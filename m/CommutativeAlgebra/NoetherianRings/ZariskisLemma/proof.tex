@@ -1,0 +1,16 @@
+Denote the generators of $R$ as a $k$-algebra by $x_1, \ldots, x_n \in R$. Suppose
+that $R$ is not a finite algebraic extension of $k$. Then we may reorder the
+$x_i$ such that there is an $1\leq m\leq n$ such that $x_1, \ldots, x_m$ is
+a transcendence basis, i.e., $x_1, \ldots, x_m$ are all transcendent, but
+$k(x_1, \ldots, x_m) \subseteq R$ is finite algebraic.
+
+Therefore we have $k \subseteq k(x_1, \ldots, x_m) \subseteq R$, and Artin-Tate
+tells us that $k(x_1, \ldots, x_m)$ is a finitely generated $k$-algebra, say
+with generators $q_1, \ldots, q_k$, where $q_i = f_i/g_i$ for some
+$f_i, g_i \in k[x_1, \ldots, x_n]$ and $g_i\neq 0$.
+This means that we can write every element $q \in k(x_1, \ldots, x_m)$ as
+\[ q = \frac{f}{q_1^{e_1}\cdots q_k^{e_k}}. \]
+
+However, since $k[x_1, \ldots, x_n]$ is a UFD, we can see that
+\[ \frac{1}{q_1\cdots q_k + 1} \]
+is not of this form, a contradiction.

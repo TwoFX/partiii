@@ -1,0 +1,19 @@
+\leavevmode
+\begin{enumerate}[label=(\roman*)]
+	\item Apply the previous lemma to the split exact sequence
+		\[\begin{tikzcd}
+			0 \arrow[r] & N \arrow[r, "\iota"] & M\oplus N \arrow[r, "\pi"] & M \arrow[r] & 0.
+		\end{tikzcd}\]
+	\item Induction.
+	\item If $\theta\colon M\to N$, apply the previous lemma to the short exact sequence
+		\[\begin{tikzcd}
+			0 \arrow[r] & \ker \theta \arrow[r] & M \arrow[r, "\theta"] & \im\theta \arrow[r] & 0.
+		\end{tikzcd}\]
+	\item If $M$ is noetherian, then so is $M_i$ as a submodule of $M$. If all $M_i$
+		are notherian, then so is $M_1 \oplus \cdots \oplus M_n$, and since the map
+		\begin{align*}
+			M_1\oplus \cdots \oplus M_n&\to M_1 + \cdots + M_n,\\
+			(m_1, \ldots, m_n)&\mapsto m_1+\cdots m_n
+		\end{align*}
+		is surjective, $M_1 + \cdots + M_n$ is noetherian.\qedhere
+\end{enumerate}

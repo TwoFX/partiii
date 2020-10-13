@@ -1,0 +1,17 @@
+\begin{enumerate}[label=(\arabic*)]
+	\item The adjoint representation $\ad_{\mathfrak{L}}\colon \mathfrak{L}\to\End \mathfrak{L}$
+		is given by $x\mapsto (y\mapsto [x, y])$.
+
+		It is indeed a homomorphism: if $x, y, z \in \mathfrak{L}$, then we may
+		calculate
+		\begin{align*}
+			\ad_{\mathfrak{L}}([x, y])(z)
+			&= [[x, y], z]\\
+			&= -[z, [x, y]]\\
+			&= [x, [y, z]] + [y, [z, x]]\\
+			&= \ad_{\mathfrak{L}}(x)(\ad_{\mathfrak{L}}(y)(z)) - \ad_{\mathfrak{L}}(y)(\ad_{\mathfrak{L}}(x)(z))\\
+			&= (\ad_{\mathfrak{L}}(x)\circ\ad_{\mathfrak{L}}(y) - \ad_{\mathfrak{L}}(y) \circ \ad_{\mathfrak{L}}(x))(z)\\
+			&= [\ad_{\mathfrak{L}}(x), \ad_{\mathfrak{L}}(y)](z),
+		\end{align*}
+		where we have used the Jacobi identity.
+\end{enumerate}

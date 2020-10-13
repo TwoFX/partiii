@@ -1,0 +1,8 @@
+A presheaf $\mathcal{F}$ is called a sheaf if it satisfies additional axioms:
+\begin{enumerate}[label=(S\arabic*)]
+	\item If  $U \subseteq X$ is covered by an open cover $\set{U_i}$ and $s \in \mathcal{F}U$ satsfies
+		$s|_{U_i}\coloneqq\rho_{UU_i}(s) = 0$ for all $i$, then $s = 0$
+	\item If $U$, and $U_i$ are as before, and if $s_i \in \mathcal{F}U_i$ such that
+		for all $i$ and $j$ we have $s_i|_{U_i\cap U_j} = s_j|_{U_i \cap U_j}$, then
+		there is some $s \in \mathcal{F}U$ such that $s|_{U_i} = s_i$ for all $i$.
+\end{enumerate}

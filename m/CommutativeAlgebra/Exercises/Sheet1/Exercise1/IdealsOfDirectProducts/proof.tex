@@ -1,0 +1,20 @@
+We need to show the following.
+\begin{enumerate}[label=(\roman*)]
+	\item If $I$ is an ideal of $R\times S$, then $\pi_1(I)$ is an ideal of $R$
+		and $\pi_2(I)$ is an ideal of $S$,
+	\item if $I_1$ is an ideal of $R$, $I_2$ is an ideal of $S$, then
+		$I_1\times I_2$ is an ideal of $R\times S$,
+	\item if $I$ is an ideal of $R\times S$, then $I = \pi_1(I) \times \pi_2(I)$ and
+	\item if $I_1$ is an ideal of $R$, $I_2$ is an ideal of $S$, then
+		$I_1 = \pi_1(I_1\times I_2)$ and $I_2 = \pi_2(I_1\times I_2)$.
+\end{enumerate}
+
+Indeed (i) follows from surjectivity of the projection and (ii) and (iv) are obvious.
+It remains to show (iii).
+
+If $(r, s) \in I$, then $r = \pi_1((r, s)) \in \pi_1(I)$ and $s = \pi_2((r, s)) \in \pi_2(I)$,
+so $(r, s) \in \pi_1(I) \times \pi_2(I)$.
+
+Conversely, if $(r, s) \in \pi_1(I)\times \pi_2(I)$, then there are
+$r', s'$ such that $(r, s') \in I$ and $(r', s) \in I$. We conclude that
+$(r, s) = (r, s') \cdot (1, 0) + (r', s) \cdot (0, 1) \in I$.\qedhere

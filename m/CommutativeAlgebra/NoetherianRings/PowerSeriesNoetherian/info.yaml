@@ -1,0 +1,6 @@
+type: theorem
+label: PowerSeriesNoetherian
+numbered: true
+section: false
+proofs:
+    proof: Proof 1

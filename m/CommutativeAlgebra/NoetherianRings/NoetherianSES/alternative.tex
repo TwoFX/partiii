@@ -1,0 +1,22 @@
+It suffices to show that if
+\[\begin{tikzcd}
+	0 \arrow[r] & A \arrow[r, "f"] & B \arrow[r, "g"] & C \arrow[r] & 0
+\end{tikzcd}\]
+is a short exact sequence of $R$-modules, then $B$ is noetherian if and only if
+both $A$ and $C$ are noetherian.
+
+If $B$ is noetherian and $N$ is a submodule of $C$, then $g^{-1}(N)$ is a submodule
+of $B$, thus finitely generated, say by $b_1, \ldots, b_n$. If $c \in N$, then
+\[ c = f(\sum_{i = 1}^n r_ib_i) = \sum_{i = 1}^n r_if(b_i),\] so $N$ is finitely generated.
+If $N$ is a submodule of $A$, then it is isomorphic to a submodule of $B$, which
+is finitely generated, hence $N$ is also finitely generated.
+
+Assume that $A$ and $C$ are finitely generated and $N$ is a submodule of $B$.
+Then $g(N)$ is finitely generated, say by $c_1, \ldots, c_n$. Additionally,
+$f^{-1}(N)$ is finitely generated, say by $a_1, \ldots, a_m$. Pick preimages
+$b_1, \ldots, b_n$ such that $g(b_i) = c_i$. Now let $x \in N$. Then
+$g(x) = \sum_{i = 1}^nr_ic_i$ and therefore $x - \sum_{i = 1}^nr_ib_i \in \ker g = \im f$.
+Thus \[ x - \sum_{i = 1}^n r_ib_i = f(\sum_{i = 1}^mr_i'a_i). \]
+Rearranging gives \[ x = \sum_{i = 1}^mr_i'f(a_i) + \sum_{i = 1}^nr_ib_i \]
+and we conclude that $N = \langle b_1, \ldots, b_n, f(a_1), \ldots, f(a_m)\rangle$ as
+required.

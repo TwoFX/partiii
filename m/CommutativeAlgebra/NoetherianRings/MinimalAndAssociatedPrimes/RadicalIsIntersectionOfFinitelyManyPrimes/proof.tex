@@ -1,0 +1,27 @@
+Let $\mathcal{S}$ be the set of radical ideals that are not the intersection
+of finitely many prime ideals. Suppose that $\mathcal{S}$ is nonempty. Since $R$
+is noetherian, $\mathcal{S}$ has a maximal member $I$. We will show that $I$ is
+prime (a contradiction, since $I$ is not the intersection of finitely many prime
+ideals).
+
+Indeed, if $I$ is not prime, then there are ideals $J_1', J_2' \nsubseteq I$ such
+that  $J_1'J_2' \subseteq I$ (indeed we can find principal ideals that work).
+Defining $J_1\coloneqq J_1' + I$, $J_2\coloneqq J_2' + I$, we find that
+$I\subsetneq J_i$, but $J_1J_2 \subseteq I$. Since $I$ was maximal, we can write
+\begin{align*}
+	\sqrt{J_1} &= Q_1 \cap \cdots \cap Q_n, &
+	\sqrt{J_2} &= Q_1'\cap\cdots\cap Q_m',
+\end{align*}
+where all $Q_i, Q_i'$ are prime.
+
+Now define
+\[J\coloneqq \sqrt{J_1}\cap\sqrt{J_2} = Q_1\cap\cdots\cap Q_n \cap Q_1'\cap\cdots\cap Q_m'. \]
+From the preceding lemma, we obtain $n_1$ and $n_2$ such that
+$J^{n_1} \subseteq J_1^{n_1} \subseteq J_1$ and $J^{n_2} \subseteq J_2^{n_2} \subseteq J_2$.
+Then we have $J^{n_1+n_2} \subseteq J_1J_2 \subseteq I$. Since $I \in \mathcal{S}$,
+$I$ is a radical ideal, which means that $J \subseteq I$.
+
+On the other hand, $I \subseteq J_i \subseteq \sqrt{J_i}$, so $I \subseteq J$.
+
+This means that $I = J$ is the intersection of finitely many prime ideals, which
+is a contradiction to  $I \in \mathcal{S}$.

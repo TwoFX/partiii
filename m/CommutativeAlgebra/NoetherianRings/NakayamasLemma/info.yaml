@@ -1,0 +1,7 @@
+type: theorem
+label: NakayamasLemma
+numbered: true
+section: false
+title: Nakayama's lemma
+proofs:
+    proof: Proof

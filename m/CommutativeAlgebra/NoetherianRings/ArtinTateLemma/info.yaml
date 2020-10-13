@@ -1,0 +1,7 @@
+type: theorem
+label: ArtinTateLemma
+numbered: true
+section: false
+title: Artin-Tate lemma
+proofs:
+  proof: Proof

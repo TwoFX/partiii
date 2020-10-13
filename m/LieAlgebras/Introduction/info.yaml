@@ -1,0 +1,15 @@
+type: chapter
+label: Introduction
+numbered: true
+section: true
+title: Introduction
+children:
+- LieAlgebra
+- Motivation
+- LieSubalgebra
+- Semisimple
+- AssociativeAlgebra
+- BackToLieAlgebras
+- Subspace
+- SemisimpleAlgebra
+- IndecomposableModule

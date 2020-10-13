@@ -1,0 +1,7 @@
+type: theorem
+label: CohensTheorem
+numbered: true
+section: false
+title: Cohen's theorem
+proofs:
+    proof: Proof

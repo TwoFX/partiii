@@ -1,0 +1,18 @@
+Define $I\coloneqq \bigcap_{p\text{ prime}} p$.
+
+If $x \in N(R)$, i.e., $x^n = 0$, and $p$ is prime, then $x^n = 0 \in p$, so
+$x \in p$. Hence, $N(R) \subseteq I$.
+
+To show that $I \subseteq N(R)$, we will show that $x \notin N(R)$ implies
+$x \notin I$. Indeed, if $x \notin N(R)$, define $\mathcal{S}$ to be the collection
+of all ideals $J$ that are disjoint from the set $\set{x^n \given n > 0}$.
+We have $(0) \in \mathcal{S}$, so $\mathcal{S}$ is nonempty, and as usual,
+upper bounds of chains exist, so Zorn's lemma gives us a maximal member
+$J_1$ of $\mathcal{S}$. We have $x \notin J_1$, so if we can show that $J_1$ is
+prime, we are done.
+
+Suppose $yz \in J_1$, $y, z \notin J_1$. Then $J_1 + Ry$ and $J_1 + Rz$ are strictly
+larger than $J_1$, so we find $n, m$ such that $x^n \in J_1 + Ry$, $x^m \in J_1 + Rz$.
+This implies $x^{n + m} \in J_1 + Ryz$ (write $x^n = j_1+r_1y$, $x^m = j_2+r_2z$),
+but then $x^{n + m} = J_1 + Ryz = J_1$, which is a contradiction because
+$J_1 \in \mathcal{S}$.

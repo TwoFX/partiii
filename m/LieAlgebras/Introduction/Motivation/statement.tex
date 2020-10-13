@@ -1,0 +1,36 @@
+Groups describe symmetries. Lie algebras describe infinitesimal symmetries.
+
+For example, let $G = \GL_n(\mathbb{R})$. This is an example of a Lie group,
+i.e., an analytic manifold with continuous group operations. The associated
+Lie algebra is the tangent space $T_1G$ at the identity.
+
+The matrix exponential diffeomorphically (with inverse $\log$) takes a
+neighborhood of $0$, which is the same as $T_1G$, to a neighborhood of $1$. 
+
+$\exp A\exp B = \exp(\mu(A, B))$ for sufficiently small $A$ and $B$.
+
+The Taylor series for $\mu$ is
+\[ \mu(A, B) = A + B + \frac{1}{2}[A, B] + \text{higher degree terms}, \]
+where $[A, B] = AB - BA$ (matrix multiplication).
+
+This is an example of a Lie bracket. Note that $T_1G\times T_1G \to T_1G$,
+$(A, B)\mapsto [A, B]$ is bilinar, skew-symmetric.
+
+The Lie algebra corresponding to $G$ is often called $\mathfrak{g}$.
+
+Note that
+\begin{enumerate}[label=(\arabic*)]
+	\item The first approximation to the group product is addition in the Lie algebra
+		$T_1G$.
+	\item If $[g_1, g_2] = g_1g_2g_1^{-1}g_2^{-1}$ is the group commutator, then
+		the Lie bracket is the first approximation of the commutator
+		$[\exp A, \exp B]$ in $G$.
+	\item The Jacobi identity arises from the associativity in $G$. Note that
+		Lie algebras in general are non-associative.
+\end{enumerate}
+
+As a further example, let $G = \GL_n(\mathbb{C})$. This is an example of an
+algebraic group, i.e., a complex algebraic variety with continuous group
+operations. We have $T_1G \cong M_n(\mathbb{C})$ as the tangent space at the
+identity. Similarly to before, we define a Lie bracket and end up with a complex
+Lie algebra.

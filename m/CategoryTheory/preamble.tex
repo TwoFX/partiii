@@ -1,0 +1,43 @@
+\documentclass[a4paper]{amsbook}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{enumitem}
+
+\usepackage[english]{babel}
+
+\usepackage{mathtools}
+\usepackage{amsfonts, amssymb}
+\usepackage{amsthm}
+
+\usepackage{csquotes}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tikz-cd}
+
+\title{Category Theory}
+\author{Peter Johnstone}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{remark}[definition]{Remark}
+\newtheorem{example}[definition]{Example}
+\newtheorem{corollary}[definition]{Corollary}
+\newtheorem{exercise}[definition]{Exercise}
+\newtheorem*{definition*}{Definition}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{remark*}{Remark}
+\newtheorem*{example*}{Example}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{exercise*}{Exercise}
+
+\allowdisplaybreaks
+
+\DeclarePairedDelimiterX\set[1]\lbrace\rbrace{\def\given{\;\delimsize\vert\;}#1}
+\DeclareMathOperator\dom{dom}
+\DeclareMathOperator\cod{cod}

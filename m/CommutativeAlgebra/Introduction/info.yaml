@@ -1,0 +1,13 @@
+type: chapter
+label: Introduction
+number: 0
+section: true
+title: Introduction
+children:
+- InitialRemarks
+- HilbertExamples
+- Noether
+- BasisTheorem
+- BasisTheoremField
+- AlgGeom
+- Dimension

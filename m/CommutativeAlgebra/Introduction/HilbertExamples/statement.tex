@@ -1,0 +1,27 @@
+Denote by $\Sigma_n$ the symmetric group on $\set{1, \ldots, n}$. $\Sigma_n$ acts
+on $k[X_1, \ldots, X_n]$ by permuting variables: given $\sigma \in \Sigma_n$,
+$f \in k[X_1, \ldots, X_n]$, we set
+\[ (\sigma f)(X_1, \ldots, X_n)\coloneqq f(X_{\sigma^{-1}(1)}, \ldots, X_{\sigma^{-1}(n)}). \]
+The action of $\Sigma_n$ is via ring automorphisms so it makes sense to define
+the \emph{ring of invariants}
+\[ S\coloneqq \set{f \in k[X_1, \ldots, X_n]\given \forall \sigma \in \Sigma_n\colon \sigma f = f}. \]
+$S$ is a ring, called the \emph{ring of symmetric polynomials}. Consider the following
+elementary symmetric functions:
+\begin{align*}
+	e_1(X_1, \ldots, X_n) &= X_1 + \cdots + X_n),\\
+	e_2(X_1, \ldots, X_n) &= \sum_{i < j} X_iX_j,\\
+	&\ \,\vdots\\
+	e_n(X_1, \ldots, X_n)&= X_1\cdot\cdots\cdot X_n.
+\end{align*}
+
+It turns out that $S$ is generated as a ring by these $e_i$ and the canonical
+map $k[Y_1, \ldots, Y_n]\to S$ given by $Y_i\mapsto e_i$ is an isomorphism of rings.
+
+Hilbert showed that $S$ is finitely generated for many other groups. Among the
+way he proved a few very deep results.
+\begin{itemize}
+	\item the basis theorem,
+	\item the Nullstellensatz,
+	\item the polynomial nature of the Hilbert function (and beginnings of dimension theory),
+	\item the syzygy theorem (and beginnings of the homological theory of polynomial rings).
+\end{itemize}

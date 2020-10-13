@@ -1,0 +1,13 @@
+type: chapter
+label: ExamplesAndElementaryProperties
+numbered: true
+section: true
+title: Elementary properties of Lie algebras
+children:
+- Introduction
+- SubalgebrasOfGL
+- Derivation
+- DerivationExample
+- InnerDerivation
+- InnerDerivationRemarks
+- Representations

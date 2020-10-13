@@ -1,0 +1,12 @@
+Let $m$ be a maximal ideal of $T$. Define $R\coloneqq T/m$. This is a field.
+By Zariski's lemma, $k \subseteq T/m$ is a finite algebraic extension. If $k$ is
+algebraically closed and $T = k[X_1, \ldots, X_n]$, then this means that the map
+natural map
+$\Phi\colon k\to k[X_1, \ldots, X_n]\to k[X_1, \ldots, X_n]/m$ is an
+isomorphism. Let $a_i\coloneqq \Phi^{-1}(X_i)$. Then we have that
+$I\coloneqq (X_1-a_1, \ldots, X_n-a_n) \subseteq \ker\Phi = m$.
+
+On the other hand the natural map  $k \to k[X_1, \ldots, X_n]/I$ is injective,
+because the kernel is not trivial and $k$ is a field, and it is surjective,
+because every polynomial in the quotient by $I$ \enquote{reduces} to an element
+of $k$, so $I$ is maximal, so $I = m$ since $m\supseteq I$ is a proper ideal.

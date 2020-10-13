@@ -1,0 +1,35 @@
+Denote the set of prime ideals of $A$ by $\mathcal{S}$. Since $A$ is nonzero,
+$(0)$ is a proper ideal, which is contained in a maximal ideal, hence $\mathcal{S}$ is
+nonempty.
+
+The set $\mathcal{S}$ is partially ordered using the relation \enquote{$\supseteq$}.
+Let  $\mathcal{S}' \subseteq \mathcal{S}$ denote a totally ordered subset of $\mathcal{S}$.
+We will show that $\mathcal{S}'$ admits an upper bound. Indeed,
+define $S\coloneqq \bigcap_{P \in \mathcal{S}'} P$. $S$ is obviously an ideal, and
+we will show that it is prime. Assume that $x, y \in A$ such that $xy \in S$. Since
+every $P \in \mathcal{S}'$ is prime, we may write $\mathcal{S}' = \mathcal{S}_x \cup \mathcal{S}_y$,
+where $\mathcal{S}_x \coloneqq \set{P \in \mathcal{S}' \given x \in P}$ and
+$\mathcal{S}_y\coloneqq\set{P \in \mathcal{S}'\given y \in P}$. We claim that it is true that
+\begin{equation}\tag{$\star$}
+	(\forall P \in \mathcal{S}'~\exists P' \in \mathcal{S}_x\colon P' \subseteq P) \vee
+	(\forall P \in \mathcal{S}'~\exists P' \in \mathcal{S}_y\colon P' \subseteq P).
+\end{equation}
+
+Indeed, the negation of this statement is
+\[
+	(\exists P \in \mathcal{S}'~\forall P' \in \mathcal{S}_x\colon P' \nsubseteq P) \wedge
+	(\exists Q \in \mathcal{S}'~\forall Q' \in \mathcal{S}_y\colon Q' \nsubseteq Q),
+\]
+but then $P\cap Q$, which is either $P$ or $Q$, since $\mathcal{S}'$ is totally
+ordered, is part of neither $\mathcal{S}_x$ nor $\mathcal{S}_y$, which is a
+contradiction.
+
+Therefore, without loss of generality, we may assume that the left hand side
+of ($\star$) is true (the case where the right hand side is true works exactly
+the same). Since $P' \in \mathcal{S}_x$ and $P' \subseteq P$ implies
+$P \in \mathcal{S}_x$, we have that $\mathcal{S}' = \mathcal{S}_x$, so $x \in S$, and
+$S$ is indeed a prime ideal, and therefore every chain in $\mathcal{S}$ admits
+an upper bound.
+
+Applying Zorn's lemma gives a maximal element of $\mathcal{S}$, which is precisely
+a minimal prime ideal of $A$.

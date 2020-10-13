@@ -1,0 +1,20 @@
+A commutative ring is called artinian if it does not contain an infinite,
+strictly decreasing chain of ideals (equivalently, if every nonempty set of
+ideals has a minimal member). An $R$-module is called artinian if it satisfies
+that analogous property for submodules.
+
+Examples of artinian rings: $\mathbb{Z}/p\mathbb{Z}$, $k[X]/(f)$, where $k$ is
+a field and $f\neq 0$. $k[X]$ is not artinian: we have the chain
+$(X) \supseteq (X^2) \subseteq \cdots$.
+
+Recall that an ideal $I$ is prime if and only iff $R/I$ is an integral domain
+if and only if $I_1, I_2 \subseteq I$ implies that $I_1 \subseteq I\vee I_2 \subseteq I$.
+
+We will now show that if $R$ is artinian, then prime ideals are maximal, which
+in particular means that $N(R) = J(R)$. Indeed, let $p$ be a prime ideal and $x \in R$
+such that $x \notin p$. By the descending chain condition, $(x) \supseteq (x^2) \subseteq \cdots$
+becomes stationary, so there is a number $n$ and some $y \in R$ such that
+$x^n = yx^{n+1}$. Rearranging, we have $x^n(1-xy) = 0 \in p$. Since $p$ is prime
+and $x\notin p$, $x^n\notin p$, so we must have $1-xy\in p$, so $x + p$ has the
+inverse $y+p$ in $R/p$. Since $x$ was arbitrary, $R/p$ is a field, so $p$ is
+maximal.

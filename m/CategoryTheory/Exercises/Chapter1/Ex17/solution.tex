@@ -1,0 +1,147 @@
+We will first show that if $f\colon C\to D$ is any morphism and $c : C \to C$ and
+$d : D \to D$ are idempotents, then $dfe = f \iff df = f = fe$.
+
+Indeed, if $df=f=fe$, then $dfe = fe = f$. Conversely, if $dfe = f$, then
+$f = dfe = ddfe = df$ and $f = dfe = dfee = fe$.
+
+To show that $\mathcal{C}[\check{\mathcal{E}}]$ is a category, we need to show
+that the composition of two morphisms is indeed a morphism and that there are
+identity morphism.
+
+Assume that $c\colon C \to C$, $d\colon D\to D$, $e\colon E \to E$ are idempotents
+and that $f\colon C\to D$ and $g\colon D\to E$ satisfy $dfc = f$ and $egd = g$.
+We need to show that $egfc = gf$. Using the lemma, we have $egf = (eg)f = gf$ and
+$gfc = g(fc) = gf$, so, again by the lemma, the claim follows.
+
+If $e\colon E \to E$ is an idempotent, define $1_e\coloneqq e \stackrel{e}{\longrightarrow} e$.
+By idempotency of $e$, this is indeed a morphism. If $f\colon d \to e$ is a morphism,
+then the morphism $f1_d$ is the morphism $fd = f$ (here we use the lemma again)
+in $\mathcal{C}$, so $f1_d = f$ as required. Similarly, $1_ef = f$. This completes part (i).
+
+Next, assume that $\mathcal{E}$ contains all identity morphisms of $\mathcal{C}$.
+Define the functor $I$ via
+\begin{align*}
+	I\colon \mathcal{C}&\to \mathcal{C}[\check{\mathcal{E}}]\\
+	A &\mapsto 1_A\\
+	(f\colon A\to B)&\mapsto (f\colon 1_A\to 1_B)
+\end{align*}
+This is indeed a functor and since the data of a morphism $A\to B$ in $\mathcal{C}$ is
+precisely the same as the data of a morphism $1_A \to 1_B$ in $\mathcal{C}[\check{\mathcal{E}}]$,
+$I$ is fully faithful.
+
+Now let $T\colon \mathcal{C}\to \mathcal{D}$ be any functor.
+
+First, assume that there is some functor $\widehat{T}\colon \mathcal{C}[\check{\mathcal{E}}]\to \mathcal{D}$
+such that $T = \widehat{T}I$. Let $e : A\to A \in \mathcal{E}$ be an idempotent. Then we have
+\begin{align*}
+	Te &= \widehat{T}(1_A \stackrel{e}{\longrightarrow}1_A)\\
+	&= \widehat{T}(1_A \stackrel{e}{\longrightarrow}e\stackrel{e}{\longrightarrow}1_A)\\
+	&= \widehat{T}(e\stackrel{e}{\longrightarrow}1_A)\circ \widehat{T}(1_A\stackrel{e}{\longrightarrow}e),
+\end{align*}
+and we also have
+\begin{align*}
+	\widehat{T}(1_A\stackrel{e}{\longrightarrow} e)\circ\widehat{T}(e\stackrel{e}{\longrightarrow}1_A)
+	&= \widehat{T}(e\stackrel{e}{\longrightarrow}1_A\stackrel{e}{\longrightarrow}e)\\
+	&= \widehat{T}(e\stackrel{ee}{\longrightarrow}e)\\
+	&= \widehat{T}(e\stackrel{e}{\longrightarrow}e)\\
+	&= \widehat{T}(1_e)\\
+	&= 1_{\widehat{T}e},
+\end{align*}
+which shows that $Te$ is split.
+
+Next, assume that $Te$ is split for any $e \in \mathcal{E}$. For any $e \in \mathcal{E}$,
+choose a splitting
+\[\begin{tikzcd}
+	TA \ar[r, "g_e", shift left] & B_e\ar[l, "f_e", shift left],
+\end{tikzcd}\]
+i.e., $f_e \circ g_e = Te$, $g_e \circ f_e = 1_{B_e}$.
+For identity morphisms $1_A$ (A an object of $\mathcal{C}$), choose the specific splitting
+given by $B_{1_A} \coloneqq TA$, $f_{1_A} \coloneqq 1_{TA}$, $g_{1_A}\coloneqq 1_{TA}$.
+
+Now define the functor $\widehat{T}$ via
+\begin{align*}
+	\widehat{T}\colon \mathcal{C}[\check{\mathcal{E}}] &\to \mathcal{D}\\
+	(e\colon A\to A) &\mapsto B_e\\
+	(f\colon d\to e) &\mapsto g_e \circ Tf \circ f_d.
+\end{align*}
+
+If $e \in \mathcal{E}$, then we have
+\begin{align*}
+	\widehat{T}(1_e) &= g_e \circ Te \circ f_e\\
+	&= g_e \circ f_e \circ g_e \circ f_e\\
+	&= 1_{B_e} \circ 1_{B_e} = 1_{B_e}
+\end{align*}
+
+Furthermore, if $f\colon c\to d$ and $g\colon d\to e$, then we have
+\begin{align*}
+	\widehat{T}(g \circ f) &= g_e \circ T(g \circ f) = f_c\\
+	&= g_e \circ Tg \circ Tf = f_c\\
+	&= g_e \circ Tg \circ T(d \circ f) \circ f_c\\
+	&= g_e \circ Tg \circ Td \circ Tf \circ f_c\\
+	&= g_e \circ Tg \circ f_d \circ g_d \circ Tf \circ f_c\\
+	&= \widehat{T}g \circ \widehat{T}f.
+\end{align*}
+
+So $\widehat{T}$ is indeed a functor. If $A$ is an object of $\mathcal{C}$, then
+\[ \widehat{T}IA = \widehat{T}1_A = B_{1_A} = TA \]
+and if $f\colon C\to D$ is a morphism in $\mathcal{C}$, then
+\[ \widehat{T}If = \widehat{T}(1_C\stackrel{f}{\longrightarrow}1_D) = g_{1_D} \circ Tf \circ f_{1_C} = 1_{TD} \circ Tf \circ 1_{TC} = Tf, \]
+so $\widehat{T}$ is the required factorisation, completing part (ii).
+
+Define a functor $\Phi\colon [\widehat{\mathcal{C}}, \mathcal{D}]\to [\mathcal{C}, D]$ via
+$F\mapsto F \circ I$, $\eta\mapsto I\eta$, where $I\eta$ is defined cia
+$I\eta_C \coloneqq \eta_{IC} = \eta_{1_C}$. Naturality of $I\eta$ immediately follows
+from naturality of $\eta$. Functoriality is also clear.
+
+We will show that this functor is full, faithful and essentially surjective.
+
+Indeed, let $F\colon \mathcal{C}\to \mathcal{D}$ be a functor. Then $\widehat{F}$ as
+defined in the previous part satisfies $\Phi\widehat{F} = F$, so $\Phi$ is essentially
+surjective.
+
+Next, let $F, G\colon \widehat{\mathcal{C}}\to \mathcal{D}$ be functors and $\eta\colon F\circ I\to G \circ I$ a
+natural transformation. For an idempotent $e\colon A\to A$ in $\mathcal{C}$, define $\hat{\eta}_e$ to be the composite
+\[\begin{tikzcd}[column sep=huge]
+	Fe \ar[r, "F(e\stackrel{e}{\longrightarrow}1_A)"] & F1_A = (F\circ I)A \ar[r, "\eta_A"] & (G \circ I)A = G1_A \ar[r, "G(1_A\stackrel{e}{\longrightarrow}e)"] & Ge.
+\end{tikzcd}\]
+
+We claim that this defines a natural transformation $\hat{\eta}\colon F \to G$. Indeed,
+if $f\colon d\to e$ is a morphism, then
+\begin{align*}
+	\hat{\eta}_e \circ Ff &= G(1_A\stackrel{e}{\longrightarrow}e) \circ\eta_E \circ F(e\stackrel{e}{\longrightarrow}1_E) \circ F(d\stackrel{f}{\longrightarrow} e)\\
+	&= G(1_E\stackrel{e}{\longrightarrow}e) \circ\eta_E \circ F(d\stackrel{f}{\longrightarrow}e\stackrel{e}{\longrightarrow}1_E)\\
+	&= G(1_E\stackrel{e}{\longrightarrow}e) \circ\eta_E \circ F(d\stackrel{d}{\longrightarrow}1_D\stackrel{d}{\longrightarrow}d\stackrel{f}{\longrightarrow}e\stackrel{e}{\longrightarrow}1_E)\\
+	&= G(1_E\stackrel{e}{\longrightarrow}e) \circ\eta_E \circ F(d\stackrel{d}{\longrightarrow}1_D\stackrel{d}{\longrightarrow}d\stackrel{f}{\longrightarrow}e\stackrel{e}{\longrightarrow}1_E)\\
+	&= G(1_E\stackrel{e}{\longrightarrow}e) \circ\eta_E \circ F(1_D\stackrel{efd}{\longrightarrow}1_E)\circ F(d\stackrel{d}{\longrightarrow}1_D)\\
+	&= G(1_E\stackrel{e}{\longrightarrow}e) \circ\eta_E \circ F(efd)\circ F(d\stackrel{d}{\longrightarrow}1_D)\\
+	&= G(1_E\stackrel{e}{\longrightarrow}e) \circ G(efd) \circ \eta_D\circ F(d\stackrel{d}{\longrightarrow}1_D),
+\end{align*}
+and doing the whole thing backwards we conclude that $\hat{\eta}_e \circ Ff = Gf \circ \hat{\eta}_d$,
+so $\hat{\eta}$ is indeed a natural transformation.
+
+For any $A \in \mathcal{C}$ we have
+\begin{align*}
+	(I\hat{\eta})_A &= \hat{\eta}_{IA} = \hat{\eta}_{1_A} = G(1_A \stackrel{1_A}{\longrightarrow}1_A) \circ \eta_A \circ F(1_A\stackrel{1_A}{\longrightarrow}1_A)\\
+	&= G(1_{1_A}) \circ \eta_A \circ F(1_{1_A}) = \eta_A,
+\end{align*}
+which means that $\Phi(\hat{\eta}) = \eta$, so $\Phi$ is full.
+
+Finally, let $F, G\colon \widehat{\mathcal{C}}\to \mathcal{D}$ be functors and
+$\eta, \eta'\colon F\to G$ be natural transformations such that $\Phi(\eta) = \Phi(\eta')$.
+To show that $\Phi$ is faithful, we need to prove that $\eta = \eta'$.
+The assumption $\Phi(\eta) = \Phi(\eta')$ means that for all $A \in \mathcal{C}$
+we have $\eta_{IA} = \eta'_{IA}$, so $\eta_{1_A} = \eta'_{1_A}$.
+
+Let $e\colon A\to A$ be any idempotent in $\mathcal{C}$. We need to show that
+$\eta_e = \eta'_e$. Indeed, we have
+\begin{align*}
+	\eta_e &= G(1_e) \circ \eta_e\\
+	&= G(e\stackrel{e}{\longrightarrow}e) \circ \eta_e\\
+	&= G(e\stackrel{ee}{\longrightarrow}e)\circ \eta_e\\
+	&= G(e\stackrel{e}{\longrightarrow}1_A\stackrel{e}{\longrightarrow}e)\circ\eta_e\\
+	&= G(1_A\stackrel{e}{\longrightarrow}e)\circ G(e\stackrel{e}{\longrightarrow}1_A)\circ \eta_e\\
+	&= G(1_A\stackrel{e}{\longrightarrow}e)\circ\eta_{1_A}\circ F(e\stackrel{e}{\longrightarrow}1_A)\\
+	&= G(1_A\stackrel{e}{\longrightarrow}e)\circ\eta'_{1_A}\circ F(e\stackrel{e}{\longrightarrow}1_A),
+\end{align*}
+and the same argument in backwards direction shows that $\eta_e = \eta'_e$,
+completing the proof.

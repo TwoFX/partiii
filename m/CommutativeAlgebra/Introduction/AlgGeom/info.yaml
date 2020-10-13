@@ -1,0 +1,8 @@
+type: section
+label: AlgGeom
+numbered: false
+section: true
+title: Links between commutative algebra and algebraic geometry
+children:
+- IntitialRemarks
+- Remarks

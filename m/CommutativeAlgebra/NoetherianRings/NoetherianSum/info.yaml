@@ -1,0 +1,6 @@
+type: lemma
+label: NoetherianSum
+numbered: true
+section: false
+proofs:
+    proof: Proof

@@ -1,0 +1,15 @@
+Let $f(z) = z^n + a_1z^{n-1} + \cdots + a_n$ be non-constant.
+Suppose that $\forall z \in C\colon f(z)\neq 0$. Define $\gamma_R\colon S^1\to \mathbb{R}^2\setminus\set{0}$
+via $\gamma_R(t)\coloneqq f(Re^{2\pi it})$.
+
+$\gamma_0$ is a constant map, so $\deg\gamma_0=0$. Since all $\gamma_R$ are homotopic,
+we have the $\forall R, \deg\gamma_R = 0$.
+
+On the other hand, if $R \gg \sum_i\abs{a_i}$, define
+\[ f_s(z)\coloneqq z^n + s(a_1z^{n-1} + \ldots + a_n) \]
+for $0\leq s\leq 1$. By choice of $R$, we must have
+$\forall s \in [0, 1], z \in \mathbb{C}, \abs{z} = R \implies f_s(z) \neq 0$.
+If we now define $\gamma_{R, s}(t)\coloneqq f_s(Re^{2\pi it})$, then
+$\gamma_{R, 0}\simeq\gamma_{R, 1}$, but $\gamma_{R, 1} = \gamma_R$ has degree
+$0$, whereas $\gamma_{R, 0}$ is given by $t\mapsto R^ne^{2\pi int}$, so
+$\deg\gamma_{R, 0}=n$, where $n\neq 0$, a contradiction.

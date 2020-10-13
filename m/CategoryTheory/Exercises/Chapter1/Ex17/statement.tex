@@ -1,0 +1,24 @@
+A morphism $e\colon A\to A$ is called idempotent if $ee = e$. An idempotent
+$e$ is said to split if it can be factored as $fg$ where $gf$ is an identity
+morphism.
+
+\begin{enumerate}[label=(\roman*)]
+	\item Let $\mathcal{E}$ be a collection of idempotents in a category $\mathcal{C}$:
+		show that there is a category $\mathcal{C}[\check{\mathcal{E}}]$ whose objects
+		are the members of $\mathcal{E}$, whose morphisms $e \to d$ are those morphisms
+		$f\colon \dom e\to \dom d$ in $\mathcal{C}$ for which $dfe = f$, and whose
+		composition coincides with composition in $\mathcal{C}$. [Hint: first show that
+		the single equation $dfe = f$ is equivalent to the two equations $df = f = fe$.
+		Note that the identity morphism on an object $e$ is not $1_{\dom e}$ in general.]
+
+	\item If $\mathcal{E}$ contains all identity morphisms of $\mathcal{C}$, show that there
+		is a full and faithful functor $I\colon \mathcal{C} \to \mathcal{C}[\check{\mathcal{E}}]$,
+		and that an arbitrary functor $T\colon \mathcal{C}\to \mathcal{D}$ can be factored
+		as $\widehat{T}I$ for some $\widehat{T}$ iff it sends the members of $\mathcal{E}$ to split
+		idempotents in $\mathcal{D}$.
+
+	\item Deduce that if all idempotents split in $\mathcal{D}$, then the functor categories
+		$[\mathcal{C}, \mathcal{D}]$ and $[\widehat{\mathcal{C}}, \mathcal{D}]$ are equivalent,
+		where $\widehat{\mathcal{C}}=\mathcal{C}[\check{\mathcal{E}}]$ for $\mathcal{E}$ the class
+		of all idempotents in $\mathcal{C}$.
+\end{enumerate}

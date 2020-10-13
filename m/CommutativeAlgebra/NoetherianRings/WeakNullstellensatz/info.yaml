@@ -1,0 +1,7 @@
+type: theorem
+label: WeakNullstellensatz
+numbered: true
+section: false
+title: Hilbert's Nullstellensatz (weak version)
+proofs:
+    proof: Proof

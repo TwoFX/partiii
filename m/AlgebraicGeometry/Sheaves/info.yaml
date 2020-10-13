@@ -1,0 +1,12 @@
+type: chapter
+label: Sheaves
+numbered: true
+section: true
+title: Sheaves
+children:
+- FixSpace
+- Presheaf
+- PresheafCategorically
+- MorphismOfPresheaves
+- Sheaf
+- SheafRemark

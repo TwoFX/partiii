@@ -1,0 +1,8 @@
+[package]
+name = "alg-geom"
+version = "0.1"
+lean_version = "leanprover-community/lean:3.20.0"
+path = "src"
+
+[dependencies]
+mathlib = {git = "https://github.com/leanprover-community/mathlib", rev = "7bbb759f1058cf71676c51ad7803bd4d20659f40"}

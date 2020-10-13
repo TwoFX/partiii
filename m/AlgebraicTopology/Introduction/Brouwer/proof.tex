@@ -1,0 +1,15 @@
+Suppose $f$ has no fixed point.
+
+Given $0\leq R\leq 1$, define $\gamma_R\colon S^{n-1} = \partial\overline{B}^n\to \mathbb{R}^n\setminus\set{0}$
+via $v\mapsto Rv - f(Rv)$. This has the advertised codomain since $f$ has no fixed point.
+$\gamma_0$ is a constant map, so $\deg\gamma_0=0$, but again all $\gamma_R$ homotopic,
+so we conclude that $\deg(\gamma_1)=0$.
+
+On the other hand, given $0\leq S\leq 1$, define $\gamma_{1, S}(v)\coloneqq v-sf(v)$
+for $v \in \partial \overline{B}^n$.  We have $\gamma_{1, 1} = \gamma_1$.
+Furthermore, if $s < 1$ and given $v \in \partial\overline{B}^n$, note that
+\[ \norm{v - sf(v)} \geq \abs{\norm{v} - \norm{sf(v)}} = \abs{1 - \abs{s}\norm{f(v)}} = 1 - \abs{s}\norm{f(v)} > 1 - 1 \cdot 1 = 0,  \]
+so $\gamma_{1, s}$ is a map $S^{n-1}\to \mathbb{R}^n\setminus\set{0}$. We conclude
+that $\gamma_{1, 0} \simeq \gamma_{1, 1}$, which contradicts homotopy invariance of
+degree since $\gamma_{1, 0}$ is the inclusion and thus has degree $1$, whereas
+$\gamma_{1, 1} = \gamma_1$ has degree $0$ as seen earlier.

@@ -1,0 +1,34 @@
+type: chapter
+label: NoetherianRings
+numbered: true
+section: true
+title: Noetherian Rings
+children:
+- AllRingsAreCommutative
+- CharacterisationsOfNoetherian
+- NoetherianModule
+- NoetherianSES
+- NoetherianSum
+- NoetherianRing
+- FinitelyGeneratedOverNoetherianIsNoetherian
+- HilbertBasisTheorem
+- GrobnerBases
+- HilbertBasisExamples
+- PowerSeriesNoetherian
+- CohensTheorem
+- PrimesInFormalPowerSeries
+- Nilradical
+- NilradicalDef
+- NilradicalIsIntersectionOfPrimeIdeals
+- Radical
+- RadicalRemarks
+- JacobsonRadical
+- JacobsonRemark
+- NakayamasLemma
+- NilradicalVsJacobson
+- Artinian
+- ArtinTateLemma
+- ZariskisLemma
+- WeakNullstellensatz
+- StrongNullstellensatz
+- MinimalAndAssociatedPrimes

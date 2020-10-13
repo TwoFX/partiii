@@ -1,0 +1,11 @@
+type: section
+label: MinimalAndAssociatedPrimes
+numbered: false
+section: true
+title: Minimal and associated primes
+children:
+- NilradicalIsNilpotent
+- RadicalIsIntersectionOfFinitelyManyPrimes
+- MinimalPrimePrep
+- MinimalPrimes
+- RadicalIsIntersectionOfMinimalPrimes

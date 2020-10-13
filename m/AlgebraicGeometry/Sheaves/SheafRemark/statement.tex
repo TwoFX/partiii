@@ -1,0 +1,18 @@
+\begin{enumerate}
+	\item If $\mathcal{F}$ is a sheaf, then $\varnothing \subseteq X$ is covered
+		by the empty covering; hence $\mathcal{F}(\varnothing) = 0$.
+	\item The two sheaf axioms can be described as saying that given $U, \set{U_i}$,
+		\[
+			\begin{tikzcd}
+				0\ar[r] & \mathcal{F}U\ar[r, "\alpha"] & \prod_i \mathcal{F}U_i \ar[r, shift left, "\beta_1"]\ar[r, shift right, "\beta_2" below] & \prod_{i, j} \mathcal{F}(U_i\cap U_j)
+			\end{tikzcd}
+			\]
+			is exact, where $\alpha(s) = (s|_{U_i})_{i \in I}$, $\beta_1((s_i)_{i \in I}) = (s_i|_{U_i \cap U_j})$,
+			$\beta_2((s_i)_{i \in I}) = (s_j|_{U_i\cap U_j})_{i, j}$.
+
+			Exactness means that $\alpha$ is injective, $\beta_1\circ\alpha = \beta_2\circ\alpha$,
+			and for any $(s_i) \in \prod_{i \in I}\mathcal{F}U_i$, with $\beta_1((s_i)) = \beta_2((s_i))$,
+			there exists $s \in \mathcal{F}U$ with $\alpha(s) = (s_i)$.
+
+			This is all subsumed by saying that $\alpha$ is the equalizer of $\beta_1$ and $\beta_2$.
+\end{enumerate}

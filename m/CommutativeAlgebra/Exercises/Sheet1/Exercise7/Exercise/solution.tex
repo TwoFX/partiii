@@ -1,0 +1,13 @@
+For (i), assume that $\theta$ is not injective. Then there is some $x \in \ker\theta\setminus\set{0}$.
+Let $n \in \mathbb{N}$. Since $\theta$ is surjective, so is $\theta^n$, so there
+is some $y \in M$ such that $\theta^n(y) = x$. Therefore, $y \in \ker\theta^{n+1}\setminus\ker\theta^n$
+and we have an infinite strictly increasing chain
+\[ \ker\theta \subsetneq \ker\theta^2 \subsetneq \ker\theta^3\subsetneq \cdots. \]
+
+For (ii), assume that $\theta$ is not surjective. This means that there is some
+$x \notin \im\theta$. Let $n \in \mathbb{N}$. Then we have $\theta^n(x) \in \im\theta^n$.
+Suppose that $\theta^n(x)  \in \im\theta^{n+1}$. Then there would be $y \in M$
+such that $\theta^{n+1}(y) = \theta^n(x)$. By injectivity of $\theta$, this means
+that $\theta(y) = x$, a contradiction. Therefore, $\theta^n(x) \in \im\theta^n\setminus \im\theta^{n+1}$
+and we have an infinite strictly decreasing chain
+\[ \im\theta \supsetneq \im\theta^2 \supsetneq\im\theta^3\supsetneq\cdots.\qedhere \]

@@ -1,0 +1,16 @@
+If all submodules of $M$ are finitely generated and $N_1 \subseteq N_2 \subseteq \ldots$ is
+an increasing chain of submodules of $M$, define $N\coloneqq \bigcup_{i = 1}^\infty N_i$.
+This is a submodule of $M$, so it is finitely generated with generators
+$m_1, \ldots, m_k$. Each $m_i$ lies in some $N_{n_i}$. If $n$ is the maximum of all
+$n_i$, we have $N_n = N$ and the chain is stationary.
+
+If the ACC holds and $\mathcal{S}$ is nonempty, let $M_0 \coloneqq \set{0}$.
+Proceed inductively. If $M_i$ is maximal, we are done. Otherwise, there is some
+$M_{i+1}$ such that $M_i\subsetneq M_{i+1}$. By the ACC, this process must terminate
+after a finite number of steps.
+
+If the maximum condition holds and $N$ is any submodule of $M$, define $\mathcal{S}$
+to be the collection of finitely generated submodules of $N$. $\mathcal{S}$ is nonempty
+as it contains the zero module. Let $L$ be a maximal member of $\mathcal{S}$. Let
+$x \in N$. Then $L + Rx$ is finitely generated and $L \subseteq L + Rx$, hence, $x \in L$
+and therefore $N = L$.

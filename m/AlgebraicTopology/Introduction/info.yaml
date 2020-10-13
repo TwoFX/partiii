@@ -1,0 +1,26 @@
+type: chapter
+label: Introduction
+numbered: true
+section: true
+title: Introduction
+children:
+- AlgebraicTopology
+- PathConnected
+- RealLine
+- IntermediateValueTheorem
+- Homotopy
+- HomotopyEquivalenceRelation
+- PathConnectedViaHomotopy
+- HomotopyAsPath
+- SimplyConnected
+- Plane
+- FundamentalTheoremOfAlgebra
+- HigherConnectivity
+- EuclideanSpace
+- Brouwer
+- HomotopyEquivalence
+- HomeomorphismIsHomotopyEquivalence
+- HomotopyEquivalenceExamples
+- Contractible
+- AlgebraicTopology
+- WhatIsAlgebraicTopology

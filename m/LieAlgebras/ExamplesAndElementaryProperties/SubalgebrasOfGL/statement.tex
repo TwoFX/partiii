@@ -1,0 +1,43 @@
+$\mathfrak{gl}_n$ has Lie subalgebras:
+\begin{enumerate}[label=(\arabic*)]
+	\item $\mathfrak{sl}_n$ is the subalgebra of trace zero matrices. It is
+		associated with $\SL_n$.
+
+		Example: $\mathfrak{sl}_2$ is a $3$-dimensional $k$-vector space. It
+		has a standard basis given by
+		\[ e = \begin{pmatrix}0 & 1\\0 & 0\end{pmatrix},\qquad
+			f = \begin{pmatrix}0 & 0\\1&0\end{pmatrix},\qquad
+			h = \begin{pmatrix}1&0\\0&-1\end{pmatrix}. \]
+
+		We notice that  $[e, f] = h$, $[h, e] = 2e$, $[h, f] = -2f$.
+
+	\item $\mathfrak{so}_n$ is the subalgebra of skew-symmetric ($A + A^T = 0)$
+		matrices. It is associated with $\SO_n$, the special orthogonal group
+		(endomorphisms preserving an inner product).
+
+		Example: $\mathfrak{so}_3$ is a $3$-dimensional $k$-vector space. It
+		has a basis given by
+		\[ A_1 = \begin{pmatrix}0&0&0\\0&0&-1\\0&1&0\end{pmatrix},\quad
+			A_2 = \begin{pmatrix}0&0&1\\0&0&0\\-1&0&0\end{pmatrix},\quad
+				A_3 = \begin{pmatrix}0&-1&0\\1&0&0\\0&0&0\end{pmatrix}\]
+
+		We have $[A_1, A_2] = A_3$,  $[A_2, A_3] = A_1$, $[A_3, A_1] = A_2$.
+
+	\item $\mathfrak{sp}_{2n}$ is the subalgebra of matrices $A$, such that
+		$JA^TJ^{-1} + A = 0$ where $J$ has $-1$s on the lower-left half of the
+		antidiagonal and $1$s on the upper-right half of the antidiagonal. It
+		is associated with the group $\SP_{2n}$ preserving a non-degenerate
+		skew-symmetric bilinar form (also known as a symplectic form).
+
+	\item $\mathfrak{b}_n$ is the subalgebra of upper triangular matrices, also
+		called the Borel subalgebra and is associated with the inverted upper
+		triangular matrices.
+
+	\item $\mathfrak{n}_n$ is the subalgebra of strictly upper triangular matrices
+		with zeros on the leading diagonal. It is associated with the upper triangular
+		matrices with ones on the leading diagonal.
+\end{enumerate}
+
+We can also consider $\End_k(R)$, which are the $k$-linear maps $R\to R$, where
+$R$ is an associative algebra. If $\dim R = n$, then $\End(R) = M_n(k)$.
+ $\End(R)$ has a Lie subalgebra called $\Der(R)$ consisting of derivations.

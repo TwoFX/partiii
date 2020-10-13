@@ -1,0 +1,6 @@
+type: theorem
+label: HilbertBasisTheorem
+numbered: true
+section: false
+proofs:
+    proof: Proof

@@ -1,0 +1,26 @@
+Assume that $R$ is not noetherian. Let $\mathcal{S}$ be the collection of
+of non-finitely generated ideals of $R$. $\mathcal{S}$ is nonempty by assumption
+and partially ordered by inclusion. Furthermore, every chain of ideals in $\mathcal{S}$
+has an upper bound (indeed, the union of an increasing chain of ideals in $\mathcal{S}$
+is an ideal and not finitely generated, since otherwise all generators would lie in
+some member of the chain, which would then be finitely generated), so by Zorn's lemma
+there is a maximal member $I \in \mathcal{S}$. $I$ has the property that it is not
+finitely generated, but every ideal $J$ such that $I \subsetneq J$ is finitely
+generated.
+
+We will now show that $I$ is a prime ideal. Supppose $a$ and $b$ are such that
+$ab \in I$, $a \notin I$, $b \notin I$. Since $I$ is maximally non-finitely-generated,
+$I+Ra$ is finitely generated, say by $i_1 + r_1a, \cdots, i_1+r_na$. Define
+\[ J \coloneqq \set{s \in R\given sa \in I}. \]
+$J$ is an ideal, and it satisfies $I \subsetneq I+Rb \subseteq J$ (here we use
+that $ab \in I$). Again by maximality of $I$, $J$ is finitely generated.
+Therefore, if we can show that $I = Ri_1 + \cdots + Ri_n + Ja$, then $I$ is finitely
+generated, a contradiction.
+
+The inclusion \enquote{$\supseteq$} follows by definition of $J$, so let
+$t \in I \subseteq I + Ra$, so \[ t = u_1(i_1 + r_1a) + \cdots + u_n(i_n + r_na) \]
+for suitable $u_i \in R$. We may rewrite this as
+\[ t = u_1i_1 + \cdots + u_ni_n + (u_1r_1 + \cdots + u_nr_n)a. \]
+Since the whole right hand side is in $I$ and everything but the last summand
+is also in $I$, the last summand is in $I$, so $u_1r_1 + \cdots + u_nr_n \in J$
+by definition of $J$, so indeed $t \in Ri_1 + \cdots + Ri_n + Ja$ and we are done.

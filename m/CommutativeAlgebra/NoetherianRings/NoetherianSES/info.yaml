@@ -1,0 +1,7 @@
+type: lemma
+label: NoetherianSES
+numbered: true
+section: false
+proofs:
+    proof: Proof
+    alternative: Alternative Proof

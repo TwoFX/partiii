@@ -1,0 +1,7 @@
+type: lemma
+label: ZariskisLemma
+numbered: true
+section: false
+title: Zariski's lemma
+proofs:
+    proof: Proof
