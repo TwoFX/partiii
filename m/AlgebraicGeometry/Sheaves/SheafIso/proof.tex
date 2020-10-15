@@ -1,0 +1,33 @@
+\enquote{$\Longrightarrow$} is obvious.
+
+\enquote{$\Longleftarrow$}: Assume that $f_p$ is an isomorphism for all
+$p \in X$. Need to show that $f_U\colon \mathcal{F}U \to \mathcal{G}U$ is an
+isomorphism for all $U \subseteq X$, as then we can define $(f^{-1})_U = (f_U)^{-1}$.
+This defines a morphism of sheaves, as
+\begin{align*}
+	\rho_{UV}^{\mathcal{F}}\circ f_U^{-1} &= f_V^{-1}\circ f_V \circ \rho_{UV}^{\mathcal{F}} \circ f_U^{-1}\\
+	&= f_V^{-1} \circ \rho_{UV}^{\mathcal{G}}\circ f_U \circ f_U^{-1}\\
+	&= f_V^{-1} \circ \rho_{UV}^{\mathcal{G}}.
+\end{align*}
+
+We will first check that $f_U$ is injective. Suppose $s \in \mathcal{F}U$ and
+$f_U(s) = 0$. Then for all $p \in U$, we have $f_p(U, s) = (U, f_U(s)) = (U, 0) = 0 \in \mathcal{F}_p$.
+Since $f_p$ is injective, this means that $(U, s) = 0$ in $\mathcal{F}_p$. This
+means that there is an open neighborhood $V_p$ of $p$ in $U$ such that
+$s|_{V_p} = 0$. Since the sets $\set{V_p}_{p \in U}$ cover $U$, we see by
+sheaf axiom 1 that we have $s = 0$.
+
+Next, we will show that $f_U$ is surjective. Let $t \in \mathcal{G}U$ and write
+$t_p\coloneqq (U, t) \in \mathcal{G}_p$. Since $f_p$ is surjective, we find $s_p \in \mathcal{F}_p$
+with $f_p(s_p) = t_p$. This means that we find an open neighborhood $V_p \subseteq U$ of $p$
+and a germ $(V_p, s_p)$ such that $(V_p, f_{V_p}(s_p)) \sim (U, t)$. By
+shrinking $V_p$ if necessary wen can assume that $t|_{V_p} = f_{V_p}(s_p)$.
+
+Now on $V_p\cap V_q$, $f_{V_p\cap V_q}(s_p|_{V_p\cap V_q} - s_q|_{V_p\cap V_q}) = t_{V_p\cap V_q} - t|_{V_p\cap V_q} = 0$
+and hence by injectivity of $f_{V_p\cap V_q}$ already proved, we have $s_p|_{V_p\cap V_q} = s_q|_{V_p\cap V_q}$.
+By the second sheaf axiom, the $s_p$ glue to give an element $s \in \mathcal{F}U$ with
+$s|_{V_p} = s_p$ for every $p \in U$.
+
+Now $f_U(s)|_{V_p} = f_{V_p}(s|_{V_p}) = f_{V_p}(s_p) = t|_{V_p}$.
+By the first sheaf axiom applied to $f_U(s) - t$ we get $f_U(s) = t$. This shows
+surjectivity of $f_U$, completing the proof.

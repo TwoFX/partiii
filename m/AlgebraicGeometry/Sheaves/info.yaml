@@ -10,3 +10,8 @@ children:
 - MorphismOfPresheaves
 - Sheaf
 - SheafRemark
+- ExamplesOfSheaves
+- Stalk
+- SheafCategorically
+- SheafIso
+- Sheafification

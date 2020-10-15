@@ -1,0 +1,54 @@
+\begin{enumerate}
+	\item Let  $X$ be any topological space, $\mathcal{F}U$ the continuous functions $U\to \mathbb{R}$.
+
+		This is a sheaf: $\rho_{UV}\colon \mathcal{F}U\to \mathcal{F}V$ is just the restriction.
+
+		The first sheaf axiom says that a contiunous function is zero if it is zero on every open set
+		of cover.
+
+		The second sheaf axiom says that continuous functions can be glued.
+
+	\item Let $X = \mathbb{C}$ with the Euclidean topology.
+
+		Define $\mathcal{F}U$ to be the set of bounded analytic functions $f\colon U\to \mathbb{C}$.
+
+		This is a presheaf, since the restriction of bounded analytic functions is
+		bounded analytic. It also satisfies the first sheaf axiom. However, it does not
+		satisfy the second sheaf axiom.
+
+		For example, consider the cover $\set{U_i}_{i \in \mathbb{N}}$ of $\mathbb{C}$ given
+		by $U_i = \set{z \in \mathbb{C}\given \abs{z}<i}$. Define $s_i\colon U_i\to \mathbb{C}$
+		by $z\mapsto z$. Note that if $i < j$, then $U_i\cap U_j = U_i$ and
+		$s_i|_{U_i\cap U_j} = s_j|_{U_i\cap U_j}$. However, gluing yields the identity
+		function on $\mathbb{C}$, which is not bounded (note that complex analysis tells
+		us that $\mathcal{F}\mathbb{C} = \mathbb{C}$.
+
+		The underlying problem is that sheafs can only track properties that can be tested
+		locally.
+
+	\item Let $G$ be a group and set $\mathcal{F}U \coloneqq G$ for any open set $U$.
+		This is called the constant presheaf. This is in general not a sheaf (unless $G$ is trivial).
+
+		Take $U$ to be an disjoint union of open sets $U_1 \cup U_2$. If $\mathcal{F}U_1 = G$ and
+		$\mathcal{F}U_2 = G$, then we need $\mathcal{F}(U_1\cap U_2) = 0$.
+
+		If the second sheaf axiom was to be satisfied, we would want $s_1 \in \mathcal{F}U_1$ and
+		$s_2 \in \mathcal{F}U_2$ to glue, so we should have $\mathcal{F}U = G\times G$.
+
+		Now give $G$ the discrete topology, and define instead $\mathcal{F}U$ to be the set
+		of continuous maps $f\colon U\to G$. By our choice of topology, this means that $f$
+		is locally constant, i.e., for every $x \in U$ we have a neighborhood $V\subseteq U$ of $x$
+		such that  $f|_V$ is constant.
+
+		This is called the constant sheaf and if $U$ is nonempty and connected then
+		$\mathcal{F}U = G$.
+
+	\item If $X$ is an algebraic variety, $U \subseteq X$ a Zariski open subset, then
+		define $\mathcal{O}_X(U)$ to be the regular functions $f\colon U\to k$.
+
+		Roughly, $f$ regular means that every point of $U$ has an open neighborhood
+		on which $f$ is expressed as a ratio of polynomials $g/h$ with $h$
+		nonvanishing on the neighborhood.
+
+		$\mathcal{O}_X$ is a sheaf, called the structure sheaf of $X$.
+\end{enumerate}

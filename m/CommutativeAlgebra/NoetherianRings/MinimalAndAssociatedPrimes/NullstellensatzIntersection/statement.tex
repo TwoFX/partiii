@@ -1,0 +1,22 @@
+Recall that the Nullstellensatz gives a bijection between
+radical ideals $\mathbb{C}[X_1, \ldots, X_n]$ and algebraic subsets of
+$\mathbb{C}^n$.
+
+If $I$ is a radical ideal of $\mathbb{C}[X_1, \ldots, X_n]$, then
+$(a_1, \ldots, a_n)$ is a common zero of all $f \in I$ if and only if
+$I \subseteq (X_1 - a_1, \ldots, X_n-a_n)$\footnote{Indeed, if
+$\set{(a_1, \ldots, a_n)} \subseteq V(I)$, then
+$I = \sqrt{I} = I(V(I)) \subseteq I(\set{(a_1, \ldots, a_n)}) =
+(X_1 - a_1,\ldots, X_n-a_n)$. Conversely, if $I \subseteq (X_1 - a_1, \ldots
+X_n - a_n)$, then $\set{(a_1, \ldots, a_n)} \subseteq V(I)$. To see that
+$I(\set{(a_1, \ldots, a_n)}) = (X_1 - a_1, \ldots, X_n - a_n)$, note that
+\enquote{$\supseteq$} is clear, but the latter is maximal as we have seen
+before.}. Consider the ideal
+\[J\coloneqq \bigcap_{(a_1, \ldots, a_n) \in V(I)} (X_1-a_1, \ldots, X_n-a_n), \]
+
+This is a radical ideal (TODO: why?). The bijection in the Nullstellensatz
+tells us that $I=J$. Therefore, we may write any radical ideal as the
+intersection of maximal ideals it is contained in, which are all of the form
+$(X_1-a_1, \ldots, X_n-a_n)$ (as we already know).
+
+Furthermore, Hilbert's Nullstellensatz tells us that if $J \subseteq \mathbb{C}[X_1, \ldots, X_n]$ is an ideal, then $N(\mathbb{C}[X_1, \ldots, X_n]/J) = J(\mathbb{C}[X_1, \ldots, X_n]/J)$.

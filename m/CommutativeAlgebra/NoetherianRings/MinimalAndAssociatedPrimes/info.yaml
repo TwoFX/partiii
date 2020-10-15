@@ -9,3 +9,8 @@ children:
 - MinimalPrimePrep
 - MinimalPrimes
 - RadicalIsIntersectionOfMinimalPrimes
+- NullstellensatzIntersection
+- AssociatedPrime
+- AssQuot
+- Primary
+- TotalAnnihilation

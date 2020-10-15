@@ -1,0 +1,29 @@
+We define
+
+\[ \mathcal{F}^+U\coloneqq\set{(s_p) \in \prod_{p \in U} \mathcal{F}_p\given (\star)}, \]
+
+where $(\star)$ means that for every $p \in U$ there is some open neighborhood
+$p \in V \subseteq U$ and $s_{(V)} \in \mathcal{F}V$ such that for all $q \in V$
+we have $s_q = (V, s_{(V)}) \in \mathcal{F}_q$.
+
+This is obviously a presheaf with the obvious restriction maps, modulo
+the fact that we have not checked that $\mathcal{F}^+U$ is an abelian group.
+
+Let $s, t \in \mathcal{F}^+U$ such that there is an open cover $\set{U_i}$ such
+that $\forall i\colon s|_{U_i} = t|_{U_i}$. If $p \in U$, then $p \in U_i$ for
+some $i$. Then $s_p = (s|_{U_i})_p = (t|_{U_i})_p = t_p$, so  $s = t$.
+
+Next, let $U_i$ be a cover, $s_i \in \mathcal{F}^+U_i$ such that $\forall i, j\colon s_i|_{U_i\cap U_j}=s_j|_{U_i\cap U_j}$.
+Given $p \in U$, define $s_p\coloneqq (s_i)_p$ for $p \in U_i$. This is well-defined
+because of the compatibility condition. Let $p \in U$. Then $s_p = (s_i)_p$ for
+some $i$, and so we find an open neighborhood of $p$ in $U_i \subseteq U$ satisfying
+the needed condition. This shows that $\mathcal{F}^+$ is a sheaf.
+
+Now define
+\[ \theta_U\colon \mathcal{F}U\to \mathcal{F}^+U;\qquad s\mapsto ((U, s) \in \mathcal{F}_p)_{p \in U}. \]
+
+We should check that $\theta_U$ is a homomorphism of groups.
+
+If $V \subseteq U$ and $p \in V$ we have
+\[ (\rho_{UV}(\theta_U(s)))_p = (\theta_U(s))_p = (U, s) = (V, s|_V) = \theta_V(\rho_{UV}(s))_p, \]
+so $\theta$ is a morphism.
