@@ -1,6 +1,6 @@
 type: lemma
 label: SolubleQuotient
-numbered: false
+numbered: true
 section: false
 proof:
     proof: Proof
