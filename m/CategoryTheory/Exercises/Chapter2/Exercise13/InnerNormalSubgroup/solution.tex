@@ -1,0 +1,18 @@
+Let $F, G\colon \mathcal{C}\to \mathcal{C}$ be automorphisms and let
+$\alpha\colon F\to 1_{\mathcal{C}}$ be a natural isomorphism.
+
+Let $A \in \mathcal{C}$. Define $\beta\colon GFG^{-1} \to 1_A$ via
+$\beta_A\coloneqq G(\alpha_{G^{-1}A})$ (so $\beta_A\colon GFG^{-1}A \to GG^{-1}A = A \to GG^{-1}A = 1_{\mathcal{C}}A$.
+
+This is indeed a natural transformation: let $f\colon A\to B \in \mathcal{C}$,
+then we can write the naturality square in a funny way,
+\[\begin{tikzcd}[row sep=1.7cm, column sep=1.7cm]
+	GFG^{-1}A \ar[r, "G(\alpha_{G^{-1}A})"]\ar[d, "GFG^{-1}(f)"] & G1_CG^{-1}A\ar[d, "G1_CG^{-1}f"]\\
+	GFG^{-1}B\ar[r, "G(\alpha_{G^{-1}B})"] & G1_CG^{-1}B
+\end{tikzcd}\]
+and we see that it is just the functor $G$ applied to the naturality diagram for
+$\alpha$ and the morphism $G^{-1}f$.
+
+Therefore, $\beta$ is a natural transformation, and since functors map isomorphisms
+to isomorphisms, it is also a natural isomorphism. So $GFG^{-1}$ is an inner
+automorphism as required.

@@ -1,0 +1,22 @@
+Of course, the terminal object in the category of sets is just the one-element set
+$1 = \set{\star}$.
+
+We define a natural transformation $\alpha\colon 1_{\mathsf{Set}}\to \mathsf{Set}(1,{-})$
+by setting \[ \alpha_A(a)(\star)\coloneqq a. \]
+The naturality square for $f\colon A\to B$ is
+\[\begin{tikzcd}
+	A\ar[r, "\alpha_A"]\ar[d, "f"] & \mathsf{Set}(1, A)\ar[d, "g\mapsto f \circ g"]\\
+	B\ar[r, "\alpha_B"] &\mathsf{Set}(1, B)
+\end{tikzcd}\]
+Both paths are just $a \mapsto (\star \mapsto f(a))$, so $\alpha$ is natural.
+It is also clear that $\alpha_A$ is bijective, so $\alpha$ is a natural isomorphism.
+
+In particular, this tells is that the collection of natural transformations
+\[ 1_{\mathsf{Set}} \to F \]
+is in bijection with the collection of natural transformation
+\[ \mathsf{Set}(1, {-}) \to F. \]
+This in turn, by the Yoneda lemma, is in bijection with $F1$, which is a terminal
+object, hence in bijection with $1$, so we conclude that there is precisely one
+natural transformation $1_{\mathsf{Set}} \to F$.
+
+TODO: Show that this is a natural isomorphism.

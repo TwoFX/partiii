@@ -1,0 +1,9 @@
+type: subsection
+label: Exercise13
+numbered: false
+section: true
+title: Exercise 13
+children:
+- InnerNormalSubgroup
+- TerminalAutomorphism
+- UniqueNatural
