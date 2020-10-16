@@ -3,3 +3,5 @@ label: Lie
 numbered: true
 section: false
 title: Lie
+proofs:
+    proof: Proof

@@ -1,0 +1,42 @@
+Let $p \in X$. Of course, $(\mathcal{F}^+)_p$ and $\mathcal{F}_p$
+cannot be literally equal. Instead, we show the following more precise
+statement: The map $\theta_p\colon \mathcal{F}_p \to \mathcal{F}^+_p$ is an
+isomorphism.
+
+Indeed, we define $g_p\colon \mathcal{F}^+_p \to \mathcal{F}_p$ as follows:
+for an open $U$ and $s \in \mathcal{F}^+U$ we define $g_p(s_p)\coloneqq s(p)$.
+This is well-defined because sections $s \in \mathcal{F}^+U$,
+$t \in \mathcal{F}^+V$
+that have the same germ at $p$ must satisfy $s|_W = t|_W$ for some $W$ that contains
+$p$, so  $s(p) = s|_W(p) = t|_W(p) = t(p)$.
+
+Next, let $U$ be an open and $s \in \mathcal{F}_p^+$. By definition of $\mathcal{F}^+$,
+there is some $p \in V_p \subseteq U$ open, $s_{V_p} \in \mathcal{F}V_p$ such that
+for all $q \in V_p$ we have $(s_{V_p})_q = s(q)$. This is equivalent to saying
+that $s|_{V_p} = \theta_{V_p}(s_{V_p})$, so in particular, in $\mathcal{F}_p^+$, we have
+$s_p = (\theta_{V_p}(s_{V_p}))_p$. This lets us calculate
+\[ \theta_p(g_p(s_p)) = \theta_p(s(p)) = \theta_p((s_{V_p})_p) = (\theta_{V_p}(s_{V_p}))_p = s_p, \]
+so we have $\theta_p \circ g_p = \id_{\mathcal{F}^+_p}$.
+
+Next, let $U$ be an open and $s \in \mathcal{F}U$. Then we have
+\[ g_p(\theta_p(s_p)) = g_p(\theta_U(s)_p) = g_p((q\mapsto s_q)_p) = (q\mapsto s_q)(p) = s_p, \]
+so $g_p \circ \theta_p = \id_{\mathcal{F}_p}$, and $\theta_p$ is an isomorphism as required.
+
+Next, let $\mathcal{F}$ and $\mathcal{G}$ be presheaves and let $\theta\colon \mathcal{F}\to \mathcal{F}^+$
+and $\iota\colon \mathcal{G}\to \mathcal{G}^+$ denote the natural maps to
+the associated sheaf. If $f\colon \mathcal{F}\to \mathcal{G}$ is a map of presheaves,
+we can invoke the universal property of $\mathcal{F}^+$ on the composite
+$\iota \circ f$ and find a morphism
+$f^+\colon \mathcal{F}^+ \to \mathcal{G}^+$ making the diagram
+\[\begin{tikzcd}[row sep=1.5cm, column sep=1.5cm]
+	\mathcal{F}\ar[r, "\theta"]\ar[d, "f"] & \mathcal{F}^+\ar[d, densely dotted, "f^+"]\\
+	\mathcal{G}\ar[r, "\iota"] & \mathcal{G}^+
+\end{tikzcd}\]
+commute.
+
+On stalks, we have
+\[ f_p^+ \circ \theta_p = (f^+ \circ \theta)_p = (\iota \circ f)_p = \iota_p \circ f_p, \]
+and since $\theta_p$ is an isomorphism, we have
+\[ f_p^+ = \iota_p \circ f_p \circ \theta_p^{-1}, \]
+which is how we should interpret the \enquote{equality} $(f^+)_p = f_p$ under the
+natural identifications $\theta_p$ and $\iota_p$.

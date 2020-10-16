@@ -1,7 +1,6 @@
-type: theorem
-label: Engel
+type: lemma
+label: NilpotentInEndomorphisms
 numbered: true
 section: false
-title: Engel
 proofs:
     proof: Proof

@@ -1,0 +1,45 @@
+We proceed by induction on $\dim \mathfrak{L}$.
+
+Assume first that $\dim \mathfrak{L} = 1$, i.e., $\mathfrak{L} = \langle x\rangle$.
+Since $x$ is nilpotent, then $x$ has eigenvalue $0$, so there is $v\neq 0$ such that
+$x(v) = 0$. Since $x$ spans $\mathfrak{L}$, we have $\mathfrak{L}(v) = 0$.
+
+Next, assume that $\dim \mathfrak{L} > 1$. We will first show that $\mathfrak{L}$
+satisfies the idealiser condition. Let $A \subsetneq \mathfrak{L}$ be a proper
+Lie subalgebra. Consider $\rho\colon A\to \End \mathfrak{L}$ given by
+$a\mapsto \ad(a) = (x \mapsto [a, x])$, the restriction of the adjoint representation
+of $\mathfrak{L}$ to $A$. Since $A$ is a subalgebra, there is a representation
+$\overline{\rho}\colon A\to \End(L/A)$ given by $a\mapsto \overline{\ad(a)} = (x + A\mapsto [a, x] + A)$.
+This is indeed a representation, because $A$ is a subalgebra.
+
+By (2.17) we know that if $a$ is nilpotent, then so is $\ad(a)$, which implies that
+$\overline{\ad(a)}$ is also nilpotent. Note that $\dim \overline{\rho}(A)\leq\dim A<\dim \mathfrak{L}$.
+
+By the inductive hypothesis, we find $0 \neq x' \in L/A$ such that
+$\forall f \in \overline{\rho}(A)\colon f(x') = 0$. In other words, we find
+$x \in L\setminus A$ such that for all $a \in A$ we have
+\[ \overline{\rho}(a)(x + A) = A. \]
+By definition of $\overline{\rho}$, this just means that $[a, x] \in A$
+for all $a \in A$, which implies that $[x, a] \in A$ for $a \in A$.
+Therefore, $x \in \Id_L(A) \setminus A$ and the idealiser condition is indeed
+satisfied.
+
+Now, if $M$ is a maximal proper subablgra of $\mathfrak{L}$, then
+$\Id_{\mathfrak{L}}(M) = \mathfrak{L}$ by maximality of $M$. This just means
+that $M$ is an ideal of $\mathfrak{L}$. This means that $\mathfrak{L}/M$ is a Lie
+algebra and the maximality of $M$ forces $\dim(\mathfrak{L}/M) = 1$, because every
+Lie algebra has subalgebras of dimension $1$ (indeed, the span of any nonzero element
+is one) and these can be pulled back to Lie subalgebras in between $M$ and $\mathfrak{L}$.
+
+This means that $\mathfrak{L} = \langle M, x\rangle$ for some $x \in \mathfrak{L}$.
+
+Consider $U\coloneqq \set{u \in V\given M(u) = 0}$. By the inductive hypothesis,
+since $\dim M < \dim \mathfrak{L}$, we know that $U\neq 0$.
+
+Let $u \in U$ and $m \in M$. Then $m(x(u)) = ([m, x] + x \circ m)(u) = 0$, since
+$m \in M$ and $[m, x] \in M$ as $M$ is an ideal.
+So $x(u) \in U$ for all $u \in U$. This means that $x$ restricts to a nilpotent endomorphism
+of $U$ and so has an eigenvector $0\neq v \in U$ with $x(v) = 0$ (every eigenvector
+of a nilpotent endomorphism must be zero). But $v \in U$ and so $M(v) = 0$.
+As $\mathfrak{L}$ is the span of $M$ and $x$, it follows that $\mathfrak{L}(v) = 0$
+as required.

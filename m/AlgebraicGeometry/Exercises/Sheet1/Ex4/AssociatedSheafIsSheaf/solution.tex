@@ -1,0 +1,19 @@
+$\mathcal{F}^+U$ is an abelian group with pointwise addition, as the sum
+of $s, t \in F^+U$ still satisfies $(\star)$ by taking the intersection of the
+$V_p$ obtained from $s$ and $t$.
+
+It is obvious that $\mathcal{F}^+$ is a presheaf.
+
+Next, let $s \in \mathcal{F}^+U$ and $\set{U_i}$ an open cover such that
+ $\forall i, s|_{U_i} = 0$. Let $p \in U$.  Then $p \in U_i$ for some $i$ and
+ we have $s(p) = (s|_{U_i})(p) = 0$, so $s = 0$, so the identity axiom is satisfied.
+
+Next, let $\set{U_i}_{i \in I}$ be a cover, $s_i \in \mathcal{F}^+U_i$ such that
+$\forall i, j\colon s_i|_{U_i\cap U_j} = s_j|_{U_i\cap U_j}$. Given $p \in U$,
+define $s(p)\coloneqq s_i(p)$ for $p \in U_i$. This is well-defined because of
+the compatibility condition. We need to show that $s \in \mathcal{F}^+U$. Indeed,
+let $p \in U$. Then $s(p) = s_i(p)$ for some $i$, and since $s_i \in \mathcal{F}^+U_i$
+and taking stalks is compatible with restrictions, we get a neighborhood that
+satisfies the required condition.
+It remains to show that for all $i$, $s|_{U_i} = s_i$, but that is true by
+definition.

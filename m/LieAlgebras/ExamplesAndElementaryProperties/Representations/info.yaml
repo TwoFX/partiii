@@ -27,3 +27,6 @@ children:
 - Lie
 - CorollaryOfEngelAndLie
 - AnotherCorollary
+- Idealiser
+- IdealiserRemark
+- NilpotentInEndomorphisms

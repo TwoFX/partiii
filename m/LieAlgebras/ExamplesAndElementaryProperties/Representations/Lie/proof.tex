@@ -1,0 +1,68 @@
+Again, we use induction on $\dim \mathfrak{L}$.
+
+If $\dim \mathfrak{L} = 1$, then we can use the fact that $k$ is algebraically
+closed to find an eigenvector of $x$ such that $\mathfrak{L} = \langle x\rangle$,
+and we are done.
+
+Next, assume that $\dim \mathfrak{L} > 1$ and suppose the the theorem is true
+for all soluble Lie subalgebras of $\End W$ of smaller dimension.
+
+Since $\mathfrak{L} \neq 0$ and $\mathfrak{L} $ is soluble, we have
+$\mathfrak{L}^{(1)}\subsetneq \mathfrak{L}$. Let $M$ be a maximal Lie
+subalgebra containing $\mathfrak{L}^{(1)}$. Then $M$ is an ideal of $\mathfrak{L}$
+(since $[x, y] \subseteq [\mathfrak{L}, \mathfrak{L}] \subseteq M$) and
+$\dim L/M = 1$ (as seen in the proof of Engel's theorem). Again, pick $x \in \mathfrak{L}$
+such that $\mathfrak{L}$ is the span of $M$ and $x$.
+By induction, we find $0\neq u \in V$ such that
+$\forall m \in M\colon m(u) = \lambda_mu$. Notice that the map
+$\lambda\colon M\to k$ given by $m\mapsto \lambda_m$ is linear.
+
+Let $u_0\coloneqq u$ and inductively set $u_{i+1}\coloneqq x(u_i)$. Define
+$U_i\coloneqq \langle u_0, \ldots, u_i\rangle$. Let $n$ be the smallest natural
+number such that  $u_0, \ldots, u_n$ are linearly dependent.
+
+We will now prove that if $m \in M$ and $i < n$, then
+$m(u_i) \equiv \lambda_mu_i\pmod{U_{i-1}}$.
+Note that this implies $M(U_i) \subseteq U_i$.
+
+We prove this by induction on $i$. It is true for $i = 0$ by definition.
+
+Next, assume it is true for $i > 0$ and $M(U_i) \subseteq U_i$. If
+$m(u_i) \equiv \lambda_mu_i\pmod{U_{i-1}}$,
+then $x(m(u_i)) \equiv \lambda_m x(u_i) = \lambda_m u_{i+1} \pmod{U_i}$ (just write out the previous
+relation and apply $x$ to both sides).
+
+Therefore,
+\[ m(u_{i+1}) = m(x(u_i)) = ([m, x] + x \circ m)(u_i) \equiv \lambda_mu_{i+1}\pmod{U_1}, \]
+using the previous calculation and the fact that $[m, x] \in M$ (since $M$ is
+an ideal) and $M(U_i) \subseteq U_i$. This completes the proof of the claim.
+
+Using the claim, we see that $M(U_{n - 1}) \subseteq U_{n-1}$.  On the other hand,
+$x(U_{n-1}) \subseteq U_{n-1}$. This means that $\mathfrak{L}(U_{n-1} \subseteq U_{n-1}$,
+but we halso have $x(U_{n-1} \subseteq U_{n-1}$
+(by linear dependence of $u_0, \ldots, u_n$). Moreover, with respect to the basis
+$u_0, \ldots, u_{n-1}$, the action of $M$ is represented by upper triangular
+matrices (since $M(U_i) \subseteq U_i$ with diagonal entries $\lambda_m$ (by the
+formula modulo $U_{i-1}$. In particular, this is true for
+$m \in \mathfrak{L}^{(1)} \subseteq M$.
+
+But matrices representing elements of $\mathfrak{L}^{(1)}$ must have trace $0$
+(since $\tr XY = \tr YX$). So $n\lambda_m = 0$ for $m \in \mathfrak{L}^{(1)}$.
+Since $\chr k = 0$, we conclude that $\lambda_m = 0$ for $m \in \mathfrak{L}^{(1)}$.
+
+We now claim that for $i < n$ and $m \in M$ we actually have $m(u_i) = \lambda_m u_i$
+(compare this to the previous claim).
+
+We will prove this again by induction (again the base case is trivial). For the
+inductive step, assume that $m(u_i) = \lambda_m u_i$ for all $m \in M$.
+
+Then \[m(u_{i+1}) = m(x(u_i)) = ([m, x] + x \circ m)(u_i) = x(m(u_i)) = \lambda_m u_{i+1} \]
+because $\lambda$ is linear and $\lambda_{[m, x]} = 0$, finishing the proof of the
+claim.
+
+So now we know that $m(w) = \lambda_mw$ for all $m \in M$ and $w \in U_{n-1}$.
+On the other hand, $x(U_{n-1}) \subseteq U_{n-1}$ (by linear dependence). Choose an
+eigenvector $0\neq v \in U_{n-1}$ of the restriction of $x$ to $U_{n-1}$, say
+$x(v) = \lambda_x v$. Thus $v$ is a common eigenvector for $M$ (see beginning
+of this paragraph) and $x$, and therefore for all of  $\mathfrak{L}$, since $\mathfrak{L}$
+is spanned by $M$ and $x$. This completes the proof.

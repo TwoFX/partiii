@@ -1,0 +1,36 @@
+Let $U$ be an open and let $s \in \mathcal{F}^+U$.
+Cover $U$ with the $V_p$ from the definition of $\mathcal{F}^+$
+and obtain the associated $s_{V_p} \in \mathcal{F}V_p$. Define
+$t_{V_p} \coloneqq \varphi_{V_p}(s_{V_p}) in \mathcal{G}V_p$. We can calulate that
+for $q \in V_p$ we have
+\[ (t_{V_p})_q = (\varphi_{V_p}(s_{V_p}))_q = \varphi_q((s_{V_p})_q) = \varphi_q(s(q)). \]
+Therefore, Lemma 2 gives us a unique $t_U \in \mathcal{G}_U$ such that
+\begin{equation}\tag{$\star$}
+	\forall q \in U\colon (t_U)_q = \varphi_q(s(q)).
+\end{equation}
+We define $\varphi^+_U(s) = t_U$.
+
+This is indeed a morphism of sheaves: if $V \subseteq U$ and $s \in \mathcal{F}^+U$,
+then
+\[ \varphi^+(s|_V) = \varphi^+(s)|_V \]
+follows from the fact that, using $(\star)$, the germ of both sides at $p \in V$
+is just $\varphi_p(s(p))$. By Lemma 1, the two sides are equal.
+
+Similarly, if $s \in \mathcal{F}U$ and $p \in U$, then
+\[ (\varphi^+_U\theta_U(s))_p \stackrel{(\star)}{=} \varphi_q(\theta(s)(q)) = \varphi_q(s_q) = (\varphi_U(s))_q, \]
+so $\varphi^+_U \circ \theta_U = \varphi_U$ by Lemma 1, so
+$\varphi^+ \circ \theta = \varphi$.
+
+Finally, to see uniqueness, assume that $\varphi^\#$ satisfies
+ $\varphi^\# \circ \theta = \varphi$. Let $s \in \mathcal{F}^+U$ and $p \in U$.
+By definition of $\mathcal{F}^+$ there is $p \in V_p \subseteq U$, $s_{V_p} \in \mathcal{F}V_p$
+such that $\forall q \in V_p\colon (s_{V_p})_q = s(q)$. The condition can be
+reprased as $s|_{V_p} = \theta(s_{V_p})$ and we calculate
+\begin{align*}
+	(\varphi^\#_U(s))_p &= (\varphi_U^\#(s)|_{V_p})_p
+= (\varphi_{V_p}^\#(s|_{V_p}))_p
+= (\varphi_{V_p}^\#(\theta(s_{V_p})))_p\\
+	&= (\varphi_{V_p}^+(\theta(s_{V_p})))_p = \ldots = (\varphi^+_U(s))_p,
+\end{align*}
+so by Lemma 1, we have $\varphi^+_U = \varphi^\#_U$, so $\varphi^+ = \varphi^\#$,
+completing the proof of uniqueness.

@@ -1,0 +1,14 @@
+type: subsection
+label: Ex4
+numbered: false
+section: true
+title: Exercise 4
+children:
+- StalkNotation
+- AssociatedSheaf
+- AssociatedSheafIsSheaf
+- Inclusion
+- Lemma1
+- Lemma2
+- Factor
+- Stalks
