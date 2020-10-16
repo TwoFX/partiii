@@ -1,0 +1,8 @@
+type: proposition
+label: InjectivityOnStalks
+numbered: false
+section: false
+proofs:
+  proof: Proof
+children:
+- ImCoker

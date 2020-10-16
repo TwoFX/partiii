@@ -1,0 +1,10 @@
+If $f\colon \mathcal{F}\to \mathcal{G}$ is a morphism of sheaves, then $\ker f$ is
+also a sheaf. The identity axiom is certainly satisfied: If $s \in (\ker f)(U) \subseteq \mathcal{F}U$
+satisfies $s|_{U_i} = 0$ for all $U_i$ in a cover of $U$, then we use the identity axiom
+for $\mathcal{F}$ to find that $s = 0$.
+
+Given $s_i \in (\ker f)(U_i)$ with $\set{U_i}$ an open cover of $U$, and with
+$s_i|_{U_i\cap U_j} = s_j|_{U_i\cap U_j}$, then we find $s \in \mathcal{F}U$ with
+$s|_{U_i} = s_i$. But $f_U(s) = 0$ since
+\[ f_U(s)|_{U_i} = f_{U_i}(s|_{U_i}) = f_{U_i}(s_i) = 0, \]
+and we can use the identity axiom to conclude that $f_U(s) = 0$.

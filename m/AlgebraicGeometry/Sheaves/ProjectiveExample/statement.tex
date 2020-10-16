@@ -1,0 +1,19 @@
+Let $X = \mathbb{P}^1$ (or think of the Riemann sphere). Let $P, Q \in X$ be distinct
+points. Let $\mathcal{G}$ be the sheaf of regular functions on $X$ (alternatively, think
+of holomorphic functions on the Riemann sphere). Next, let $\mathcal{F}$ be the sheaf
+of regular functions which vanish on $P$ and $Q$. Notice that
+$\mathcal{F}U = \mathcal{G}U$ if $U\cap \set{P, Q} = \varnothing$.
+
+Let $U \coloneqq \mathbb{P}^1\setminus\set{P}$, $V = \mathbb{P}^1\setminus\set{Q}$.
+
+Note that $\mathcal{F}(\mathbb{P}^1) = 0$, $\mathcal{G}(\mathbb{P}^1) = k$,
+because regular functions on $\mathbb{P}^1$ are constants. Let
+$f\colon \mathcal{F}\to \mathcal{G}$ be the inclusion.
+
+Then $(\coker f)(\mathbb{P}^1) \cong k$, $(\coker f)(U) = \mathcal{G}U/\mathcal{F}U = k[X]/(X) \cong k$a,
+$(\coker f)(V) \cong k$. However, $(\coker f)(U\cap V) = \mathcal{G}(U\cap V)/\mathcal{F}(U\cap V) \cong 0$.
+
+Therefore, if the gluing axiom held, then we could need to have
+\[ (\coker f)(\mathbb{P}^1) \cong k\oplus k. \]
+
+Note that this failure to be a sheaf is not a bug, but a feature!

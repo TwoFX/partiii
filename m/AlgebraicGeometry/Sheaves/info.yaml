@@ -15,3 +15,11 @@ children:
 - SheafCategorically
 - SheafIso
 - Sheafification
+- Kernel
+- KernelForSheaf
+- ProjectiveExample
+- SheafKernel
+- SheafImageExercise
+- InjectiveMorphism
+- KernelsCokernelsStalks
+- InjectivityOnStalks

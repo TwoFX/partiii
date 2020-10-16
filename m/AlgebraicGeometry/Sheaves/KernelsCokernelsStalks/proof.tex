@@ -1,0 +1,37 @@
+We first define a map $(\ker f)_p \to \ker f_p$. If $(U, s) \in (\ker f)_p$, then
+$(U, s) \in \mathcal{F}_p$ then $(U, s) \in \mathcal{F}_p$ and
+\[ f_p(U, s) = (U, f_U(s)) = (U, 0) = 0 \in \mathcal{G}_p. \]
+Therefore, $(U, s) \in \ker f_p$.
+
+We will check injectivity and surjectivity of this map.
+
+For injectivity, assume that $(U, s) = 0$ in $\mathcal{F}_p$, then there is
+$V \subseteq U$ of $p$ such that $s|_V = 0$. Then we also have the equality
+\[ (U, s) = (V, s|_V) = (V, 0) = 0 \]
+in  $(\ker f)_p$.
+
+For surjectivity, assume that $(U, s) \in \ker f_p$. This means that
+ $(U, f_U(s)) = 0$ in $\mathcal{G}_p$, so there is $p \in V \subseteq U$ such
+ that $0 = f_U(s)|_V = f_V(s|_V)$. Thus, $s|_V \in (\ker f)(V)$, and
+ $(V, s|_V) \in (\ker f)_p$, and $(V, s|_V)$ maps to the element in $\ker f_p$
+ represented by $(U, s)$.
+
+For images: Let $\im' f$ be the presheaf image.
+
+From the exercises we know that $\theta_p\colon \mathcal{F}_p \to \mathcal{F}^+_p$ is
+an isomorphism for every $p$.
+
+Therefore $(\im f)_p \cong (\im' f)_p$, so we need to show that
+$(\im' f)_p \cong \im f_p$. Define a map
+$(\im' f)_p \to \im f_p$ by
+\[ (U, s)  \in (\im' f)_p \mapsto (U, s) \in \im f_p. \]
+
+Once again, we will check that this is injective and surjective.
+
+For injectivity: if $(U, s) = 0$ in $\mathcal{G}_p$ then there is a neighborhood
+$V \subseteq U$ of $p$ such that $s|_V = 0$. Then $(U, s) = (V, 0)$ in $(\im' f)_p$.
+
+For surjectivity: if $(U, s) \in \im f_p$, then there is
+$(V, t) \in \mathcal{F}_p$ with $(V, f_V(t)) = f_p(V, t) = (U, s)$, so after
+shrinking $U$ and $V$ if necessary, then we can take $U = V$ and
+$f_U(t) = s$. Then $(U, s) \in (\im' f)_p$.
