@@ -1,1 +1,21 @@
-Exercise (TODO). For (i) note that $\tr ([a, b]c) = \tr(a[b, c])$ for $a, b, c \in \End V$.
+Symmetry follows from $\tr x \circ y = \tr y \circ x$. Bilinearity is
+immediate.
+
+For $x, y, z \in \mathfrak{L}$, we have
+\begin{align*}
+	\vspan{[x, y], z} &= \tr(\rho([x, y]) \circ \rho(z))\\
+	&= \tr([\rho(x), \rho(y)] \circ \rho(z))\\
+	&= \tr(\rho(x)\circ\rho(y)\circ\rho(z)) - \tr(\rho(y)\circ\rho(x)\circ\rho(z))\\
+	&= \tr(\rho(x)\circ\rho(y)\circ\rho(z)) - \tr(\rho(x)\circ\rho(z)\circ\rho(y))\\
+	&= \tr(\rho(x) \circ [\rho(y), \rho(z)])\\
+	&= \tr(\rho(x) \circ \rho([y, z]))\\
+	&= \vspan{x, [y, z]},
+\end{align*}
+so the trace form is invariant\footnote{Note that we even have $\vspan{[x, y], z} = 0 = \vspan{x, [y, z]}$.}.
+This completes the proof of (i).
+
+Next, let $J$ be a Lie ideal. Let $x \in J^\perp$, $y \in \mathfrak{L}$.
+We will show that $[x, y] \in J^\perp$. Indeed, let $z \in J$.
+Then  $[y, z] = -[z, y] \in J$ since $J$ is a Lie, ideal. But then
+$\vspan{[x, y], z} = \vspan{x, [y, z]} = 0$ since $x \in J^\perp$ and we are
+done.
