@@ -30,3 +30,11 @@ children:
 - Idealiser
 - IdealiserRemark
 - NilpotentInEndomorphisms
+- ChainOfSubspaces
+- MaximalFlag
+- SumOfSoluble
+- Radical
+- Semisimple
+- Levi
+- LeviDecomposition
+- LeviExamples

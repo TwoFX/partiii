@@ -1,0 +1,53 @@
+\begin{enumerate}
+	\item $\mathfrak{L} = \mathfrak{gl}_2$.
+		Then $R(\mathfrak{L}) = Z(L)$, where $Z(L)$ are the matrices of the form
+		$\lambda I$. Indeed, $\mathfrak{L}/R(\mathfrak{L})\cong \mathfrak{sl}_2$
+		is semisimple (TODO: why?)
+
+		By Levi's theorem, we find that $\mathfrak{L} = \mathfrak{sl}_2 + Z(\mathfrak{L})$,
+		and $\mathfrak{sl}_2$ is the Levi subalgebra of $\mathfrak{gl}_2$.
+
+	\item
+		Let $\mathfrak{L}$ be the subalgebra of $\mathfrak{gl}_4$ consisting of
+		matrices of the form
+		\[
+			\begin{pmatrix}
+				\mathfrak{sl}_2 & \star\\0&\mathfrak{sl}_2
+			\end{pmatrix}.
+			\]
+
+		Then $R(\mathfrak{L})$ consists of matrices of the form
+		\[
+			\begin{pmatrix}
+				0 & \star\\0 & 0
+			\end{pmatrix}.
+			\]
+
+		This is soluble, and in fact nilpotent. The Levi subalgebra consists
+		of matrices of the form
+		\[
+			\begin{pmatrix}
+				\mathfrak{sl}_2&0\\0&\mathfrak{sl}_2
+			\end{pmatrix}.
+			\]
+		So $\mathfrak{L}_1\cong \mathfrak{sl}_2\times \mathfrak{sl}_2$.
+
+	\item
+		Let $\mathfrak{L}$ be the subalgebra of $\mathfrak{gl}_4$ consisting of
+		matrices of the form
+		\[
+			\begin{pmatrix}
+				\mathfrak{gl}_2 & \star\\0&\mathfrak{gl}_2
+			\end{pmatrix}.
+			\]
+
+		Then $R(\mathfrak{L})$ consists of matrices of the form
+		\[
+			\begin{pmatrix}
+				\lambda I & \star\\0 & \mu I
+			\end{pmatrix}, \]
+		which is soluble but not nilpotent.
+
+		Now we have $\mathfrak{L}/R(\mathfrak{L}) \cong \mathfrak{gl}_2/\set{\lambda I}\times \mathfrak{gl}_2/\set{\mu I} \cong \mathfrak{sl}_2\times \mathfrak{sl}_2$.
+		So the Levi subablegra is the same as in the previous example.
+\end{enumerate}

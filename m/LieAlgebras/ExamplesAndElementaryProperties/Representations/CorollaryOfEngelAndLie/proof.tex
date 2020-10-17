@@ -1,1 +1,15 @@
-Follows from the fact that $\mathfrak{n}_n$ is nilpotent.
+We will prove both parts at the same time by induction on $\dim V$.
+
+By (2.12) and (2.13) we can pick a common eigenvector $v_1$ of $\mathfrak{L}$.
+
+Then  $\mathfrak{L}(\vspan{v_1}) \subseteq \vspan{v_1}$. Define
+$V_1\coloneqq \vspan{v_1}$.
+Define $\overline{\mathfrak{L}}\coloneqq \set{\overline{x}\given x \in \mathfrak{L}} \subseteq \End (V/V_1)$
+where $\overline{x}(v + V_1) = x(v) + V$ for  $x \in \mathfrak{L}, v \in V$.
+This definition makes sense because $V_1$ is invariant under the action of $\mathfrak{L}$.
+
+$\overline{L}$ inherits the properties of $\mathfrak{L}$. By the inductive hypothesis,
+$\overline{\mathfrak{L}}$ is represented by (strictly) upper triangular matrices
+with regard to the basis $v_2 + V_1, \ldots, v_n + V_2$ of $V/V_1$. Then
+$v_1, \ldots, v_n$ is a basis of $V$ with respect to which $\mathfrak{L}$ is represented
+by (strictly) upper triangular matrices .

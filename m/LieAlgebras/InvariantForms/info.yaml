@@ -1,0 +1,12 @@
+type: chapter
+label: InvariantForms
+numbered: true
+section: true
+title: 'Invariant forms and the Cartan-Killing criteria '
+children:
+- Invariant
+- InvariantFromRepresentation
+- TraceFormProperties
+- TraceFormsAreNotAllInvariantForms
+- CartanCriterion
+- CartanKillingCriterion
