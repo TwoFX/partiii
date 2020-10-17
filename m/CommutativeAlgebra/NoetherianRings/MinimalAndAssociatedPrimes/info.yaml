@@ -14,3 +14,11 @@ children:
 - AssQuot
 - Primary
 - TotalAnnihilation
+- AssociatedPrimesExist
+- PrimeSeries
+- SubmoduleAnnihilator
+- FinitelyManyAssociatedPrimes
+- MinimalIsAssociated
+- AssociatedNotMinimal
+- PrimaryDecomposition
+- PrimaryDecompositionRemark

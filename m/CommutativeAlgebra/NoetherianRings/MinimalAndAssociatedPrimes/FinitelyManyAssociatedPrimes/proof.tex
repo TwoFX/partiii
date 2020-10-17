@@ -1,0 +1,11 @@
+Take a chain
+\[ M_0 = 0 \subsetneq M_1 \subsetneq M_2 \subsetneq \cdots \subsetneq M_t = M. \]
+such that $M_{i+1}/M_i \cong R/p_i$ for $i\geq 0$.
+
+We will show inductively that $M_{i+1} = 0$ for $i \geq 0$. Indeed, if
+$i = 0$, then $M_i \cong R/p_0$, and we have previously calculated that
+$\Ass(R/p_0) = \set{p_0}$.
+
+If $i > 0$, then $M_i$ is a submodule of $M_{i+1}$. By the previous lemma,
+we have $\Ass(M_{i+1}) \subseteq \Ass(M_i) \cup \Ass(M_{i+1}/M_i)$. The former
+is finite by the inductive hypothesis, while the latter is a one-element set.

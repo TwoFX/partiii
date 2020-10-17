@@ -1,0 +1,13 @@
+Let $\ann(m) \in \Ass(M)$ for some $m \in M$. Define
+$M_1\coloneqq Rm \cong R/\ann(m)$.
+
+Let $rm \in M_1.$
+It is trivial that $\ann(m) \subseteq \ann(rm)$. Conversely, if
+$s \in \ann(rm)$, then $srm = 0$, but $\ann(m)$ is prime and
+$rm\neq 0$, so we must have $s \in \ann(m)$. Hence $\ann(rm) = \ann(m)$.
+
+Now if $M_1\cap N \neq 0$, then by what we just saw there is $rm \in M_1\cap N$
+with $\ann(rm) = \ann(m)$, so $\ann(m) \in \Ass(N)$.
+
+On the other hand, if $M_1\cap N = 0$, then $r \in\ann(m + N)$ iff
+$r\cdot m \in N$ iff $r\cdot m = 0$, so $\ann(m) = \ann(m+N) \in \Ass(M/N)$.

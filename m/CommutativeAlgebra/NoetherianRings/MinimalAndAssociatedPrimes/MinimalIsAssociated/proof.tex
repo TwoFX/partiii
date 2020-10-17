@@ -1,0 +1,53 @@
+By (1.24), we find minimal primes $p_1, \ldots, p_n$ and natural numbers
+$s_1, \ldots, s_n$ such that $p_1^{s_1}\cdot\cdots\cdot p_n^{s_n} \subseteq I$.
+Additionally, we may assume that $i\neq j$ implies $p_i\neq p_j$.
+
+Define
+\[ M\coloneqq (p_2^{s_2}\cdot\cdots\cdot p_n^{s_n} + I)/I \]
+and let $J\coloneqq \ann(M)$. Clearly, every element of $p_1^{s_1}$ annihilates
+$M$, so $p_1^{s_1} \subseteq J$. Furthermore, we have
+\[ Jp_2^{s_2}\cdot\cdots\cdot p_n^{s_n} \subseteq I \subseteq p_1, \]
+but $p_1$ is prime and we cannot have $p_i^{s_i} \subseteq p_1$ for $i \neq 1$
+as the $p_i$ are minimal primes, so we must have $J \subseteq p_1$. In particular,
+$J\neq R$, so $M\neq 0$.
+
+Invoke (1.29) to obtain a chain
+\[ 0 \subsetneq M_1 \subsetneq M_2 \subsetneq \cdots \subsetneq M_t = M \]
+of submodules with $M_i/M_{i-1}\cong R/q_i$ for some prime ideal $q_i$.
+
+Since $p_1^{s_1}$ annihilates $M$, in particular it annihilates $M_j/M_{j-1}$
+for every $j$. So we have $p_1^{s_1} \subseteq \ann(M_j/M_{j-1}) = \ann(R/q_j) = q_j$
+for every $j$. Since $q_j$ is prime, we conclude $p_1 \subseteq q_j$ for every $j$.
+
+On the other hand, $\prod q_j \subseteq J$: by induction on $j$ assume that
+$\prod_{k=1}^{j} q_k$ annihilates $M_j$.
+If $x \in M_{j + 1}$ and $r \in \prod{k=1}^{j} q_k$,
+and $s \in q_{j+1}$ then $sx \in M_j$, since $q_{j+1}$ annihilates $M_{j+1}/M_j$. By the
+inductive hypothesis, $rsx = 0$, so $\prod_{k=1}^{j+1}q_j$ annihilates $M_{j+1}$.
+
+Hence $\prod q_j \subseteq J \subseteq p_1$, so there is some $j$ such that
+$q_j \subseteq p_1$, but we have seen that $p_1 \subseteq q_j$, so there is $j$
+such that $q_j = p_1$. Let $j$ be the least such $j$. In particular,
+$\prod_{k < j}q_k \subsetneq p_1$.
+
+We will now show that $p_1 \in \Ass(M)$. For this, take $x \in M_j\setminus M_{j-1}$.
+If $j = 1$, then $\ann(x) = p_1$ (since $M_1\cong R/p_1$), but $x \in M \subseteq R/I$,
+so $p_1 \in \Ass(R/I)$.
+
+On the other hand, if $j > 1$, choose some
+$r \in (\prod_{k < j}q_k)\setminus p_1$ (this is indeed nonempty, since otherwise
+one of the $q_k$ would be contained in $p_1$). Note that if $s \in p_1 = q_j$,
+then $r(sx) = 0$ (this is just the induction we did earlier). So we have
+$s(rx) = 0$, which means that we have $p_1 \subseteq \ann(rx)$.
+
+Note that $\ann(rx + M_{j-1}) = p_1$ since $rx + M_{j-1} \neq 0$, but
+$M_j/M_{j-1} \cong R/q_j = R/p_1$.
+Since $r\notin p_1$, we conclude that
+$rx \notin M_{j-1}$. Now if $s \in \ann(rx)$, then certainly
+$s \in\ann(rx + M_{j-1}) = p_1$, so $\ann(rx) \subseteq p_1$.
+
+Putting the last two paragraphs together, we have $\ann(rx) = p_1$, so
+$p_1 \in \Ass(M) \subseteq \Ass(R/I)$.
+
+By changing the order of the $p_i$, we see that $p_j \in \Ass(R/I)$ for
+every $j$, completing the proof.

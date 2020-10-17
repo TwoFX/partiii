@@ -1,0 +1,6 @@
+type: proposition
+label: MinimalIsAssociated
+numbered: true
+section: false
+proofs:
+    proof: Proof

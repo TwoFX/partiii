@@ -1,0 +1,14 @@
+By the previous lemma we find $0\neq m_1 \in M$ such that
+$\ann(m_1)$ is a prime ideal. Set $M_1 = Rm_1$. Then
+the kernel of the map $R\to M_1$ given by $r \mapsto rm_1$ is
+precisely $\ann(m_1)$, so $M_1\cong R/p_1$ (as $R$-modules).
+
+Similarly, if $M_i$ is a proper submodule of $M$, then we find
+$m_{i+1} + M_i \in M/M_i$ such that $\ann(m_{i+1} + M_i)$ is a prime ideal.
+Set $M_{i+1} \coloneqq M_i + Rm_{i+1}$. Then the map
+$R\to M_{i+1}/M_i$ given by $r\mapsto rm_{i+1}+M_i$ is surjective and has
+kernel $\ann(m_{i+1} + M_i)$. Furthermore, $m_{i+1} \notin M_i$, since otherwise
+the annihilator of $m_{i+1} + M_i$ would be all of $R$. Therefore,
+$M_i$ is a proper submodule of $M_{i+1}$.
+
+By the ascending chain condition, this process terminates.
