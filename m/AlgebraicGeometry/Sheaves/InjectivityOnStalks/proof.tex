@@ -1,7 +1,39 @@
 $f_p$ is injective for every $p$ if and only if $\ker f_p = 0$ for every $p$
-if and only if $(\ker f)_p = 0$ for every $p$. By identity this is equivalent
-to $\ker f = 0$ (TODO: check this!), which is the definition of injectivity.
+if and only if $(\ker f)_p = 0$ for every $p$.
 
-Similarly $f_p$ is surjective for every $p$ iff $(\im f)p = \mathcal{G}_p$ for every $p$
-iff $(\im f)_p = \mathcal{G}_p$ for every $p$ iff $\Im f = \mathcal{G}$ (TODO: check this),
-but this is the definition of surjectivity.
+In the exercises, we show that for any sheaf $\mathcal{F}$, the map
+\[ \mathcal{F}U \to \prod_{p \in U} \mathcal{F}_p \]
+is injective. Now if all of the $\mathcal{F}_p$ are trivial, then so is
+$\mathcal{F}U$.
+
+Therefore $(\ker f)_p = 0$ for every $p$ if and only if $\ker f = 0$.
+
+Similarly, $f_p$ is surjective for every $p$ iff $\im f_p = \mathcal{G}_p$ for every $p$.
+Now consider the diagram
+\[\begin{tikzcd}
+	\im f_p\ar[r]\ar[d, "\cong"] & \mathcal{G}_p\\
+	(\im' f)_p\ar[ur]\ar[r, "\cong"] & (\im f)_p,\ar[u]
+\end{tikzcd}\]
+where
+\begin{itemize}
+	\item the top arrow is the inclusion,
+	\item the left arrow is the isomorphism defined in Lemma 1.9,
+	\item the bottom arrow is the isomorphism on stalks induced by the inclusion into
+		the associated sheaf,
+	\item the diagonal arrow is the morphism on stalks induced by the inclusion of
+		the presheaf image, and
+	\item the right arrow is induced by the arrow making the sheaf image into a
+		subsheaf.
+\end{itemize}
+
+The upper triangle commutes trivially, and the lower triangle commutes because
+by construction the right arrow is induced by the unique arrow making the non-stalk
+version of the triangle commute.
+Thus, since the bottom and left arrows are isomorphisms and the diagram commutes,
+we have that $\im f_p \to \mathcal{G}_p$ is an isomorphism (which just means that
+$\im f_p = \mathcal{G}_p$ if and only if
+$(\im f)_p \to \mathcal{G}_p$ is an isomorphism.
+
+Now, the arrow $(\im f)_ \to \mathcal{G}_p$ is an isomorphism for every $p$ if
+and only if $\im f \to \mathcal{G}$ is an isomorphism (Proposition 1.7), and this
+is the definition of surjectivity.
