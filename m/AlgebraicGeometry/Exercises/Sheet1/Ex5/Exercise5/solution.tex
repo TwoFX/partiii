@@ -1,0 +1,21 @@
+We will prove the following more general statement: if $\mathcal{F}$ is a presheaf
+satisfying the identity axiom, $\mathcal{G}$ is a sheaf and $f\colon \mathcal{F}\to \mathcal{G}$
+is a morphism of presheaves such that $f_U$ is injective for every $U$, then the induced
+morphism $f^+_U\colon \mathcal{F}^+U\to \mathcal{G}U$ is injective for every $U$.
+
+Indeed, the inclusion of the presheaf image into $\mathcal{G}$ satisfies these conditions.
+It satisfies sheaf axiom 1 for the same reason that the presheaf kernel does.
+
+We will now prove the claim. Let $U$ be an open set, $s \in \mathcal{F}^+U$ such that
+$f^+_U(s) = 0$. From the construction of the associated sheaf we see that
+$f^+_U(s) = f_U(t)$ where $t$ is the unique element of $\mathcal{F}U$ such that
+$\forall q \in U\colon t_q = f_q(s(q))$.
+
+So we have $0 = f^+_U(s) = f_U(t)$, so since $f_U$ is injective we have $t = 0$.
+Let $q \in U$. Then $f_q(s(q)) = t_q = 0_q = 0$. The element $s(q)$ of $\mathcal{F}_q$
+is represented by some open set $V$ and a section $u \in \mathcal{F}V$. Thus
+$0 = f_q(s(q)) = f_q(V, u) = (V, f_V(u))$. Thus, there is some open $W \subseteq V$
+such that $0 = f_V(u)|_W = f_W(u|_W)$. Since $f_W$ is injective, we conclude
+$u|_W = 0$, and $u|_W$ represents the same element in $\mathcal{F}_q$ as $u$,
+but that element is just $s(q)$, so $s(q) = 0$. Since $q$ was arbitrary, we
+conclude $s = 0$.
