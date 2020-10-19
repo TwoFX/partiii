@@ -1,5 +1,29 @@
 Of course, the terminal object in the category of sets is just the one-element set
 $1 = \set{\star}$.
+Since $F1$ is also terminal, it is in bijection with $1$. We write
+$F1 = \set{\star_{F1}}$.
+
+By the Yoneda lemma, the set of natural transformations
+$\mathsf{Set}(1, {-}) \to F$
+is in bijection with $F1$, so there is a unique natural transformation
+$\eta\colon \mathsf{Set}(1, {-}) \to F$.  Examining the proof, we see that the
+components of this natural transformation are given by
+\begin{align*}
+	\eta_A \colon \mathsf{Set}(1, A)&\to FA\\
+	f&\mapsto Ff(\star_{F1})
+\end{align*}
+for any object $A$ of $\mathcal{C}$. Let $A$ be an object of $\mathcal{C}$.
+We will show that $\eta_A$ is an isomorphism, i.e., a bijection.
+
+First, let $x \in FA$. Then
+$\eta_A(F^{-1}(\star_{F1}\mapsto x)) = x$, so $\eta_A $ is surjective.
+
+Additionally, let $f, g \colon 1\to A$ such that $\eta_A(f) = \eta_A(g)$. Since
+a map $F1\to FA$ is completely determined by its value at $\star_{F1}$, we must
+have $Ff = Fg$. But then $f = F^{-1}F(f) = F^{-1}F(g) = g$.
+
+This means that $\eta_A$ is an isomorphism, so $\eta$ is in fact a natural
+isomorphism.
 
 We define a natural transformation $\alpha\colon 1_{\mathsf{Set}}\to \mathsf{Set}(1,{-})$
 by setting \[ \alpha_A(a)(\star)\coloneqq a. \]
@@ -10,13 +34,14 @@ The naturality square for $f\colon A\to B$ is
 \end{tikzcd}\]
 Both paths are just $a \mapsto (\star \mapsto f(a))$, so $\alpha$ is natural.
 It is also clear that $\alpha_A$ is bijective, so $\alpha$ is a natural isomorphism.
+In other words, $\star$ is a universal element of the identity functor.
 
-In particular, this tells is that the collection of natural transformations
+In particular, this tells is that composition with $\alpha$ and its inverse
+exhibits a bijection between
+the collection of natural transformations
 \[ 1_{\mathsf{Set}} \to F \]
-is in bijection with the collection of natural transformation
+and the collection of natural transformations
 \[ \mathsf{Set}(1, {-}) \to F. \]
-This in turn, by the Yoneda lemma, is in bijection with $F1$, which is a terminal
-object, hence in bijection with $1$, so we conclude that there is precisely one
-natural transformation $1_{\mathsf{Set}} \to F$.
-
-TODO: Show that this is a natural isomorphism.
+This means that there is a unique natural transformation $1_{\mathsf{Set}}\to F$,
+and it is given by $\alpha \circ \eta$, and since $\alpha$ and $\eta$ are both
+natural isomorphisms, so is $\alpha \circ \eta$, completing the proof.

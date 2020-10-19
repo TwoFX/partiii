@@ -1,6 +1,6 @@
 type: lemma
 label: TerminalAutomorphism
-numbered: true
+numbered: false
 section: false
 proofs:
     proof: Proof
