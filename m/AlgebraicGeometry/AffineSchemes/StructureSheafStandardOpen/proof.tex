@@ -1,0 +1,17 @@
+Define
+\begin{align*}
+	\Psi\colon A_f&\to \mathcal{O}(D(f))\\
+	a/f^n&\mapsto (p\mapsto a/f^n).
+\end{align*}
+This makes sense since if $f\notin p$, then $f^n\notin p$.
+As usual, we will verify injectivity and surjectivity.
+
+For inejctivity, assume that $\Psi(a/f^n) = 0$. Then for all $p \in D(f)$, we have
+$a/f^n = 0$ in $A_p$, i.e., there is  $h \in A\setminus p$ such that $ha = 0$ in $A$.
+
+Let $I = \set{q \in A\given q\cdot a = 0}$ (the annihilator of $a$).
+So $h \in I$, but $h \notin p$, so $I\subsetneq p$.
+This is true for all $p \in D(f)$, so $V(I)\cap D(f) = \varnothing$. Thus
+$f \in \bigcap_{p \in V(I)}p = \sqrt{I}$, as we know from commutative algebra.
+This means that $f^n \in I$ for some $n>0$. Thus $f^n\cdot a = 0$, so
+$a/f = 0$ in $A_f$, so $\Psi$ is injective.

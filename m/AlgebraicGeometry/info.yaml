@@ -2,4 +2,5 @@ type: lecture
 children:
 - Introduction
 - Sheaves
+- AffineSchemes
 - Exercises

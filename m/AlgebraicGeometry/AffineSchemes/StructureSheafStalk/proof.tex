@@ -1,0 +1,26 @@
+We define a map
+\begin{align*}
+	\mathcal{O}_p&\to A_p\\
+	(U, s)&\mapsto s(p)
+\end{align*}
+and will show that it is injective and surjective.
+
+For surjectivity, notice that every element of $A_p$ can be written as
+$a/f$ for some $a \in A$, $f \notin p$. Then
+\[ D(f)\coloneqq \Spec A\setminus V(f) = \set{p \in \Spec A\given f\notin p} \]
+is an open set (in fact it is called a standard open). Now $a/f$ defines an
+element of $s \in \mathcal{O}(D(f))$ given by $q\mapsto a/f \in A_q$.
+In particular, $s(p) = a/f \in A_p$.
+
+For injectivity, let $p \in U \subseteq \Spec A$, $s \in \mathcal{O}U$ with $s(p) = 0$ in
+$A_p$. We need to show that $(U, s) = 0$ in $\mathcal{O}_p$. By shrinking $U$
+we can assume that $s$ is given by $a, f \in A$ with $s(q) = a/f$ for all $q \in U$.
+In particular $f\notin q$ for every $q \in U$.
+
+Thus, $a/f = 0/1$ in $A_p$. By definition of localization, this means that there
+is $h \in A\setminus p$ such that  $h\cdot(a\cdot 1 = f\cdot 0) = 0$ in $A$,
+so we have $ah = 0$.
+
+Now let $V = D(f)\cap D(h)$. Then $(V, s|_V) = 0$ in $\mathcal{O}_p$, since
+for $q \in V$, $s|_v(q) = s(q) = a/f \in A_q$ and $ha = 0$, $h \notin A\setminus q$,
+so $ha = 0$ implies $a/f = 0/1$ in $A_q$. Thus $(U, s) = 0$ in $\mathcal{O}_p$.

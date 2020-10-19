@@ -1,0 +1,12 @@
+type: chapter
+label: AffineSchemes
+numbered: true
+section: true
+title: Affine schemes
+children:
+- Goal
+- Localization
+- LocalizationExample
+- StructureSheaf
+- StructureSheafStalk
+- StructureSheafStandardOpen

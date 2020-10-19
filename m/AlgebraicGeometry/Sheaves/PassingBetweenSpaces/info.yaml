@@ -1,0 +1,12 @@
+type: section
+label: PassingBetweenSpaces
+numbered: true
+section: true
+title: Passing between spaces
+children:
+- Intro
+- PushforwardSheaf
+- PushforwardSheafVer
+- PullbackSheaf
+- Examples
+- Sections
