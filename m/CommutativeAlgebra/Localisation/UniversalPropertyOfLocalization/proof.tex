@@ -1,0 +1,20 @@
+We will first show uniqueness. Suppose we have $\alpha\colon S^{-1}R\to T$ satisfying
+$\alpha \circ \theta = \varphi$.
+
+Then we have
+\begin{align*}
+	\forall r \in R\colon \alpha(\frac{r}{1}) &= \alpha(\theta(r)) = \varphi(r),\\
+	\forall s \in S\colon \alpha((\frac{s}{1})^{-1})=\alpha(\frac{s}{1})^{-1} = \alpha(\theta(s))^{-1} = \varphi(s)^{-1}.
+\end{align*}
+Thus, $\alpha(\frac{r}{s}) = \alpha(\frac{r}{1})\alpha(\frac{1}{s}) = \varphi(r)\varphi(s)^{-1}$ is
+uniquely determined by $\varphi$.
+
+For existence, we define $\alpha(\frac{r}{s})\coloneqq \varphi(r)\varphi(s)^{-1}$.
+We need to show that this is well-defined. If $\frac{r_1}{s_1}=\frac{r_2}{s_2}$,
+then we find $x \in S$ such that $(r_1s_2 - r_2s_1)x = 0$. Applying $\varphi$,
+we find $(\varphi(r_1)\varphi(s_2) - \varphi(r_2)\varphi(s_1))\varphi(x) = 0$.
+Since $\varphi(x)$ is a unit, we can cancel it and since the $\varphi(s_i)$ are
+units, we can rewrite this two the required relation
+$\varphi(r_1)\varphi(s_1)^{-1} = \varphi(r_2)\varphi(s_2)^{-1}$.
+
+It is also possible to check that $\alpha$ is indeed a homomorphism of rings.

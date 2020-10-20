@@ -1,0 +1,20 @@
+As always, all rings $R$ are commutative with unity.
+
+Let $S$ be a multiplicatively closed subset of $R$ (i.e.,  $S$ is closed under
+multiplication and $1 \in S$. We define a relation $\equiv$ on $R\times S$ by saying
+that $(r_1, s_1)\equiv (r_2, s_2)\iff \exists x \in S\colon (r_1s_2 - r_2s_1)x = 0$.
+Reflexivity and symmetry are immediate, for transitivity, assume that
+\[ (r_1s_2 - r_2s_1)x = 0 = (r_2s_3-r_3s_2)y. \]
+Multiplying the left hand side with $s_3y$ and the right hand side with $s_1x$
+and the subtracting the two yields the desired identity
+\[ (r_1s_3 - r_3s_1)s_2xy = 0, \]
+since $s_2xy \in S$.
+
+This shows that $\equiv$ is an equivalence relation, and we will denote equivalence
+classes of $(r_1, s_1)$ by $\frac{r_1}{s_2}$ and the quotient by
+$S^{-1}R$. We make  $S^{-1}R$ into a ring by setting
+\begin{align*}
+	\frac{r_1}{s_1}+\frac{r_2}{s_2}&\coloneqq \frac{r_1s_2+r_2s_1}{s_1s_2},\\
+	\frac{r_1}{s_1}\cdot\frac{r_2}{s_2}&\coloneqq \frac{r_1r_2}{s_1s_2}.
+\end{align*}
+Furthermore, we have a ring homohmorphism $R\to S^{-1}R$ given by $r\mapsto\frac{r}{1}$.

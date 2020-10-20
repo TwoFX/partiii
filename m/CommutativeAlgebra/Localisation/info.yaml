@@ -1,0 +1,13 @@
+type: chapter
+label: Localisation
+numbered: true
+section: true
+title: Localisation
+children:
+- MultiplicativeSubset
+- UniversalPropertyOfLocalization
+- LocalizationExamples
+- LocalRing
+- LocalNoetherian
+- LocalExamples
+- LocalizationOfModules

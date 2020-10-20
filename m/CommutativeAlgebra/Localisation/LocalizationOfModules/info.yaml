@@ -1,0 +1,7 @@
+type: section
+label: LocalizationOfModules
+numbered: true
+section: true
+title: Localization of modules
+children:
+- LocalisationOfModules
