@@ -1,0 +1,37 @@
+Let $D$ be a derivation of $\mathfrak{L}$ and $x \in \mathfrak{L}$. Then
+for every $y \in \mathfrak{L}$ we have
+\begin{align*}
+	[D, \ad_{\mathfrak{L}}(x)](y) &= (D \circ \ad_{\mathfrak{L}}(x) - \ad_{\mathfrak{L}}(x) \circ D)(y)\\
+	&= D([x, y]) - [x, D(y)]\\
+	&= [D(x), y] + [x, D(y)] - [x, D(y)]\\
+	&= [D(x), y]\\
+	&= \ad_{\mathfrak{L}}(D(x))(y),
+\end{align*}
+so we conclude that
+\begin{equation}\tag{$\star$}
+[D, \ad(x)] = \ad(D(x)).
+\end{equation}
+The centre $Z(\mathfrak{L})$ of $\mathfrak{L}$ is an abelian ideal, hence zero
+(since $\mathfrak{L}$ is semisimple)
+
+Since $\mathfrak{L}$ is semisimple
+and the kernel of the map $\mathfrak{L} \to \ad_{\mathfrak{L}}$ is an abelian ideal,
+it must be zero (since it is trivially soluble), hence
+$\mathfrak{L}\cong \ad(L)$.
+
+Let $\vspan{\ ,\ }$ denote the Killing form on $\Der \mathfrak{L}$. By question
+13 from the example sheet, the restriction of $\vspan{\ ,\ }$ to $\ad(\mathfrak{L})$
+is the Killing form on $\ad(\mathfrak{L})$.
+
+Let $J$ be the orthogonal space to $\ad(\mathfrak{L})$ inside $\Der(\mathfrak{L})$
+with respect to $\vspan{\ ,\ }$. By 3.3(ii) $J$ is an ideal of $\Der \mathfrak{L}$.
+Now, since $\mathfrak{L}$ is semisimple, so is $\ad(\mathfrak{L})$, and by the
+Cartan-Killing criterion,  $\vspan{\ ,\ }$ restricted to $\ad(\mathfrak{L})$ is
+non-degenerate. Hence $\ad(\mathfrak{L})\cap J = 0$ and
+$[\ad(\mathfrak{L}), J] \subseteq \ad(\mathfrak{L})\cap J = 0$,
+since both are ideals.
+
+Thus if $D \in J$, then for all $x \in \mathfrak{L}$ we have $\ad(D(x)) = 0$ by
+($\star$). Thus, $D(x) \in Z(\mathfrak{L}) = 0$, since $\mathfrak{L}$ is semisimple,
+so $D$ is the zero derivation, and we conclude $J = 0$. This can only happen
+if $\Der(\mathfrak{L}) = \ad(\mathfrak{L})$ (by linear algebra) and so we are done.

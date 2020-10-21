@@ -1,0 +1,34 @@
+We have
+\[  \mathfrak{L}^\perp = \set{x\given\forall y \in \mathfrak{L}\colon \tr(\ad(x) \circ \ad(y)) = 0}. \]
+Suppose $J$ is an abelian ideal of $\mathfrak{L}$. Then $x \in \mathfrak{L}$,
+$y \in J$. Then $\ad(y)(\mathfrak{L}) \subseteq J$, so $\ad(x) \circ \ad(y)(\mathfrak{L}) \subseteq J$.
+Both times, we use that $J$ is an ideal.
+
+Since $J$ is abelian, $\ad(y)(J) = 0$, hence $(\ad(x) \circ \ad(y))^2(\mathfrak{L}) = 0$.
+This means that $\ad(x) \circ \ad(y)$ is nilpotent in $\End \mathfrak{L}$ and therefore
+has zero trace\footnote{Any eigenvalue must be zero, and we can put the matrix
+in Jordan normal form.}. But if $x \in \mathfrak{L}$, $y \in J$, then
+\[ \vspan{x, y}_{\ad} = \tr(\ad(x) \circ \ad(y)) = 0, \]
+so $y \in \mathfrak{L}^{\perp}$. Hence $J \subseteq \mathfrak{L}^\perp$.
+
+Now, if $R(\mathfrak{L})\neq 0$, then it contains a nonzero abelian ideal of $\mathfrak{L}$,
+for example the last nonzero term of the derived series of $R(\mathfrak{L})$.
+
+Hence, if the Killing form is nondegenerate (this is the same as saying that
+$\mathfrak{L}^\perp = 0$), then $\mathfrak{L}$ must be semisimple, since otherwise
+we would have $R(\mathfrak{L})\neq 0$, so we find a nonzero abelian ideal $J$ which
+by what we have seen above is contained in $\mathfrak{L}^\perp = 0$, a contradiction.
+
+Conversely, suppose $\mathfrak{L}$ is semisimple. Then $R(\mathfrak{L}) = 0$ and
+$J = L^\perp$ an ideal of $\mathfrak{L}$. Consider $\ad_{\mathfrak{L}}\colon \mathfrak{L} \to \End\mathfrak{L}$ and
+the image $\ad(J) \subseteq \End \mathfrak{L}$. By definition of $J$, we have
+$\tr(\ad(x)\circ \ad(y) = 0$ for all $x \in J, y \in\mathfrak{L}$.
+
+In particular, $\tr(\ad(x) \circ \ad(y)) = 0$ for $x, y \in J$.
+By Cartan's solubility criterion, $\ad_{\mathfrak{L}}(J)$ is a soluble subalgebra
+of $\End\mathfrak{L}$.
+
+On the other hand, $\ker\ad_{\mathfrak{L}} = Z(\mathfrak{L})$ is the centre of
+$\mathfrak{L}$ and an abelian ideal of $\mathfrak{L}$, hence soluble, so
+2.9(ii) gives that $J$ is soluble. Therefore, $J \subseteq R(\mathfrak{L}) = 0$, so
+$J = 0$. But since $J = \mathfrak{L}^\perp$, the Killing form is nondegenerate.

@@ -3,3 +3,5 @@ label: CartanKillingCriterion
 numbered: true
 section: false
 title: Cartan-Killing criterion for semisimplicity
+proofs:
+    proof: Proof

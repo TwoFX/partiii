@@ -1,0 +1,21 @@
+First of all, let $x, y, z \in L$. Then we have
+\begin{align*}
+	\ad(x)([y, z]) &= [x, [y, z]]\\
+	&= -[z, [x, y]] - [y, [z, x]]\\
+	&= [[x, y], z] + [y, [x, z]]\\
+	&= [\ad(x)(y), z] + [y, \ad(x)(z)],
+\end{align*}
+so $\ad(x)$ is a derivation and we conclude that $\ad(L) \subseteq \Der L$. Since
+adjoints are obviously closed under addition and scalar multiplication,
+$\ad(L)$ is a subspace of $\Der L$.
+
+Furthermore, let $D \in \Der L$ and $x, y \in L$. Then we have
+\begin{align*}
+	[D, \ad_{L}(x)](y) &= (D \circ \ad_{L}(x) - \ad_{L}(x) \circ D)(y)\\
+	&= D([x, y]) - [x, D(y)]\\
+	&= [D(x), y] + [x, D(y)] - [x, D(y)]\\
+	&= [D(x), y]\\
+	&= \ad_{L}(D(x))(y),
+\end{align*}
+so we conclude that $[D, \ad(x)] = \ad(D(x))$, hence $\ad(L)$ is a Lie ideal
+of $\Der L$.

@@ -1,7 +1,6 @@
 type: theorem
-label: CartanCriterion
+label: DerivationsInCharacteristicZero
 numbered: true
 section: false
-title: Cartan's criterion for solubility
 proofs:
     proof: Proof

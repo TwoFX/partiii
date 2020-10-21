@@ -1,0 +1,18 @@
+Let $x \in J^\perp$, $y \in L$.
+We will show that $[x, y] \in J^\perp$. Indeed, let $z \in J$.
+Then  $[y, z] = -[z, y] \in J$ since $J$ is a Lie ideal. But then, using
+invariance we have
+$\vspan{[x, y], z} = \vspan{x, [y, z]} = 0$ since $x \in J^\perp$. Hence $J^\perp$
+is a Lie ideal.
+
+Choose a basis $v_1, \ldots, v_n$ of $L$ such that there is some $m \leq n$
+such that $v_1, \ldots, v_m$ is a basis of $J$. Let $x, y$ in $J$, and let $M$ be
+the $m\times m$ matrix corresponding to $\ad_J(x) \circ \ad_J(y)$ under our basis. Since
+$\ad(y)(L)  = [y, L] \subseteq J$ since $J$ is a Lie ideal, the $n\times n$ matrix
+corresponding to $\ad_L(x) \circ \ad_L(y)$ under our basis has the
+block form
+\[ N = \begin{pmatrix}M & 0\\\star&0\end{pmatrix}. \]
+Hence, if $\vspan{\ ,\ }_J$ and $\vspan{\ ,\ }_L$ denote the respective
+Killing forms, we have
+\[ \vspan{x, y}_J = \tr M = \tr N = \vspan{x, y}_L, \]
+so the Killing form of $J$ is the restriction of the Killing form of $L$ to $J$.
