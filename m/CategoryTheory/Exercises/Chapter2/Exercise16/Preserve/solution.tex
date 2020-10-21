@@ -1,0 +1,30 @@
+\begin{enumerate}[label=(\alph*)]
+	\item If $gfu = gfv$, then $fu = fv$ since $g$ is monic, and $u = v$, since
+		$f$ is monic.
+	\item Consider the diagram
+		\[\begin{tikzcd}[row sep=1cm, column sep=1cm]
+			D\ar[r, "h"]\ar[dd, two heads, "l"] & A\ar[d, "f", hook]\\
+			& B\ar[d, "g", hook]\\
+			E\ar[r, "k"]\ar[ur, "t", densely dotted]\ar[uur, "u", densely dotted]&C.
+		\end{tikzcd}\]
+		Since $g$ is strong monic, using the square $(fh, g, l, k)$,
+		we find $t\colon E\to B$ such that
+		$gt = k$ and $tl = fh$. Since $f$ is strong epic, using the square
+		$(h, f, l, t)$, we find $u\colon E\to A$ such that $fu = t$ and $ul = h$.
+		Then we have $gfu = gt = k$, so $u$ is the required morphism.
+	\item If $u\colon B\to A$ satisfies $uf = 1_A$ and $v\colon C\to B$ satisfies
+		$vg = 1_B$, then $uv$ is the desired retraction, as $uvgf= u1_Bf = uf = 1_A$.
+	\item If $fu = fv$, then trivially, $gfu = gfv$, so $u = v$.
+	\item Consider the diagram
+		\[\begin{tikzcd}[row sep=1cm, column sep=1cm]
+			D\ar[r, "h"]\ar[d, two heads, "l"] & A\ar[d, "f"]\\
+			E\ar[ur, densely dotted, "t"]\ar[r, "k"]\ar[dr, "gk" below left] & B\ar[d, "g"]\\
+			&C.
+		\end{tikzcd}\]
+		Since $gf$ is strong monic, using the square $(h, gf, l, gk)$ we find
+		$t\colon E\to A$ such that $tl = h$ (and $gft = gk$, but that is not
+		important). We have $ftl = fh = kl$, so since $l$ is epi, we have $ft = k$,
+		so $t$ is indeed the required diagonal morphism, so  $f$ is strong monic.
+	\item If  $u\colon C\to A$ satisfies $ugf = 1_A$, then $(ug)f = 1_A$, so
+		$f$ is split monic.
+\end{enumerate}

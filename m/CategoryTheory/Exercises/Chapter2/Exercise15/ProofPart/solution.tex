@@ -1,0 +1,10 @@
+Let $f$ be the equaliser of $u$ and $v$ and take a commutative square as in
+the definition of strongness.
+\[\begin{tikzcd}[row sep=1cm, column sep=1cm]
+	C\ar[r, "h"]\ar[d, two heads, "g"] & A\ar[d, hook, "f"]\\
+	D\ar[r, "k"]\ar[ur, densely dotted, "t"] & B\ar[r, shift left, "u"]\ar[r, shift right, "v" below] & E
+\end{tikzcd}\]
+We have $ukg = ufh = vfh = vkg$. Since $g$ is epi, this means that $uk = vk$, and
+since $f$ is the equaliser of $u$ and $v$, we find $t\colon D\to A$ such that
+$ft = k$. Now $ftg = kg = fh$. Since $f$ is mono, we conclude that $tg = h$,
+so $t$ has the desired properties. Hence, $f$ is a strong monomorphism.

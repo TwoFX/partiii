@@ -1,0 +1,6 @@
+type: exercise
+label: IdempotentEqualizer
+numbered: false
+section: false
+proofs:
+    solution: Solution

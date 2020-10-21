@@ -1,0 +1,14 @@
+The strongness condition for $f$ is actually vacuous: if we have a diagram
+\[\begin{tikzcd}[row sep=1cm, column sep=1cm]
+	\bullet\ar[r, "u"]\ar[d, two heads, "v"] & A\ar[d, hook, "f"]\\
+	\bullet\ar[r, "w"] & B,
+\end{tikzcd}\]
+then we must have $u = 1_A$. The morphism  $f$ is not an epimorphism, as witnessed
+by the fact that $hf = kf$, but $h\neq k$, so we must have $v = l$. Then $w$ is
+a morphism $D \to B$, but such a morphism does not exist. Hence, the square does not
+exist, so $f$ is strong.
+
+However, the only pairs of morphisms that $f$ can be an equaliser of are
+$(1_B, 1_B)$, $(k, k)$, $(h, h)$ and $(h, k)$. If $f$ was the equaliser of any
+of these pairs, $g$ would factor through $f$, but there is no morphism $C\to A$,
+hence that is not the case. So we conclude that $f$ is not regular.

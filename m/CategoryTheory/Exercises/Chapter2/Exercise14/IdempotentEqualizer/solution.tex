@@ -1,0 +1,21 @@
+We will show that (i) is equivalent to (ii). By duality, this implies that (i)
+is equivalent to (iii).
+
+Assume that there are $f\colon B\to A$ and $g\colon A\to B$ such that $fg = e$
+and $gf = 1_B$. We claim that $f$ is an equaliser of $e$ and $1_A$.
+We must show that any $h\colon C\to A$ satisfying $he = h$
+factors uniquely through $f$.
+
+\[\begin{tikzcd}
+	& C\ar[dl, "h'" above left]\ar[d, "h"]\\
+	B\ar[r, shift left, "f"] & A\ar[l, shift left, "g"]\ar[r, shift left, "e"]\ar[r, shift right, "1_A" below] & A
+\end{tikzcd}\]
+
+Indeed, given such $h$. Then $fgh = eh = h$, hence
+$gh$ is one such factoring factoring. If $h'\colon C\to B$ is another factoring such that
+$fh' = h$, then $h' = gfh' = gh$, so the factoring is unique.
+
+Conversely, assume that the pair $(e, 1_A)$ admits an equaliser $f\colon B\to A$.
+Since $ee = e = 1_Ae$, $e$ factors through $f$ via some $g\colon A\to B$. Hence,
+$fg = e$. On the other hand, $fgf = ef = f$, and by a result from the lecture,
+$f$ is monic, so $gf = 1_A$, so $e$ is split.
