@@ -15,3 +15,50 @@ This is true for all $p \in D(f)$, so $V(I)\cap D(f) = \varnothing$. Thus
 $f \in \bigcap_{p \in V(I)}p = \sqrt{I}$, as we know from commutative algebra.
 This means that $f^n \in I$ for some $n>0$. Thus $f^n\cdot a = 0$, so
 $a/f = 0$ in $A_f$, so $\Psi$ is injective.
+
+Next, we will prove surjectivity. Let $s \in \mathcal{O}(D(f))$. Cover
+$D(f)$ with open sets $V_i$ on which $s$ is represented by as $a_i/g_i$ with
+$a_i, g_i \in A$, $g_i \notin p$ whenevery $o \in V_i$. Thus $V_i \subseteq D(g_i)$.
+By question 1 on the first example sheet, the sets of the form $D(h)$ form a
+base for the Zariski topology on $\Spec A$. Thus we can assume $V_i = D(h_i)$
+for some $h_i \in A$. Since $D(h_i) \subseteq D(g_i)$, we have
+$V(h_i) \supseteq V(g_i)$, so $\sqrt{(h_i)} \subseteq \sqrt{(g_i)}$, since the
+radical is the intersection of all the primes of $V(\cdot)$. Hence,
+$h_i^n \in (g_i)$ for some $n$, say $h_i^n = c_ig_i$, so we have
+$\frac{a_i}{g_i} = \frac{c_ia_i}{h_i^n}$. Now replace $h_i$ by $h_i^n$. This does
+not change the open sets because in general $D(h_i) = D(h_i^n)$ and replace
+$a_i$ by $c_ia_i$.
+
+The situation so far is that we may assume that $D(f)$ is covered by sets
+$D(h_i)$ such that $s$ is represented by $a_i/h_i$ on $D(h_i)$.
+
+We now claim that $D(f)$ can be covered by a finite number of the  $D(h_i)$, i.e.,
+$D(f)$ is quasicompact. Indeed, $D(f) \subseteq \bigcup_i D(h_i)$, which is equivalent
+to $V(f) \supseteq \bigcap_i V(h_i) = V(\sum (h_i))$. This in turn is equivalent to
+$f \in \sqrt{\sum_i (h_i)}$ (because it just says that $f$ is in every prime ideal
+containing $\sum_i (h_i)$), which is equivalent to there being some $n$ such that
+$f^n \in \sum_i (h_i)$. Hence, we can write $f^n = \sum_{i \in I} b_i h_i$ for some finite
+set $I$.
+
+Reversing this argument yields that $D(f) \subseteq \bigcup_{i \in I} D(h_i)$ as
+required, completing the proof of the claim.
+
+We now pass to this finite subcover $\set{D(h_i)}_{i \in I}$. On
+$D(h_i)\cap D(h_j) = D(h_ih_j)$, note $a_i/h_i$ and $a_j/h_j$ both represent $s$. Since we
+have already shown injectivity, this means that $a_ih_j/h_ih_j = a_jh_i/h_ih_j$ in $A_{h_ih_j}$.
+
+Thus, for some $n$, $(h_ih_j)^n(h_ja_i - h_ia_j) = 0$ in $A$. We can pick an $n$
+sufficiently large to work for all pairs $i, j$ (since there are only finitely many
+such pairs).
+
+We rewrite this equality as $h_j^{n+1}(h_i^na_i) = h_i^{n+1}(h_j^na_j) = 0$.
+Now replace $h_i$ by $h_i^{n+1}$, and $a_i$ by $h_i^na_i$ (this is allowed because
+$\frac{a_i}{h_i}= \frac{a_ih_i^n}{h_i^{n+1}}$. Thus we can assume that $s$ is still
+represented on $D(h_i)$ by $a_i/h_i$ but also for each $i, j$ we have $h_ia_j = h_ja_i$
+
+Note $f^n = \sum b_ih_i$ for some $b_i \in A$, since the $D(h_i)$ cover $D(f)$,
+and define $a \coloneqq b_ia_i$.
+
+Then for any $j$, we have \[ h_ja = \sum_i b_ia_ih_j = \sum_i b_ia_jh_i = f^na_j. \]
+This means that $a/f^n = a_jh_j$ on $D(h_j)$. Hence $\Psi(a/f^n) = s$, completing
+the proof of surjectivity.

@@ -1,0 +1,15 @@
+A locally ringed space $(X, \mathcal{O}_X)$ is a ringed space such that
+$\mathcal{O}_{X, p}$ is a local ring is a local ring (i.e., has a unique maximal
+ideal) for every $p \in X$.
+
+A morphism $f\colon (X, \mathcal{O}_X)\to (Y, \mathcal{O}_Y)$ of locally ringed spaces is a morphism of ringed spaces such that
+such that the induced map $f_p^\#\colon \mathcal{O}_{Y, f(p)} \to \mathcal{O}_{X, p}$ is a local
+homomorphism. Here,
+\begin{itemize}
+	\item the map $f_p^\#$ is defined by $(U, s)\mapsto (f^{-1}(U), f^\#_U(s))$ for
+		a section $s \in \mathcal{O}_Y(U)$, and
+	\item a local homomorphism $\varphi\colon (A, m_A)\to (B, m_B)$ is a ring homomorphism between local rings such that
+		$\varphi^{-1}(m_B) = m_A$. Note that $\varphi(A\setminus m_A) = \varphi(A^\times) \subseteq B^\times = B\setminus m_B$.
+		Hence, $\varphi^{-1}(m_B) \subseteq m_A$ is always true, and the opposite
+		inclusion is what makes a ring homomorphism local.
+\end{itemize}

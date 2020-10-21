@@ -10,3 +10,8 @@ children:
 - StructureSheaf
 - StructureSheafStalk
 - StructureSheafStandardOpen
+- WhereAreWe
+- RingedSpace
+- RingedSpaceExamples
+- LocallyRingedSpace
+- LocallyRingedSpaceIntuition
