@@ -1,0 +1,16 @@
+If $f$ is nilpotent, say $f^n = 0$, and $\mathfrak{p}$ is a prime ideal, then we have
+$f^n = 0 \in \mathfrak{p}$, so $f \in \mathfrak{p}$. Hence, $D(f) = \varnothing$.
+
+If  $f$ is not nilpotent, then define $\mathcal{S}$ to be the collection of all
+ideals $I$ such that $f^n\notin I$ for every $n > 0$. Since $f$ is not nilpotent,
+$(0) \in \mathcal{S}$. The set $\mathcal{S}$ is partially ordered by inclusion
+and admits upper bounds, since the increasing union of ideals disjoint from $\set{f^n}$ is
+still an ideal disjoint from $\set{f^n}$. Hence $\mathcal{S}$ admits a maximal member
+$I$. We will show that $I$ is prime.
+
+Let $x, y \in A$ such that $xy \in I$ and suppose that $x\notin I$, $y\notin I$.
+Then $I + Ax$ and $I + Ay$ are not disjoint from $\set{f^n}$ so we find
+$n, m \in \mathbb{N}$, $i, j \in I$ and $a, b \in A$ such that
+$f^n = i + ax$,  $f^m = j + by$. But then $f^{n+m} = ij + iby + jax + abxy \in I$,
+a contradiction, so $x \in I$ or $y \in I$ and $I$ is prime. Hence, $I \in D(f)$,
+so $D(f) \neq \varnothing$.
