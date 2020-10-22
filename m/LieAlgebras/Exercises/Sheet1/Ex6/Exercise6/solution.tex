@@ -1,0 +1,9 @@
+Indeed, if $x, y, z \in L$, then by definition of the adjoint representation,
+we have
+\begin{align*}
+	\ad_L([x, y], z) &= [[x, y], z]\\
+	&= -[z, [x, y]],\\
+	[\ad_L(x), \ad_L(y)](z) &= (\ad_{\mathfrak{L}}(x)\circ\ad_{\mathfrak{L}}(y) - \ad_{\mathfrak{L}}(y) \circ \ad_{\mathfrak{L}}(x))(z)\\
+		&= \ad_{\mathfrak{L}}(x)(\ad_{\mathfrak{L}}(y)(z)) - \ad_{\mathfrak{L}}(y)(\ad_{\mathfrak{L}}(x)(z))\\
+		&=[x, [y, z]] + [y, [z, x]].\qedhere\\
+\end{align*}

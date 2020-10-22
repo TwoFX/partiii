@@ -4,5 +4,8 @@ numbered: false
 section: true
 title: Example Sheet 1
 children:
+- Ex2
+- Ex6
+- Ex7
 - Ex13
 - Ex14

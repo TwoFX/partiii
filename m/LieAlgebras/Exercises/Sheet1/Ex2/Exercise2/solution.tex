@@ -1,0 +1,19 @@
+Let $L$ be a Lie algebra over $k$ of dimension $2$.
+If $L$ is abelian, then $L$ is isomorphic to $k^2$ with the trivial Lie bracket.
+
+Otherwise, there are $x, y \in L$ such that $v\coloneqq [x, y] \neq 0$. Since $v\neq 0$,
+$x$ and $y$ are linearly independent, so $x$ and $y$ form a basis of $L$ and
+we have $v = \lambda_1x + \lambda_2y$ for some $\lambda_1, \lambda_2 \in k$ which
+are not both zero. We calculate
+\begin{align*}
+	[v, x] &= [\lambda_1x + \lambda_2 y, x] = [\lambda_1x, x] + [\lambda_2y, x] = -\lambda_2v,\\
+	[v, y] &= [\lambda_1x + \lambda_2 y, y] = [\lambda_1x, y] + [\lambda_2y, y] = \lambda_1v.
+\end{align*}
+
+Now if $\lambda_1 \neq 0$, then setting $w\coloneqq \lambda_1^{-1}y$, we find
+that $[v, w] = \lambda_1^{-1}[v, y] = v$. Hence $L$ is isomorphic  to $k^2$ with
+the bracket given by $[(1, 0), (0, 1)] = (1, 0)$.
+
+If $\lambda_1 = 0$, then we must have $\lambda_2 \neq 0$. Setting $w\coloneqq -\lambda_2^{-1}x$,
+we find that $[v, w] = -\lambda_2^{-1}[v, x] = v$. Again, $L$ is isomorphic to
+$k^2$ with the bracket given by $[(1, 0), (0, 1)] = (1, 0)$.

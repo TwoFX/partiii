@@ -1,0 +1,19 @@
+We will first show that for natural numbers $i$ and $j$ we have $[\mathfrak{L}_{(i)}, \mathfrak{L}_{(j)}] \subseteq \mathfrak{L}_{(i + j)}$.
+
+We do induction on $j$. The case $j = 1$ is true by definition.
+
+Now assume that for some $j \in \mathbb{N}$ and all $i \in \mathbb{N}$ we have $[\mathfrak{L}_{(i)} + \mathfrak{L}_{(j)}] \subseteq \mathfrak{L}_{(i + j)}$.
+Let $i \in \mathbb{N}$. We need to show that $[\mathfrak{L}_{(i)}, \mathfrak{L}_{(j + 1)}] \subseteq \mathfrak{L}_{(i + j + 1)}$.
+We will check this on generators, so let $x \in \mathfrak{L}_{(i)}$, $y \in \mathfrak{L}_{(j)}$ and $z \in \mathfrak{L}$.
+We need to show that $[x, [y, z]] \in \mathfrak{L}_{(i+j+1)}$.
+
+Indeed, $[x, y] \in \mathfrak{L}_{(i + j)}$ by our inductive hypothesis, so
+$\alpha\coloneqq[z, [x, y]] \in \mathfrak{L}_{(i + j + 1)}$ by definition. Furthermore, $[z, x]$ in $\mathfrak{L}_{(i + 1)}$ by
+definition, so $\beta\coloneqq[y, [z, x]] \in \mathfrak{L}_{(i + j + 1)}$ by inductive
+hypothesis. Therefore  $[x, [y, z]] = -\alpha-\beta \in \mathfrak{L}_{(i + j + 1)}$
+as required, completing the proof of the lemma.
+
+Now we will proceed to prove the claim, again by induction. The base case is again
+trivial, and for $n \in \mathbb{N}$ we have
+\[ \mathfrak{L}^{(n+1)} = [\mathfrak{L}^{(n)}, \mathfrak{L}^{(n)}] \subseteq [\mathfrak{L}_{(2^n)}, \mathfrak{L}_{(2^n)}] \subseteq \mathfrak{L}_{(2^{n+1})}, \]
+using the inductive hypothesis and our lemma. This completes the proof.
