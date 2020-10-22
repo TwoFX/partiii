@@ -3,3 +3,5 @@ label: JordanDecomposition
 numbered: true
 section: false
 title: Jordan decomposition of an endomorphism
+proofs:
+    proof: Proof

@@ -1,0 +1,41 @@
+Compute the Jordan decomposition $w = w_s + w_n$. Our goal is to show that $w_s = 0$.
+Take a basis $\set{v_i}$ of eigenvectors of $w_s$ such that $w_s(v_i) = \lambda_iv_i$.
+
+Define $\theta_{ij}$ as in the previous proof. Again we have
+$\ad(w_s)(\theta_{ij}) = (\lambda_j - \lambda_i)\theta_{ij}$
+
+Assume that $w_s\neq 0$, so there is some $j$ such that $\lambda_j\neq 0$.
+Let $E$ be the $\mathbb{Q}$-span of $\lambda_i, \ldots, \lambda_n$.
+Choose any non-zero linear form $f\colon E\to \mathbb{Q}$.
+
+Define $y \in \End V$ via $y(v_i)\coloneqq f(\lambda_i)v_i$.
+So
+\[ \ad(y)(\theta_{ij}) = (f(\lambda_j) - f(\lambda_i))\theta_{ij}
+= f(\lambda_j - \lambda_i)\theta_{ij} \]
+by linearity of $f$.
+
+Let $r(t)$ be a polynomial with vanishing constant term such that
+\[ r(\lambda_j - \lambda_i) = f(\lambda_j - \lambda_i) \]
+for all $i, j$. The polynomial $r$ exists by polynomial interpolation.
+
+Then
+\begin{align*}
+	r(\ad(w_s))(\theta_{ij}) &= \sum_{\ell = 0}^{\deg q}q_\ell\ad(w_s)^\ell(\theta_{ij})\\
+	&= \sum_{\ell = 0}^{\deg q}q_{\ell}(\lambda_j - \lambda_i)^\ell\theta_{ij}\\
+	&= r(\lambda_j - \lambda_i)\theta_{ij}\\
+	&= f(\lambda_j - \lambda_i)\theta_{ij}\\
+	&= \ad(y)(\theta_{ij}),\\
+\end{align*}
+so $\ad(y) = r(\ad(w_s))$.
+
+By 3.9(ii) and 3.11, the semisimple part of $\ad(w)$ is a polynomial in
+$\ad(w)$ with zero constant term. So $\ad(y)$ is also such a polynomial.
+However $w \in T$, so $[w, B] \subseteq A$, which means that $\ad(w)(B) \subseteq A$,
+and we conclude $\ad(y)(B) \subseteq A$. By definition of $T$, we have
+$y \in T$. By assumption, $\tr(wt) = 0$ for all $t \in T$. In particular,
+$0 = \tr(wy) = \sum \lambda_i f(\lambda_i)$. Recall that $f(\lambda_i) \in \mathbb{Q}$.
+But $f$ is linear, so applying $f$ we get $\sum f(\lambda_i)^2 = 0$. Hence,
+$f(\lambda_i) = 0$ for all $i$, but since the $\lambda_i$ span $E$, $f$ is
+identically zero, a contradiction.
+
+Hence, we must have $w_s = 0$.

@@ -17,3 +17,7 @@ children:
 - SemisimpleEndomorphism
 - SemisimpleRemarks
 - JordanDecomposition
+- SemisimplePart
+- SemisimpleAdjoint
+- SemisimpleJordan
+- TechnicalResultForCartan

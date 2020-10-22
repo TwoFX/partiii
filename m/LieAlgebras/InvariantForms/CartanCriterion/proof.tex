@@ -1,5 +1,20 @@
-We will only do the case $k = \mathbb{C}$.
+We will only do the case $k = \mathbb{C}$. In general, we can embed any $k$ of
+characteristic zero into an algebraically closed field and obtain the result from
+that (with some work).
 
-We need to introduce the idea of the semisimple and nilpotent parts of an
-endomorphism in $\End V$, where $V$ is a finite-dimensional complex vector
-space.
+Assume first that $L$ is soluble. By the corollary of Lie, there is a basis of
+$V$ with regard to which $L$ is represeted by upper triangular matrices, i.e.,
+$L \subseteq \mathfrak{b}_n$. Hence, $L^{(1)} \subseteq \mathfrak{n}_n$. Hence,
+$\tr(xy) = 0$ for all $x \in L$, $y \in L^{(1)}$ since $xy$ is triangular with
+$0$ s on the diagonal.
+
+Conversely, it suffices to show that $L^{(1)}$ is nilpotent, hence soluble.
+By Engel (and its corollary), it will suffice to show that all elements in
+$L^{(1)}$ are nilpotent. Define $A = L^{(1)}$, $B = L$ and apply lemma 3.12.
+We have $T = \set{t \in \End V\given [t, L] \subseteq L^{(1)}}$. Note
+that $L^{(1)} \subseteq L \subseteq T$.
+$L^{(1)}$ is spanned by $[x, z]$,  $x, z \in L$. Let $t \in T$. Then
+\[ tr([x, z] \circ t) = \tr(x \circ [z, t]),\]
+where $[z, t] \in L^{(1)}$ by definition of $T$, hence $\tr([x, z] \circ t) = 0$.
+Thus, $\tr(wt) = 0$ for all $w \in L^{(1)}, t \in T$. But $L^{(1)} \subseteq T$,
+so by the lemma every element in $L^{(1)}$ is nilpotent.

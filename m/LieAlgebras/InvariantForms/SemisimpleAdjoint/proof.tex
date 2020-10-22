@@ -1,0 +1,20 @@
+By (2.17), $\ad(x_n)$ is nilpotent. Since $x_s$ and $x_n$ commute with $x$,
+$\ad(x_s)$ and $\ad(x_n)$ commute with $\ad(x)$. Since $\ad(x) = \ad(x_s) + \ad(x_n)$,
+it remains to show that $\ad(x_s)$ is semisimple.
+
+Since $x_s$ is semisimple, we find a basis $\set{v_i}$ of $V$ consisting of eigenvectors
+of $x_s$, i.e., $x_s(v_i) = \lambda v_i$.
+
+Define $\theta_{ij} \in \End V$ via $v_i\mapsto v_j$, and $v_{\ell}\mapsto 0$ for
+$\ell\neq i$. The $\theta_{ij}$ form a basis of $\End V$ corresponding to elementary
+matrices.
+
+Note that $x_s\theta_{ij}(v_i) = \lambda_jv_j$ and $x_s\theta_{ij}(v_{\ell}) = 0$
+for $\ell\neq i$. On the other hand, $\theta_{ij}x_s(v_i) = \lambda_i v_j$ and
+$\theta_{ij}x_s(v_{\ell}) = 0$ if $\ell\neq i$.
+
+Thus, $\ad(x_s)(\theta_{ij} = (\lambda_j - \lambda_i)\theta_{ij}$, so the
+$\theta_{ij}$ form a basis of eigenvectors of $\ad(x_s)\colon \End V\to \End V$.
+
+Hence $\ad(x_s)\colon \End V\to \End V$ is diagonalisable, hence its restriction
+to $L$ is diagonalisable as well, completing the proof.

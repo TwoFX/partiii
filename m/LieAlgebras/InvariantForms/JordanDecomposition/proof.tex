@@ -1,0 +1,28 @@
+(iii) is an immediate consequence of (ii).
+
+Let $\prod (t - \lambda_i)^m_i$ be the characteristic polynomial of $x$.
+
+Define $V_i\coloneqq \ker(x - \lambda_i\iota)^{m_i}$ to be the generalized
+eigenspace, where $\iota$ is the identity. By linear algebra, we have
+$V = \bigoplus V_i$.
+The characteristic polynomial of $x|_{V_i}$ is $(t - \lambda_i)^{m_i}$.
+
+Our goal is to find a polynomial $p$ such that $p\equiv 0\pmod{t}$ and
+$p\equiv \lambda_i\pmod{(t - \lambda_i)^{m_i}}$ for each $i$. By the Chinese
+Remainder Theorem, such a polynomial exists. Define $q(t) = t - p(t)$.
+Now set $x_s \coloneqq p(x)$, $x_n\coloneqq q(x)$.
+
+For each $i$, we have
+\[ x_s - \lambda_i\iota = p(x) - \lambda_i\iota = r(x)(x - \lambda_i)^{m_i} + \lambda_i\iota - \lambda_i\iota = r(x)(x - \lambda_i)^{m_i}, \]
+hence $(x_s - \lambda_i\iota)|_{V_i} = 0$, so $x_s|_{V_i} = (\lambda_i\iota)|_{V_i}$,
+and so $x_s$ is diagonalizable.
+
+Now $(x_n)|_{V_i} = (x - x_s)|_{V_i} = (x - \lambda_i\iota)|_{V_i}$, so by
+definition of $V_i$, $x_n|_{V_i}$ is nilpotent for each $i$. Therefore,
+$x_n$ is nilpotent.
+
+It remains to show uniqueness of $x_s$ and $x_n$. If $x = s + n$ with $s$ semisimple
+and $n$ nilpotent and $s$ and $n$ commute. Then $n, s$ commute with $x$ and with
+$x_s$ and $x_n$, which are just polynomials in $x$. So $n - x_n = s - x_s$ is semisimple
+by the previous remark and nilpotent. But an endomorphism that is both semisimple
+and nilpotent must be zero.
