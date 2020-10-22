@@ -1,0 +1,13 @@
+By functoriality, we have
+\[ (S^{-1}\varphi) \circ (S^{-1}\theta) = S^{-1}(\varphi \circ\theta) = S^{-1}0 = 0, \]
+hence $\im (S^{-1}\theta) \subseteq\ker (S^{-1}\varphi)$.
+
+Now suppose $\frac{m}{s} \in \ker(S^{-1}\varphi) \subseteq S^{-1}M$. This
+means that $\frac{\varphi(m)}{s}= 0$ in $S^{-1}M_2$. By definition of
+localization, this means that there is $t \in S$ such that $t\varphi(m) = 0$ in
+$M_2$. By linearity, $0 = t\varphi(m) = \varphi(tm)$, hence
+$tm \in \ker\varphi = \im\theta$, so we find $m_1 \in M_1$ such that
+$\theta(m_1) = tm$. Then we can calculate in $S^{-1}M$ that
+\[ \frac{m}{s} = \frac{tm}{ts} = \frac{\theta(m_1)}{ts} = (S^{-1}\theta)(\frac{m_1}{ts}), \]
+hence $\frac{m}{s} \in \im S^{-1}\theta$, and we conclude that $\ker S^{-1}\varphi = \im S^{-1}\theta$ as
+claimed.

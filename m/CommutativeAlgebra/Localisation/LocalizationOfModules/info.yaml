@@ -5,3 +5,9 @@ section: true
 title: Localization of modules
 children:
 - LocalisationOfModules
+- LocalisationIsExact
+- LocalisationSubmodule
+- LocalisationOfQuotient
+- IdealsInLocalisation
+- LocalisationIsNoetherian
+- LocalProperty

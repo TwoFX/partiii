@@ -1,0 +1,31 @@
+For the first part, let $J$ be an ideal of $S^{-1}R$ and define
+$I\coloneqq \set{r \in R\given \frac{r}{1} \in J}$. This is clearly an ideal.
+Now if $\frac{r}{s} \in J$, then $\frac{r}{1} = \frac{s}{1}\frac{r}{s} \in J$,
+hence $r \in I$, so $\frac{r}{s} \in S^{-1}I$ and $J \subseteq S^{-1}I$.
+
+Conversely, if $\frac{r}{s} \in S^{-1}I$, i.e., $r \in I$ and $s \in S$, then
+$\frac{r}{1} \in J$, so $\frac{r}{s} = \frac{1}{s}\frac{r}{1} \in J$.
+
+Hence, $S^{-1}I = J$, completing the first part.
+
+Let $q$ be a prime ideal of $S^{-1}R$ and set $p\coloneqq\set{r \in R\given \frac{r}{1} \in q}$.
+By the previous part, $p$ is an ideal and $q = S^{-1}p$.
+
+The ideal $p$ is prime, since if $xy \in p$, then $\frac{xy}{1} = \frac{x}{1}\frac{y}{1} \in q$, so either
+$\frac{x}{1}$ or $\frac{y}{1}$ is in $q$, hence, $x \in p$ or $y \in p$.
+
+Furthermore, we have $p \cap S = \varnothing$, since if $r \in S\cap p$, then
+$\frac{r}{1} \in q$ by definition of $p$ and $\frac{1}{r}$ is valid element of
+$S^{-1}R$, so $1 = \frac{1}{r}\frac{r}{1} \in q$ since $q$ is an ideal, but
+$q$ is prime, so $1 \neq q$, a contradiction.
+
+Conversely, if $p$ is a prime ideal of $R$ that does not meet $S$. If
+$\frac{r}{s}, \frac{x}{y} \in S^{-1}R$ such that $\frac{rx}{sy} \in S^{-1}p$,
+then by definition of localisation we have $zrx \in p$ for some $z \in S$.
+Since $z \in S$, we have $z\notin p$, so since $p$ is prime, we must have
+$rx \in p$. Again since $p$ is prime, we find that $r \in p$ or $x \in p$, so
+$\frac{r}{s} \in S^{-1}p$ or $\frac{x}{y} \in S^{-1}p$, so $S^{-1}p$ is prime.
+
+Hence, the mappings $p \mapsto S^{-1}p$ and $q\mapsto\set{r \in R\given \frac{r}{1} \in q}$
+are inverse bijections (one half is given by the first part of the proof,
+the other half is obvois) the preserve primality in both directions.
