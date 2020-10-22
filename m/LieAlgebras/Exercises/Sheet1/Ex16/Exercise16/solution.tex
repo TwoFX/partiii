@@ -1,0 +1,15 @@
+Let $\alpha, \beta \in k$. We have
+\begin{align*}
+	\ad(\alpha x + \beta y)(x) &= [\alpha x + \beta y, x] = -\beta y,\\
+	\ad(\alpha x + \beta y)(y) &= [\alpha x + \beta y, y] = \alpha y.\\
+\end{align*}
+On the other hand, let $D\colon L\to L$ be any derivation.
+We have $\lambda_1, \lambda_2, \mu_1, \mu_2 \in k$ such that
+\[ D(x) = \lambda_1 x + \lambda_2 y,\quad D(y) = \mu_1 x + \mu_2 y. \]
+We calculate
+\begin{align*}
+	\mu_1 x + \mu_2 y &= D(y) = D([x, y]) = [D(x), y] + [x, D(y)]\\
+	&= [\lambda_1 x + \lambda_2 y, y] + [x, \mu_1 x + \mu_2 y] = \lambda_1 y + \mu_2 y.
+\end{align*}
+Hence $\mu_1 = \lambda_1 = 0$ and $D = \ad(\mu_2 x - \lambda_2 y)$, finishing
+the proof.
