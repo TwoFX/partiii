@@ -1,0 +1,26 @@
+\begin{enumerate}[label=(\roman*)]
+	\item We claim that multiplication by $2$ is an equalizer in $\mathcal{C}$ of the projection
+		$\pi\colon \mathbb{Z}\to \mathbb{Z}/2\mathbb{Z}$ and the zero map
+		$0\colon \mathbb{Z}\to \mathbb{Z}/2\mathbb{Z}$.
+		\[\begin{tikzcd}
+			& G\ar[d, "f"]\ar[dl, densely dotted]\\
+			\mathbb{Z}\ar[r, "\cdot 2"] & \mathbb{Z}\ar[r, shift left, "\pi"]\ar[r, shift right, "0" below]& \mathbb{Z}/2\mathbb{Z}
+		\end{tikzcd}\]
+		Indeed, if $f\colon G\to \mathbb{Z}$ equalizes $\pi$ and $0$, then its image
+		is contained in $2\mathbb{Z}$, hence it factors uniquely through multiplication
+		by $2$ via the map $g\mapsto f(g)/2$.
+	\item Assume that multiplication by $4$ is an equalizer in $\mathcal{C}$ of $f$ and $g$.
+		\[\begin{tikzcd}
+			& \ker (f-g)\ar[d, "\iota"]\ar[dl, densely dotted]\\
+			\mathbb{Z}\ar[r, "\cdot 4"] & \mathbb{Z}\ar[r, shift left, "f"]\ar[r, shift right, "g" below]& G
+		\end{tikzcd}\]
+	Clearly, the kernel of $f-g$ has no elements of order $4$ and the inclusion
+		equalizes $f$ and $g$, hence
+		it factors through multiplication by $4$. Consider the element
+		$\alpha\coloneqq f(1) - g(1) \in G$. We know that $\alpha+\alpha+\alpha+\alpha = f(4) - g(4) = 0$,
+		since multiplication by $4$ equalises $f$ and $g$. Since $G$ is an object
+		of $\mathcal{C}$, the order of $\alpha$ is $2$ or $1$. In either case,
+		we have $2 \in \ker (f - g)$,  which is not in the image of multiplication
+		by $4$, hence $\iota$ cannot factor through multiplication by $4$, so
+		multiplication by  $4$ is not an equalizer of $f$ and $g$.
+\end{enumerate}

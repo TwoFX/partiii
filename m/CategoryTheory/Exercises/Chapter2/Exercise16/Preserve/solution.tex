@@ -27,4 +27,14 @@
 		so $t$ is indeed the required diagonal morphism, so  $f$ is strong monic.
 	\item If  $u\colon C\to A$ satisfies $ugf = 1_A$, then $(ug)f = 1_A$, so
 		$f$ is split monic.
+	\item Say $gf$ is an equalizer of $u$ and $v$.
+		\[\begin{tikzcd}
+			& T\ar[d, "h"]\ar[dl, densely dotted, "\ell" above left]\\
+			A\ar[r, "f"] & B\ar[r, "g", hook] & C\ar[r, shift left, "u"]\ar[r, shift right, "v" below] & D
+		\end{tikzcd}\]
+		If $h\colon T\to B$ satisfies $ugh = vgh$, then since $gf$ is an equaliser of
+		$u$ and $v$, we find a unique $\ell\colon T\to A $ such that $gf\ell = gh$.
+		Since $g$ is monic, we have $f\ell = h$. The morphism $\ell$ is the unique
+		morphism satisfying $f\ell = h$, since if $\hat{\ell}$ also satisfies
+		$f\hat{\ell} = h$, then certainly $gf\hat{\ell} = gh$, hence $\ell = \hat{\ell}$.
 \end{enumerate}
