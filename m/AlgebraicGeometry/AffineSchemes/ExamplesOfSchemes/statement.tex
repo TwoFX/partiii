@@ -1,0 +1,24 @@
+\begin{enumerate}
+	\item Let $k$ be a field. Then $\Spec k = (\set{0}, k)$.
+
+		What does giving a morphism $f\colon \Spec k\to X$ a scheme mean?
+
+		First, we need to choose a point $x \in X$, the image of $f$. Second,
+		we get a local ring homomorphism
+		\[ f^\#_x\colon \mathcal{O}_{X, x} \to \mathcal{O}_{\Spec k, 0} \cong k, \]
+		i.e., $(f_x^\#)^{-1}(0) = m_x \subseteq \mathcal{O}_{X, x}$, the maximal
+		ideal of $\mathcal{O}_{X, x}$. Thus we get a factorization
+		$f^\#_x\colon \mathcal{O}_{X, x}\to \mathcal{O}_{X, x}/m_x \to k$.
+		The middle quotient is a field denoted as $\kappa(x)$, the residue field
+		of $X$ at $x$.
+
+		Thus $f$ induces an inclusion $\kappa(x) \to k$.
+
+		Conversely, given an inclusion $\iota\colon\kappa(x)\to k$ we get a morphism of
+		schemes $\Spec k\to X$ by defining $f(0) = x$ and
+		$f^\#\colon \mathcal{O}_X\to f_*k$ by defining $s\mapsto \iota(s(x)) \in k$,
+		where $s(x)$ means taking the stalk of $s$ at $x$.
+
+		Moral: Giving a morphism $f\colon \Spec k\to X$ is equivalent to giving
+		a point $x \in X$ and an inclusion $\kappa(x)\to k$.
+\end{enumerate}

@@ -1,0 +1,6 @@
+type: theorem
+label: CategoryOfAffineSchemes
+numbered: false
+section: false
+proofs:
+    proof: Proof
