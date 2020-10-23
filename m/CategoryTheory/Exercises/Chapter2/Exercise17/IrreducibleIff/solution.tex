@@ -1,0 +1,17 @@
+If $F$ is irreducible, then applying the irreducibility property to the
+epimorphism constructed in 2.12 gives the desired result.
+
+Conversely, if $A$ is an object of $\mathcal{C}$ such that there is an
+epimorphism $\beta\colon C(A, {-}) \to F$, then by 2.11 we get a factoring
+$\gamma\colon \mathcal{C}(A, {-})\to \coprod_{i \in I}G_i$. Define
+$x \coloneqq f_A(1_A) \in G_j(A)$ for some $j \in I$. By Yoneda, we know
+that for any object $B$ and morphism $f\colon A\to B$ we have
+\[ \gamma_B(f) = \left(\coprod_{i \in I}G_i\right)(f)(x) = G_j(f)(x), \]
+i.e., the image of $\gamma_B$ is completely contained in $G_j(B)$ for every $B$.
+Hence we have a commutative diagram
+\[\begin{tikzcd}[row sep=1cm, column sep=1cm]
+	G_j\ar[r, "\alpha|_{G_j}"] & F\\
+	& \mathcal{C}(A, {-}),\ar[ul, "\gamma"]\ar[u, "\beta", two heads]
+\end{tikzcd}\]
+and by the dual of Exercise 2.16(ii), the natural transformation $\alpha|_{G_i}$
+must be an epimorphism.
