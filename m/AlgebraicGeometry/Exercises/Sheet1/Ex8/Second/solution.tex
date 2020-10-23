@@ -1,0 +1,14 @@
+We have a commutative diagram
+\[\begin{tikzcd}[row sep=1cm, column sep=1cm]
+	\mathcal{F}\ar[d, "\hat{\imath}"]\ar[r, "i"] & \mathcal{F}'\\
+	\im' i\ar[r, "\theta"]\ar[ur] & \im i,\ar[u]
+\end{tikzcd}\]
+where the diagonal arrow is the inclusion, the bottom arrow is the natural map
+into the associated sheaf, and the right arrow is induced by the diagonal arrow.
+By Exercise 5, $\im i$ can be regarded as a subsheaf of $\mathcal{F}$.
+Since $i$ is injective, for every $p \in X$, $i_p$ is injective, so by commutativity,
+$\hat{\imath}_p$ is injective. Furthermore, for every $p \in X$, $\hat{\imath}$
+is surjective, because it is surjective on open sets. Hence, the composite
+$\theta \circ \hat{\imath}$ is an isomorphism on stalks. Since it is a map between
+sheaves, this means that is is an isomorphism. Hence, $\mathcal{F}$ is isomorphic
+to the subsheaf $\im i$.

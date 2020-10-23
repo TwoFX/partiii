@@ -1,0 +1,30 @@
+Assume that $f\colon \mathcal{F}\to \mathcal{G}$ and $g\colon \mathcal{G}\to \mathcal{H}$
+are morphisms of sheaves such that $g \circ f = 0$. Consider the diagram
+\[\begin{tikzcd}[row sep = 1cm, column sep=1cm]
+	\mathcal{F}\ar[r, "f"]\ar[d] & \mathcal{G}\ar[r, "g"] & \mathcal{H}\\
+	\im' f\ar[ur]\ar[r, "\theta"]\ar[rr, bend right, "\iota"] &\im f\ar[r, "\varphi"]\ar[u] & \ker g,\ar[ul]
+\end{tikzcd}\]
+where the map $\iota$ is an inclusion of subsheaves of $\mathcal{G}$ and $\varphi$ is
+induced by $\iota$. We say that $\im f = \ker g$ if $\varphi$ is an isomorphism. By
+a result of the lecture, this is the case if and only if forall $p \in X$, the
+induced map $\varphi_p\colon (\im f)_p \to (\ker g)_p$ is an isomorphism. Since
+$\theta$ induces isomorphisms on stalks and the bottom triangle commutes, this is
+the case if and only if $\iota_p\colon (\im' f)_p\to (\ker g)_p$ is an isomorphism
+for every $p \in X$. Now consider the diagram
+\[\begin{tikzcd}
+	(\im' f)_p \ar[r, "\iota_p"]\ar[d, "\cong"] & (\ker g)_p\ar[d, "\cong"]\\
+	\im f_p\ar[r, "i"] & \ker g_p,
+\end{tikzcd}\]
+where the left and right maps are the isomorphisms defined in the proof of a result
+from the lecture and the bottom map is just the inclusion (this makes sense since
+$g \circ f = 0 \iff \forall p \in X\colon g_p \circ f_p = 0$ as stalks characterize morphisms). The
+diagram commutes since none of the maps actually does anything. Since the left and
+right maps are isomorphisms, we have that the top map is an isomorphism if and only
+if the bottom map is an isomophism.
+
+But the bottom map is an isomorphism if and only if the sequence
+\[\begin{tikzcd}
+	\mathcal{F}_p\ar[r, "f_p"] & \mathcal{G}_p\ar[r, "g_p"] & \mathcal{H}_p
+\end{tikzcd}\]
+is exact, so putting everything together, we find that $(f, g)$ is exact if and only if
+$(f_p, g_p)$ is exact for every $p \in X$.

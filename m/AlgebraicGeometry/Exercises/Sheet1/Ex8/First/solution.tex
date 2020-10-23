@@ -1,0 +1,22 @@
+The natural map $e\colon \mathcal{F}\to \mathcal{F}/\mathcal{F}'$ is
+given as the composite $\theta \circ \hat{e}$, where $\hat{e}$ is
+the map $\mathcal{F}\to \coker' i$, where $i\colon \mathcal{F}'\to \mathcal{F}$ is
+the inclusion and $\coker' i$ is the presheaf cokernel of $i$, and
+$\theta$ is the natural map into the sheafification.
+
+For every $p \in X$, $\theta_p$ is surjective because $\theta$ induces
+isomorphisms on stalks, and $\hat{e}_p$ is surjective, because
+$\hat{e}$ is surjective on open sets, which in particular implies
+surjectivity on stalks. Hence $e_p$ is surjective as the composite
+of two open maps. By a result from the lecture, this implies that $e$
+is surjective.
+
+Additionally, for any open $U \subseteq X$, we have $(\ker e)U = \ker p_U = \mathcal{F}'U$,
+so $\ker e$ and $\mathcal{F}'$ are equal as subsheaves of $\mathcal{F}$.
+
+Now we have $\im i = \mathcal{F}'$ as subsheaves of $\mathcal{F}$, since
+the map $\theta\colon \mathcal{F}' = \im' i \to \im f$ induces isomorphisms on
+stalks, but since the domain already is a sheaf this forces $\theta$ to be an
+isomorphism. Hence $\im i = \ker e$ as subsheaves of $\mathcal{F}$, so the sequence
+is exact at $\mathcal{F}$.  Exactness at $\mathcal{F}'$ and
+$\mathcal{F}/\mathcal{F}'$ is trivially checked on stalks using Exercise 6.
