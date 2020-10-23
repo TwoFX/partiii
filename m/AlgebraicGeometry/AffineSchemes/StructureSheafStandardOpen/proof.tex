@@ -6,19 +6,19 @@ Define
 This makes sense since if $f\notin p$, then $f^n\notin p$.
 As usual, we will verify injectivity and surjectivity.
 
-For inejctivity, assume that $\Psi(a/f^n) = 0$. Then for all $p \in D(f)$, we have
+For injectivity, assume that $\Psi(a/f^n) = 0$. Then for all $p \in D(f)$, we have
 $a/f^n = 0$ in $A_p$, i.e., there is  $h \in A\setminus p$ such that $ha = 0$ in $A$.
 
 Let $I = \set{q \in A\given q\cdot a = 0}$ (the annihilator of $a$).
-So $h \in I$, but $h \notin p$, so $I\subsetneq p$.
+So $h \in I$, but $h \notin p$, so $I\nsubseteq p$.
 This is true for all $p \in D(f)$, so $V(I)\cap D(f) = \varnothing$. Thus
 $f \in \bigcap_{p \in V(I)}p = \sqrt{I}$, as we know from commutative algebra.
 This means that $f^n \in I$ for some $n>0$. Thus $f^n\cdot a = 0$, so
-$a/f = 0$ in $A_f$, so $\Psi$ is injective.
+$a/f^n = 0$ in $A_f$, so $\Psi$ is injective.
 
 Next, we will prove surjectivity. Let $s \in \mathcal{O}(D(f))$. Cover
 $D(f)$ with open sets $V_i$ on which $s$ is represented by as $a_i/g_i$ with
-$a_i, g_i \in A$, $g_i \notin p$ whenevery $o \in V_i$. Thus $V_i \subseteq D(g_i)$.
+$a_i, g_i \in A$, $g_i \notin p$ whenever $p \in V_i$. Thus $V_i \subseteq D(g_i)$.
 By question 1 on the first example sheet, the sets of the form $D(h)$ form a
 base for the Zariski topology on $\Spec A$. Thus we can assume $V_i = D(h_i)$
 for some $h_i \in A$. Since $D(h_i) \subseteq D(g_i)$, we have
@@ -51,14 +51,15 @@ Thus, for some $n$, $(h_ih_j)^n(h_ja_i - h_ia_j) = 0$ in $A$. We can pick an $n$
 sufficiently large to work for all pairs $i, j$ (since there are only finitely many
 such pairs).
 
-We rewrite this equality as $h_j^{n+1}(h_i^na_i) = h_i^{n+1}(h_j^na_j) = 0$.
+We rewrite this equality as $h_j^{n+1}(h_i^na_i) - h_i^{n+1}(h_j^na_j) = 0$.
 Now replace $h_i$ by $h_i^{n+1}$, and $a_i$ by $h_i^na_i$ (this is allowed because
 $\frac{a_i}{h_i}= \frac{a_ih_i^n}{h_i^{n+1}}$. Thus we can assume that $s$ is still
-represented on $D(h_i)$ by $a_i/h_i$ but also for each $i, j$ we have $h_ia_j = h_ja_i$
+represented on $D(h_i)$ by $a_i/h_i$ but also for each $i, j$ we have $h_ia_j = h_ja_i$.
 
-Note $f^n = \sum b_ih_i$ for some $b_i \in A$, since the $D(h_i)$ cover $D(f)$,
-and define $a \coloneqq b_ia_i$.
+Since $D(f) \subseteq \bigcup_{i \in I} D(h_i)$, we have
+$V(\sum (h_i)) = \bigcap_{i \in I} V(h_i) \subseteq V(f)$, hence
+$f^n = \sum b_ih_i$ for some $h_i$. Define $a\coloneqq b_i a_i$.
 
 Then for any $j$, we have \[ h_ja = \sum_i b_ia_ih_j = \sum_i b_ia_jh_i = f^na_j. \]
-This means that $a/f^n = a_jh_j$ on $D(h_j)$. Hence $\Psi(a/f^n) = s$, completing
+This means that $a/f^n = a_j/h_j$ on $D(h_j)$. Hence $\Psi(a/f^n) = s$, completing
 the proof of surjectivity.
