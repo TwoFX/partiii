@@ -21,3 +21,6 @@ children:
 - SemisimpleAdjoint
 - SemisimpleJordan
 - TechnicalResultForCartan
+- SemisimpleDecomposes
+- WarningOnTerminology
+- SLisSimple

@@ -1,0 +1,26 @@
+For part (i), note that using the fact that adjoints are
+derivations we have
+\[ (\ad(y) - (\lambda+\mu)\iota)([x, z]) = [(\ad(y) - \lambda\iota)x, z] +
+		[x, (\ad(y)-\mu\iota)z] \]
+
+and so
+\[ (\ad(y) - (\lambda + \mu)\iota)^n([x, z]) = \sum_{i + j = n}\binom{n}{i}[(\ad(y) - \lambda\iota)^i(x), (\ad(y) - \mu\iota)^j(z)] \]
+
+Hence if $x \in L_{\lambda, y}$, $z \in L_{\mu, y}$, then
+$[x, z] \in L_{\lambda + \mu, y}$.
+
+Part (ii) is just standard linear algebra about generalized eigenspaces.
+
+For part (iii), we have already noticed that $[y, y] = 0$ and so $\ad(y)$
+has $0$ as an eigenvalue. Hence the characteristic polynomial of $\ad(y)$ can
+be written as $t^mf$ with $m\geq 1$ and $t\nmid f$. By coprimality we find
+polynomial $q, r$ such that $1 = qt^m + rf$.
+
+Let $b \in \Id_L(A)$. Then
+\begin{equation*}\tag{$\star$}
+b = q(\ad(y))(\ad(y))^m(b) + r(\ad(y))f(\ad(y))(b).
+\end{equation*}
+But $m\geq 1$ and $y \in A$, so the first term of the RHS of ($\star$) is in $A$.
+Also $(\ad(y))^\mathfrak{(\ad(y))(b) = 0}$ by Cayley-Hamilton. So
+$f(\ad(y))(b) \in L_{0, y} \subseteq A$. Hence the secod term of the RHS of
+($\star$) is in $A$, hence $b \in A$. Thus $\Id(A) = A$.

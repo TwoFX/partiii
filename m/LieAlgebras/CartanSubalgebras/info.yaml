@@ -1,0 +1,19 @@
+type: chapter
+label: CartanSubalgebras
+numbered: true
+section: true
+title: Cartan Subalgebras
+children:
+- ChapterConventions
+- GeneralizedEigenspace
+- ElementInEigenspace
+- BracketsOfEigenspaces
+- CartanSubalgebra
+- CartanSubalgebrasExist
+- Converse
+- Rank
+- CSAifRegular
+- UniquenessOfRank
+- CSAConjugate
+- Geometry
+- RegularConnected

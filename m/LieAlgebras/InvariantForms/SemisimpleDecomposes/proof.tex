@@ -1,0 +1,25 @@
+We will prove part (i) by induction on $\dim L$. Let $J$ be an ideal of
+the semisimple Lie algebra $L$. By the Cartan-Killing criterion, the Killing
+form is non-degenerate. Consider the orthogonal space $J^\top$, which is an
+ideal. We have $\dim J + \dim J^\top = \dim L$.
+
+By Cartan's criterion applied to $\ad(J\cap J^\top)$, we find that
+$\ad(J\cap J^\top)$ is soluble. Hence $J\cap J^\top$ is an ideal and it is
+soluble, since the kernel of the adjoint representation is an abelian ideal.
+We conclude $J\cap J^\perp \subseteq R(L) = 0$. By a dimension argument, we
+conclude $L = J\oplus J^\top$. Note that any ideal of $J$ or in $J^\top$
+is also an ideal of $L$ (because $J$ is a direct summand of $L$). Thus,
+$J$ and $J^\perp$ are also semisimple. Since $L\neq J \neq 0$,  $J$ and $J^\perp$
+are direct sums of non-abelian simple ideals. This completes the proof of
+part (i).
+
+For part (ii), suppose $J\cap L_i = 0$. Then $[L_i, J] = 0$, since $J$ and $L_i$
+are ideals and hence $J \subseteq \bigoplus_{j\neq i} L_j$.
+
+Conversly, if $J\cap L_j \not 0$, then by simplicity of $L_i$ we have $L_i \subseteq J$.
+Hence $J = \bigoplus_{L_i \subseteq J}L_i$.
+
+For part (iii), assume at $L$ is a direct sum of non-abelian simples. By
+(ii), the ideal $R(L)$ is the direct sum of some of them. However,
+$R(L)$ is soluble and so cannot contain nonabelian simple ideals. Hence
+$R(L) = 0$, so $L$ is semisimple.
