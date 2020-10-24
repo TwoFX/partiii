@@ -1,0 +1,15 @@
+For a zero divisor $a \in A$ denote by  $\Sigma_a$ the set of ideals containing
+$a$ in which every element is a zero divisor (notice that $\Sigma = \Sigma_0$). Since $(a) \in \Sigma_a$, we know
+that $\Sigma_a$ is nonempty. Furthermore, the union of a chain of ideals in
+$\Sigma_a$ is once again an element of $\Sigma_a$, hence $\Sigma_a$ admits
+a maximal element $I_a$ by Zorn's lemma.
+
+Let $x, y \in A$ such that $xy \in I_a$, $x\notin I_a$ and $y\notin I_a$. Then
+The ideals $I_a + Ax$ and $I_a + Ay$ contain non-zero-divsors $u$ and $v$. Write
+$u = i + u_1x$ and $v = j + u_2y$ with $i, j \in I_a$, $u_1, u_2 \in A$. Then
+$uv = ij + iu_2y + ju_1x + u_1u_2xy \in I_a$, hence $uv$ is a zero divisor, but
+then $u$ and $v$ are also zero divisors, a contradiction.
+
+Hence $I_a$ is prime and if $Z$ is the set of zero divisors, then we find that
+\[ Z = \bigcup_{a \in Z} I_a \]
+as required.
