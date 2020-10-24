@@ -1,0 +1,18 @@
+\begin{enumerate}[label=(\alph*)]
+	\item Easy verification.
+	\item The claim is obvious for $\rho(y)$ and $\rho(z)$, and for
+		$fX^p \in (X^p)$ we have
+		\[ \frac{\mathrm{d}}{\mathrm{d}X}(fX^p) =
+		\left(\frac{\mathrm{d}}{\mathrm{d}X}f\right)X^p +
+		f\frac{\mathrm{d}}{\mathrm{d}X}X^p, \]
+		and the left summand is clearly in $(X^p)$, and since we're in
+		characteristic $p$, the right summand vanishes, hence the claim follows.
+	\item Let $V \subseteq k[X]/(X^p)$ be a nontrivial $\theta$-subspace.
+		Then we find $0\neq f \in V$. By repeatedly applying $\rho(x)$ to $f$ we
+		find that $V$ contains (an element represented by) a nonzero constant
+		(we use here that $k$ does not have zero divisors),
+		hence $1 + (X^p) \in V$. By repeatedly applying $\rho(y)$ we find that
+		$X^i + (X^p) \in V$ for all $0 \leq i < p$, hence $V$ contains a
+		basis of $k[X]/(X^p)$ and thus $V = k[X]/(X^p)$, so $\theta$ is
+		indeed irreducible.\qedhere
+\end{enumerate}

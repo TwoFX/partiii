@@ -1,0 +1,27 @@
+Let $x, y, z$ denote a basis of the Heisenberg Lie algebra such that
+\[ [x, y] = z,\quad [x, z] = 0\quad [y, z] = 0. \]
+It immediately follows that $\ad(x)$ sends $y$ to $z$ and other basis elements
+to $0$, $\ad(y)$ sends $x$ to $-z$ and other basis elements to $0$ and $\ad(z)$
+is the zero derivation. Hence $\ad(L)$ is a two-dimensional subalgebra of
+$\Der L$.
+
+On the other hand, if $\alpha, \beta, \gamma, a, b, c \in k$ we define
+\[ D(x) \coloneqq \alpha x + \beta y + \gamma z,\quad D(y)\coloneqq ax + bx + cx, \]
+and we want $D$ to be a derivation, then we must set
+\[ D(z) = D([x, y]) = [D(x), y] + [x, D(y)] = (\alpha + b)z. \]
+Is is then easily cheked that the conditions on $D([x, z])$ and $D([y, z])$
+are vacuous. Hence, we conclude that $\Der L$ consists of the endomorphisms that
+are precisely of the form above. In particular, $\Der L$ is a 6-dimensional Lie
+algebra, so there are derivations that are not inner (for example, the derivation
+given by $D(x) = z$,  $D(y) = 0$, $D(z) = 0$).
+
+Now $\Der L/\ad(L)$ is a $4$-dimensional Lie algebra. We can give representatives
+$D, E, F, G \in \Der L$ whose images in the quotient form a basis by setting
+\begin{align*}
+	D(x) &= x & E(x) &= 0 & F(x) &= z & G(x) &= 0\\
+	D(y) &= 0 & E(y) &= z & F(y) &= 0 & G(y) &= y\\
+	D(z) &= z & E(z) &= 0 & F(z) &= 0 & G(z) &= z.
+\end{align*}
+We find that $[D, E] = E$ and $[F, G] = -F$ and all other Lie brackets of basis
+elements vanish. Hence, if $L_2$ is the non-abelian
+two-dimensional Lie algebra (cf. Exercise 2), then $\Der L/\ad(L) \cong L_2 \oplus L_2$.
