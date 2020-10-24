@@ -11,3 +11,6 @@ children:
 - IdealsInLocalisation
 - LocalisationIsNoetherian
 - LocalProperty
+- BeingZeroIsLocal
+- BeingInjectiveIsLocal
+- LocalizationOfLocalization

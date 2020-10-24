@@ -1,0 +1,16 @@
+(i) implies (ii) by exactness of localization. It is obvious that (ii) implies
+(iii).
+
+Now assume that $\varphi_q$ is injective for all maximal ideals $q$.
+The sequence
+\[\begin{tikzcd}
+	0 \arrow[r] & \ker\varphi \arrow[r, "\iota"] & M \arrow[r, "\varphi"] & N
+\end{tikzcd}\]
+is exact. Hence
+\[\begin{tikzcd}
+	0 \arrow[r] & (\ker\varphi)_q \arrow[r, "\iota_q"] & M_q \arrow[r, "\varphi_q"] & N_q
+\end{tikzcd}\]
+is exact for every maximal ideal $q$. By exactness, $(\ker\varphi)_q$ is
+isomorphic to $\ker \varphi_q$, which is trivial by assumption. Hence
+$(\ker\varphi)_q$ is trivial for every maximal ideal $q$, so by the previous
+result, we have $\ker\varphi = 0$ as required.

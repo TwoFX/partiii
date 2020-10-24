@@ -1,0 +1,6 @@
+type: theorem
+label: StrongNullstellensatz
+numbered: false
+section: false
+proofs:
+    proof: Proof

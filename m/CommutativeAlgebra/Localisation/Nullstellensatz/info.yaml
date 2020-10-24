@@ -1,0 +1,8 @@
+type: section
+label: Nullstellensatz
+numbered: true
+section: true
+title: A proof of the Nullstellensatz
+children:
+- NullstellensatzRemark
+- StrongNullstellensatz

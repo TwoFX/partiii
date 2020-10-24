@@ -11,3 +11,4 @@ children:
 - LocalNoetherian
 - LocalExamples
 - LocalizationOfModules
+- Nullstellensatz

@@ -1,0 +1,24 @@
+Let $p$ be any prime ideal of $R$ and let $s \in R\setminus p$. The
+set $S\coloneqq\set{1, s, s^2, \ldots}$ is multiplicative, so we get
+a localization $S^{-1}R$ and a map $\theta\colon R\to S^{-1}R$.
+$R$ is a finitely generated $k$-algebra and $S^{-1}R$ generated as a
+$k$-algebra by $\theta(R)$ and $1/s$. Hence $S^{-1}R$ is a finitely generated
+$k$-algebra. Let $q$ be a maximal ideal of $S^{-1}R$ containing $S^{-1}p$. By
+the weak Nullstellensatz,  $S^{-1}R/q$ is a finite field extension of $k$.
+
+The ideal  $p_1\coloneqq \theta^{-1}(q)$ is a prime ideal containing $p$, and
+by the correspondence of prime dieals we know that  $p_1$ does not meet $S$.
+Hence $\theta$ induces an injective $k$-vector space homomorphism
+$R/p_1\to S^{-1}R/q$. Since $S^{-1}R/q$ is finite-dimensional, this implies
+that $R/p_1$ is also finite-dimensinoal.
+
+By the remark, this implies that $R/p_1$ (which is an integral domain since
+ $p_1$ is prime) is a field, hence $p_1$ is a maximal ideal. Hence, for any
+ $s \notin p$, we find a maximal ideal containing $p$ but not containing $s$,
+i.e.,
+\[ R\setminus p \subseteq \bigcup \set{\text{complemenents of maximal ideals containing $p$}}. \]
+By elementary set theory, this means that
+\[ \bigcap\set{\text{maximal ideals containing $p$}} \subseteq p. \]
+Since the converse inclusion is trivial, we have that $p$ is the intersection
+of maximal ideals containing $p$. Hence the intersection of all primes is
+the same as the intersection of all maximals, which is what we wanted to show.
