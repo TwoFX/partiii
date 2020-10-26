@@ -1,0 +1,10 @@
+We will procedd by induction on $n$. The claim is obviously true for $n = 1$.
+Suppose that
+\[ Q\coloneqq \bigcap_{i = 1}^n q_i = \prod_{i = 1}^n q_i \]
+and $q_{n+1}$ is a maximal ideal distinct from the $q_i$. We have $Q \nsubseteq q_{n+1}$,
+because otherwise there would be some $i \leq n$ such that $q_i \subseteq q_{n+1}$,
+since $q_{n + 1}$ is prime. But then we would have $q_i = q_{n+1}$, a contradiction.
+Hence $Q + q_{n+1} = A$ by maximality of $q_{n+1}$, so we find $u \in Q$ and
+$v \in q_{n+1}$ such that $u + v = 1$. It is obvious that
+$Qq_{n+1} \subseteq Q\cap q_{n+1}$. Conversely, let $x \in Q\cap q_{n+1}$. Then
+$x = x(u + v) = xu + xv \in Qq_{n+1}$, so the claim follows.

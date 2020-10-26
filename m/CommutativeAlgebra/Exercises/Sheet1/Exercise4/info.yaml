@@ -1,0 +1,9 @@
+type: subsection
+label: Exercise4
+numbered: false
+section: true
+title: Exercise 4
+children:
+- FormalPowerSeriesNoetherian
+- Surjective
+- ConverseDirection

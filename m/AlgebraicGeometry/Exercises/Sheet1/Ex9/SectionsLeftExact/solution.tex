@@ -1,0 +1,23 @@
+Since $(0, i)$ is exact, $(0, i_x)$ is exact for every $x \in U$, hence
+$i_x$ is injective for every $x \in U$, hence $i$ is injective, hence
+$\ker i = 0$, hence $0 = (\ker i)(U) = \ker i_U$, hence $i_U$ is injective,
+so the sequence is exact at $\Gamma(U, \mathcal{F}')$.
+
+It remains to show exactness at $\Gamma(U, \mathcal{F})$. Since
+$p_U \circ i_U = (p \circ i)_U = 0_U = 0$, we have
+$\im i_U \subseteq \ker i_U$.
+
+Conversely, let $s \in \ker p_U$, i.e., $p_U(s) = 0$. By Exercise 6 we know
+that $(i_x, p_x)$ is exact for every $x \in U$. Since $p_U(s) = 0$, we have
+$p_x(U, s) = 0$ for every $x \in U$, hence $(U, s) \in \im i_x$ for all $x \in U$,
+i.e., we find $(V_x, t_x) \in \mathcal{F}'_x$ such that $i_x(V_x, t_x) = (U, s)$.
+If necessary, shrink $V_x$ such that $i_{V_x}(t_x) = s|_{V_x}$.
+
+For $x, y \in U$, we have
+\[ i_{V_x\cap V_y}(t_x|_{V_x\cap V_y} - t_y|_{V_x\cap V_y}) = s|_{V_x\cap V_y} - s|_{V_x\cap V_y} = 0. \]
+Since $i$ is injective, we conclude $t_x|_{V_x\cap V_y} = t_y|_{V_x\cap V_y}$, hence
+we can glue the $t_x$ to a $t \in \mathcal{F}'U$. For any $x \in U$ we have
+\[ \mathcal{F}_x\ni (U, i_U(t)) = (V_x, i_{V_x}(t|_{V_x})) = (V_x, i_{V_x}(t_x))
+	= (V_x, s|_{V_x}) = (U, s), \]
+and since stalks characterize sections, this implies that $i_U(t) = s$, hence
+$s \in \im i_U$ as required.

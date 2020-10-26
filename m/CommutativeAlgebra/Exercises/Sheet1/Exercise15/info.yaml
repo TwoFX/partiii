@@ -1,0 +1,9 @@
+type: subsection
+label: Exercise15
+numbered: false
+section: true
+title: Exercise 15
+children:
+- IntersectionIsProduct
+- ArtinianHasFinitelyManyMaximalIdeals
+- ArtinianIsNoetherian

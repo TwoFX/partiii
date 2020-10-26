@@ -1,0 +1,24 @@
+Let $I \subseteq A[[X]]$ be an ideal. For a natural number $n$ define $R(n)$
+to be the set of trailing coefficients of elements of the form
+$a_nX^n +$ higher order terms in $I\cap (X^n)$. As in the proof of
+Hilbert's basis theorem, we have $R(0) \subseteq \ldots$. Since $A$ is
+noetherian, wie find $N$ such that $R(n) = R(N)$ for all $n \geq N$.
+For $0 \leq i \leq N$, $R(i)$ is finitely generated, say by
+$r_{ij}$, $0\leq i\leq N$, $1\leq j\leq k_i$. We find $f_{ij} \in I$ such that
+$f_{ij} = r_{ij}X^i +$ higher order terms. We claim that $I$ is generated
+by the $f_{ij}$. Indeed, if $f \in I$, we can choose $c_{ij}$ for $1\leq i\leq N$,
+$1\leq j\leq k_i$ such that $f'\coloneqq f - \sum_{i, j} c_{ij} f_{ij} \in (X^{N+1})$.
+
+Now let $g_i \in A[[X]]$, $1\leq i\leq k_N$. Write $f' = \sum_{j = N+1}^\infty a_jX^j$,
+$f_{Ni} = \sum_{j = N}^\infty b_{ij}X^j$, $g_i = \sum_{j = 0}^\infty c_{ij}X^j$.
+For any $k$, the $k$-th coefficient of $\sum_{i=1}^{k_N} f_{Ni}g_i$ is given by
+\begin{align*}
+	\sum_{t = 1}^{k_N}\sum_{i+j = k}b_{ti}c_{tj}&= \sum_{t=1}^{k_N}\sum_{i = 1}^kb_{ti}c_{t(k-1)}\\
+	&= \left(\sum_{t=1}^{k_N}\sum_{i = N+1}^kb_{ti}c_{t(k-i)}\right)+\sum_{t=1}^{k_N}r_{Nt}c_{t(k-N)}.
+\end{align*}
+
+Hence, we can define the $g_i$ inductively in such a way that the
+$k$-th coefficient of $\sum f_{Ni}g_i$ is precisely $a_k$: since $R(k) = R(N)$,
+there is a choice of $c_{t(k-N)}$ that works.
+Therefore, $f' = \sum f_{Ni}g_i$, so $f$ is indeed in the span of the
+$f_{ij}$, hence $I$ is finitely generated.
