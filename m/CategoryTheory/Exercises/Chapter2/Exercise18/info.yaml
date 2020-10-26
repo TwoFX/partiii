@@ -1,0 +1,7 @@
+type: subsection
+label: Exercise18
+numbered: false
+section: true
+title: Exercise 18
+children:
+- EpicButNotPointwiseEpic

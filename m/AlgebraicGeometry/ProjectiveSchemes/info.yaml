@@ -1,0 +1,10 @@
+type: chapter
+label: ProjectiveSchemes
+numbered: true
+section: true
+title: Projective schemes
+children:
+- Conventions
+- HomogeneousIdeal
+- Proj
+- ProjectiveZariski

@@ -1,0 +1,15 @@
+Let $G\colon \mathsf{2}\to D$ be the functor that sends the morphism
+$0\to 1$ to $h$. Consider any functor $H\colon \mathsf{2}\to D$ and
+a natural transformation $\eta\colon G\to H$.
+\[\begin{tikzcd}[row sep=1cm, column sep=1cm]
+	B\ar[r, "\eta_0"]\ar[d, "h"] & H0\ar[d, "H(0\to 1)"]\\
+	D\ar[r, "\eta_1"]& H1.
+\end{tikzcd}\]
+Clearly, $H_1 = D$, $\eta_1 = 1_D$.
+$H_0$ is either $B$ or $D$. If $H_0 = B$, then $\eta_0 = 1_B$ and $H(0\to 1) = h$.
+If $H_0 = D$, then $\eta_0 = h$ and $H(0\to 1) = 1_D$. In both cases,
+there is only one natural transformation $G\to H$. Hence, any natural transformation
+$\alpha\colon F\to G$ is automatically epic. Choose $F$ to be the functor that
+sends $0\to 1$ to $f$ and set $\alpha_0 \coloneqq f$, $\alpha_1\coloneqq h$. Then
+$\alpha$ is a natural transformation. By what we have just seen, it is epic,
+but $\alpha_0 = f$ is not an epimorphism, hence $\alpha$ is not pointwise epic.

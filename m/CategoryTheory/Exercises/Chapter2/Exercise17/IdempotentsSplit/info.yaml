@@ -1,0 +1,6 @@
+type: exercise
+label: IdempotentsSplit
+numbered: false
+section: false
+proofs:
+    solution: Solution

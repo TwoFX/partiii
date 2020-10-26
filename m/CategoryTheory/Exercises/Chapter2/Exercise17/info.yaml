@@ -5,3 +5,5 @@ section: true
 title: Exercise 17
 children:
 - IrreducibleIff
+- IrreducibleAndProjective
+- IdempotentsSplit

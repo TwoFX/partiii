@@ -1,0 +1,22 @@
+If $F$ is representable, then we have a natural isomorphism
+$\mathcal{C}(A, {-})\to F$, which in particular is a split epimorphism, hence
+$F$ is irreducible and projective by part (ii).
+
+Conversely, if $F$ is irreducible and projective, by (ii) we find an epimorphism
+$e\colon \mathcal{C}(A, {-})\to F$ and a section $s\colon F\to \mathcal{C}(A, {-})$
+such that $es = 1$. $se$ is a natural transformation $\mathcal{C}(A, {-})\to \mathcal{C}(A, {-})$.
+Define $f\coloneqq (se)_A(1_A)$. By Yoneda, for any $u\colon A\to B$, we have
+\[ (se)_B(u) = \mathcal{C}(A, u)(f) = uf. \]
+Since $se$ is idempotent, in particular we get
+\[ f = (se)_A(1_A) = (sese)_A(1_A) = (se)_A((se)_A(1_A)) = (se)_A(f) = ff, \]
+so $f$ is idempotent. By assumption, $f$ is split, so we find some object $B$,
+$g\colon B\to A$ and $h\colon A\to B$ such that $f = gh$, $hg = 1_B$. Defining
+\begin{align*}
+	x\colon \mathcal{C}(A, {-})&\to \mathcal{C}(B, {-}) & y\colon \mathcal{C}(B, {-})&\to \mathcal{C}(A, {-})\\
+	x_C\colon u&\mapsto ug & y_C\colon u&\mapsto uh,
+\end{align*}
+(these are natural, which we can see either using Yoneda or by noticing that the
+naturality squares are just associativity of composition), we find that $yx = se$ and $xy = 1$. But then we have
+$xsey = xyxy = 1$, $eyxs = eses = 1$, so $xs \colon F\to \mathcal{C}(B, {-})$ and
+$ey\colon \mathcal{C}(B, {-}) \to F$ are two-sided inverses of each other, hence
+$F$ is representable.

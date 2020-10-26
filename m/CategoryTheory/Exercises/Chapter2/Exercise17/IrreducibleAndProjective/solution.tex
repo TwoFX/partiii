@@ -1,0 +1,20 @@
+If $F$ is irreducible and projective, then by part (i) we find an epimorphism
+$e\colon \mathcal{C}(A, {-})\to F$ for some $A$. Applying the projectivity of
+ $F$ to the diagram
+\[\begin{tikzcd}[row sep=1cm, column sep=1cm]
+	& F\ar[d, "1_F"]\ar[dl, densely dotted, "s"]\\
+	\mathcal{C}(A, {-})\ar[r, two heads, "e"] & F
+\end{tikzcd}\]
+yields $s\colon F\to \mathcal{C}(A, {-})$ such that $es = 1$, so $e$ is split.
+
+Conversely, if $e\colon \mathcal{C}(A, {-}) \to F$ admits a section
+$s\colon F\to \mathcal{C}(A, {-})$ such that $es = 1$, then $F$ is irreducible by
+part (i). Suppose we have a morphism  $f\colon F\to R$ and an epimorphism
+$g\colon Q\to R$.
+\[\begin{tikzcd}[row sep=1cm, column sep=1cm]
+	\mathcal{C}(A, {-})\ar[r, shift left, "e", two heads]\ar[d, densely dotted, "h"] & F\ar[l, shift left, "s"]\ar[d, "f"]\\
+	Q\ar[r, two heads, "g"] & R
+\end{tikzcd}\]
+Since $\mathcal{C}(A, {-})$ is projective by 2.11, we find some $h\colon \mathcal{C}(A, {-}) \to Q$ such
+that $fe = gh$. But then $ghs = fes = f$, hence $hs\colon F\to Q$ solves the lifting
+problem, and $F$ is projective.

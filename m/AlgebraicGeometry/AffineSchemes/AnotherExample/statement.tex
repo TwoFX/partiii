@@ -1,0 +1,30 @@
+Fix a field $k$, and let $D = \Spec k[t]/(t^2) = (\set{(t)}, k[t]/(t^2))$, where $(t)$ is
+the unique maximal ideal.
+$t$ doesn't make sense as a $k$-valued function any more, as $t^2 = 0$.
+
+Let $X$ be any scheme over $k$. What is $X(D)$? Given a morphism $f\colon D\to X$
+of schemes over $k$, we get a point $x \in X$ as the image of $f$ and a local
+homomorphism
+\[ f^\#_x\colon \mathcal{O}_{X, x}\to k[t]/(t^2), \]
+such that $(f^\#_x)^{-1}((t)) = \mathfrak{m}_x$. Note thate $\mathfrak{m}_x^2$ maps
+to $0$, hence we get a $k$-linear map
+\[ \mathfrak{m}_x/\mathfrak{m}_x^2 \to (t)\cong k, \]
+where the isomorphism is as a $k$-vector space. We also have a composed $k$-algebra
+homomorphism
+\[ \mathcal{O}_{X, x} \to k[t]/(t^2)\to k[t]/(t) \cong k \]
+with kernel $\mathfrak{m}_x$, and hence we have $k(x) = \mathcal{O}_{X, x}/\mathfrak{m}_x \cong k$.
+To see this, we must use that this is a homomorphism of $k$-algebras, so the $k$ sitting inside
+$\mathcal{O}_{X, x}$ maps to $k$ on the right, i.e., the composite is surjective.
+
+Se we get:
+\begin{enumerate}
+	\item a $k$-valued point with residue field $k$,
+	\item a morphism of $k$-vector spaces $\mathfrak{m}_x/\mathfrak{m}_x^2\to k$,
+		i.e., an element of $(\mathfrak{m}_x/\mathfrak{m}_x^2)^*$, the dual vector space.
+\end{enumerate}
+
+The space $(\mathfrak{m}_x/\mathfrak{m}_x^2)^*$ is called the Zariski tangent space
+to $X$ at $x$. It can be thought of as a kind of \enquote{differentiation rule}.
+
+Think of $D$ as a point plus an arrow: mapping $D$ into a scheme $X$ carries as
+data a point of $X$ and a tangent vector\footnote{This is just a vague intuition.}.

@@ -1,0 +1,26 @@
+This is a special case of a question of Example Sheet 1.
+
+Suppose we are given to schemes $X_1$, $X_2$ and open subsets $U_i \subseteq X_i$.
+
+Recall $U_i$ is also a locally ringed space $(U_i, \mathcal{O}_{X_i}|_{U_i})$ and
+in fact $U_i$ is then a scheme (this is not obvious and will be discussed later).
+
+Given an isomorphism $f\colon U_1\to U_2$, we can glue $X_1$ and $X_2$ along
+$U_1$ and $U_2$ to get a scheme $X$ with an open cover $\set{X_1, X_2}$.
+
+As a topological space, $X$ is just the topological gluing of $X_1$ and $X_2$.
+Refer to the example sheet for the construction of $\mathcal{O}_X$.
+
+Now take $\mathbb{A}^n_k \coloneqq \Spec k[X_1, \ldots, X_n]$. Hence,
+$\mathbb{A}^1_k = \Spec k[X]$. Take $X_1 = X_2 = \mathbb{A}^1_k$. Glue
+$U_1 \coloneqq \mathbb{A}^1\setminus\set{0} = D(X) \subseteq A_k^1 = X$, where $0$ is the point
+corresponding to the prime ideal $(X)$ and
+$U_2\coloneqq \mathbb{A}^1\setminus\set{0} = D(X) \subseteq X_2$ via the
+identity map. As a topological space, $X$ is just the line with two origins.
+The resulting scheme is called the affine line with doubled origin. It is not
+a variety.
+
+Note that $U_i = \Spec k[X]_X$ (localization). Hence, we could also glue
+$U_1$ and $U_2$ via the map given by $X\mapsto X^{-1}$.
+
+When we glue this way, we get the projective line over $k$, $\mathbb{P}^1_k$.

@@ -21,4 +21,39 @@
 
 		Moral: Giving a morphism $f\colon \Spec k\to X$ is equivalent to giving
 		a point $x \in X$ and an inclusion $\kappa(x)\to k$.
+
+		Note: If $X = \Spec A$, then giving a morphism $\Spec k \to \Spec A$ is
+		equivalent to giving a homomorphism $A\to k$, which we viewed at the
+		beginning of the course as a \enquote{$k$-valued point} on $\Spec A$.
+	\item What does giving a morphism $X\to \Spec k$ mean? The continuous map
+		$X \to \Spec k$ does not carry any information, since $\Spec k$ is
+		a singleton space. We also have a map
+		\[ f^\#\colon k \cong \mathcal{O}_{\Spec k} f_*\mathcal{O}_X, \]
+		i.e., a map $k\to \Gamma(\Spec k, f_*\mathcal{O}_X) = \Gamma(X, \mathcal{O}_X)$,
+		i.e., $\Gamma(X, \mathcal{O}_X)$ carries a $k$-algebra structure.
+
+		Notice that this induces $k$-algebra structures on $\mathcal{O}_X(U)$
+		for all open sets $U$ via the composite
+		\[ k \longrightarrow \mathcal{O}_X(X) \stackrel{\rho}\longrightarrow \mathcal{O}_X(U), \]
+		and similarly all stalks $\mathcal{O}_{X, p}$ are also $k$-algebras.
+
+		In this situation we say that $X$ is a scheme (defined) over $k$.
+	\item Consider $A = k[X_1, \ldots, X_n]/I$ with $I = \sqrt{I}$. Then
+		$\Spec A$ is a replacement for $V(I) \subseteq \mathbb{A}^n_k$, viewing
+		$\Spec A$ as a scheme over $k$.
+
+		If $k \subseteq k'$ is a field extension, a $k'$-valued point of $X/k$ is
+		a commutative diagram
+		\[\begin{tikzcd}
+			\Spec k' \ar[r]\ar[dr] & X\ar[d]\\
+			& \Spec k,
+		\end{tikzcd}\]
+		which has the dual
+		\[\begin{tikzcd}
+			k' & A\ar[l]\\
+			& k\ar[u]\ar[ul],
+		\end{tikzcd}\]
+		so the top arrow is a homomorphism of  $k$-algebras.
+
+		We write $X(k')$ for the set of such morphisms.
 \end{enumerate}
