@@ -1,0 +1,30 @@
+If $L$ is nilpotent, then by Exerice 9 we have that $\ad(x)$ is nilpotent for
+every $x \in L$. Let $S \subseteq L$ be a proper Lie subalgebra. Define
+\begin{align*}
+	\rho\colon S&\to \End L/S\\
+	x&\mapsto (y + S\mapsto [x, y] + S),
+\end{align*}
+this is well-defined and a representation, because $S$ is a subalgebra.
+We have that $\rho(S) \subseteq \End L/S$ consists of nilpotent endomorphisms.
+By Engel's theorem we find $y \in L\setminus S$ such that for all $x \in S$
+we have $[x, y] + S = 0 + S$. Hence $y \in \Id(S)\setminus S$, so the idealiser
+condition is satisfied.
+
+Conversely, assume that the idealiser condition is satisfied and $x \in L$.
+For a submodule $S$ of $L$, define $\Id^0(S)\coloneqq S$,
+$\Id^{n+1}(S)\coloneqq \Id(\Id^n(S))$. We claim that if
+$y \in \Id^n(\vspan{x})$, then $\ad(x)^{n+1}(y) = 0$.
+
+We will prove the claim by induction. If $y \in \Id^0(\vspan{x}) = \vspan{x}$,
+then $\ad(x)(y) = [x, y] = 0$. If the claim holds for $n \in \mathbb{N}_0$,
+let $y \in \Id^{n+1}(\vspan{x})$. By definition of the idealiser, we have
+that for any $z \in \Id^{n}(\vspan{x})$, $[y, z] \in \Id^n(\vspan{x})$.
+In particular, $x \in \Id^{n}(\vspan{x})$, so we find $[x, y] \in \Id^n(\vspan{x})$.
+Hence $\ad(x)^{n+2}(x)(y) = \ad^{n+1}(x)([x, y]) = 0$ by the inductive
+hypothesis, completing the proof.
+
+Consider the sequence
+\[ \Id^0(\vspan{x}) \subseteq \Id^1(\vspan{x}) \subseteq \ldots. \]
+By the idealiser condition and finite-dimensionality, we must have $\Id^n(\vspan{x}) = L$ for some
+$n$. Then $\ad(x)^{n+1}(L) = 0$, so $\ad(x)^{n+1} = 0$, so $\ad(x)$ is nilpotent.
+By Exercise 9, we conclude that $L$ is nilpotent.

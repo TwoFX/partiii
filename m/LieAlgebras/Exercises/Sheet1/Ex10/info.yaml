@@ -1,0 +1,7 @@
+type: subsection
+label: Ex10
+numbered: false
+section: true
+title: Exercise 10
+children:
+- NilpotentIff
