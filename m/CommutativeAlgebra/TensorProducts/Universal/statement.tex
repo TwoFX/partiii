@@ -1,0 +1,14 @@
+The idea is to reduce the study of bilinear maps to the of linear (i.e, $R$-module)
+maps.
+
+If $\varphi\colon M\times N\to T$ is bilinear and $\theta\colon T\to L$ is
+linear, then $\theta \circ \varphi$ is bilinear. Composition with $\varphi$
+gives a well defined function $\varphi^*$ from  $R$-linear maps $T\to L$ to
+bilinear maps $M\times N\to L$.
+\[\begin{tikzcd}[row sep=1cm, column sep=1cm]
+	M\times N\ar[r, "\varphi"]\ar[dr, "\varphi^*(\theta)" below left] & T\ar[d, "\theta"]\\
+	& L
+\end{tikzcd}\]
+We say that $\varphi$ is universal if $\varphi^*$ is a bijection for every $L$.
+If this happens that study of bilinear maps $M\times N\to L$ is reduced to
+the study if linear maps $T\to L$.

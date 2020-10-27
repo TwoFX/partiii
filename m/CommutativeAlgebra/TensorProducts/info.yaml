@@ -1,0 +1,10 @@
+type: chapter
+label: TensorProducts
+numbered: true
+section: true
+title: Tensor products
+children:
+- Bilinear
+- Universal
+- TensorProductsExist
+- TensorProduct
