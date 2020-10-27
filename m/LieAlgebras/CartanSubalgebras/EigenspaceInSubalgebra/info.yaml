@@ -1,5 +1,5 @@
-type: theorem
-label: CartanSubalgebrasExist
+type: lemma
+label: EigenspaceInSubalgebra
 numbered: true
 section: false
 proofs:

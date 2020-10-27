@@ -10,10 +10,13 @@ children:
 - BracketsOfEigenspaces
 - CartanSubalgebra
 - CartanSubalgebrasExist
-- Converse
 - Rank
 - CSAifRegular
 - UniquenessOfRank
 - CSAConjugate
 - Geometry
 - RegularConnected
+- EigenspaceInSubalgebra
+- CartanSubalgebraSL
+- CartanSubalgebraOfSemisimple
+- RegularOfSemisimple

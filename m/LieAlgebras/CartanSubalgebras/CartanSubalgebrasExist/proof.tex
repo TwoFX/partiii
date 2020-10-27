@@ -1,0 +1,26 @@
+Suppose $H = L_{0, z}$ is minimal. We must show that it is nilpotent and
+equal to its own idealiser. Then $\Id(H) = H$ by 4.2(iii).
+Take $K = H$ in 4.9 to deduce that $H = L_{0, z} \subseteq L_{0, y}$ for all
+$y \in H$. Thus $\ad(y)|_H\colon H\to H$ is nilpotent for $y \in H$ since
+$0$ is the only eigenvalue. Hence $\ad(H)$ is nilpotent by (the corollary of)
+Engel (TODO: why?) and so $H$ is nilpotent (since the quotient by the center (the
+kernel of $\ad$) is nilpotent). Thus $H$ is a Cartan subalgebra.
+
+Conversely, sat $H$ is a Cartan subalgebra. Then $H \subseteq L_{0, y}$ for all
+$y \in H$ since $H$ is nilpotent. Suppose we have strict inequality for
+all $y$.
+
+Choose $L_{0, z}$ as small as possible with $z \in H$. By 4.9 with $K = H$ we
+have $L_{0, z} \subseteq L_{0, y}$ for all $y \in H$. But $H \subseteq L_{0, z}$,
+hence $\ad(H)(L_{0, z}) \subseteq L_{0, z}$. For $y \in H$ we have
+$L_{0, z} \subseteq L_{0, y}$, hence $\ad(y)$ acts nilpotently on $L_{0, z}$.
+Hence all elements of $\ad(H)$ act nilpotently on $L_{0, z}/H$. By Engel,
+there is a common eigenvector $x+H$ with $x \in L_{0, z}\setminus H$ such that
+$[H, x] \subseteq H$. Therefore, $x \in \Id(H) \setminus H$, but $H$ is a Cartan
+subalgebra, so we have a contradiction.
+
+Therefore, we must have some $z$ such that $H = L_{0, z}$ for some $z \in H$. Note
+that $H$ is nilpotent and so satisfies the idealiser condition. But 4.2iii says
+that $\Id_L(L_{0, y}) = L_{0, y}$ for any $y$. Hence, no $L_{0, y}$ is a proper
+subalgebra of $H$ and so we know that $H = L_{0, z}$ is minimal among the
+$L_{0, y}$ for $y \in H$.
