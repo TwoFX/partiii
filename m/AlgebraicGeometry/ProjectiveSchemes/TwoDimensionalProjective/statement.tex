@@ -1,0 +1,28 @@
+Let $k$ be an algebraically closed field, consider $\mathbb{P}_k^1 = \Proj k[X_0, X_1]$.
+
+The closed points, i.e., points $p$ such that $\set{p}$ is closed, correspond to
+maximal elements of $\Proj S$ (TODO: exercise!). These maximal elements are ideals
+of the form $(aX_0 - bX_1)$:
+
+Note that the only maximal homogeneous ideal of $k[X_0, X_1]$ is $(X_0, X_1) = S_+$,
+which is the irrelevant ideal, hence not part of $\Proj S$ (TODO), since
+any maximal ideal is of the form $(X_0 - a_0, X_1 - a_1)$ by the Nullstellensatz.
+
+The other prime ideals of $k[X_0, X_1]$ are principal, i.e. of the form
+$(f)$ with $f$ irreducible or zero.
+
+For $(f)$ to be homogeneous, $f$ must be homogeneous. Any such polynomial splits
+into linear factors, all homogeneous, so in order for $f$ to be irreducible,
+it must be linear.
+
+Note that we hve a bijective correspondence between the collection of ideals
+$(aX_0 - bX_1)$ with $a, b \in k$, $a, b$ not both zero and
+$(k^2\setminus\set{0, 0})/k^\times$ given by $(aX_0 - bX_1)\mapsto (b : a)$.
+
+Conclusion: The closed points of $\mathbb{P}^1_k = \Proj k[X_0, X_1]$ are in one-to-one correspondence
+with points of $(k^2\setminus\set{0})/k^\times$.
+
+More generally, the closed points of $P^n_k$ are in one-to-one correspondence with
+points of $(k^{n+1}\setminus\set{0})/k^\times$. This is harder (but a good exercise), but it can be seen
+by using the open cover $(D_+(X_i))$ (note that if $p \nsubseteq D_+(X_i)$ for any $i$,
+then $X_i \in p$ for any $i$, hence $S_+ \subseteq p$, so $p\notin \Proj S$).

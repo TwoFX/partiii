@@ -5,10 +5,10 @@
 
 		First, we need to choose a point $x \in X$, the image of $f$. Second,
 		we get a local ring homomorphism
-		\[ f^\#_x\colon \mathcal{O}_{X, x} \to \mathcal{O}_{\Spec k, 0} \cong k, \]
-		i.e., $(f_x^\#)^{-1}(0) = m_x \subseteq \mathcal{O}_{X, x}$, the maximal
+		\[ f^\#_0\colon \mathcal{O}_{X, x} \to \mathcal{O}_{\Spec k, 0} \cong k, \]
+		i.e., $(f_0^\#)^{-1}(0) = \mathfrak{m}_x \subseteq \mathcal{O}_{X, x}$, the maximal
 		ideal of $\mathcal{O}_{X, x}$. Thus we get a factorization
-		$f^\#_x\colon \mathcal{O}_{X, x}\to \mathcal{O}_{X, x}/m_x \to k$.
+		$f^\#_0\colon \mathcal{O}_{X, x}\to \mathcal{O}_{X, x}/\mathfrak{m}_x \to k$.
 		The middle quotient is a field denoted as $\kappa(x)$, the residue field
 		of $X$ at $x$.
 
@@ -28,7 +28,7 @@
 	\item What does giving a morphism $X\to \Spec k$ mean? The continuous map
 		$X \to \Spec k$ does not carry any information, since $\Spec k$ is
 		a singleton space. We also have a map
-		\[ f^\#\colon k \cong \mathcal{O}_{\Spec k} f_*\mathcal{O}_X, \]
+		\[ f^\#\colon k \cong \mathcal{O}_{\Spec k}\to f_*\mathcal{O}_X, \]
 		i.e., a map $k\to \Gamma(\Spec k, f_*\mathcal{O}_X) = \Gamma(X, \mathcal{O}_X)$,
 		i.e., $\Gamma(X, \mathcal{O}_X)$ carries a $k$-algebra structure.
 

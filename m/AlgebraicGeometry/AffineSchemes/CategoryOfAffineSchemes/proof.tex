@@ -1,7 +1,7 @@
 We need to show the following things.
 \begin{enumerate}
 	\item If $\varphi\colon A\to B$ is a ring homomorphism, we obtain an
-		induced morhphism
+		induced morphism
 		\[ (f, f^\#)\colon (\Spec B, \mathcal{O}_B)\to (\Spec A, \mathcal{O}_A). \]
 	\item Any morphism of affine schemes as locally ringed spaces arises in
 		this way.
@@ -50,7 +50,7 @@ Thus $\varphi_p^{-1}(pB_p) = \varphi^{-1}(p)A_{\varphi^{-1}(p)}$.
 Given $V \subseteq \Spec A$ open, we may define
 \begin{align*}
 	f^\#_V\colon \mathcal{O}_{\Spec A}(V)&\to \mathcal{O}_{\Spec B}(f^{-1}(V))\\
-	s&\mapsto (q\mapsto \varphi_q(s(f(q))))
+	s&\mapsto (q\mapsto \varphi_q(s(f(q)))).
 \end{align*}
 We now have to check the local coherence condition of $\mathcal{O}$, i.e.,
 if $s$ is locally given by $a/h$, then $f^\#_V(s)$ is locally given by
@@ -77,9 +77,9 @@ This is compatible with the corresponding map on glocal sections in the sense th
 is a commutative diagram. By applying our calculations, this yields a diagram
 \[\begin{tikzcd}
 	A\ar[r, "\varphi"]\ar[d] & B\ar[d]\\
-	A_{f(p)}\ar[r, "f_p^\#"] & B_p
+	A_{f(p)}\ar[r, "f_p^\#"] & B_p.
 \end{tikzcd}\]
-and we find that $f_p^\#$ is a local homomorphism. Thus $(f_p^\#)^{-1}(pB_p) = f(p)A_{f(p)}$.
+Recall that $f_p^\#$ is a local homomorphism. Thus $(f_p^\#)^{-1}(pB_p) = f(p)A_{f(p)}	$.
 Along the lower left path, the maximal ideal $pB_p$ is pulled back to $f(p)A_{f(p)}$ and
 then to $f(p)$. Along the upper right path, it gets pulled back to $p$ and then to $\varphi^{-1}(p)$.
 By commutativity, we conclude that $f(p) = \varphi^{-1}(p)$.

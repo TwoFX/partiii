@@ -8,3 +8,10 @@ children:
 - HomogeneousIdeal
 - Proj
 - ProjectiveZariski
+- HomogeneousNotation
+- ProjectiveStructureSheaf
+- ProjectiveIsScheme
+- ProjectiveSpace
+- TwoDimensionalProjective
+- WeirdGrading
+- LatticeExample

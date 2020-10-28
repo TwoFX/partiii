@@ -1,0 +1,32 @@
+Let $M = \mathbb{Z}^n$, $M_\mathbb{R} = M\otimes_{\mathbb{Z}} \mathbb{R}=\mathbb{R}^n$.
+ Let $\Delta \subseteq M_\mathbb{R}$ be a compact convex lattice polytope,
+ i.e., there is some finite set $V \subseteq M$ such that $\Delta$ is the convex
+ hull of $V$, i.e., the smallest convex set containing $V$.
+
+(there is a picture missing here)
+
+Let $C(\Delta) = \set{(m, r) \in M_\mathbb{R}\oplus \mathbb{R}\given m \in r\Delta, r\geq 0}$.
+Here $r\Delta = \set{r\cdot m\given m \in \Delta}$. This is the cone over $\Delta$.
+
+Let \[S = k[C(\Delta)\cap (M\oplus \mathbb{Z})] = \bigoplus_{p \in C(\Delta)\cap(M\oplus \mathbb{Z})}k\cdot z^p .\]
+The thing in the square bracket is a monoid (use convexity to prove this).
+We have a multiplication given by $z^p \cdot z^{p'} = z^{p + p'}$ making
+$S$ into a ring, and it is graded by $\deg z^{m, r} = r$.
+
+Define $\mathbb{P}_{\Delta} = \Proj S$. This is called a projective
+toric variety.
+
+Examples: If $\Delta$ is a standard $n$-simplex, i.e., the convex hull of
+$\set{0, e_1, \ldots, e_n}$, then it is possible to check that
+$S\cong k[X_0, \ldots, X_n]$ with the standard grading such that
+$X_0 \leftrightarrow z^{(0, 1)}$, $X_0 \leftrightarrow z^{(e_i, i)}$. Hence
+$\mathbb{P}_\Delta = P^n_k$.
+
+Let $n = 2$ and $\Delta$ be the convex hull of $\set{(0, 0), (1, 0), (0, 1), (1, 1)}$,
+i.e., the unit square. In $S$, the degree $d$ monomials are $\set{z^{(a, b, d)}\given 0\leq a, b\leq d}$.
+Any of these monomials can be written as a product of monomials of degree $1$, i.e.,
+$x\coloneqq z^{(0, 0, 1)}, y\coloneqq z^{(1, 0, 1)}, w\coloneqq z^{(0, 1, 1)}, t\coloneqq z^{(1, 1, 1)}$.
+Thus $S = k[x, y, w, t]/(xt-yw)$ (it is possible but nontrivial to verify that this is
+the only relation).
+
+Hence, $\Proj S$ can be thought of as a quadric surface in $\mathbb{P}^3_k$.

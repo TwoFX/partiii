@@ -4,3 +4,32 @@ determined up to isomorphism by having exactly three endomorphisms, the claim
 follows.
 
 The proof of (b) is entirely analogous to the proof of 2.13(ii).
+
+For (c), write $FS = \set{\tilde{0}, \tilde{1}}$ such that $\set{\tilde{1}}$ is open.
+Suppose that $\alpha_S$ is not continuous. Then $\alpha_S$ must send
+$0 \mapsto \tilde{1}$ and $1\mapsto \tilde{0}$. Now let $U \subseteq X$ be an
+open set of some topological space in $\mathcal{C}$. Consider the map $g\colon X\to S$ which sends $x \in X$ to $1$ if and only if
+$x \in U$. This map is continuous. Define $f\coloneqq F^{-1}g$, then by naturality
+we have
+\[ (\alpha_{F^{-1}X})^{-1}(U) = \alpha_{F^{-1}X}^{-1}((UFf)^{-1}(\set{\tilde{1}})) = (Uf)^{-1}((\alpha_S)^{-1}(\tilde{1})) = (Uf)^{-1}(\set{0}). \]
+Since $f$ is continuous, the right hand side is closed. Hence the preimage under $\alpha_{F^{-1}X}$ of an open
+set is closed. In analogous fashion and using the fact that $F^{-1}$ is also an automorphism
+(noting that $\alpha^{-1}$ must be the unique natural isomorphism $U\to UF^{-1}$),
+we find that for any space  $X$ in $\mathcal{C}$ we have
+\begin{itemize}
+	\item the preimage under $\alpha_X$ of an open set is closed,
+	\item the preimage under $\alpha_X$ of a closed set is open,
+	\item the image under $\alpha_X$ of an open set is closed,
+	\item the image under $\alpha_X$ of a closed set is open.
+\end{itemize}
+Now let $X$ be a space in $\mathcal{C}$ and a collection $U_i$ closed sets such
+that $\bigcup U_i$ is not closed. We have
+\[ \alpha_X^{-1}(\bigcup U_i) = \bigcup \alpha_X^{-1}(U_i), \]
+where the left hand side is not open, since otherwise $\bigcup U_i$ would be closed,
+but the right hand side is open, since $\alpha_X^{-1}(U_i)$ is open for every $i$.
+This is a contradiction, so $\alpha_S$ is continuous.
+
+For (d), we can now carry out the same calculation as above to find that
+$\alpha_X$ and $\alpha_X^{-1}$ are continuous for every $X$, so $\alpha$ lifts to a natural isomorphism
+$1_C\to F$, which must be unique since the forgetful functor $[\mathcal{C}, \mathcal{C}]\to [\mathsf{Set}, \mathsf{Set}]$
+is faithful.

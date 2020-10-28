@@ -11,11 +11,19 @@ surjectivity on stalks. Hence $e_p$ is surjective as the composite
 of two open maps. By a result from the lecture, this implies that $e$
 is surjective.
 
-Additionally, for any open $U \subseteq X$, we have $(\ker e)U = \ker p_U = \mathcal{F}'U$,
-so $\ker e$ and $\mathcal{F}'$ are equal as subsheaves of $\mathcal{F}$.
+Since for any open set $U$ and $s \in \mathcal{F}'U$ we have
+$e_U(s) = \theta_U(\hat{e}_U(s)) = \theta_U(0) = 0$, we obtain a map
+$\varphi\colon\mathcal{F}' \to \ker e$. Let $p \in X$.
+\[\begin{tikzcd}
+	\mathcal{F}_p'\ar[d, "\varphi_p"]\ar[r, "i_p"] & \mathcal{F}_p\ar[r, "e_p"]\ar[dr, "\hat{e}_p"] & (\mathcal{F}/\mathcal{F}')_p\\
+	(\ker e)_p\ar[ur]\ar[r, "\cong"] & \ker e_p\ar[u] & (\coker' i)_p\ar[u, "\theta_p"]
+\end{tikzcd}\]
+The map $\varphi_p$ is injective because $i_p$ is, and it is surjective, because
+$\ker e_p = \ker \hat{e}_p = i_p$. Hence $\ker e = \mathcal{F}'$ as subsheaves
+of $\mathcal{F}$.
 
 Now we have $\im i = \mathcal{F}'$ as subsheaves of $\mathcal{F}$, since
-the map $\theta\colon \mathcal{F}' = \im' i \to \im f$ induces isomorphisms on
+the map $\theta\colon \mathcal{F}' = \im' i \to \im i$ induces isomorphisms on
 stalks, but since the domain already is a sheaf this forces $\theta$ to be an
 isomorphism. Hence $\im i = \ker e$ as subsheaves of $\mathcal{F}$, so the sequence
 is exact at $\mathcal{F}$.  Exactness at $\mathcal{F}'$ and
