@@ -8,3 +8,6 @@ children:
 - Universal
 - TensorProductsExist
 - TensorProduct
+- TensorProductRemarks
+- Associativity
+- TensorHomAdjunction

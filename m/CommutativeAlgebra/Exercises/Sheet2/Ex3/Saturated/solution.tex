@@ -1,0 +1,22 @@
+If $S$ is saturated and $x \in R\setminus S$, let $\Sigma$ denote the set of
+ideals $I$ such that $I \subseteq R\setminus S$ and $x \in I$.
+
+If $y \in R$, then $xy \in R\setminus S$, since otherwise we would have
+$x \in S$ by saturation of $S$. Hence $(x) \in \Sigma$.
+
+The set $\Sigma$ admits upper bounds, as the union of a chain of ideals once again
+is an ideal in $\Sigma$.
+
+Hence we have a maximal element $I \in \Sigma$, which is prime, since if
+$ab \in I$ and $a\notin I$, $b\notin I$, then $I + Ra$ and $I + Rb$ both
+intersect nontrivially with $S$, so for $s_1 \in S\cap I + Ra, s_2 \in S\cap I+ Rb$
+we have $s_1s_2 \in S\cap I = \varnothing$, a contradiction.
+
+Hence every element of $R\setminus S$ is contained in a prime ideal which is
+fully contained in $R\setminus S$,  so $R\setminus S$ is the union of
+these prime ideals.
+
+Conversely, if $R\setminus S$ is the union of prime ideals and $xy \in S$,
+then if $x\notin S$, then $x$ was contained in one of the ideals, and by the
+ideal property, so would be $xy$, a contradiction. Hence $x \in S$ and
+symmetrically $y \in S$.

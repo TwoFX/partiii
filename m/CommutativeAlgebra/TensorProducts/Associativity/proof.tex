@@ -1,0 +1,30 @@
+\begin{enumerate}[label=(\roman*)]
+	\item The map $M\times N\to N\tensor M$ given by
+		$(m, n)\mapsto n \tensor m$ is bilinear, hence it induces the map
+		$M\tensor N\to N\tensor M$ given by $m\tensor n\mapsto n\tensor m$.
+		Swapping the roles of $M$ and $N$ yields an inverse.
+	\item Exercise (appears on the second example sheet).
+	\item We have a bilinear map
+		\begin{align*}
+			(M\oplus N)\times L&\to (M\tensor L)\oplus(N\tensor L)\\
+			((m, n), \ell)&\mapsto (m\tensor \ell, n\tensor \ell).
+		\end{align*}
+		This map induces a linear map
+		\begin{align*}
+			(M\oplus N)\tensor L&\to (M\tensor L)\oplus (N\tensor L)\\
+			(m, n)\tensor \ell&\mapsto (m\tensor\ell, n\tensor\ell),
+		\end{align*}
+		and we will find an inverse. Indeed, the maps
+		\begin{align*}
+			M\times L&\to (M\oplus N)\tensor L & N\times L&\to (M\oplus N)\tensor L\\
+			(m, \ell) &\mapsto (m, 0) \tensor \ell & (n, \ell) &\mapsto (0, n)\tensor\ell
+		\end{align*}
+		are bilinear, and by the universal property of the tensor product and
+		the universal property of the direct sum we obtain a linear map
+		\begin{align*}
+			\Psi\colon (M\tensor L)\oplus (N\tensor L)&\to (M\oplus N)\tensor L\\
+			(m\tensor \ell_1, n\tensor \ell_2)&\mapsto (m, 0)\tensor\ell_1 + (0, n)\tensor\ell_2.
+		\end{align*}
+		We trivially calculate that this is the required inverse.
+	\item Another exercise, cf. Proposition 2.14 in Atiyah-Macdonald.
+\end{enumerate}

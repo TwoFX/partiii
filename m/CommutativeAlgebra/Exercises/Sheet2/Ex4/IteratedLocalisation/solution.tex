@@ -1,0 +1,29 @@
+Consider the following commutative diagram.
+\[\begin{tikzcd}[row sep=1cm, column sep=1cm]
+	R\ar[r, "\alpha"]\ar[dr, "\beta"] & S^{-1}R\ar[r, "\delta"]\ar[d, "\gamma"] & U^{-1}S^{-1}R\ar[dl, shift right, "\Phi" above left]\\
+	& (ST)^{-1}R\ar[ur, shift right, "\Psi" below right]
+\end{tikzcd}\]
+
+The maps $\alpha, \beta$ and $\delta$ are localization maps. Since
+$S \subseteq ST$, $\beta(s)$ is a unit for every $s \in S$,
+hence from the universal property of localization we have
+$\gamma\colon S^{-1}R \to (ST)^{-1}R$ satisfying $\gamma \circ \alpha = \beta$. An element of
+$U$ is of the form $\alpha(t)$ for some $t \in T$. We have
+$\gamma(\alpha(t)) = \beta(t)$, which is invertible, hence again from
+the universal property we have a map $\Phi\colon U^{-1}S^{-1}R \to (ST)^{-1}R$
+such that $\Phi \circ \delta = \gamma$.
+We know how this map is defined: if $r \in R$, $s \in S$, $t \in T$, we have
+\[ \Phi\left(\frac{r/s}{\alpha(t)}\right) = \gamma(r/s)\gamma(\alpha(t))^{-1}
+= \beta(r)\beta(s)^{-1}\beta(t)^{-1} = \frac{r}{1}\frac{1}{s}\frac{1}{t} = \frac{r}{st}. \]
+
+Next, let $st \in ST$. We have
+\[ \delta(\alpha(st)) = \delta(\alpha(s))\delta(\alpha(t)) = \frac{s/1}{1}\frac{\alpha(t)}{1}. \]
+This has the inverse
+\[ \frac{1/s}{1}\frac{1}{\alpha(t)}, \]
+so it is a unit, and the universal property yields $\Psi\colon (ST)^{-1}R\to U^{-1}S^{-1}R$
+satisfying $\Psi \circ \beta = \delta \circ \alpha$.
+Again, if $r \in R$, $s \in S$ and $t \in T$, we have
+\[ \Psi\left(\frac{r}{st}\right) = \delta(\alpha(r))\delta(\alpha(st))^{-1} = \frac{r/1}{1}\frac{1/s}{1}\frac{1}{\alpha(t)} = \frac{r/s}{\alpha(t)}, \]
+where we have used our inverse calculation from above.
+
+Hence, $\Phi$ and $\Psi$ are two-sided inverses of each other, finishing the proof.

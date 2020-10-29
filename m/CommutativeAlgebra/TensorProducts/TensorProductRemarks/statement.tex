@@ -1,0 +1,25 @@
+\begin{itemize}
+	\item We often drop the subscript $R$ if it is clear what ring we are using.
+	\item Not all elements of $M\tensor_R N$ are of the for $m\tensor n$. A general element
+		if of the form $\sum_{i=1}^r m_i\tensor n_i$.
+	\item If $R = k$ is a field and $k^s, k^t$ are finite-dimensinal vector spaces
+		over $k$, then the map $M\times N \to k^{st}$ given by numbering basis elements
+		of  $k^{st}$ by pairs $(i, j)$, $1\leq i\leq s, 1\leq j\leq t$ and sending
+		$(a_i, b_j)\mapsto e_{(i, j)}$ is universal, hence $M\tensor N\cong k^{st}$.
+	\item It is possible to define tensor products over non-commutative rings,
+		where $M$ is a right $R$-module and $N$ is a left $R$-module. In this
+		situation, $M\tensor N$ is only an abelian group, not necessarily and
+		$R$-module. The construction is analogous, but you take the free abelian
+		group instead of the free $R$-module and use the relations
+		\begin{align*}
+			e_{(m_1 + m_2, n)} &- e_{(m_1, n)} - e_{(m_2, n)}\\
+			e_{(m, n_1 + n_2)} &- e_{(m, n_1)} - e_{(m, n_2)}\\
+			e_{(mr, n)} &- e_{(m, rn)}.
+		\end{align*}
+		If $M$ is an $(R, S)$-bimodule and $N$ is an $(S, T)$-bimodule, then
+		$M\tensor N$ becomes a $(R, T)$-bimodule.
+	\item On the exercise sheed we will see that
+		$\mathbb{Z}/r\mathbb{Z} \tensor_\mathbb{Z} \mathbb{Z}/s\mathbb{Z} \cong \mathbb{Z}/\gcd(r, s)\mathbb{Z}$.
+	\item one can product a universal trilinear map $L\times M\times N\to T$, unique
+		up to isomorphism, denoted by $L\tensor M\tensor N$.
+\end{itemize}
