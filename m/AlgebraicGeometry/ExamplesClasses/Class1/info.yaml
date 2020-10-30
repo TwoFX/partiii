@@ -1,0 +1,10 @@
+type: section
+label: Class1
+numbered: false
+section: true
+title: Examples class 1
+children:
+- Exercise12
+- Exercise11
+- Exercise10
+- Exercise14

@@ -1,0 +1,47 @@
+Given a continuous map $f\colon X\to Y$ and a sheaf $\mathcal{F}$ over $X$ and a sheaf $\mathcal{G}$ over $Y$.
+
+We will first give a morphism morphism $\Psi\colon f^{-1}f_*\mathcal{F}\to \mathcal{F}$.
+$s \in (f^{-1}f_*\mathcal{F})(U) = \set{(V, s')\given V\supseteq f(U)}/\sim$,
+where $s' \in (f_*\mathcal{F})(V) = \mathcal{F}(f^{-1}(V))$,
+i.e., $s = (V, s)$, where $V\supseteq f(U)$, $s \in \mathcal{F}(f^{-1}(V))$, but
+$f^{-1}(V) \supseteq U$. Then the natural $\Psi$ map takes $(V, s) \mapsto s|_U$.
+
+Next, we give a morphism $\Phi\colon \mathcal{G}\to f_*f^{-1}(\mathcal{G}$.
+Given $s \in \mathcal{G}(U)$, we have $f_*f^{-1}(\mathcal{G})(U) = (f^{-1}(\mathcal{G}))(f^{-1}(U))$.
+The natural map $\Phi$ sends $s\mapsto (U, s)$, which makes sense since $U\supseteq f(f^{-1}(U))$.
+
+We want to construct a bijection
+\[F\colon \Hom_X(f^{-1}\mathcal{G}, \mathcal{F}) \to \Hom_Y(\mathcal{G}, f_*\mathcal{F}). \]
+Given a map $\varphi\colon f^{-1}\mathcal{G}\to \mathcal{F}$, apply $f_*$ to get
+$f_*\varphi\colon f_*f^{-1}\mathcal{G}\to f_*\mathcal{F}$ and then $(f_*\varphi)\circ\Phi\colon \mathcal{G}\to f_*\mathcal{F}$,
+se define $F(\varphi) = (f_*\varphi)\circ\Phi$.
+
+Similarly, we define \[G\colon \Hom_Y(\mathcal{G}, f_*\mathcal{F})\to \Hom_X(f^{-1}\mathcal{G}, \mathcal{F}). \]
+Given $\varphi\colon \mathcal{G}\to f_*\mathcal{F}$, apply $f^{-1}$ to get
+$f^{-1}\varphi\colon f^{-1}\mathcal{G}\to f^{-1}f_*\mathcal{F}$, so we can define
+$G(\varphi)\coloneqq \Psi \circ f^{-1}\varphi$.
+
+Now we need to check that $F \circ G$ and $G \circ F$ are identities.
+
+Given $\psi\colon \mathcal{G}\to f_*\mathcal{F}$, the map $FG(\psi)$ is given as
+a composition
+\[\begin{tikzcd}
+	\mathcal{G}\ar[r, "\Phi"] &f_*f^{-1}\mathcal{G} \ar[r] & f_*f^{-1}f_*\mathcal{F}\ar[r] & f_*\mathcal{F}\\
+	s\ar[r, mapsto] & (U, s)\ar[r, mapsto] & (U, \psi_U(s))\ar[r, mapsto] & \psi_U(s),
+\end{tikzcd}\]
+so $FG$ is the identity.
+
+Similarly, given $\varphi\colon f^{-1}\mathcal{G}\to \mathcal{F}$ is given as a composition
+\[\begin{tikzcd}
+	f^{-1}\mathcal{G}\ar[r] & f^{-1}f_*f^{-1}\mathcal{G}\ar[r], f^{-1}f_*\mathcal{F}\ar[r, "\Psi"] & \mathcal{F}\\
+\end{tikzcd}\]
+
+A section of $(f^{-1}\mathcal{G})(U)$ is represented by $(V, s)$ for $s \in \mathcal{G}(V)$
+with $V\supseteq f(U)$.
+
+The sequence of maps is given as
+\[ (V, s)\mapsto (V, s) \mapsto  (V, \varphi(s))\mapsto \varphi(s), \]
+so $GF$ is the identity.
+
+Note that we are working with presheaves here, so we have to splice in the universal property of
+sheafification everywhere.

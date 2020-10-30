@@ -1,0 +1,20 @@
+Note that $D(f)$ is the set of all prime ideals of $A$ not containing $f$. There
+is a one-to-one correspondence between primes of $A$ disjoint from $S$ and primes of
+$S^{-1}A$ for $S$ any multiplicatively closed subset.
+
+Thus time primes of $A_f$ are in one-to-one correspondence with primes of
+$A$ disjoint from $\set{1, f, f^2, \ldots}$, i.e., primes in $D(f)$. This
+gives a bijection $\Spec A_f \to D(f)$ and the composition with
+the inclusion $D(f) \to \Spec A$ is induced by the localization map $\varphi\colon A\to A_f$.
+
+Hence, the induced map $\Spec A_f\to \Spec A$ is continuous, so $\Spec A_f\to D(f)$
+is continuous. Note that if $I \subseteq A_f$ is an ideal, then $i(V(I)) = V(\varphi^{-1}(I))\cap D(f)$,
+so $i$ is a homeomorphism.
+
+To check that $i$ is an isomorphism of schemes, we need to check that we get an
+isomorphism $i^\#\colon \mathcal{O}_{\Spec A}|_{D(f)}\to \mathcal{O}_{\Spec A_f}$.
+Note that it is enough to check that this is an isomorphism on stalks. Note
+that the stalk of $\mathcal{O}_{\Spec A}$ at $p \in D(f)$ is $A_p$ and the
+stalk of $\mathcal{O}_{\Spec A_f}$ at $pA_f$ is $(A_f)_{pA_f\stackrel{\cong}{\longleftarrow}}$,
+by sending $a/s \mapsto a/s$. Since $f\notin p$, one can check algebraically that this
+is an isomorphism.

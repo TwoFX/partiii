@@ -1,0 +1,7 @@
+type: chapter
+label: ExamplesClasses
+numbered: false
+section: true
+title: Examples classes
+children:
+- Class1

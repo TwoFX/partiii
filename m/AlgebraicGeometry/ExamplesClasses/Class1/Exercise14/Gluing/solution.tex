@@ -1,0 +1,19 @@
+We can glue the $X_i$ as topological spaces to get a space $X$ and open subsets
+$X_i \subseteq X$ by usual gluing of topological spaces. We have sheaves
+$\mathcal{O}_{X_i}$ on $X_i$ along with isomorphisms
+\[ \varphi_{ij}^\#\colon \mathcal{O}_{X_j}|_{X_i\cap X_j}\to \mathcal{O}_{X_i}|_{X_i\cap X_j}, \]
+and for each $i, j, k$, we have $\varphi_{ik}^\# = \varphi_{jk}^\# \circ \varphi_{ij}^\$$ on
+$X_i\cap X_j\cap X_k$.
+
+Let's glue these sheaves. Define $\mathcal{O}_X$ be defining
+$\mathcal{O}_X(U)$ to be the set of tuples $(s_i)_{i \in I}$ with $s_i \in \mathcal{O}_{X_i}(U\cap X_i)$
+subject to the contraint that on $X_i\cap X_j \cap U$, $\varphi_{ij}^\#(s_j) = s_i$.
+
+One now checks that this is a sheaf of rings, i.e, we inherit a ring structure, the
+sheaf axioms are satisfied. This follows from the sheaf axioms for the $\mathcal{O}_{X_i}$.
+
+Finally, we need to check that this is a scheme. For this it is enough to show that
+$\mathcal{O}_X|_{X_i}\cong \mathcal{O}_{X_i}$. This isomorphism is given by sending
+$s \in \mathcal{O}_{X_i}(U)$ to $(\varphi_{ij}^\#(s|_{U\cap X_j}))_{j \in I}$.
+To see that this is a section of $\mathcal{O}_X$, we use the compatibility
+condition for $\varphi_{ij}^\#$ from above.

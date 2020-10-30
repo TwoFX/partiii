@@ -1,0 +1,68 @@
+Want to construct an inverse $\beta$ to $\alpha$. Define for
+$\varphi\colon A\to \Gamma(X, \mathcal{O}_X)$. Define $\beta(\varphi)$ as follows.
+Cover $X$ with affine schemes $\set{U_i}$,  $U_i = \Spec B_i$. We have
+restriction maps $\Gamma(X, \mathcal{O}_X) \to \Gamma(U_i, \mathcal{O}_X) = \Gamma(U_i, \mathcal{O}_{\Spec B_i}) = B_i$.
+
+This igves by composition with $\varphi$ maps $\varphi_i\colon A\to B_i$. This
+induces a morphism $f_i\colon U_i = \Spec B_i \to \Spec A$. We want
+to show that we can glue the $f_i$, by first showing that they agree on $U_i\cap U_j$.
+
+Using Exercises 1 and 11, we may cover $U_i\cap U_j$ with affine schemes $\set{U_{ijk}}$,
+where $U_{ijk} = \Spec B_{ijk}$. Then we have a commutative diagram
+\[\begin{tikzcd}
+	\Gamma(X, \mathcal{O}_X)\ar[r]\ar[d] & B_j\ar[d]\\
+	B_i\ar[r] & B_{ijk}
+\end{tikzcd}\]
+of restriction maps for $\mathcal{O}_X$.
+
+Thus the compositions
+\[\begin{tikzcd}
+	U_{ijk}\ar[r, hook] & U_i\ar[r, "f_i"] & \Spec A\\
+	U_{ijk}\ar[r, hook] & U_j\ar[r, "f_j"] & \Spec A
+\end{tikzcd}\]
+agree. Thus $f_i|_{U_i\cap U_j} = f_j|_{U_i\cap U_j}$.
+We can now glue these morphisms to get a morphism $f\colon X\to \Spec A$.
+\begin{itemize}
+	\item Obtaining $f$ as a continuous map is no problem.
+	\item We need to construct $f^\#$.
+\end{itemize}
+Given $V \subseteq \Spec A$, we need a map $f^\#_V\colon \Gamma(V, \mathcal{O}_{\Spec A}\to \Gamma(f^{-1}(V), \mathcal{O}_X)$.
+
+Note $f^{-1}(V)$ is covered by the sets $f_i^{-1}(V) = f^{-1}(V) \cap U_i$. So we have for
+$s \in \Gamma(V, \mathcal{O}_{\Spec A})$, $f_i^\#(s) \in \Gamma(f^{-1}_i(v), \mathcal{O}_X)$
+and since $f_i|_{U_i\cap U_j} = f_j|_{U_i\cap U_j}$ we have
+\[f_i^\#(s)|_{f_i^{-1}(V)\cap f_j^{-1}(V)} = f_j^\#(s)|_{f_i^{-1}(V)\cap f_j^{-1}(V)}. \]
+By the sheaf gluing axiom, we obtain $f^\#(s) \in \Gamma(f^{-1}(V), \mathcal{O}_X)$.
+
+Note: This is a general fact: given $\set{U_i}$ a cover of $X$ and $f_i\colon U_i\to Y$ morphisms
+such that $f_i|_{U_i\cap U_j} = f_j|_{U_i\cap U_j}$, then we obtain a glued morphism.
+
+This gives $\beta\colon \Hom_{\text{Ring}}(A, \Gamma(X, \mathcal{O})X))\to \Hom_{\text{Sch}}(X, \Spec A)$.
+Need to check:
+\begin{itemize}
+	\item $\alpha \circ \beta$ is the identity: given $\varphi$, $f = \beta(\varphi)$ is contructed
+		such that the composition
+		\[\begin{tikzcd}
+			A\ar[r, "f^\#"] & \Gamma(X, \mathcal{O}_X)\ar[r] & \Gamma(U_i, \mathcal{O}_X)
+		\end{tikzcd}\]
+		coincides with
+		\[\begin{tikzcd}
+			A\ar[r, "\varphi"] & \Gamma(X, \mathcal{O}_X)\ar[r] & \Gamma(U_i, \mathcal{O}_X),
+		\end{tikzcd}\]
+		so by the first sheaf axiom we must have $f^\# = \varphi = \alpha(f)$.
+	\item $\beta \circ \alpha$ is the identity: given a morphism
+		$f\colon X\to \Spec A$, this induces by restriction to $U_i$ a morphism
+		$U_i\to \Spec A$; necessarily induced by the composition
+		\[\begin{tikzcd}
+			A\ar[r, "f^\#"] & \Gamma(X, \mathcal{O}_X)\ar[r] & \Gamma(U_i, \mathcal{O}_X) = B_i.
+		\end{tikzcd}\]
+		SO $f$ is induced by $\alpha(f)$ on open sets $U_i$. So $f|_{U_i} = \beta(\alpha(f))|_{U_i}$.
+		Thus $ = \beta(\alpha(f))$.
+\end{itemize}
+
+Note: not every details has been checked here, for example that $f^\#$ constructed above
+is indeed a morphism of locally ringed spaces (the reason is because locally, we
+already started with a morphism). Checking details is essential to understanding what
+is important and what isn't. During marking, not checking unimportant/easy things is
+usually not a problem, forgetting to check important things is.
+

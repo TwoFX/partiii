@@ -1,0 +1,9 @@
+Let $x \in R$ be a nilpotent element. Consider the ideal
+$\ann(x) = \set{r \in R\given rx = 0}$. If $\ann(x)\neq R$, then
+$\ann(x) \subseteq \mathfrak{m}$ for some maximal ideal $\mathfrak{m}$. Then
+$\mathfrak{m}$ is prime. Let $\varphi\colon R\to R_{\mathfrak{m}}$. Since
+$x$ is nilpotent, we find $n$ such that $x^n = 0$. Then $\varphi(x)^n = \varphi(x^n) = 0$,
+hence $\varphi(x) = 0$. By definition of localization, this means that there
+is some $s \in R\setminus \mathfrak{m}$ such that $sx = 0$. But then
+$s \in \ann(x)$, which is a contradiction. Hence we must have $\ann(x) = R$,
+in particular $x = 1\cdot x = 0$.
