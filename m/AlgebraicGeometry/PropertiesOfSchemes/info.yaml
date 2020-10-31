@@ -1,0 +1,8 @@
+type: chapter
+label: PropertiesOfSchemes
+numbered: true
+section: true
+title: Properties of schemes
+children:
+- OpenAndClosedSubschemes
+- FibreProducts

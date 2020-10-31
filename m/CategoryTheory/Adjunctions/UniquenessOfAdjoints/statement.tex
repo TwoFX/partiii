@@ -1,0 +1,37 @@
+From the initial objects we obtain the compontents:
+\[\begin{tikzcd}[row sep=1cm, column sep=1cm]
+	A\ar[r, "\eta_A"]\ar[dr, "\eta'_A" below left] & GFA\ar[d, shift left, "G\theta_A" right]\\
+	& GF'A\ar[u, shift left, "G\theta^{-1}_A" left]
+\end{tikzcd}\]
+It remains to show naturality. Let $f\colon A\to A'$ be a morphism. By initiality,
+there is a unique morphism $\alpha\colon FA\to FA'$ making the square
+\[\begin{tikzcd}[row sep=1cm, column sep=1cm]
+	A\ar[r, "\eta_A"]\ar[d, "f"] & GFA\ar[d, "G\alpha", densely dotted]\\
+	A'\ar[r, "\eta_{A'}"]& GFA'
+\end{tikzcd}\]
+commute. Recall that in the proof of 3.3 we saw that the morphism corresponding
+to $GFf \circ \eta_A\colon A\to GFA'$ is $Ff\colon FA\to FA'$. On the other hand,
+consider the adjunction square
+\[\begin{tikzcd}
+	(FA'\to FA')\ar[r]\ar[d] & (A'\to GFA')\ar[d]\\
+	(FA\to FA')\ar[r] & (A\to GFA').
+\end{tikzcd}\]
+Along the top right path, $1_{FA'}$ is mapped to $\eta_{A'}$ and then to
+$\eta_{A'}\circ f$. Along the bottom left path $1_{FA'}$ is mapped to $Ff$ and
+then to the morphism corresponding with $Ff$. Hence, $Ff$ corresponds to
+$\eta_{A'}\circ f$. But $Ff$ also corresponds to $GFf \circ \eta_A$, so
+we must have $\eta_{A'} \circ f = GFf \circ \eta_A$, which just means that
+$\eta$ is a natural transformation, and in particular, $\alpha = Ff$.
+
+On the other hand, we may calculate that
+\begin{align*}
+	G\theta_{A'}^{-1} \circ GF'f \circ G\theta_A \circ \eta_A &=
+	G\theta_{A'}^{-1} \circ GF'f \circ \eta'_A\\
+	&= G\theta^{-1}_{A'}\circ \eta'_{A'} \circ f\\
+	&= \eta_{A'} \circ f,
+\end{align*}
+where we use that $\eta'$ is a natural transformation for the same reason as
+$\eta$ and that the triangle at the start commutes.
+Therefore, we find that $\alpha = \theta_{A'}^{-1} \circ F'f \circ \theta_A	$.
+Rearranging, this yields $\theta_{A'} \circ Ff = F'f \circ \theta_A$, so
+$\theta$ is natural, which is what we wanted to show.

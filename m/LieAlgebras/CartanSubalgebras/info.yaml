@@ -20,3 +20,15 @@ children:
 - CartanSubalgebraSL
 - CartanSubalgebraOfSemisimple
 - RegularOfSemisimple
+- SemisimpleRemark
+- WeightSpace
+- RootRemark
+- RootSystemGeometry
+- String
+- PropertiesOfStrings
+- MultiplicitiesAreOne
+- MultiplicitesOneRemerk
+- ComplexMultiplesOfRoots
+- DetectingElement
+- LinearFormOnDual
+- RootsAreRootSystem

@@ -1,0 +1,8 @@
+type: subsection
+label: FibreProducts
+numbered: true
+section: true
+title: Fibre products
+children:
+- FibreProductDef
+- Yoneda

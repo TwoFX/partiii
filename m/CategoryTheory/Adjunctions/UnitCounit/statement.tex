@@ -1,0 +1,14 @@
+Let $A$ be an object of $\mathcal{C}$. The naturality in the first variable of
+an adjunction asserts that
+\[\begin{tikzcd}
+	(GFA\to GFA)\ar[r]\ar[d] & (FGFA\to FA)\ar[d]\\
+	(A\to GFA)\ar[r] & (FA\to FA)
+\end{tikzcd}\]
+is a commutative diagram, where the horizontal arrows are the adjunction and
+the vertical arrows are given by precomposition with $\eta_A$ resp. $F\eta_A$.
+
+Starting with $1_{GFA}$, along the top right way we map to $\epsilon_{FA}$ and
+then to $\epsilon_{FA} \circ F\eta_A$. Along the bottom left way we map to
+$\eta_A \circ 1_{GFA} \circ = \eta_A$ and then to $1_{FA}$, since this is how we
+defined $\eta_A$. Thus $\epsilon_{FA} \circ F\eta_A = 1_{FA}$, so the first
+triangular identity holds.

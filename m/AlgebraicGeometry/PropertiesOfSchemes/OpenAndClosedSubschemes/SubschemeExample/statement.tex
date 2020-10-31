@@ -1,0 +1,33 @@
+\begin{enumerate}
+	\item Let $Y = \Spec A$, let $I \subseteq A$ be an ideal and take $X = \Spec A/I$. Note
+that the map of schemes induced by the quotient map $A\to A/I$ identifies
+$\Spec A/I$ with $V(I) \subseteq \Spec A$. Thus the map $f\colon X\to Y$
+induced by $A\to A/I$ satisfies the first condition of being a closed immersion.
+
+Note that $\mathcal{O}_Y\to f_*\mathcal{O}_X$ is surjective on stalks. Indeed,
+for $p \in V(I)$, $\mathcal{O}_{Y, p} \cong A_p$, and furthermore
+$(f_*\mathcal{O}_X)_p\cong \mathcal{O}_{X, p}$, since all open sets in $X$ are
+of the form $U\cap X$ for $U \subseteq Y$ open. We have $\mathcal{O}_{X, p} \cong (A/I)_(p/I)$.
+The induced map $A_p\to (A/I)_{(p/I)}$ is surjective (and we should convince ourselves
+that this map is indeed the one we get).
+	\item
+		\[ \Spec k[X, Y]/(X) \to \Spec k[X, Y] = \mathbb{A}^2 \]
+		can be thought of as the $y$-axis. This gives \enquote{a closed subscheme
+		structure} to the set $V(X)$.
+
+		Observe that $V(X^2, XY) = V(X)$. Hence this also gives a closed immersion
+		\[ \Spec k[X, Y](X^2, XY) \to \mathbb{A}^2, \]
+		but we obtain a different closed subscheme structure on $V(X)$ (for example,
+		in one we have nilpotents, in the other we do not).
+
+		If we were to draw a picture, we would think of the first subscheme as the
+		$y$-axis, and the second subscheme as the $y$-axis where the origin is
+		a special point.
+
+		Note that the subschemes are isomorphic away from the origin, which we can
+		see by looking at $D(Y) \subseteq \Spec k[X, Y]/(X)$. Here
+		$D(Y) \cong \cong \Spec (k[X, Y]/(X))_Y \cong \Spec k[Y]_Y$. If we instead
+		consider $D(Y) \subseteq \Spec k[X, Y]/(X^2, XY)$. Here
+		$D(Y)\cong \Spec(k[X, Y]/(X^2, XY))_Y \cong \Spec(k[X, Y]_Y/(X)) \cong \Spec k[Y]_Y$.
+		The second isomorphism is a good exercise in localizations.
+\end{enumerate}

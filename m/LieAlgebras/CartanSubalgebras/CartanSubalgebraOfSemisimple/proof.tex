@@ -1,9 +1,9 @@
 By the classification of Cartan subalgebras, $H = L_{0, y}$ for some
 $y \in H$.
 
-Consider the decomposition
+For part (d), consider the decomposition
 \[ L = L_{0, y} \oplus \bigoplus_{\mathclap{\substack{\lambda\neq 0\\\text{$\lambda$ eigenvalue of $\ad(y)$}}}} L_{\lambda, y} \]
-Recall $[L_{\lambda, y}, L_{\mu, y} \subseteq L_{\lambda+\mu, y}$.
+Recall $[L_{\lambda, y}, L_{\mu, y}] \subseteq L_{\lambda+\mu, y}$.
 If $u \in L_{\lambda, y}$, $v \in L_{\mu, y}$ with $\lambda + \mu \neq 0$, then
 applying $\ad(u)\ad(v)$ maps each generalized eigenspace into a different one, so
 $\tr(\ad(u) \circ \ad(v)) = 0$ (think of matrices). Thus when
@@ -14,3 +14,37 @@ is an orthogonal direct sum with regards to the Killing form. But by
 the Cartan-Killing criterion, we know that that Killing form is non-degenerate
 on $L$. This means that its restriction to each summand is non-degenerate. In
 particular, the restriction to $L_{0, y}$ is non-degenerate.
+
+For part (a), we notice that $H$ is nilpotent and so $\ad_L(H)$ is nilpotent
+and hence soluble, and so we can use Cartan's solubility criterion to find that
+\[ \tr(\ad(x_1) \circ \ad(x_2) = 0 \]
+for $x_1 \in H$, $x_2 \in H^{(1)}$. Thus, $H^{(1)}$ is orthogonal to $H$ with respect
+to the Killing form. By (d), the restriction of the Killing form to $H$ is
+non-degenerate, so we must have $H^{(1)} = 0$, which just means that $H$ is
+abelian.
+
+For part (b), obvserve that $H \subseteq Z_L(H) \subseteq \Id_L(H)$, where the first
+inclusion follows from (a) and the second inclusion is true by definition.
+But $H$ is a CSA, so $\Id_L(H) = H$, hence we have equality everywhere, so in
+particular $Z_L(H) = H$. If $H \subseteq A$ is abelian, then certainly $A \subseteq Z_L(H) = H$,
+and $H$ is indeed maximal abelian.
+
+Finally, for part (c), recall that $L$ is semisimple, so
+$\ad_L$ is injective. If $x \in H$, then we have a Jordan decomposition
+$\ad x = \ad(x)_s + \ad(x)_n$. Now it can be shown (see Humphreys, Lemma 4.2.B),
+that $\ad(x)_s$ and $\ad(x)_n$ are derivations. Since $L$ is semisimple, by
+Theorem 3.7 we have that $\ad(x)_s, \ad(x)_n \in \ad(L)$, hence we find
+$x_s, x_n \in L$ such that $\ad(x)_s = \ad(x_s)$, $\ad(x)_n = \ad(x_n)$ and,
+by injectivity, $x = x_s + x_n$.
+
+If $h \in H$, then since $[x, h] = 0$ by abelianness and using the Jacobi
+idendity, we find that $\ad(x) \circ \ad(h) = \ad(h) \circ \ad(z)$. By
+3.9(ii), we know that $\ad(h)$ commutes with $\ad(x_s)$ and $\ad(x_n)$.
+
+In particular, $h$ commutes with $x_n$ by injectivity of $\ad$, so
+$x_n \in Z_L(H) = H$. Since $\ad(x_n)$ is nilpotent, since $\ad(h)$ and $\ad(x_n)$
+commute, $\ad(h) \circ\ad(x_n)$ is also nilpotent. In particular,
+$\tr(\ad(h) \circ \ad(x_n)) = 0$, thus $\vspan{h, n}_{\ad} = 0$ for all $h \in H$.
+
+We have $x_n \in H$ and by (d) the restriction of $\vspan{\ ,\ }_{\ad}$ to $H$
+is non-degenerate, so $x_n = 0$. Hence $x = x_s$ is semisimple.

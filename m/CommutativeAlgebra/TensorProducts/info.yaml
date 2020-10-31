@@ -11,3 +11,8 @@ children:
 - TensorProductRemarks
 - Associativity
 - TensorHomAdjunction
+- RestrictionOfScalars
+- TensorProductsOfMaps
+- TensorProductOfAlgebras
+- ExamplesOfAlgebras
+- DiagonalAction

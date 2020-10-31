@@ -1,0 +1,25 @@
+Let $\mathcal{C}$ be a category and
+\[\begin{tikzcd}
+	& Y\ar[d, "g"]\\
+	X\ar[r, "f"] & Z
+\end{tikzcd}\]
+be a diagram in $\mathcal{C}$.
+
+Then a fibre product, if it exists, is an object $W$ equipped with morphisms $p\colon W\to X$, $q\colon W\to Y$
+such that $f \circ p = g \circ q$ satisfying the following universal property.
+
+\[\begin{tikzcd}
+	W'\ar[dr, densely dotted, "h"]\ar[drr, bend left, "q'"]\ar[ddr, bend right, "p'"]\\
+	&W\ar[r, "q"]\ar[d, "p"] & Y\ar[d, "g"]\\
+	&X\ar[r, "f"] & Z
+\end{tikzcd}\]
+
+For any $W'$ equipped with maps $p'\colon W'\to X$, $q'\colon W'\to Y$ such that
+$f \circ p' =g \circ q'$, there exists a unique moprhism $h\colon W'\to W$ making
+the diagram commute, i.e., $p \circ h = p'$, $q \circ h = q'$.
+
+If the fibre product exists, it is unique up to unique isomorphism.
+
+As a key exmple, if $\mathcal{C}$ is the category of sets, then
+\[ X\times_Z Y = \set{(x, y) \in X \times Y\given f(x) = g(y)}. \]
+

@@ -1,0 +1,8 @@
+type: section
+label: RestrictionOfScalars
+numbered: true
+section: true
+title: Restriction and extension of scalars
+children:
+- RestrictionAndExtension
+- LocalisationAsExtension

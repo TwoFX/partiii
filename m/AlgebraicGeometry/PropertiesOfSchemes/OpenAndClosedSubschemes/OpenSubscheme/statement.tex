@@ -1,0 +1,20 @@
+An open subschemes of a schemes $X$ is a scheme $(U, \mathcal{O}_X|_U)$ for $U \subseteq X$ an open subset.
+
+This is indeed a scheme, since from questions 1 and 11 on the first example sheet, we know
+that some open affine subsets of $X$ form a basis for the topology of $X$. In particular, we
+can cover $U$ by affine schemees.
+
+An open immersion is a morphism $f\colon X\to Y$ which induces an isomorphism of $X$ with an open
+subscheme of $Y$.
+
+A closed immersion $f\colon X\to Y$ is a morphism which is a homeomorphism onto a closed
+subset of $Y$ and the induced morhpism $f^\#\colon \mathcal{O}_Y\to f_*\mathcal{O}_X$ is
+surjective.
+
+A closed subscheme of $Y$ is an equivalence class of closed immersions, where two closed
+immersions are considered equivalent if there is an isomorphism $i\colon X\to X'$ making the diagram
+\[\begin{tikzcd}
+	X\ar[d, "i"]\ar[r, "Y"] & Y\\
+	X'\ar[ur]
+\end{tikzcd}\]
+commute.

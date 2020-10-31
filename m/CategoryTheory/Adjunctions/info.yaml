@@ -1,0 +1,10 @@
+type: chapter
+label: Adjunctions
+numbered: true
+number: 3
+section: true
+title: Adjunctions
+children:
+- Initial
+- UniquenessOfAdjoints
+- UnitCounit

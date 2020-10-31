@@ -1,0 +1,17 @@
+Localisation of a module is just extension of scalars using the map
+$R \to S^{-1}R$. Indeed, given an $R$-module $M$ and a multiplicatively
+closed set $S$, we find an isomorphism of $R$-modules
+$f\colon S^{-1}R\tensor_R M\to S^{-1}M$ given by $\frac{r}{s}\tensor m\mapsto \frac{rm}{s}$.
+
+Indeed, the map $S^{-1}R\times M\to S^{-1}M$, $(r/s, m)\mapsto (rm)/s$ is bilinear,
+so it induces  $f$ as above. It is obviously surjective. For injectivity,
+recall that a general element of the left hand side is of the form
+$\sum_{i = 1}^n r_i/s_i \tensor m_i$. Let $s = s_1\cdots s_n$ and
+$t_i = \prod_{j\neq i} s_j$. Then we may calculate
+\[ \sum \frac{r_i}{s_i}\tensor m_i = \sum \frac{r_it_i}{s}\tensor m_i = \sum \frac{1}{s}\tensor r_it_im_i = \frac{1}{s}\tensor \sum r_it_im_i. \]
+Hence, every element of the left hand side is of the form $1/s \tensor m$.
+
+Suppose that $f(1/s)\tensor m) = 0$. Then $m/s = 0$ in $S^{-1} M$, i.e., we find
+ $x \in S$ such that $xm = 0$. But then
+ \[ \frac{1}{s}\tensor m = \frac{x}{sx}\tensor m = \frac{1}{sx}\tensor xm = \frac{1}{sx}\tensor 0 = 0, \]
+ and so $f$ is injective.

@@ -1,0 +1,8 @@
+type: section
+label: OpenAndClosedSubschemes
+numbered: true
+section: true
+title: Open and closed subschemes
+children:
+- OpenSubscheme
+- SubschemeExample

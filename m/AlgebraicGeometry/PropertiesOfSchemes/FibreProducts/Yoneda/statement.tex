@@ -1,0 +1,58 @@
+It will be helpful to think about the fibre product and more generally
+other universal properties via the Yoneda lemma.
+
+Let $\mathcal{C}$ be a category. Write $h_X$ for the contravariant functor
+\begin{align*}
+	h_X\colon \mathcal{C}&\to \mathsf{Set}\\
+	Y&\mapsto \Hom(Y, X)\\
+	h_X(f\colon Y\to Z)\colon \Hom(Z, X)&\to \Hom(Y, Z)\\
+	\varphi &\mapsto \varphi \circ f.
+\end{align*}
+
+Recall that a natural transformation of contravariant functors
+$F, G\colon \mathcal{C}\to \mathcal{D}$ written as $T\colon F\to G$, consists
+of data $T_(X)\colon F(X)\to G(X)$ for every object $X$ of $\mathcal{C}$ such
+that for  all $f\colon X\to Y$ in $\mathcal{C}$ the diagram
+\[\begin{tikzcd}
+	F(X)\ar[d, "T(X)"] & F(Y)\ar[l, "F(f)"]\ar[d, "T(Y)"]\\
+	G(X)& G(Y)\ar[l, "G(f)"]
+\end{tikzcd}\]
+commutes.
+
+The Yoneda lemma sats that the set of natural transformations
+$h_X\to G$ for any functor $G\colon \mathcal{C}\to \mathsf{Set}$ is in natural
+bijection with  $G(X)$.
+
+A sketch of the proof is as follows: given $\eta \in G(X)$, we need to define a map
+$h_X(Y)\to G(Y)$ for all objects $Y$ in $\mathcal{C}$. We do this by sending
+$f\colon Y\to X$ to $G(f)(\eta)$. One can check that this is indeed a natural
+transformation.
+
+In the converse direction, if $T\colon h_X\to F$ is a natural transformation,
+we obtain an element $\eta \colon T(X)(1_X) \in F(X)$.
+
+One can check that these two maps are inverse to each other.
+
+The corollary we are interested in is the following: the set of natural transformations
+$h_X \to h_Y$ is in natural bijection with $h_Y(X) = \Hom(X, Y)$.
+
+We call a contravariant functor $F\colon \mathcal{C}\to \mathsf{Set}$ representable
+if $F$ is naturally isomorphic to $h_X$ for some object $X$ of $\mathcal{C}$.
+
+Lots of questions in algebraic geometry boil down to whether some functor is
+representable.
+
+In this light, we can redefine fibre products: a fibre product in a category
+$\mathcal{C}$ is an object which represents the functor
+$T \mapsto \Hom(T, X) \times_{\Hom(T, Z)} \Hom(T, Y)$.
+
+The advantage of putting it this way is that we can check identities involving
+fibre products using identities of fibre products of sets. For example, consider
+the identity $(A\times_B C)\times_C D\cong A\times_B D$. On sets, we find
+that $((a, c), d)\mapsto (a, d)$ has the inverse $((a, f(d)), d)$, where
+$f\colon D\to C$ is the map we pulled back.
+
+Then we have functors $T\mapsto (h_A(T)\times_{h_B(T)} h_C(T))\times_{h_C(T)} h_D(T)$
+and $T\mapsto h_A(T)\times_{h_B(T)} hD(T)$. The bijection of sets above
+yields a natural isomorphism between the functors, which hence represent
+isomorphic objects by Yoneda.
