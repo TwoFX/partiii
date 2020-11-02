@@ -1,0 +1,114 @@
+Let  $F, G\colon \mathcal{C}\to \mathsf{Set}$ be functors and let $A$ be
+ an object of $\mathcal{C}$. Define
+ \[ F^G(A)\coloneqq \Hom_{[\mathcal{C}, \mathsf{Set}]}(\mathcal{C}(A, {-})\times G, F). \]
+(TODO: Why is the thing on the right a set?)
+
+If $f\colon A\to A'$ is a morphism in $\mathcal{C}$, $\eta\colon \mathcal{C}(A, {-})\times G\to F$
+a natural transformation, $B$ an object of $\mathcal{C}$, $g\colon A'\to B$ and
+$x \in G(B)$, define \[ F^G(f)(\eta)_B(g, x)\coloneqq \eta_B(g \circ f, x). \]
+It
+is immediate this this makes $F^G$ into a functor $F^G\colon \mathcal{C} \to \mathsf{Set}$.
+
+Furthermore, if $H\colon \mathcal{C}\to\mathsf{Set}$ is a functor and
+$\varphi\colon F\to H$ is natural, we declare $\varphi^G\colon F^G\to H^G$ via
+\[ (\varphi^G)_A\colon F^G(A)\to H^G(A),\quad \alpha \mapsto \varphi \circ \alpha. \]
+This is clearly a natural transformation, and it behaves well under identities and
+composition, hence we have a functor
+\[ {-}^G\colon [\mathcal{C}, \mathsf{Set}]\to [\mathcal{C}, \mathsf{Set}]. \]
+It remains to verify that ${-}\times G\dashv {-}^G$. We apply Theorem 3.7. Let
+
+Our first goal will be to define a natural transformation
+\[ \eta\colon 1_{[\mathcal{C}, \mathsf{Set}]}\to ({-}\times G)^G. \]
+Let $F\colon \mathcal{C}\to \mathsf{Set}$, $A$ an object of $\mathcal{C}$, $x \in F(A)$,
+$B$ an object of $\mathcal{C}$, $g\colon A\to B$ and $y \in G(B)$. Define
+\[ \eta_{F, A}(x)_B(f, y)\coloneqq (F(f)(x), y). \]
+By the Yoneda lemma, this defines a natural transformation
+\[ \eta_{F, A}(x) \colon \mathcal{C}(A, {-})\times G \to F\times G \]
+and hence we have a morphism of sets
+\[ \eta_{F, A}\colon F(A)\to \Hom_{[\mathcal{C}, \mathsf{Set}]}(\mathcal{C}(A, {-})\times G, F\times G). \]
+Let $A'$ be an object of $\mathcal{C}$, $f\colon A\to A'$,
+$x \in F(A)$, $B$ an object of $\mathcal{C}$, $g\colon A'\to B$, and $y \in G(B)$.
+We can calculate
+\begin{align*}
+	(F\times G)^G(f)(\eta_{F, A}(x))_B(g, y) &= \eta_{F, A}(x)_B(g \circ f, y)\\
+	&= (F(g \circ f)(x), y)\\
+	&= (F(g)(F(f)(x)), y)\\
+	&= \eta_{F, A'}(F(f)(x))_B(g, y).
+\end{align*}
+In other words,
+\[ \eta_F\colon F\to (F\times G)^G \]
+is a natural transformation. Next, let $H\colon \mathcal{C}\to \mathsf{Set}$ be
+a functor and $\varphi\colon F\to H$ be a natural transformation. Also, let
+$A$ an object of $\mathcal{C}$, $x \in F(A)$, $B$ an object of $\mathcal{C}$,
+$f\colon A\to B$, $y \in G(B)$. We have
+\begin{align*}
+	((\varphi\times G)^G \circ \eta_F)_A(x)_B(f, y)
+	&= (((\varphi\times G)^G)_A\times \eta_{F, A})(x)_B(f, y)\\
+	&= ((\varphi\times G)^G_A(\eta_{F, A}(x)))_B(f, y)\\
+	&= ((\varphi\times G) \circ \eta_{F, A}(x))_B(f, y)\\
+	&= (\varphi\times G)_B \circ \eta_{F, A}(x)_B(f, y)\\
+	&= (\varphi\times G)_B(F(f)(x), y)\\
+	&= (\varphi_B(F(f)(x)), y)\\
+	&= (H(f)(\varphi_A(x)), y)\\
+	&= \eta_{H, A}(\varphi_A(x))_B(f, y),
+\end{align*}
+so $\eta$ is indeed a natural transformation as promised.
+
+Next, we need to define a natural transformation
+\[ \epsilon\colon {-}^G\times G\to 1_{[\mathcal{C}, \mathsf{Set}]}. \]
+
+Indeed, let $F\colon \mathcal{C}\to\mathsf{Set}$ be a functor, $A$ an object of
+$\mathcal{C}$ and $\alpha\colon \mathcal{C}(A, {-})\times G\to F$ be a natural
+transformation and $x \in G(A)$. Define
+\[ \epsilon_{F, A}(\alpha, x)\coloneqq \alpha_A(1_A, x). \]
+Let $A'$ be an object of $\mathcal{C}$, $f\colon A\to A'$ and $x \in G(A)$. We
+have
+\begin{align*}
+	\epsilon_{F, A'} \circ(F^G\times G)(f)(\alpha, x)
+	&= \epsilon_{F, A'}(F^G(f)(a), G(f)(x))\\
+	&= F^G(f)(\alpha)_{A'}(1_{A'}, G(f(x)))\\
+	&= \alpha_{A'}(\mathcal{C}(A, f)(1_A), G(f)(x))\\
+	&= \alpha_{A'}((\mathcal{C}(A, {-})\times G)(f)(1_A, x))\\
+	&= F(f)(\alpha_A(1_A, x))\\
+	&= F(f)(\epsilon_{F, A}(\alpha, x)),
+\end{align*}
+so $\epsilon_F\colon F^G\times G\to F$ is a natural transformation. Next,
+if $H\colon \mathcal{C}\to \mathsf{Set}$ is a functor and
+$\varphi\colon F\to H$ is a natural transformation, $A$ is an object of $\mathcal{C}$,
+$\alpha\colon \mathcal{C}(A, {-})\times G\to F$ is natural and $x \in G(A)$, then
+we have
+\begin{align*}
+	(\epsilon_H \circ (\varphi^G\times G))_A(\alpha, x)
+	&= \epsilon_{H, A}((\varphi^G\times G)_A(\alpha, x))\\
+	&= \epsilon_{H, A}((\varphi^G)_A(\alpha), x)\\
+	&= \epsilon_{H, A}(\varphi \circ\alpha, x)\\
+	&= (\varphi \circ\alpha)_A(1_A, x)\\
+	&= (\varphi_A \circ\alpha_A(1_A, x))\\
+	&= \varphi_A(\epsilon_{F, A}(1_A, x))\\
+	&= (\varphi \circ\epsilon_F)_A(\alpha, x).
+\end{align*}
+Hence, $\epsilon\colon {-}^G\times G\to 1_{[\mathcal{C}, \mathsf{Set}]}$
+is a natural transformation.
+
+It remains to verify the triangle identities.
+For the first triangle identity, let $F\colon \mathcal{C} \to \mathsf{Set}$ be
+a functor, $A$ an object of $\mathcal{C}$, $x \in F(A)$ and $y \in G(A)$. Then
+\begin{align*}
+	\epsilon_{F\times G, A}((\eta_F\times G)_A(x, y)) &= \epsilon_{F\times G, A}(\eta_{F, A}(x), y) = \eta_{F, A}(x)_A(1_A, y)\\
+	&= (F(1_A)(x), y) = (x, y),
+\end{align*}
+so the first triangle identity holds.
+
+Finally, let $F\colon \mathcal{C}\to \mathsf{Set}$ be a functor,
+$\alpha\colon \mathcal{C}(A, {-})\times G\to F$ a natural transformation,
+$B$ an object of $\mathcal{C}$, $f\colon A\to B$ and $x \in G(B)$. Then
+\begin{align*}
+	((\epsilon_F)^G \circ\eta_{F^G})_A(\alpha)_B(f, x)
+	&= (\epsilon_F \circ\eta_{F^G, A}(\alpha))_B(f, x)\\
+	&= \epsilon_{F, B}(\eta_{F^G, A}(\alpha)_B(f, x))\\
+	&= \epsilon_{F, B}(F^G(f)(\alpha), x)\\
+	&= F^G(f)(\alpha)_B(1_B, x)\\
+	&= \alpha_B(1_B \circ f, x)\\
+	&= \alpha_B(f, x).
+\end{align*}
+This completes the proof of second triangle identity, and we are done.
