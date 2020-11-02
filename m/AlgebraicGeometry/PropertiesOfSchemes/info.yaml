@@ -6,3 +6,5 @@ title: Properties of schemes
 children:
 - OpenAndClosedSubschemes
 - FibreProducts
+- FibreProductsOfSchemes
+- FibresOfMorphisms

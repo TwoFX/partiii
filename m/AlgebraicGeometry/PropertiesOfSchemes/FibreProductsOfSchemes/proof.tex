@@ -1,0 +1,78 @@
+We will construct $X\times_S Y$ for various cases, bootstrapping up to the general case.
+
+For the first step, $X = \Spec A$, $Y = \Spec B$, $S = \Spec R$.
+Since we have an equivalence with the opposite category of the category of rings,
+we are looking for pushouts in the category of rings. But the pushout of  $A$ and
+$B$ via $R$ is just $A\otimes_R B$. Thus $\Spec (A\tensor_R B)$ is
+$\Spec A\times_{\Spec R}\Spec B$ in the category of affine schemes.
+
+If $T$ is an arbitrary scheme, then giving a morphism $T\to \Spec A$ (for any ring $A$)
+is the same as giving a morphism $A\to \Gamma(T, \mathcal{O}_T)$ by the first example
+sheet. Thus giving a diagram
+\[\begin{tikzcd}
+	T\ar[drr, bend left]\ar[ddr, bend right]\\
+	& & \Spec B\ar[d]\\
+	& \Spec A\ar[r] & \Spec R
+\end{tikzcd}\]
+is equivalent to
+\[\begin{tikzcd}
+	\Gamma(T, \mathcal{O}_T)\\
+	& A\tensor_R B\ar[ul, densely dotted, "\exists! h"] & B\ar[l]\ar[ull, bend right]\\
+	& A\ar[u]\ar[uul, bend left]] & R\ar[l, "f"]\ar[u, "g"]
+\end{tikzcd}\]
+and $h\colon A\tensor_R B\to \Gamma(T, \mathcal{O}_T)$ induces a map $T\to \Spec A\tensor_R B$.
+Thus $\Spec A\tensor_R B$ is the fibre product $\Spec A\times_{\Spec R}\Spec B$ in the category
+of schemes.
+
+For the second step, the idea is to construct more general fibre products by gluing
+of schemes as seen on the first example sheet. We also glue morphisms: if $X, Y$
+are schemes, $\set{U_i}$ an open cover of $X$ and we are given morhpsisms $f_i\colon U_i\to Y$ such
+that $f_i|_{U_i\cap U_j} = f_j|_{U_i\cap U_j}$, then we obtain $f\colon X\to Y$ such that
+$f|_{U_i} = f_i$ (this was proved in the examples class).
+
+For the third step, if $X, Y\to S$ are given and $U \subseteq X$ is open, suppose that
+$X\times_S Y$ exists, with projectives $p_1\colon X\times_S Y\to X$,
+$p_2\colon X\times_S Y\to Y$. Then we claim $p_1^{-1}(U)$ has the universal property of $U\times_S Y$.
+
+\[\begin{tikzcd}
+	T\ar[ddr, bend right]\ar[drrr, bend left]\ar[drr, densely dotted, "\exists! h'"]\ar[dr, densely dotted, "\exists! h"]\\
+	&p_1^{-1}(U)\ar[d]\ar[r, hook] & X\times_S Y\ar[r]\ar[d] & Y\ar[d]\\
+	&U\ar[r, hook] & X\ar[r]& S
+\end{tikzcd}\]
+Note that by commutativity, the image of $p_1 \circ h'$ is contained in $U$, hence
+the image of $h'$ is contained in $p_1^{-1}(U)$. Hence we get a unique factoring $h$
+as required. Therefore, the universal property holds for $p^{-1}(U)$.
+
+For the fourth step, suppose $\set{X_i}$ is an open cvover of $X$ and $X_i\times_S Y$
+exists for each $i$. Then we claim that $X\times_S Y$ exists.
+
+Indeed, Define $X_{ij}\coloneqq X_i\cap X_j$, $U_{ij} = p_1^{-1}(X_{ij}) \subseteq X_i\times_S Y$.
+By the third step, we find $U_ij\cong X_{ij}\times_S Y$. By the universal propertu
+of fibre products, there is a unique isomorphism $\varphi_{ij}\colon U_{ij}\to U_{ji}$
+compatible with the projections.
+
+As an exercise: check that these gluing maps $\varphi_{ij}$ satisfy the
+requirements of question 14 on the first example sheet.
+
+Thus we can glue that $X_i\times_S Y$ via the  $\varphi_{ij}$ to get a scheme
+$X\times_S Y$, and we need to check that this is indeed a fibre product.
+So suppose we have a scheme $T$, $p_1'\colon T\to X$ and $p_2'\colon T\to Y$ satisfying
+the commutativity condition.
+Let $T_i\coloneqq (p_1')^{-1}(X_i)$, so we get a morphism $\theta_i\colon T_i\to X_i\times_S Y \hookrightarrow X\times_S Y$,
+where the latter is an open immersion by construction. On $T_i\cap T_j$, these maps
+agree, since they factor through  $X_{ij}\times S Y \subseteq X_i\times_S Y$ and
+$X_{ji}\times_S Y \subseteq X_j\times_S Y$ and by the universal property they agree.
+
+Thus using step 2 we can glue the $\theta_i$ to get $\theta\colon T\to X\times_S Y$.
+It is an exercise to check that this is the unique map making the diagram commute.
+
+For step 5, using step 4 and 1, we may construct $X\times_S Y$ when $S$ and $Y$
+are affine. Repeating the process for $Y$, we obtain fibre products when
+$S$ is affine and $X$ and $Y$ are arbitrary schemes.
+
+Now, for step 6, if $X, Y$ and $S$ are all arbitrary, take an open affine cover
+$\set{S_i}$ of $S$, $f\colon X\to S$ $\colon Y\to S$, $X_i\coloneqq f^{-1}(S_i)$,
+$Y_i\coloneqq g^{-1}(S_i)$. Then $X_i\times_{S_i} Y_i$ exists, and it is an exercise
+to verify using the universal property that $X_i\times_{S_i}Y_i\cong X_i\times_S Y_i$
+(since the maps $X_i\to S$ and $Y_i\to S$ factor through $S_i$).
+Use the same gluing argument as above to glue the $X_i\times_S Y_i$ to $X\times_S Y$.

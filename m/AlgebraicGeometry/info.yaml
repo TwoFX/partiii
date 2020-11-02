@@ -4,6 +4,6 @@ children:
 - Sheaves
 - AffineSchemes
 - ProjectiveSchemes
+- PropertiesOfSchemes
 - Exercises
 - ExamplesClasses
-- PropertiesOfSchemes
