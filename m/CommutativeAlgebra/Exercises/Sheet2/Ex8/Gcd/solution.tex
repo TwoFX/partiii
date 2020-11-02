@@ -1,0 +1,8 @@
+Bézout's lemma yields $a, b \in \mathbb{Z}$ such that $am + bn = 1$. The
+module $\mathbb{Z}/m\mathbb{Z} \tensor_\mathbb{Z} \mathbb{Z}/n\mathbb{Z}$ is generated
+by elements of the form $x\tensor y$, $x \in \mathbb{Z}/m\mathbb{Z}$, $y \in\mathbb{Z}/n\mathbb{Z}$.
+For any such element, we have
+\begin{align*}
+	 x\tensor y &= (am+bn)(x\tensor y) = am(x\tensor y) + bn(x\tensor y) = a(mx\tensor y) + b(x\tensor ny) \\
+	&= a(0\tensor y) + b(x\tensor 0) = 0.\qedhere
+\end{align*}

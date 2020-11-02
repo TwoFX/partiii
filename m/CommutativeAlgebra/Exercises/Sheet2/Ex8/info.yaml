@@ -1,0 +1,7 @@
+type: subsection
+label: Ex8
+numbered: false
+section: true
+title: Exercise 8
+children:
+- Gcd

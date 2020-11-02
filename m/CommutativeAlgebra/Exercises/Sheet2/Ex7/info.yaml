@@ -1,0 +1,9 @@
+type: subsection
+label: Ex7
+numbered: false
+section: true
+title: Exercise 7
+children:
+- MaximalIffMinimal
+- MinimalContainedIn
+- TotalRingOfFractions

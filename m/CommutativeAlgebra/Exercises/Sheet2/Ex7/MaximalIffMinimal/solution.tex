@@ -1,0 +1,33 @@
+The union of a chain in $\Sigma$ is again an element of $\Sigma$, and the singleton
+set  $\set{1}$ is an element of $\Sigma$. Hence, $\Sigma$ admits maximal elements
+by Zorn's lemma.
+
+If $S \in \Sigma$ is maximal, we claim that $I\coloneqq R\setminus S$ is a prime
+ideal. If $r, s \in I$,
+then $SM_r$ and $SM_s$, where $M_r\coloneqq \set{1, r, r^2, \ldots}$,
+are multiplicatively closed subsets. Since  $r, s \notin S$, these are strictly
+larger than $S$, hence must contain $0$, i.e., we find natural numbers
+$n, m$ and $x, y \in S$ such that $xr^n = 0 = ys^m$. Then $xy(r+s)^{n+m} = 0$
+by the binomial theorem, so we must have $r + s \in I$, since otherwise
+we would have $0 \in S$, a contradiction.
+
+If $r \in R$, $t \in I$, then again we find $n \in \mathbb{N}$ and $x \in S$ such
+that $xt^n = 0$. Then $r^nxt^n = 0$, so if we have $rt \in S$, then $0 \in S$,
+hence $rt \in I$. This makes $I$ into an ideal.
+
+Next, let $r, s \in R$ such that $rs \in I$. Again, this means that we find $n \in \mathbb{N}$
+and $t \in S$ such that $(rs)^nt = 0$. If $r$ and $s$ were both in $S$, this would again
+lead to the contradiction $0 \in S$, hence $r \in I \vee s \in I$, making $I$ into
+a prime ideal.
+
+It remains to show that $I$ is minimal. If $\mathfrak{p} \subseteq I$ is a prime ideal,
+then $R \setminus \mathfrak{p}$ is multiplicative, does not contain $0$, and
+satisfies $S \subseteq R\setminus \mathfrak{p}$. By maximality of $S$, we find
+$S = R\setminus \mathfrak{p}$, so $\mathfrak{p} = I$.
+
+Conversely, assume that $R\setminus S$ is a minimal prime ideal. Then $S$ is
+multiplicative, because $R\setminus S$ is prime. Suppose $S$ is not maximal.
+Then we have $S \subsetneq S'$ for some maximal element $S'$ of $\Sigma$. Then
+by what we have just shown,
+$R\setminus S'$ is a minimal prime ideal, but then $R\setminus S$ cannot be a
+minimal prime, since it is a strict superset of $R\setminus S'$.

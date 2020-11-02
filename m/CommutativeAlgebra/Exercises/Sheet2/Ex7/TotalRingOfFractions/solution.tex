@@ -1,0 +1,27 @@
+For (i), let $S$ be any multiplicatively closed set. We claim that $\varphi\colon R\to S^{-1}R$ is injective
+if and only if $S$ contains no zero divisors.
+
+Indeed, $\varphi(r) = 0$ if and only if $r/1 = 0/1 \in S^{-1}R$, i.e., if and only if
+there exists $s \in S$ such that $rs = 0$. So there is
+some nonzero $r$ satisfying $\varphi(r) = 0$ if and only if $S$ contains a zero divisor.
+
+Since $S_0$ is the largest multiplicatively closed subset without zero divisors,
+the claim follows.
+
+For (ii), let $r/s \in S_0^{-1}R$. If $r \in S_0$, then $r/s$ is a unit, since
+$r/s \cdot s/r = 1$. Conversely, if $r \notin S_0$, then $r$ is a zero divisor,
+so we find $0\neq q \in R$ such that $rq = 0$. Since $S_0$ does not contain zero divisors,
+we have $q/1 \neq 0 \in S^{-1}R$. Then $r/s \cdot q/1 = 0/s = 0 \in S^{-1}R$,
+so $r/s$ is a zero divisor.
+
+For (iii), observe that if every non-unit is a zero divisor, every non-zero-divisor
+is a unit. Hence the universal property of localisation yields a map $\theta$
+making the diagram
+\[\begin{tikzcd}[row sep=1cm, column sep=1cm]
+	R\ar[r, "\varphi"]\ar[dr, "\id" below left] & S_0^{-1}R\ar[d, "\theta"]\\
+	& R
+\end{tikzcd}\]
+commute. It remains to verify that $\varphi \circ \theta = \id_{S_0^{-1}R}$. Indeed,
+if $r \in R$ and $s \in S_0$, then $\varphi(\theta(r/s)) = \varphi(rs^{-1}) = (rs^{-1})/1$.
+But since $1(rs^{-1}s - r) = 0 \in R$, we have $r/s = (rs^{-1})/1 \in S_0^{-1}R$,
+completing the proof.
