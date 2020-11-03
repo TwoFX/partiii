@@ -1,0 +1,17 @@
+We know that $\scp{\ ,\ }_{\ad}$ is symmetric and bilinear and rationally
+valued on $\tilde{H}$ by 4.20(c).
+
+Let $x \in \tilde{H}$. Then
+\[ \scp{x, x}_{\ad} = \sum_{\alpha \in \Phi} \alpha(x)^2 = \sum_{\alpha \in \Phi}\scp{h_{\alpha}, x}^2 \]
+by 4.13(a). Each $\scp{h_\alpha, x}$ is rational and so
+$\scp{x, x}_{\ad} \geq 0$ with equality only if
+$\scp{h_\alpha, x} = \alpha(x) = 0$ for every $\alpha \in \Phi$. By 4.13(f), this
+can only happen if $\alpha = 0$.
+
+It remains to show that each .$h_\alpha$ is a rational linear combination
+of $h_1, \ldots, h_r$. But if
+\[ h_\alpha = \sum \lambda_i h_i \] with $\lambda_i \in \mathbb{Q}$, then
+\[ \scp{h_\alpha, h_j}_{\ad} = \sum \lambda_i\scp{h_i, h_j} \in \mathbb{Q} \]
+by 4.20(c). Hence the matrix with entries $\scp{h_i, h_j}$ is nonsingular
+by non-degeneracy and has entries in $\mathbb{Q}$. Hence it is invertible over
+$\mathbb{Q}$, so each $\lambda_i \in \mathbb{Q}$ as required.

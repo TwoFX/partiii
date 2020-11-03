@@ -20,6 +20,5 @@ children:
 - ExactnessRemarks
 - TensorProductIsRightExact
 - NotFlat
-- NotFlat
 - Flat
 - FlatExamples

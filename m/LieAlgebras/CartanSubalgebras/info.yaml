@@ -32,3 +32,6 @@ children:
 - DetectingElement
 - LinearFormOnDual
 - RootsAreRootSystem
+- QSpan
+- KillingFormTwiddle
+- Translatio

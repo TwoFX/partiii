@@ -1,0 +1,18 @@
+type: chapter
+label: RootSystems
+numbered: true
+section: true
+title: Root systems
+children:
+- RootSystem
+- InitialRemark
+- RootSystemSL2
+- Rank
+- ReducedRootSystem
+- InducedReduced
+- WeylGroup
+- IsomorphismOfRootSystems
+- SL2Isomorphism
+- DirectSumOfRootSystems
+- CoRoot
+- CoRootExercise

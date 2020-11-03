@@ -1,0 +1,8 @@
+type: subsection
+label: Ex11
+numbered: false
+section: true
+title: Exercise 11
+children:
+- FlatDirectSum
+- FlatPolynomial
