@@ -1,0 +1,14 @@
+The second statement follows from the first statement by commutativity
+of tensor products.
+
+Let $N'$ be any $R$-module. By the previous lemma, we have an exact sequence
+\[\begin{tikzcd}[column sep=0.2cm]
+	0\ar[r] & \Hom(M_2, \Hom(N, N'))\ar[r] & \Hom(M, \Hom(N, N'))\ar[r] &\Hom(M_1, \Hom(N, N')).
+\end{tikzcd}\]
+By the tensor-hom adjunction, we have $\Hom(M, \Hom(N, N'))\cong \Hom(M\tensor N, N')$,
+so we get an exact sequence
+\[\begin{tikzcd}
+	0\ar[r] & \Hom(M_2\tensor N, N')\ar[r] & \Hom(M\tensor N, N')\ar[r] & \Hom(M\tensor N, N').
+\end{tikzcd}\]
+The previous lemma yields the desired exact sequence (after we have verified that
+the maps are indeed what we expect).

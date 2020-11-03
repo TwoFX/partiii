@@ -1,0 +1,6 @@
+type: lemma
+label: TensorProductIsRightExact
+numbered: true
+section: false
+proofs:
+    proof: Proof

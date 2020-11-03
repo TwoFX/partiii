@@ -16,3 +16,10 @@ children:
 - TensorProductOfAlgebras
 - ExamplesOfAlgebras
 - DiagonalAction
+- HomIsLeftExact
+- ExactnessRemarks
+- TensorProductIsRightExact
+- NotFlat
+- NotFlat
+- Flat
+- FlatExamples

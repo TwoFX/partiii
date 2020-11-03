@@ -1,0 +1,31 @@
+First, assume that the first sequence is exact.
+Let $N$ be an $R$-module. If $ f \in \Hom(M_2, N)$, then
+$f \circ \varphi \in \Hom(M, N)$. This is the map $\alpha\colon \Hom(M_2, N)\to \Hom(M, N)$,
+and it is injective, since if $f\neq 0$, there is $m_2 \in M_2$ with
+$f(m_2)\neq 0$, but $m_2 = \varphi(m)$ for some $m \in M$, so $f(\varphi(m)) \neq 0$,
+hence $\alpha$ is injective.
+
+If $g \in \Hom(M, N)$ then $\beta$ sends it to $g \circ \theta \in \Hom(M_1, N)$.
+If $g \circ \theta = 0$, then $\theta(M_1) \subseteq \ker g$. By exactness,
+we have $\theta(M_1) = \ker\varphi$, so we conclude $\ker\varphi \subseteq \ker g$.
+Now $\varphi$ factors as $M \to M/\ker\varphi \to M_2$, with the latter
+map being an isomorphism. Hence, $g$ factors as
+$M\to M_2 \to M/\ker\varphi \to M/\ker g \to N$, where the first map
+is $\varphi$ and the second map is the inverse of the isomorphism.
+Taking $f$ to be the composite of the the latter maps, we have
+written $g = f \circ \varphi$ for $f \in \Hom(M_2, N)$, hence
+$\ker \beta \subseteq \im \alpha$. Since the reverse inclusion is
+trivial, we have exactness at $\Hom(M, N)$.
+
+Conversely, suppose that the sequence of Homsets is exact.
+If the map $M_2 \to M_2/\im\varphi$ was nonzero, then by
+injectivity of $\alpha$, so would be the composite
+$M\to M_2\to M_2/\im\varphi$, which is obviously not the case. Hence
+ $\varphi$ is surjective.
+
+We have $0 = \beta(\alpha(\id_{M_2})) = \varphi \circ \theta$, hence
+$\im\theta \subseteq \ker\varphi$. Let
+$p\colon M\to M/\im\theta$ be the projection. Then $p \circ \theta = 0$, i.e.,
+$p \in \ker\beta = \im\alpha$, so we find $g\colon M_2\to N$
+$p = g \circ \varphi$. Then $\im\theta = \ker p \supseteq \ker\varphi$.
+Putting things together, we have exactness at  $M$.
