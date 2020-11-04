@@ -1,0 +1,9 @@
+type: section
+label: SeparatedAndProperMorphisms
+numbered: true
+section: true
+title: Separated and proper morphisms
+children:
+- Hausdorff
+- DiagonalMapOfSchemes
+- ValuativeCriterion

@@ -1,0 +1,12 @@
+A morphism $f\colon X\to Y$ of schemes is called locally of finite type
+if there is a covering of $Y$ by affine open sets $\set{V_i \cong \Spec B_i}$
+such that for each $i$, $f^{-1}(V_i)$ can be covered by affine open sets
+$\set{U_{ij}\cong \Spec A_{ij}}$, where each $A_{ij}$ is a finitely generated
+$B_i$-algebra. This makes sense:
+\[\begin{tikzcd}[row sep=1cm, column sep=1cm]
+	U_{ij}\ar[d]& A_{ij}\\
+	V_i & B_i.\ar[u]
+\end{tikzcd}\]
+
+We say that $f$ is of finite type if for each $i$ the cover $U_{ij}$ may be
+taken to be finite.

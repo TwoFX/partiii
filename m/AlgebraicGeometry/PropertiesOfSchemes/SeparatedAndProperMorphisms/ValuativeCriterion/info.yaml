@@ -1,0 +1,6 @@
+type: theorem
+label: ValuativeCriterion
+numbered: true
+section: false
+proofs:
+    noproof: Not proved in this course

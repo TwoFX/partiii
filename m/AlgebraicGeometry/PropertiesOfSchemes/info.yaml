@@ -8,3 +8,14 @@ children:
 - FibreProducts
 - FibreProductsOfSchemes
 - FibresOfMorphisms
+- BaseChangeExample
+- IntegralScheme
+- ReducedScheme
+- Irreducible
+- PropertiesExample
+- IntegralIff
+- LocallyNoetherianScheme
+- LocallyOfFiniteType
+- Variety
+- LocallyFiniteTypeExample
+- SeparatedAndProperMorphisms
