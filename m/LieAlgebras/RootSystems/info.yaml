@@ -16,3 +16,16 @@ children:
 - DirectSumOfRootSystems
 - CoRoot
 - CoRootExercise
+- Norm
+- NormNotSymmetric
+- NormProduct
+- ReducedRootSystemsOfRank2
+- SimplyLaced
+- BaseOfARootSystem
+- Rank2Base
+- CartanMatrix
+- CartanMatrixExample
+- CoxeterGraph
+- CoxeterExample
+- ClassificationTheory
+- CoxeterGraphsAreInsufficient
