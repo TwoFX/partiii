@@ -1,0 +1,13 @@
+\begin{enumerate}[label=(\arabic*)]
+	\item  $\mathbb{P}_k^n = \Proj k[X_0, \ldots, X_n] \to \Spec k$ is proper.
+	\item $\mathbb{A}_k^1\to \Spec k$ is not proper. It is separated (we have not proved
+		this) and of finite type (TODO: this should be clear). Consider the base
+		change by $\mathbb{A}_k^1\to \Spec k$. We have the map
+		\begin{align*}
+		P_2\colon	\mathbb{A}_k^1\times_{\Spec k} \mathbb{A}_k^1 = \mathbb{A}_k^2 = \Spec k[X] \otimes_k k[Y] &\to \Spec k[t]= \mathbb{A}_k^1\\
+			Y &\mapsfrom t\\
+			(X, Y)&\mapsto Y.
+		\end{align*}
+		This is not a closed map, e.g., $P_2(V(XY-1)) = D(t)$, which is open,
+		not closed. We are essentially projecting a hyperbola to the $x$ axis.
+\end{enumerate}

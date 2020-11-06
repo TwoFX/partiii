@@ -1,0 +1,18 @@
+Let $X = \Spec A$ be an affine scheme and $M$ an $A$-module.
+For $p \in \Spec A$, we have the localization $M_p$. Define a sheaf
+$\tilde{M}$ on $\Spec A$ by
+\[ \tilde{M}(U) = \set{s\colon U\to \coprod_{p \in U} M_p\given (\star)}, \]
+where $(\star)$ means that
+\begin{enumerate}
+	\item $\forall p \in U\colon s(p) \in M_p$,
+	\item for each $p \in U$ there is a neighborhood $p \in V \subseteq U$ and
+		$m \in M$, $s \in A$ such that $s\notin q$ for all $q \in V$ and
+		$s(q) = m/s$ for all $q \in V$.
+\end{enumerate}
+We notice that $\tilde{A} = \mathcal{O}_{\Spec A}$. Observe:
+\begin{enumerate}
+	\item $(\tilde{M})_p \cong M_p$,
+	\item $\tilde{M}(D(f)) \cong M_f$,
+	\item $\Gamma(\Spec A, \tilde{M}) \cong M$.
+\end{enumerate}
+The proofs are exactly the same as for $\mathcal{O}_{\Spec A}$.

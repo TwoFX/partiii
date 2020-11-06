@@ -1,0 +1,25 @@
+Let $(X, \mathcal{O}_X)$ be a ringed space. A sheaf of  $\mathcal{O}_X$-modules
+is a sheaf of abelian groups on $X$ such that for each $U \subseteq X$, $\mathcal{F}(U)$
+has the structure of an $\mathcal{O}_X(U)$-module, compatible with restriction,
+i.e., if $s \in \mathcal{O}_X(U)$, $m \in F(U)$ and $V \subseteq U$, then
+$s|_V\cdot m|_V = (s\cdot m)|_V$.
+
+A morphism of sheaves of $\mathcal{O}_X$-modules $\varphi\colon \mathcal{F}\to \mathcal{G}$
+is a morphism of sheaves of abelian groups such that for all $U \subseteq X$
+$\varphi_U\colon \mathcal{F}(U)\to \mathcal{G}(U)$ is $\mathcal{O}_X(U)$-linear.
+
+Kernels, cokernals and images of morphisms of sheaves of $\mathcal{O}_X$-modules
+are sheaves of $\mathcal{O}_X$-modules (TODO: show that sheafification retains the
+$\mathcal{O}_X$-module structure).
+
+We write $\Hom_{\mathcal{O}_X}(\mathcal{F}, \mathcal{G})$ for the group of
+$\mathcal{O}_X$-module homomorphisms from $\mathcal{F}$ to $\mathcal{G}$.
+This is an $\mathcal{O}_X(X)$-module.
+
+Then $U\mapsto \Hom_{\mathcal{O}_U}(\mathcal{F}|_U, \mathcal{G}|_U)$ is a sheaf
+of $\mathcal{O}_X$-modules, written as $\mathcal{Hom}(\mathcal{F}, \mathcal{G})$
+and pronounced \enquote{sheaf hom}.
+
+If $\mathcal{F}$, $\mathcal{G}$ are $\mathcal{O}_X$-modules, we denote by
+$\mathcal{F}\tensor_{\mathcal{O}_X} \mathcal{G}$ the sheaf associated to the
+presheaf $U\mapsto \mathcal{F}(U) \tensor_{\mathcal{O}_X(U)} \mathcal{G}(U)$.

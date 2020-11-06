@@ -1,0 +1,10 @@
+type: chapter
+label: SheavesOfModules
+numbered: true
+section: true
+title: Sheaves of $\mathcal{O}_X$-modules
+children:
+- Idea
+- SheafOfModules
+- FreeSheaf
+- Examples

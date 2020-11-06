@@ -7,3 +7,9 @@ children:
 - Hausdorff
 - DiagonalMapOfSchemes
 - ValuativeCriterion
+- Intuition
+- Variety
+- ProperMorphism
+- ProjectiveProper
+- ValuativeCriterionForProperness
+- ProjectiveExample

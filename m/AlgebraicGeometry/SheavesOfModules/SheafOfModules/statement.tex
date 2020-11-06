@@ -1,0 +1,50 @@
+Let $(X, \mathcal{O}_X)$ be a ringed space. A sheaf of  $\mathcal{O}_X$-modules
+is a sheaf of abelian groups on $X$ such that for each $U \subseteq X$, $\mathcal{F}(U)$
+has the structure of an $\mathcal{O}_X(U)$-module, compatible with restriction,
+i.e., if $s \in \mathcal{O}_X(U)$, $m \in F(U)$ and $V \subseteq U$, then
+$s|_V\cdot m|_V = (s\cdot m)|_V$.
+
+A morphism of sheaves of $\mathcal{O}_X$-modules $\varphi\colon \mathcal{F}\to \mathcal{G}$
+is a morphism of sheaves of abelian groups such that for all $U \subseteq X$
+$\varphi_U\colon \mathcal{F}(U)\to \mathcal{G}(U)$ is $\mathcal{O}_X(U)$-linear.
+
+Kernels, cokernals and images of morphisms of sheaves of $\mathcal{O}_X$-modules
+are sheaves of $\mathcal{O}_X$-modules (TODO: show that sheafification retains the
+$\mathcal{O}_X$-module structure).
+
+We write $\Hom_{\mathcal{O}_X}(\mathcal{F}, \mathcal{G})$ for the group of
+$\mathcal{O}_X$-module homomorphisms from $\mathcal{F}$ to $\mathcal{G}$.
+This is an $\mathcal{O}_X(X)$-module.
+
+Then $U\mapsto \Hom_{\mathcal{O}_U}(\mathcal{F}|_U, \mathcal{G}|_U)$ is a sheaf
+of $\mathcal{O}_X$-modules, written as $\mathcal{Hom}(\mathcal{F}, \mathcal{G})$
+and pronounced \enquote{sheaf hom}.
+
+If $\mathcal{F}$, $\mathcal{G}$ are $\mathcal{O}_X$-modules, we denote by
+$\mathcal{F}\tensor_{\mathcal{O}_X} \mathcal{G}$ with the trivial Lie bracket.
+
+the sheaf associated to the
+presheaf $U\mapsto \mathcal{F}(U) \tensor_{\mathcal{O}_X(U)} \mathcal{G}(U)$.
+
+Pushforwards and pullbacks: We will start with some motivation.
+Consider a map of rings $\varphi A\to B$ and let $M$ be a
+$B$-module and $N$ and $A$-module. Then $M$ is also an $A$-module via restriction
+of scalars. Also, $B\tensor_A N$ is a $B$-module via extension of scalars. We
+want to find analogues of this for sheaves of $\mathcal{O}_X$-modules.
+
+Given $f\colon X\to Y$ a morphism of ringed spaces (recall that this includes
+a map $f^\#\colon \mathcal{O}_Y \to f_*\mathcal{O}_X$), a sheaf $\mathcal{F}$ of
+$\mathcal{O}_X$ modules and a sheaf $\mathcal{G}$ of $\mathcal{O}_Y$-modules,
+then
+\begin{enumerate}
+	\item $f_*\mathcal{F}$ is naturally a sheaf of $f_*\mathcal{O}_X$-modules since
+		$(f_*\mathcal{F})(U)  = \mathcal{F}(f^{-1}(U))$, which is a
+		 $\mathcal{O}_X(f^{-1}(U)) = (f_*\mathcal{O}_X)(U)$-module and hence
+		 $f_*\mathcal{F}$ becomes a $\mathcal{O}_Y$-module via restriction of
+		 scalars.
+	\item $f^{-1}\mathcal{G}$ is naturally an $f^{-1}\mathcal{O}_Y$-module. But
+		$f^\#$ induces the adjoint map $f^\#\colon f^{-1}\mathcal{O}_Y\to \mathcal{O}_X$
+		by Question 10 on the first example sheet.
+		Define $f^*\mathcal{G}\coloneqq f^{-1}\mathcal{G}\tensor_{f^{-1}\mathcal{O}_Y}\mathcal{O}_X$.
+		This is a sheaf of $\mathcal{O}_X$-modules.
+\end{enumerate}
