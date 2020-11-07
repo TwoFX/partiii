@@ -2,12 +2,13 @@ For (a) choose a basis for each weight space and take the union to obtain
 a basis of $L$. Then $\ad(x)$ and $\ad(y)$ are represented by diagonal matrices,
 and $\tr(\ad(x) \circ \ad(y))$ is precisely the right hand side of the formula.
 
-The proof of the first part of (b) is similar to the proof of 4.2(i) (TODO). By
+The first part of (b) is an immediate consequence of the fact that $\ad(h)$ is a
+derivation. By
 an argument similar to that used in 4.10(d) we have that
 $\tr(\ad(x) \circ \ad(y)) = 0$ if $x \in L_{\alpha}$ and $y \in L_{\beta}$ and
 $\alpha+\beta\neq 0$ (TODO). So $\vspan{L_\alpha, L_{\beta}}_{\ad} = 0$.
 
-For (c), take $\alpha \in \Phi$ and suppose $-\alpha \in \Phi$. Then using (b) we
+For (c), take $\alpha \in \Phi$ and suppose $-\alpha \notin \Phi$. Then using (b) we
 have that for all weights $\beta$, $\vspan{L_\alpha, L_\beta}_{\ad} = 0$.
 
 Hence, $\vspan{L_{\alpha}, L}_{\ad} = 0$. But by Cartan-Killing
@@ -26,4 +27,12 @@ $x \in H$. Then $\vspan{h, x}_{\ad} = \sum_{\alpha \in \Phi}m_\alpha\alpha(h)\al
 By (d), we have $h = 0$.
 
 Thus, if $h\neq 0$, there is some $\alpha \in\Phi$ such that $\alpha(h)\neq 0$.
-TODO: why does this imply that $\Phi$ spans $H^*$?
+
+The spanning statement can be proved by inductively finding a basis::
+if $n = \dim H$, given
+$k < n$ linearly independent elements in $\Phi$, by the dimension formula the
+intersection of the kernels
+of these linear forms has dimension at least $n - k > 0$, so we find some $h \in H$ on
+which all elements vanish. By what we just proved, we find a new element of
+$\Phi$ that does not vanish on $h$ and therefore is linearly independent from
+the previous elements.

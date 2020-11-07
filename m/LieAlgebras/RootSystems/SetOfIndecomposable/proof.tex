@@ -1,0 +1,42 @@
+We will first show that every $\alpha \in \Phi^+(\gamma)$ is a non-negative integral
+combination of elements of $\Delta(\gamma)$.
+
+Otherwise, choose $\alpha$ with $(\gamma, \alpha) > 0$ which does not satisfy
+the claim with $(\gamma, \alpha)$ minimal.
+Then $\alpha$ is decomposable, say $\alpha = \alpha_1 + \alpha_2$ with
+$\alpha_i \in \Phi^+(\gamma)$. But $(\gamma, \alpha) = (\gamma, \alpha_1) + (\gamma, \alpha_2)$.
+By minimality, $\alpha_1$ and $\alpha_2$ are good, hence $\alpha$ is also good,
+a contradiction.
+
+Hence, $\Delta(\gamma)$ spans $E$ and satisfies (ii) of the definition of a base.
+To show linear independence, it suffices to show that $(\alpha, \beta) \leq 0$
+for $\alpha, \beta$ distinct elements of $\Delta(\gamma)$ (TODO: why?).
+
+Indeed, otherwise we would find
+$\alpha, \beta$ such that
+$(\alpha, \beta) > 0$. By definition of $n$, this implies that
+$n(\alpha, \beta) > 0$ and $n(\beta, \alpha) > 0$. Consulting Table~\ref{tbl:ncases},
+we conclude
+$n(\alpha, \beta) = 1$ or $n(\beta, \alpha) = 1$.
+If $n(\alpha, \beta) = 1$, then $\alpha - \beta = -(\beta - n(\beta, \alpha) \alpha) = -s_{\alpha}(\beta)$ is
+a root. Similarly, if $n(\beta, \alpha) = 1$ then $\alpha - \beta$ is a root.
+So $\alpha - \beta$ is a root, and such $\alpha - \beta \in \Phi^+(\gamma)$ or
+$\beta - \alpha \in \Phi^+(\gamma)$.
+
+In the first case $\alpha = (\alpha - \beta) + \beta$, so $\alpha$ is
+decomposable. Similarly, in the second case, $\alpha$ is also decomposable. This
+is a contradiction, hence $(\alpha, \beta)\leq 0$ as claimed.
+
+Finally, suppose that  $\Delta$ is a base. Choose $\gamma$ such that
+$(\gamma, \alpha) > 0$ for all $\alpha \in \Delta$ (TODO: I guess that is some
+geometric voodoo?). Then $\gamma$ is certainly regular and we will show that
+$\Delta = \Delta(\gamma)$.
+
+Certainly, we have $\Phi^+ \subseteq \Phi^+(\gamma)$ (using linearity of the
+scalar product). Hence $-\Phi^+ \subseteq -\Phi^+(\gamma)$. But since $\Phi$
+splits into $\Phi^+ \cup -\Phi^-$ and $\Phi^+(\gamma) \cup -\Phi^+(\gamma)$,
+we conclude that the converse inclusion is also true, hence $\Phi^+ = \Phi^+(\gamma)$.
+But $\Delta$ is a base, so each of $\Phi^+$ is a positive integral combination
+of $\Delta$ and so elements of $\Delta$ are indecomposable. This implies
+ $\Delta \subseteq \Delta(\gamma)$. But $\abs{\Delta} = \dim E = \abs{\Delta(\gamma)}$,
+ so $\Delta = \Delta(\gamma)$.
