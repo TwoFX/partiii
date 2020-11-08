@@ -2,3 +2,5 @@ type: lemma
 label: GeneralLinear
 numbered: true
 section: false
+proofs:
+    proof: Proof

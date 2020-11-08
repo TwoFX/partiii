@@ -1,0 +1,18 @@
+For (a), let $\alpha \in \Phi$, $\beta \in E$. Then
+\[ (\sigma s_\alpha \sigma^{-1})\sigma(\beta) = \sigma s_{\alpha}(\beta) = \sigma(\beta) - n(\beta, \alpha)\sigma(\alpha). \]
+Hence, $\sigma s_\alpha \sigma^{-1}$ fixes pointwise $\sigma(P_\alpha)$ and
+sends $\sigma(\alpha) \mapsto -\sigma(\alpha)$. But then we must have
+$\sigma^{-1} s_\alpha\sigma = s_{\sigma(\alpha)}$.
+
+For (b), take $a$ minimal such that $s_a\cdots s_2(\alpha_1)$ is negative. Then
+$1 < a\leq t$. Then $\beta\coloneqq s_{a-1}\cdots s_2(\alpha_1)$ is positive
+by minimality. By the first part of 5.17(d), we have $\beta = \alpha_a$.
+Define $\sigma\coloneqq s_{a-1}\cdots s_2$. We have
+$s_a = s_{\beta} = s_{\sigma(\alpha_1)} = \sigma s_{\alpha_1}\sigma^{-1} = \sigma s_1\sigma^{-1}$ using
+(a). The claim now follows after rearranging (recall that reflections
+are self-inverse).
+
+For (c), notice that if
+$\sigma(\alpha_1) = s_t\cdots s_1(\alpha_1) = -s_t\cdots s_2(\alpha_1)$ is positive,
+then $s_t\cdots s_2(\alpha_1)$ is negative, so by the previous part the
+expression would not be minimal.
