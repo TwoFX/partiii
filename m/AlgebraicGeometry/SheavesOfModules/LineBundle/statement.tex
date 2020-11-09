@@ -1,0 +1,27 @@
+Note that if $\mathcal{L}$ is a line bundle, say with trivializing cover $\set{U_i}$, then
+we have on $U_i\cap U_j$:
+\[\begin{tikzcd}
+	\mathcal{O}_{U_i}|_{U_i\cap U_j} & \mathcal{L}|_{U_i \cap U_j}\ar[l, "\cong"]\ar[r, "\cong"] & \mathcal{O}_{U_j}|_{U_i\cap U_j},
+\end{tikzcd}\]
+where the first map comes from trivialization in $U_i$ and the other using trivialization
+on $U_j$. Composing the second map with the inverse of the first yields a map $\varphi_{ij}$
+from left to right. Then $\varphi_{ij}$ is an automorphism of
+$\mathcal{O}_{U_i\cap U_j}$ as an $\mathcal{O}_{U_i\cap U_j}$-module, and as such
+is given by multiplication by $g_{ij} \in \mathcal{O}_X^{\times}(U_i\cap U_j)$,
+where $\mathcal{O}_X^{\times}$ is the subsheaf of $\mathcal{O}_X$ consisting of
+invertible sections of $\mathcal{O}_X$.
+
+Note on $U_i\cap U_j\cap U_k$ we have $g_{ij}g_{jk} = g_{ik}$.
+
+Now suppose given $f\colon Y\to X$ a morphism and $\mathcal{L}$ still a line bundle
+on $X$. How do we think about $f^*\mathcal{L}$?
+
+Let $Y_i\coloneqq f^{-1}(U_i)$. We get $f_i\colon Y_i\to U_i$. Then
+\[ f_i^*(\mathcal{L}|_{U_i})\cong f_i^*(\mathcal{O}_U)\cong f_i^{-1}(O_{U_i})\tensor_{f_i^{-1}\mathcal{O}_{U_i}}\mathcal{O}_{Y_i}\cong \mathcal{O}_{Y_i}. \]
+Hence $(f^*\mathcal{L})|_{Y_i}\cong \mathcal{O}_{Y_i}$, so $\set{U_i}$ pulls back to
+a trivializing cover for $f^*\mathcal{L}$, i.e., the pullback of a line bundle is a line
+bundle.
+
+Further, the transition maps are given by $f^\#(g_{ij})$ (this can be shown by
+tracing the previous chain of isomorphisms in a larger pulled back version of the above
+diagram).

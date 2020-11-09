@@ -1,0 +1,29 @@
+The pushforward is not as well-behaved, e.g., $f_*\mathcal{L}'$ for $\mathcal{L}'$ a line
+bundle on $Y$ need not be a line bundle. In fact, it will always be quasi-coherent, but not
+necessarily coherent.
+
+If $\mathcal{L}_1, \mathcal{L}_2$ are line bundles on $X$, with a common trivializing
+cover $\set{U_i}$ (this is always possible) and with transition functions
+$g_{ij}, h_{ij}$ respectively, then:
+\begin{enumerate}
+	\item The transition functions of $\mathcal{L}_1\tensor_{\mathcal{O}_X} \mathcal{L}_2$
+		are $g_{ij}h_{ij}$. Note that if $(\cdot g)\colon A\to A$ and  $(\cot h)\colon A\to A$
+		are given, then these two homomorphisms induce the homomorphism
+		$(\cdot g)\tensor (\cdot h)\colon A\tensor_A A\to A\tensor_A A$, but
+		$A\tensor_A A\cong A$, and applying this isomorphism on both sides yields
+		the map $A\to A$ given by $(\cdot (g\cdot h))$.
+	\item Set $\mathcal{L}_1^\vee\cong \SheafHom_{\mathcal{O}_X}(\mathcal{L}_1, \mathcal{O}_X)$.
+		This is also a line bundle, because on $U_i$, $\mathcal{L}_1|_{U_i}\cong \mathcal{O}_{U_i}$,
+		and $\SheafHom_{\mathcal{O}_{U_i}}(\mathcal{O}_{U_i}, \mathcal{O}_{U_i}) = \mathcal{O}_{U_i}$,
+		noting that $\Hom_A(A, A)\cong A$.
+
+		The transition maps are given by $g_{ij}^{-1}$:
+		\[\begin{tikzcd}
+			\mathcal{O}_{U_i}|_{U_i\cap U_j}\ar[r, "\cdot g_{ij}"] & \mathcal{O}_{U_j}|_{U_i\cap U_j},
+		\end{tikzcd}\]
+		and we need to take the transpose inverse of this map represented by a
+		$1\times 1$ matrix.
+
+		Note that $\mathcal{L}_1^\vee\tensor_{\mathcal{O}_X}\mathcal{L}_1$ has transition
+		maps given by $g_{ij}^{-1}g_{ij} = 1$. Thus $\mathcal{L}_1^\vee \tensor_{\mathcal{O}_X} \mathcal{L}_1\cong \mathcal{O}_X$.
+\end{enumerate}

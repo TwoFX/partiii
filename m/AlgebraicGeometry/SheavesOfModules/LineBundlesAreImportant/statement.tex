@@ -1,0 +1,21 @@
+Why are line bundles important? They tell you about morphisms to projective space.
+
+Fix a base scheme $\Spec k$, $\mathbb{P}_k^n = \Proj k[X_0, \ldots, X_n]$. Denote
+by
+$\mathsf{Sch}/k$ the category of schemes over $\Spec k$. Let
+$F$ be the functor taking a scheme $T$ over $k$ to the set of surjections
+$\mathcal{O}_T^{\oplus(n+1)}\to \mathcal{L}$ for $\mathcal{L}$ a line bundle on $T$
+modulo isomorphism, where $\varphi_i\colon \mathcal{O}_T^{\oplus(n+1)}\to \mathcal{L}_i$ for $i = 1, 2$  are
+considered isomorphic, if there exists an isomorphism $f\colon \mathcal{L}_1\to \mathcal{L}_2$
+of $\mathcal{O}_X$-modules making the diagram
+\[\begin{tikzcd}
+	\mathcal{O}_T^{\otimes(n+1)}\ar[r, "\varphi_1"]\ar[dr, "\varphi_2"] & \mathcal{L}_1\ar[d, "f"]\\
+	& \mathcal{L}_2
+\end{tikzcd}\]
+commute.
+
+Given a morphism $f\colon T_1\to T_2$ over $k$, we get a map of sets
+$F(T_2)\to F(T_1)$ by mapping  $\varphi\colon \mathcal{O}_{T_2}^{\oplus(n+1)}\to \mathcal{L}$ to
+$f^*\varphi\colon \mathcal{O}_{T_1}^{\oplus(n+1)} = f^*(\mathcal{O}_{T_2}^{\oplus(n+1)})\to f^*\mathcal{L}$.
+We use that  $f^*\varphi$ is still surjective, which follows from right exactness of
+the tensor product.

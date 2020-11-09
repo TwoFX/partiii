@@ -17,6 +17,11 @@
 \usepackage{csquotes}
 \usepackage[hidelinks]{hyperref}
 
+\DeclareFontFamily{U}{mathc}{}
+\DeclareFontShape{U}{mathc}{m}{it}%
+{<->s*[1.03] mathc10}{}
+\DeclareMathAlphabet{\mathcal}{U}{mathc}{m}{it}
+
 \title{Algebraic Geometry}
 \author{Mark Gross}
 
@@ -48,6 +53,8 @@
 \DeclareMathOperator\im{im}
 \DeclareMathOperator\Hom{Hom}
 \DeclareMathOperator\chr{char}
+\DeclareMathOperator\Pic{Pic}
+\DeclareMathOperator\SheafHom{\mathcal{H\mkern-3mu om}}
 \DeclarePairedDelimiter\abs\lvert\rvert
 \newcommand\tensor\otimes
 \newcommand\mapsfrom{\mathrel{\reflectbox{\ensuremath{\mapsto}}}}

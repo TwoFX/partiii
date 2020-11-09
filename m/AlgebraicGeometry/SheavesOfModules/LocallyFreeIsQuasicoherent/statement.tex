@@ -1,0 +1,15 @@
+A locally free sheaf is always quasi-coherent and it is coherent if it is of
+finite rank: if $U \subseteq X$ (where $U\cong \Spec A$) satisfies
+$\mathcal{F}|_U \cong \bigoplus_{i \in I} \mathcal{O}_U$,
+then $\mathcal{F}|_U = \widetilde{\bigoplus_{i \in I} A}$
+
+Kernels, cokernels, images, tensor products and hom sheaves of quasi-coherent
+sheaves of $\mathcal{O}_X$-modules are themselves quasi-coherent.
+
+This follows since these operations commute with $\tilde{\cdot}$, e.g.,
+$\ker (\tilde{M_1}\to \tilde{M_2}) = \widetilde{\ker(M_1\to M_2)}$,
+$\tilde{M_1}\tensor_{\mathcal{O}_X} \tilde{M_2} = \widetilde{M_1\tensor_A M_2}$,
+$\Hom_{\mathcal{O}_X}(\tilde{M_1}, \tilde{M_2}) = \widetilde{\Hom_A(M_1, M_2)}$
+
+Should check (TODO) that a morphism of sheaves is always induced by an underlying morphism of
+modules (look at global sections).

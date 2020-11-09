@@ -8,3 +8,12 @@ children:
 - SheafOfModules
 - FreeSheaf
 - Examples
+- GeometricInterpretation
+- Quasicoherent
+- LocallyFreeIsQuasicoherent
+- LineBundle
+- Pushforward
+- PicardGroup
+- LineBundlesAreImportant
+- FIsRepresentable
+- QuotScheme
