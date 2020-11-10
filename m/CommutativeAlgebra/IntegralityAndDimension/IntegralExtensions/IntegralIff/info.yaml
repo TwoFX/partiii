@@ -1,0 +1,6 @@
+type: lemma
+label: IntegralIff
+numbered: true
+section: false
+proofs:
+    proof: Proof

@@ -1,0 +1,6 @@
+type: lemma
+label: IntegralIdeal
+numbered: true
+section: false
+proofs:
+    proof: Proof

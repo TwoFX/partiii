@@ -1,0 +1,14 @@
+type: chapter
+label: IntegralityAndDimension
+numbered: true
+section: true
+title: Integrality and dimension
+children:
+- Spectrum
+- Length
+- KrullDimension
+- Height
+- HeightRemark
+- DimensionExamples
+- HeightOneInPolynomial
+- IntegralExtensions

@@ -1,0 +1,7 @@
+type: theorem
+label: IncomparabilityTheorem
+numbered: true
+section: false
+title: Incomparability theorem
+proofs:
+    proof: Proof

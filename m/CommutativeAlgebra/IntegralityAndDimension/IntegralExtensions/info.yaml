@@ -1,0 +1,21 @@
+type: section
+label: IntegralExtensions
+numbered: true
+section: true
+title: Integral extensions
+children:
+- IntegralElement
+- IntegralOverQ
+- IntegralIff
+- FiniteType
+- IntegralIffRemark
+- AdjoinMultiple
+- IntegralClosureExists
+- IntegralClosure
+- IntegralClosureExamples
+- IntegralTransitive
+- IntegralIdeal
+- FieldIffField
+- MaximalIffMaximal
+- IncomparabilityTheorem
+- LyingOverTheorem

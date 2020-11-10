@@ -1,0 +1,7 @@
+type: theorem
+label: LyingOverTheorem
+numbered: true
+section: false
+title: Lying over theorem
+proofs:
+    proof: Proof

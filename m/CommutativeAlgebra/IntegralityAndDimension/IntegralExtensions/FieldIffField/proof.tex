@@ -1,0 +1,11 @@
+First assume that $R$ is a field. Let $0\neq t \in T$. Let
+$t^n + r_{n-1}t^{n-1} + \cdots + r_0 = 0$ be such that $n$ is minimal
+among all monic expressions. We have $r_0\neq 0$, otherwise we could factor out
+a $t$, so since $T$ is a domain, $t^{n-1}+\cdots r_1 = 0$ would be a shorter expression,
+contradicting minimality. Then $s\coloneqq -r_0^{-1}(t^{n-1}+\cdots+ r_1)$ satisfies
+$st = 1$, hence $t$ has an inverse, so $T$ is a field.
+
+Conversely suppose that $T$ is a field. Let $0\neq x \in R$. Then $x$ has an inverse
+$x^{-1}$ in $T$. We find $r_i' \in R$ such that $x^{-m}+r'_mx^{-m+1}+\cdots r_0' = 0$.
+Multiply by $x^{m-1}$ and rearrange to find $x^{-1} = -(r_m' + r_{m-1}'x + \cdots + r_0'x^{m-1}) \in R$,
+so $R$ is a field.
