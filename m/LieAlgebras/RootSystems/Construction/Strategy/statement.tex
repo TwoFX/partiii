@@ -1,0 +1,65 @@
+Our strategy will be the following: let $e_1, \ldots, e_n$ be an
+orthonormal basis in Euclidean $n$-space. Denote by $I$ the set of integral
+combinations of elements of the form $\frac{1}{2}e_i$.
+$J$ will be a subgroup of $I$ and $x, y$ fixed real numbers strictly greater than
+zero with $\frac{x}{y} \in \set{1, 2, 3}$. Define
+$\Phi = \set{\alpha \in J\given \abs{\alpha}^2 \in \set{x, y}}$, $\mathbb{E} = \vspan{\Phi}$.
+We need that each reflection $s_\alpha$ preserves lengths and $s_\alpha(\Phi) = \Phi$
+and so ensure $n(\beta, \alpha) \in \mathbb{Z}$.
+
+Note that if $J \subseteq \sum \mathbb{Z}e_i$ and $x, y \in \set{1, 2}$, then this is
+satisfied.
+
+We will first consider $A_r$ for $r\geq 1$. Take $n = r + 1$ and
+\[ J = (\sum \mathbb{Z}e_i)\cap \vspan{\sum_{i=1}^{r+1} e_i}^\perp. \]
+Define \[\Phi\coloneqq \set{\alpha \in J\given \abs{\alpha}^2 = 2} = \set{e_i - e_j\given i\neq j}. \]
+The elements $\alpha_i = e_i - e_{i+1}$ with $i \leq r$ are linearly independent
+and if $i < j$ then $e_i - e_j = \sum_{k=i}^{j-1}\alpha_k$. Hence
+the $\alpha_i$ form a base for $\Phi$. We have $(\alpha_i, \alpha_j) = 0$ unless
+$j \in \set{i, i+1}$, and $(\alpha_i, \alpha_i) = 2$, and
+$(\alpha_i, \alpha_{i+1}) = -1$. Hence, the Dynkin diagram of $\Phi$ is
+$A_r$ as required.
+
+Each permutation of $(1, \ldots, r+1)$ induces an automorphism of $\Phi$. Hence
+$W(\Phi) \cong S_{r+1}$, since $s_{\alpha_i}$ switches $i, i+1$ and the
+transpositions $(i, i+1)$ generate $S_{r+1}$. This is the root system for
+$\mathfrak{sl}_{r+1}$.
+
+Next, we will consider $B_r$ for $r\geq 2$. Set $n = r$ and define
+$J = \sum \mathbb{Z}e_i$.
+Then $\Phi = \set{\alpha \in J\given \abs{\alpha}^2 \in \set{1, 2}} = \set{\pm e_i, \pm e_i\pm e_j\given i\neq j}$.
+Take $\alpha_i\coloneqq e_i - e_{i+1}$ with $i < r$ and $\alpha_r = e_r$. These
+are linearly independent and we have $e_i = \sum_{k=i}^r \alpha_k$,
+$e_i + e_j$ is the sum of two such expressions, and $e_i - e_j = \sum_{k=i}^{j-1}\alpha_k$.
+So $\alpha_1, \ldots, \alpha_r$ form a base of $\Phi$. This root system corresponds
+to the Dynkin diagram $B_r$.
+
+For the action of $W(\Phi)$, observe that all
+permutations and sign changes of $e_1, \ldots, e_r$ have an effect, hence
+$W(\Phi)$ is isomorphic to a split extension of $C_2^r$ by $S_r$, i.e., we
+have a normal subgroup isomorphic to $C_2^r$ and a subgroup isomorphic to
+$S_r$, such that $S_r$ acts on $C_2^r$ by conjugation. This is known as the
+permutation wreath product. This arises from the Lie algebra $\mathfrak{so}_{2r+1}$.
+
+Next, we will consider $C_r$ for $r\geq 3$. Set $n = r$ and define
+$J = \sum \mathbb{Z}e_i$. Then
+$\Phi = \set{\alpha \in J\given \abs{\alpha}^2 \in \set{2, 4}} = \set{\pm 2e_i, \pm e_i\pm e_j\given i\neq j}$.
+This is the dual root system for $B_r$. We have a base $e_1 - e_2, e_2 - e_3, \ldots, e_{r-1} - e_r, 2e_r$.
+The Weyl group is identical to the one of $B_r$. This arises from $\mathfrak{sp}_{2r}$.
+
+Next, we will consider $D_r$ ($r\geq 4$). Set $n = r$ and $J = \sum \mathbb{Z}e_i$
+and
+\[ \Phi = \set{\alpha \in J\given \abs{\alpha}^2 = 2} = \set{\pm e_i\pm e_j\given i\neq j}. \]
+Set $\alpha_i = e_i - e_{i+1}$ for $i < r $ and $\alpha_r = e_{r-1} - e_r$. These
+form a base and the simple reflectionsd cause permutation and an even number of
+sign changes of $_1, \ldots, e_r$. Hence, $W(\Phi)$ is a split extension and
+$C_2^{r_1}$ by $S_r$, which is of index $2$ inside the wreath product
+$C_2^r\propfrom S_r$. This arises from $\mathfrak{so}_{2r}$.
+
+For $E_8$, we set $n = 8$ and take $f\coloneqq \frac{1}{2}\sum_{i=1}^8 e_i$.
+Define
+\[ J\coloneqq \set{cf + \sum_{c_ie_i}\given c, c_i \in\mathbb{Z}, c + \sum c_i \in\mathbb{Z}}. \]
+Then
+\[ \Phi = \set{\alpha \in J\given \abs{\alpha}^2 = 2} = \set{\pm e_i\pm e_j\given i\neq j}\cup\set{\frac{1}{2}\sum_{i=1}^8(-1)^{k_i}e_i\given \sum k_i \in 2\mathbb{Z}}. \]
+Set $\alpha_1 = \frac{1}{2}(e_1 + e_8 - \sum_{i=3}^7 e_i)$,
+$\alpha_2 = e_1 + e_2$, $\alpha_i = e_{i-1}- e_{i-2}$ for $i\geq 3$.

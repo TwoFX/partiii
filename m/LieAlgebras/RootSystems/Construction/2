@@ -1,0 +1,16 @@
+Our strategy will be the following: let $e_1, \ldots, e_n$ be an
+orthonormal basis in Euclidean $n$-space. Denote by $I$ the set of integral
+combinations of elements of the form $\frac{1}{2}e_i$.
+$J$ will be a subgroup of $I$ and $x, y$ fixed real numbers strictly greater than
+zero with $\frac{x}{y} \in \set{1, 2, 3}$. Define
+$\Phi = \set{\alpha \in J\given \abs{\alpha}^2 \in \set{x, y}}$, $\mathbb{E} = \vspan{\Phi}$.
+We need that each reflection $s_\alpha$ preserves lengths and $s_\alpha(\Phi) = \Phi$
+and so ensure $n(\beta, \alpha) \in \mathbb{Z}$.
+
+Note that if $J \subseteq \sum \mathbb{Z}e_i$ and $x, y \in \set{1, 2}$, then this is
+satisfied.
+
+We will first consider $A_r$ for $r\geq 1$. Take $n = r + 1$ and
+\[ J = (\sum \mathbb{Z}e_i)\cap \span{\sum_{i=1}^r+1 e_i}^\perp. \]
+Define \[\Phi\coloneqq \set{\alpha \in J\given \abs{\alpha}^2 = 2\} = \set{e_i - e_j\given i\neq j}. \]
+The elements $\alpha_i = e_i - e_{i+1}$ are linearly independent for $i \leq r$.

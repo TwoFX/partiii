@@ -34,3 +34,6 @@ children:
 - SetOfIndecomposable
 - PropertiesOfBases
 - GeneralLinear
+- WeylGenerators
+- WeilGroupExpression
+- Construction

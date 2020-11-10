@@ -1,0 +1,41 @@
+Define $W' = \vspan{s_\alpha\mid \alpha \in \Delta} \subseteq W$.
+We will first prove (a) and (b) for  $W'$ in place of $W$.
+
+For (a), define $\rho\coloneqq \frac{1}{2}\sum_{\alpha \in \Phi^+}\alpha$ and
+let $\gamma$ be regular. Choose $\sigma \in W'$ with
+$(\sigma(\gamma), \rho)$ maximal. Then for $\alpha \in \Delta$ we have
+$s_\alpha, \sigma \in W'$. Hence
+\[ (\sigma(\gamma), \rho)\leq (s_\alpha\sigma(\gamma), \rho) = (\sigma(\gamma), s_\alpha(\rho)) = \sigma(\gamma), \rho) - (\sigma(\gamma), \alpha), \]
+using the fact that reflections preserve the inner product and 5.17(d).
+Hence $(\sigma(\gamma),\alpha)\geq 0$. Equality would imply $(\gamma, \sigma^{-1}(\alpha)) = 0$,
+hence $\gamma \in P_{\sigma^{-1}(\alpha)}$, which is a contradiction since
+$\gamma$ is regular.
+
+Also, $\sigma^{-1}(\Delta)$ is a base with $(\gamma, \alpha')> 0$ for all
+$\alpha' \in \sigma^{-1}(\Delta)$.
+By an argument as in the proof of 5.16, we find that
+$\sigma^{-1}(\Delta) = \Delta(\gamma)$.
+Since any base is of the form $\Delta(\gamma)$ by 5.16 transitivity follows.
+
+For (b), it will suffice to show that each root $\alpha$ is in a base
+and then use (a). Choose  $\gamma_1 \in P_\alpha \setminus \bigcup_{\beta\neq \pm\alpha} P_\alpha$.
+Define $\varepsilon\coloneqq \frac{1}{2}\min \set{\abs{(\alpha, \beta)}\given \beta\neq \pm\alpha}$.
+Pick $\gamma_2$ in such a way that  $\abs{(\gamma_2, \beta)}<\varepsilon$ for
+each $\beta \neq \pm\alpha$. Define $\gamma \coloneqq \gamma_1+\gamma_2$.
+Then $0 < (\gamma, \alpha) < \varepsilon$ and $\abs{(\gamma, \beta)}>\varepsilon$
+for each $\beta\neq\pm\alpha$.
+
+Hence, $\alpha$ is an indecomposable element of $\Phi^+(\gamma)$, and so
+$\alpha \in \Delta(\gamma)$.
+
+For (c), it will be eneough to show that $\alpha \in \Phi\implies s_\alpha \in W'$.
+By (b), we find some $\sigma \in W'$ with $\sigma(\alpha) \in \Delta$.
+In particular, $s_{\sigma(\alpha)} \in W'$. But
+$s_{\sigma(\alpha)} = \sigma^{-1}s_\alpha\sigma$ by 5.18(a). Rearranging
+gives $s_\alpha = \sigma s_{\sigma(\alpha)}\sigma^{-1} \in W'$ as required.
+
+Suppose we find $\sigma \in W$ such that $\sigma(\Delta) = \Delta$ but
+$\sigma\neq\id$. Write $\sigma$ as a product of simple reflections in the shortest
+possible way. By 5.18(c), this means that there is some $\alpha \in \Delta$
+whose image under $\sigma$ is negative, i.e., not an element of $\Delta$.
+This is a contradiction.

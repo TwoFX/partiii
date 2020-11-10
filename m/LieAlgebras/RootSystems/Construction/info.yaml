@@ -1,0 +1,7 @@
+type: section
+label: Construction
+numbered: true
+section: true
+title: Construction of root systems from Dynkin diagrams/Cartan matrices
+children:
+- Strategy
