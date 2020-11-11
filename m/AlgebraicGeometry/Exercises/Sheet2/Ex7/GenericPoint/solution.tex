@@ -1,0 +1,44 @@
+If $U\cong \Spec A$ is an open affine subset of $X$, then $A \cong \mathcal{O}_X(U)$ is
+an integral domain. Hence we have a point $\eta_U \in X$ corresponding to the prime ideal $(0)$.
+
+We will show:
+\begin{enumerate}[label=(\roman*)]
+	\item $\eta_U$ is the unique point of $U$ that is contained in every nonempty open
+		subset of $U$.
+	\item If $U$ is an open affine subset of $X$, and $V$ is an open affine subset
+		of $U$, then $\eta_U = \eta_V$.
+	\item If $U, V$ are open affine subsets of $X$, then $\eta_U = \eta_V$. Thus
+		we may define $\eta\coloneqq \eta_U$, where $U$ is any open affine subset
+		of $X$.
+	\item The closure of $\set{\eta}$ is $X$ and $\eta$ is the unique point with
+		this property.
+	\item If  $U\cong \Spec A$ is an open affine subset of $X$, then the stalk of $\eta$ is a
+		field of fractions of $A$.
+\end{enumerate}
+
+For (i), notice that a point $\mathfrak{p} \in \Spec A$ is contained in every nonempty open
+subset of $\Spec A$ if and only if $\mathfrak{p} \in V(I)$ implies $V(I) = \Spec A$.
+Since $A$ is an integral domain, then $V(I) = \Spec A$ is equivalent to $I = (0)$.
+Clearly, $\mathfrak{p} \in V(\mathfrak{p})$ for any $\mathfrak{p} \in \Spec A$,
+so $\mathfrak{p}$ is contained in every nonempty open subset of $\Spec A$ if and only
+if $\mathfrak{p} = (0)$.
+
+For (ii), we observe that every open subset of $V$ is also an open subset of
+$U$, hence $\eta_U$ is a point contained in every nonempty open subset of $V$,
+so by uniqueness, $\eta_U = \eta_V$.
+
+For (iii), notice that since $X$ is integral, it is irreducible, so $U\cap V \neq \varnothing$.
+Combining Exercises 1 and 11 from the first example sheet, we know that the affine
+open subsets of $X$ form a base for the topology of $X$. Hence we find an affine
+open subset $W \subseteq U\cap V$.
+Hence, by (i), we have $\eta_U = \eta_W = \eta_V$.
+
+For (iv), we remark that the closure of $\set{\eta}$ being $X$ is the same as saying
+that $\eta$ is contained in every nonempty open subset of $X$. But since the
+open affine subsets form a base, it suffices to know that $\eta$ is contained
+in every affine open subsets, which is clear from what we have shown previously.
+Uniqueness follows by applying the uniqueness statement from (i) for any
+open affine $U$.
+
+For (v), note that $\mathcal{O}_{X, \eta} = \mathcal{O}_{X, \eta_U} \cong A_{(0)} = (A\setminus\set{0})^{-1}A$,
+which is precisely the field of fractions of $A$.
