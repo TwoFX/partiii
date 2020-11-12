@@ -1,0 +1,6 @@
+type: theorem
+label: AllFromLie
+numbered: true
+section: false
+proofs:
+    noproof: Not proved in this course

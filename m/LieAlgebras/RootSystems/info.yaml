@@ -37,3 +37,9 @@ children:
 - WeylGenerators
 - WeilGroupExpression
 - Construction
+- Automorphisms
+- IrreducibleRootSystems
+- AllFromLie
+- RemarksOnClassification
+- PositiveDefiniteCoxeterGraphIsTree
+- RulingOut

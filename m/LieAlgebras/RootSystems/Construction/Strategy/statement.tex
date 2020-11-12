@@ -54,7 +54,7 @@ Set $\alpha_i = e_i - e_{i+1}$ for $i < r $ and $\alpha_r = e_{r-1} - e_r$. Thes
 form a base and the simple reflectionsd cause permutation and an even number of
 sign changes of $_1, \ldots, e_r$. Hence, $W(\Phi)$ is a split extension and
 $C_2^{r_1}$ by $S_r$, which is of index $2$ inside the wreath product
-$C_2^r\propfrom S_r$. This arises from $\mathfrak{so}_{2r}$.
+$C_2^r\rtimes S_r$. This arises from $\mathfrak{so}_{2r}$.
 
 For $E_8$, we set $n = 8$ and take $f\coloneqq \frac{1}{2}\sum_{i=1}^8 e_i$.
 Define
@@ -63,3 +63,18 @@ Then
 \[ \Phi = \set{\alpha \in J\given \abs{\alpha}^2 = 2} = \set{\pm e_i\pm e_j\given i\neq j}\cup\set{\frac{1}{2}\sum_{i=1}^8(-1)^{k_i}e_i\given \sum k_i \in 2\mathbb{Z}}. \]
 Set $\alpha_1 = \frac{1}{2}(e_1 + e_8 - \sum_{i=3}^7 e_i)$,
 $\alpha_2 = e_1 + e_2$, $\alpha_i = e_{i-1}- e_{i-2}$ for $i\geq 3$.
+
+Next, we consider $E_7$ and $E_6$. Take $\Phi$ from $E_8$ and take the intersections
+\[ \Phi\cap \vspan{y}^\perp\qquad \Phi\cap \vspan{h, y}^\perp \]
+for suitable $h$ and $y$. We obtain $\alpha_1, \ldots, \alpha_k$ for $k = 7,6$
+with Dynkin diagrams $E_7$, $E_6$.
+
+For $F_4$, take $n = 4$ and set $h = \frac{1}{2}(e_1+e_2+e_3+e_4)$. Define
+$J = \sum \mathbb{Z}e_i + \mathbb{Z}h$. Then
+\[ \Phi = \set{\alpha \in J\given \abs{\alpha}^2 \in \set{1, 2}} = \set{\pm e_i, \pm e_i\pm e_j, \frac{1}{2}(\pm e_1\pm e_2\pm e_3\pm e_4) \given i\neq j} \]
+and we have a base $e_2-e_3$, $e_3 - e_4$, $e_4$, $\frac{1}{2}(e_1-e_2-e_3-e_4)$.
+
+Finally, for $G_2$, take $n = 3$, $J = \sum \mathbb{Z}e_i \cap \vspan{e_1 + e_2 + e_3}^\perp$.
+Then
+\[ \Phi = \set{\alpha \in J\given \abs{\alpha}^2 \in \set{2, 6}} = \set{\pm(e_i-e_j), \pm(2e_i-e_j-e_k)\given i, j, k\text{ distinct}} \]
+and we have a base $\alpha_1 = e_1 - e_2$, $\alpha_2 = -2e_1 + e_2 + e_3$.
