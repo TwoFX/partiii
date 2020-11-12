@@ -1,6 +1,7 @@
 type: theorem
-label: FIsRepresentable
+label: GoingUp
 numbered: true
 section: false
+title: Going-up theorem
 proofs:
     proof: Proof

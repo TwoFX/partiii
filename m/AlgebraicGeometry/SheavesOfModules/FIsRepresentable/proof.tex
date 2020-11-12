@@ -1,0 +1,90 @@
+If the statement holds, then there is a \enquote{universal object}, i.e., an lement
+of $F(\mathbb{P}^n_K)$ corresponding to the identity $1_{\mathbb{P}^n_k} \in h_{\mathbb{P}^n_k}(\mathbb{P}^n_k)$,
+i.e., a surjective map $\varphi\colon\mathcal{O}_{\mathbb{P}^n}^{\oplus(n+1)}\to \mathcal{L}$. Further, following the proof of
+Yoneda, given $f\colon X\to \mathbb{P}^n_k$ and $T\colon h_{\mathbb{P}^n} \to F$ the natural transformation
+giving the natural isomorphism of functors, we get a commutative diagram
+\[\begin{tikzcd}
+	h_{\mathbb{P}^n}(\mathbb{P}^n)\ar[d, "h_{\mathbb{P}^n}(f)"]\ar[r, "T(\mathbb{P}^n)"] & F(\mathbb{P}^n)\ar[d, "F(f)"]\\
+	h_{\mathbb{P}^n}(X)\ar[r, "T(X)"] & F(X)
+\end{tikzcd}\]
+By commutativity of the diagram, we find that $f^*\varphi\colon \mathcal{O}_X^{\oplus(n+1)}\to f^*\mathcal{L}$
+is the same as $T(X)(f)$.
+
+So the representing scheme $\mathbb{P}^n$ comes with the universal object
+(surjective morphism) $\mathcal{O}_{\mathbb{P}^n}^{\otimes(n+1)}\to \mathcal{L}$.
+
+Hence, our proof strategy will be to construct this universal object. The
+line bundle we construct has a name: $\mathcal{O}_{\mathbb{P}^n}(1)$.
+
+Recall that $\mathbb{P}^n$ has an open cover $\set{D_+(X_i)\given i\leq i\leq n}$,
+where $S = k[X_0, \ldots, X_n]$, $\mathbb{P}_k^n = \Proj S$,
+$D_+(X_i) = \set{\mathfrak{p} \in\Proj S\given X_i \in \mathfrak{p}}$.
+
+We will take $U$ to be the trivializing cover for $\mathcal{O}_{\mathbb{P}^n}(1)$
+with transition map $g_{ij} \in \mathcal{O}_{\mathbb{P}^n}^\times(D_+(X_i)\cap D_+(X_j)) = \mathcal{O}_{\mathbb{P}^n}^\times(D_+(X_iX_j)) \cong S_{(X_iX_j)}$
+given by $g_{ij} = X_i/X_j = X_i^2/X_iX_j$. Note that $g_{ji} = X_j/X_i$, so $g_{ij}$
+is invertible and the compatibility condition $g_{ij}\cdot g_{jk} = g_{ik}$ is
+satisfied.
+
+We have a morphism $\mathcal{O}_{\mathbb{P}^n}^{\oplus(n+1)}\to \mathcal{O}_{\mathbb{P}^n}(1)$
+defined on $D_+(X_i)$ by $e_j\mapsto \frac{X_j}{X_i}$ using the trivialization of
+$\mathcal{O}_{\mathbb{P}^n}(1)$ on $D_+(X_i)$, i.e., we have an isomorphism
+$\mathcal{O}_{\mathbb{P}^n}(1)|_{U_i}\cong \mathcal{O}_{U_i}$.
+
+We need to check that this is well-defined globally. We have maps
+\begin{align*}
+	\mathcal{O}_{\mathbb{P}^n}^{\oplus(n+1)}|_{D_+(X_iX_k)}&\to \mathcal{O}_{D_+(X_i)}|_{D_+(X_jX_k)},\\
+	e_j&\mapsto X_j/X_i,\\
+	\mathcal{O}_{\mathbb{P}^n}^{\oplus(n+1)}|_{D_+(X_iX_k)}&\to \mathcal{O}_{D_+(X_k)}|_{D_+(X_jX_k)},\\
+	e_j &\mapsto X_j/X_k,\\
+	\mathcal{O}_{D_+(X_i)}|_{D_+(X_jX_k)} &\stackrel{\cdot g_{ik}}{\longrightarrow} \mathcal{O}_{D_+(X_k)}|_{D_+(X_iX_k)}
+\end{align*}
+
+And the triangle they form commutes:
+\[ g_{ik}\cdot \frac{X_j}{X_i} = \frac{X_i}{X_k}\cdot \frac{X_j}{X_i} = \frac{X_i}{X_j}. \]
+
+Note in particular, that each $e_j$ maps to a global section of $\mathcal{O}_{\mathbb{P}^n}(1)$.
+(Remark: if instead we have chosen $g_{ij} = X_j/X_i$ we would have obtained the line bundle
+$\mathcal{O}_{\mathbb{P}^n}(1)^\vee \eqqcolon \mathcal{O}_{\mathbb{P}^n}(-1)$, and
+$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(-1)) = 0$).
+
+We now have a morphism $\mathcal{O}_{\mathbb{P}^n}^{\oplus(n+1)} \to \mathcal{O}_{\mathbb{P}^n}(1)$,
+and we need to check that it is surjective.  On $D_+(X_i)$, we have
+$e_i\mapsto X_i/X_i = 1 \in\Gamma(D_+(X_i), \mathcal{O}_{\mathbb{P}^n})$, so in
+particular, looking at sections over $D_+(X_i)$, we get a homomorphism of
+$S_{(X_i)}$-modules $S_{(X_i)}^{\oplus(n+1)}\to S_{(X_i)}$ sending
+$e_i\mapsto 1$, so it is clearly a surjective map of modules.
+
+Thus, $(\psi\colon \mathcal{O}_{\mathbb{P}^n}^{\oplus(n+1)}\to \mathcal{O}_{\mathbb{P}^n}(1)) \in F(\mathbb{P}^n)$.
+
+Ite remains to show that given $(X, \varphi\colon \mathcal{O}_X^{\oplus(n+1)}\to \mathcal{L})$,
+there exists a unique morphism $f\colon X\to \mathbb{P}^n$ such that $\varphi\cong (f^*\psi\colon \mathcal{O}_X^{\oplus(n+1)}\to f^*\mathcal{O}_{\mathbb{P}^n}(1))$.
+Indeed, this will give the natural transformation $F\to h_{\mathbb{P}^n}$ and the
+inverse natural transformation $h_{\mathbb{P}^n}\to F$ is given by pullback,
+$X\to \mathbb{P}^n$ gives $f^*\psi\colon \mathcal{O}_X^{\oplus(n+1)}\to f^*\mathcal{O}_{\mathbb{P}^n}(1)$.
+
+To prove the existence of the unique morphism, let $\varphi(e_i) = s_i \in\Gamma(X, \mathcal{L})$.
+Define $Z_i \coloneqq \set{x \in X\given (s_i)_x \in \mathfrak{m}_x \mathcal{L}_X}$,
+where $(s_i)_x$ is the germ of $s_i$ at $x$ and $\mathfrak{m}_x \subseteq \mathcal{O}_{X, x}$
+is the maximal ideal. We claim that $Z_i$ is a closed set.
+
+Observe that being a closed set can be checked on an open cover $\set{U_i}$, since
+$Z \subseteq X$ if and only if $Z\cap U_i$ is closed on $U_i$ for all $i$.
+
+Thus we may use a trivializing affine cover $\set{U_i}$ of $X$, so we reduce to the
+case that $X = \Spec A$, $\mathcal{L} \cong \mathcal{O}_{\Spec A}$, so $\Gamma(X, \mathcal{L})\cong A$,
+so by abuse of notation we have $s_i \in A$. This induces $(s_i)_{\mathfrak{p}} = \frac{s_i}{1} \in A_{\mathfrak{p}}$.
+
+Now $\frac{s_i}{1} \in \mathfrak{p}A_{\mathfrak{p}}$ if and only if $s_i$ lies in the
+inverse image of $\mathfrak{m}_{\mathfrak{p}} A_{\mathfrak{p}}$ under the localization
+map $A\to A_{\mathfrak{p}}$. Hence, $Z_i = V(s_i)$ is closed.
+
+Let $U_i\coloneqq X|_{Z_i}$ Then there is an isomorphism $\mathcal{O}_{U_i} \to \mathcal{L}|_{U_i}$
+sencind $1\mapsto s_i$, and the inverse sends $s\mapsto s/s_j$. Injectivity is obvious,
+surjectivity is by definition of $Z_i$.
+
+(Remark: If we were working in the world of varieties, locally the section $s_i$ is
+viewed as a function and $Z_i$ is the locus where $s_i$ vanishes. On $U_i$, we will
+define a morphism to projective space $U_i\to D_+(X_i) \subseteq \mathbb{P}^n$
+via $p\mapsto (\frac{s_o(p)}{s_i(p)}, \ldots, \frac{s_n(p)}{s_i(p)})$. Equivalently,
+on $X$, we can view this function as $X\to \mathbb{P}^n$, $p\mapsto (s_0(p), \ldots, s_n(p))$.)

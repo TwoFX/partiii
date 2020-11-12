@@ -1,5 +1,5 @@
-type: theorem
-label: FIsRepresentable
+type: corollary
+label: HeightIntersection
 numbered: true
 section: false
 proofs:

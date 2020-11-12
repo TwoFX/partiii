@@ -19,3 +19,10 @@ children:
 - MaximalIffMaximal
 - IncomparabilityTheorem
 - LyingOverTheorem
+- CohenSeidelberg
+- GoingUp
+- GoingDown
+- NoetherNormalisation
+- DimensionOfIntegral
+- HeightIntersection
+- IntegralOver
