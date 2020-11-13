@@ -1,0 +1,6 @@
+type: proposition
+label: NoetherianIsNoetherian
+numbered: false
+section: false
+proofs:
+    proof: Proof

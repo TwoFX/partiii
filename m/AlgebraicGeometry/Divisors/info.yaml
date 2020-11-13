@@ -1,0 +1,10 @@
+type: chapter
+label: Divisors
+numbered: true
+section: true
+title: Divisors and the Picard Group
+children:
+- Introduction
+- Dimension
+- NoetherianIsNoetherian
+- Assumption

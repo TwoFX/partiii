@@ -80,7 +80,8 @@ inverse image of $\mathfrak{m}_{\mathfrak{p}} A_{\mathfrak{p}}$ under the locali
 map $A\to A_{\mathfrak{p}}$. Hence, $Z_i = V(s_i)$ is closed.
 
 Let $U_i\coloneqq X|_{Z_i}$ Then there is an isomorphism $\mathcal{O}_{U_i} \to \mathcal{L}|_{U_i}$
-sencind $1\mapsto s_i$, and the inverse sends $s\mapsto s/s_j$. Injectivity is obvious,
+sencind $1\mapsto s_i$, and the inverse sends $s\mapsto s/s_j$. We should interpret this
+as the element of $\mathcal{O}_{U_i}$ such that $\frac{s}{s_j}\cdot s_j = s$. Injectivity is obvious,
 surjectivity is by definition of $Z_i$.
 
 (Remark: If we were working in the world of varieties, locally the section $s_i$ is
@@ -88,3 +89,48 @@ viewed as a function and $Z_i$ is the locus where $s_i$ vanishes. On $U_i$, we w
 define a morphism to projective space $U_i\to D_+(X_i) \subseteq \mathbb{P}^n$
 via $p\mapsto (\frac{s_o(p)}{s_i(p)}, \ldots, \frac{s_n(p)}{s_i(p)})$. Equivalently,
 on $X$, we can view this function as $X\to \mathbb{P}^n$, $p\mapsto (s_0(p), \ldots, s_n(p))$.)
+
+We may now define a morphism
+\[ f\colon U_i = X\setminus Z_i \to D_+(X_i) \cong \Spec S_{(X_i)} \]
+by giving a homomorphism of rings $f_i^\#\colon S_{(X_i)}\to \Gamma(U_i, \mathcal{O}_X)$. But
+$S_{(X_i)}$ should be thought of as $k[\frac{X_0}{X_i},  \ldots, \frac{X_n}{X_i}]$,
+so we define our map by sending $\frac{X_j}{X_i}\mapsto \frac{s_j}{s_i}$, which
+defines $f_i^\#$ as a homomorphism of $k$-algebras.
+To get a morphism $f\colon Z\to \mathbb{P}_k^n$ such that $f|_{U_i} = f_i$, we
+need to check $f_i|_{U_i\cap U_j} = f_j|_{U_i\cap U_j}$. We can now check that check that
+\[ (f_i^\#)_{U_i\cap U_j} \colon S_{(X_iX_j)} \cong \Gamma(D_+(X_iX_j),  \mathcal{O}_{\mathbb{P}^n}) = \Gamma(D_+(X_i)\cap D_+(X_j), \mathcal{O}_{\mathbb{P}^n})\to \Gamma(U_i\cap U_j, \mathcal{O}_X) \]
+maps $\frac{X_k}{X_i}\mapsto \frac{s_k}{s_i}$ and $\frac{X_k}{X_j} = \frac{X_k/X_i}{X_j/X_i} \mapsto \frac{s_k/s_i}{s_j/s_i} = \frac{s_k}{s_j}$
+and similarly for $(f_j^\#)_{U_i\cap U_j}$, and we find that they agree, i.e.,
+$(f_i^\#)_{U_i\cap U_j} = (f_j^\#)_{U_i\cap U_j}$, so $f_i|_{U_i\cap U_j} = f_j|_{U_i\cap U_j}$,
+so the morphisms glue to give $f\colon X\to \mathbb{P}^n_k$.
+
+This defines our morphism, and we have to show that $f^*\mathcal{O}_{\mathbb{P}^n}(1)\cong \mathcal{L}$.
+This is the case because the transition maps $g_{ij} = X_i/X_j$ of $\mathcal{O}_{\mathbb{P}^n}(1)$
+pull back under $f^\#$ to $s_i/s_j$, which are the transition maps for $\mathcal{L}$
+using the trivializations for $\mathcal{L}_{U_i}$ which we used above (this needs to be checked).
+We should also check that this isomorphism is suitably compatibe.
+
+For uniqueness, suppose given a surjection $\varphi\colon \mathcal{O}_X^{\oplus(n+1)} \to \mathcal{L}$
+and a morphism $g\colon X\to \mathbb{P}^n$ such that $g^*(\mathcal{O}_{\mathbb{P}^n}^{\oplus(n+1)}\to \mathcal{O}_{\mathbb{P}^n}(1))\cong (\mathcal{O}_X^{\oplus(n+1)}\to \mathcal{L})$.
+We may think of $\varphi$ as given by $n+1$ sections $s_0, \ldots, s_n \in\Gamma(X, \mathcal{L})$
+with $s_i = \varphi(p_i)$. Similarly, the universal object on $\mathbb{P}^n$ is given
+by sections $X_i \in \Gamma(\mathbb{p}^n, \mathcal{O}_{\mathbb{P}^n}(1))$.
+
+Note that by the construction of the universal object, the section $X_j$ is
+given on $D_+(X_i)$ by $X_j/X_i \in S_{(X_i)}$. In particular, the pullback of
+the section $X_i \in \Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(1))$ is $s_i$.
+
+A short remark on pullbacks: if $f\colon X\to Y$, and $\mathcal{F}$ is a sheaf of
+$\mathcal{O}_Y$-modules, then $s \in \Gamma(Y, \mathcal{F})$ induces a section
+$(Y, s)$ in $\Gamma(X, f^{-1}\mathcal{F})$, and hence a section
+$f^*s = (Y, s)\tensor 1 \in \Gamma(X, f^{-1}\mathcal{F}\tensor_{f^{-1}\mathcal{O}_Y}\mathcal{O}_X) = \Gamma(X, f^*\mathcal{F})$.
+
+In particular, $(s_i)_x \in \mathfrak{m}_x\mathcal{L}_X$ for some $x \in X$ if and only if
+$(x_i)_{g(x)} \in \mathfrak{m}_{g(x)}\mathcal{O}_{\mathbb{P}^n}(1)_{g(x)}$.
+Thus, $U_i = \set{x \in X\given (s_i)_x \notin \mathfrak{m}_x\mathcal{L}_x}$ satisfies
+$U_i = g^{-1}(D_+(X_i))$ (things need to be checked here).
+
+So we have $g_i = g|_{U_i}\colon U_i\to D_+(X_i)$ and it is enough to show that
+$g_i = f_i$, where $f_i$ was constructed previously from $\mathcal{O}_X^{\oplus(n+1)} \to \mathcal{L}$.
+For this, it suffices to show $g_i^\# = f_i^\#$. But we have $g_i^\#(X_j/X_i) = \frac{g^\#(X_j)}{g^\#(X_i)} = \frac{s_j}{s_i} = f_i^\#(\frac{X_j}{X_i})$ (the first equality needs to be checked),
+and uniqueness follows.

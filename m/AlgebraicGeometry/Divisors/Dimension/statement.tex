@@ -1,0 +1,30 @@
+The dimension of a topological space $X$ is the length of the longest chain
+$Z_0 \subsetneq Z_1 \subsetneq \cdots \subsetneq Z_n$ of irreducible closed
+subsets of $X$.
+
+For example $\dim \mathbb{A}^1_k = 1$, and the chains are $\set{\star} \subseteq \mathbb{A}_k^1$,
+where $\star$ is any closed point.
+
+The Krull dimension of a ring $A$, $\dim A$, is the dimension of $\Spec A$ as a topological
+space. Equivalently, this is the length of the longest chain
+$\mathfrak{p}_0\subsetneq \cdots \subsetneq \mathfrak{p}_n$ of prime ideals.
+
+If $Z \subseteq X$ is an irreducible closed subset, then $\codim(Z, X)$ is the length
+$n$ of the longest chain $Z = Z_0 \subsetneq \cdots \subsetneq Z_n$ of irreducible closed
+subsets.
+
+Note that the intuition on dimension may be faulty, even for Noetherian affine
+schemes.
+
+However, if $B$ is a domain and a finitely generated $k$-algebra for $k$ a field,
+then for any prime ideal $\mathfrak{p} \subseteq B$, then $\hgt \mathfrak{p} + \dim B/\mathfrak{p} = \dim B$.
+Here, $\hgt \mathfrak{p}$ is the length of the longest chain of primes
+$\mathfrak{p}_0 \subsetneq \mathfrak{p}_1 \subsetneq \cdots \subsetneq \mathfrak{p}_n = \mathfrak{p}$.
+Note $\dim B/\mathfrak{p} = \dim V(\mathfrak{p})$ and $\hgt \mathfrak{p} = \codim(V(\mathfrak{p}), \Spec B)$,
+so we have from $(\star)$ that $\codim(V(\mathfrak{p}), \Spec B) + \dim V(\mathfrak{p}) = \dim \Spec B$.
+This implies that if $X$ is a variety over $k$ (integral and of finite type over $k$), and $Z \subseteq X$
+is an irreducible closed subset, then
+$\dim Z + \codim(Z, X) = \dim X$.
+
+Also, if $\eta \in Z \subseteq X$ is the generic point of $Z$, then $\dim \mathcal{O}_{X, \eta} = \codim(Z, X)$.
+This is shown on the third example sheet.
