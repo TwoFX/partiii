@@ -1,0 +1,21 @@
+type: chapter
+label: AssociativeAlgebras
+numbered: true
+section: true
+title: Finite dimensional associative algebras
+children:
+- ExamplesOfAlgebras
+- JacobsonRadical
+- SimpleModule
+- Nakayama
+- AboutJacobson
+- SemisimpleExamples
+- CompletelyReducibleAlgebra
+- ModuleOverAlgebra
+- CompletelyReducible
+- Socle
+- SocleChar
+- SocleRemark
+- SocleSeries
+- SocleSeriesMark
+- RadicalIsNilpotent

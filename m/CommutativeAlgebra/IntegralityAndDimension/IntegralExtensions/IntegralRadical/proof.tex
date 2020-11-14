@@ -1,0 +1,15 @@
+If $x$ is integral over $I$, then by definition we get a description
+$x^n = -(a_1x^{n-1} + \cdots + a_n) \in TI$. Hence, $x \in \sqrt{TI}$.
+
+Conversely, if $x \in \sqrt{TI}$, then we have $x^n = \sum_i t_ir_i$ for some
+$n \in \mathbb{N}$, $r_i \in I$ and $t_i \in T$. Since $R \subseteq T$ is
+integral, using 4.8 we find that $M \coloneqq R[t_1, \ldots, t_n]$ is finitely generated
+as an $R$-module. Observe that $x^nM - \sum_i r_i(t_iM) \subseteq IM$.
+Let $y_1, \ldots, y_s$ be a generating set for $M$. We may write
+$x^ny_j = \sum_\ell r_{j\ell}y_\ell$ for suitable $r_{j\ell} \in I$ (first write
+$t_iy_j$ as an $R$-linear combination of the $y_j$ and then multiply with
+$r_i$ to obtain an $I$-linear combination. Summing up, we get $x^ny_j$ as required).
+Rearrange to obtain
+\[ \sum_\ell (x^n\delta_{j\ell} - r_{j\ell})y_\ell = 0, \]
+and an argument identical to that in the proof of 4.7 yields that $x^n$, and
+hence $x$, is integral over $I$.

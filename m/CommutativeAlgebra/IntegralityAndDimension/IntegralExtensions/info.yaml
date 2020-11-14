@@ -26,3 +26,5 @@ children:
 - DimensionOfIntegral
 - HeightIntersection
 - IntegralOver
+- IntegralRadical
+- AlgebraicOverFieldOfFractions

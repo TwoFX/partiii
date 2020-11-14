@@ -1,0 +1,41 @@
+By induction, it will be sufficient to consider the case $m = 1$, $n = 2$, i.e.,
+we are given prime ideals $\mathfrak{p}_1 \supsetneq \mathfrak{p}_2$ of $R$ and
+a prime ideal $\mathfrak{q}_1$ of $T$ such that $\mathfrak{q}_1\cap R = \mathfrak{p}_1$.
+We need to produce a prime ideal $\mathfrak{q}_2 \subseteq \mathfrak{q}_1$ such that
+$\mathfrak{q}_2\cap R = \mathfrak{p}_2$.
+
+Let $S_1 = T\setminus \mathfrak{q}_1$ and $S_2 = R\setminus \mathfrak{p}_2$.
+$S\coloneqq S_1S_2$ is a multiplicatively closed subset of $T$ satisfying
+$S_1 \subseteq S$ and $S_2 \subseteq S$.
+
+Assume for now that $Tp_2\cap S = \varnothing$ (we will prove this later).
+$T \mathfrak{p}_2$ is an ideal of $T$, so we have $S^{-1}(T \mathfrak{p}_2) \subseteq S^{-1} T$
+is an ideal, and it is a proper ideal, since otherwise we would have
+$x \in T \mathfrak{p}_2$ and $s, y \in S$ such that $s(x-y) = 0$, but then
+$sx = sy \in T \mathfrak{p}_2 \cap S = \varnothing$ (since $T \mathfrak{p}_2$ is
+an ideal and $S$ is multiplicatively closed), a contradiction.
+
+Hence $S^{-1} T \mathfrak{p}_2$ is contained in some maximal ideal $S^{-1}T$, which
+by 2.5, is of the form $S^{-1} \mathfrak{q}_2$ for some prime ideal $\mathfrak{q}_2$
+of $T$ satisfying $\mathfrak{q}_2\cap S = \varnothing$. Furthermore, if
+$x \in T \mathfrak{p}_2$, then $x/1 \in S^{-1}(T \mathfrak{p}_2)$, i.e., we find
+$y \in \mathfrak{q}_2$, $s_1, s_2 \in S$ such that $s_2(y - xs_1) = 0$. Hence,
+$x(s_1s_2) \in \mathfrak{q}_2$, but $\mathfrak{q}_2$ is prime, $s_1s_2 \in S$ and
+$\mathfrak{q}_2\cap S = \varnothing$, so $x \in \mathfrak{q}_2$. We conclude that
+$T \mathfrak{p}_2 \subseteq \mathfrak{q}_2$ and hence
+$\mathfrak{p}_2 \subseteq T \mathfrak{p}_2 \cap R \subseteq \mathfrak{q}_2 \cap R$.
+On the other hand, if $\mathfrak{q}_2 \cap R \nsubseteq \mathfrak{p}_2$, then
+we find $x \in \mathfrak{q}_2\cap R$ such that $x\notin \mathfrak{p}_2$. The
+latter means that $x \in R\setminus \mathfrak{p}_2 = S_2 \subseteq S$, but then
+$x \in \mathfrak{q}_2 \cap S = \varnothing$, a contradiction. We conclude
+$\mathfrak{p}_2 = \mathfrak{q}_2\cap R$.
+
+Similarly, if $\mathfrak{q_2} \nsubseteq \mathfrak{q}_1$, then we find
+$x \in \mathfrak{q}_2$ such that $x\notin \mathfrak{q}_1$. Then
+$x \in T\setminus \mathfrak{q}_1 = S_1 \subseteq S$, so $x \in \mathfrak{q}_2 \cap S = \varnothing$.
+This shows, $\mathfrak{q}_2 \subseteq \mathfrak{q}_1$, so $\mathfrak{q}_2$ has
+the desired properties.
+
+It remains to show that $T \mathfrak{p}_2 \cap S = \varnothing$. Suppose
+$x \in T \mathfrak{p}_2 \cap S$. Using the definition of $S$ and the fact that
+$T$ is an integral domain, we see that $x\neq 0$.

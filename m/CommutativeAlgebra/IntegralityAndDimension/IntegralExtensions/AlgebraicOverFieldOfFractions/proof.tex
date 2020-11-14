@@ -1,0 +1,17 @@
+Certaily $x$ is algebraic over $K$, since $x$ is integral over $I$. It remains
+to show that the coefficients $r_i$ are in $\sqrt{I}$. By the previous result,
+it will be sufficient to show that they are integral over $I$, since in that
+case they will be contained in $R$, since $R$ is integrally closed, and 4.22
+with $T = R$ yields the desired result.
+
+To show that the $r_i$ are integral over $I$, consider the extension
+$K \subseteq L$, where $L$ is a splitting field of $f$. If $y$ is a root
+of $f$, then there is a $K$-automorphism of $L$ sending $x\mapsto y$ (cf. Galois
+theory). Since $x$ is integral over $R$, it satisfies some monic equation
+$x^m + s_{m-1}x^{m-1}+\cdots + s_0 = 0$ with $s_i \in I$. Applying the automorphism
+(which fixes $K$, so inparticular $I$), yields
+$y^m + s_{m-1}y^{m-1} + \cdots + s_0 = 0$, so  $y$ is integral over $I$.
+
+Since $f = \prod_y (X - y)$ for the roots $y$, the coefficients $r_i$ are
+expressible as sums and products of the $y$. By 4.22, sums and products of
+elements integral over an ideal are again integral over the ideal, so we are done.

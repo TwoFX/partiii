@@ -1,0 +1,20 @@
+An $R$-module $M$ is called simple if its only submodules are $0$ and $M$.
+
+Note that $I$ is a maximal right ideal if and only if $R/I$ is a simple right
+$R$-module.
+
+Let $M$ be a simple right $R$-module and $m \in M$. Then
+$\Ann_R(m) = \set{r \in R\given mr = 0}$ is a right ideal, but not necessarily
+a two-sided ideal.
+
+However, $\Ann_R(M) = \bigcap_{m \in M} \Ann(m)$, the annihilator of the module,
+is a two-sided ideal: if $r \in \Ann_R(M)$ and $x \in R$, then $m(xr) = (mx)r = 0$,
+since $r \in \Ann_R(mx)$. Hence $xr \in \Ann_R(M)$, so $\Ann_R(M)$ is a left
+ideal.
+
+If $M$ is simple, then the $\Ann_R(m)$ for $m\neq 0$ are maximal right ideals,
+because $mR = M$ by simplicity of $M$, so $R/\Ann_R(m)\cong M$
+(via the map $r\mapsto mr$) is simple, so $\Ann_R(m)$ is maximal. So we can see
+that $J(R) = \bigcap_{M~\text{simple}} \Ann_R(M)$ is a two-sided ideal (all
+ideals of the for  $\Ann_R(M)$ are maximal, and if $I$ is a maximal right ideal,
+then $I = \Ann_R(R/I)$).
