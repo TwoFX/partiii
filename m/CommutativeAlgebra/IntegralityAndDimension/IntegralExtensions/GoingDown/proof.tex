@@ -8,7 +8,7 @@ Let $S_1 = T\setminus \mathfrak{q}_1$ and $S_2 = R\setminus \mathfrak{p}_2$.
 $S\coloneqq S_1S_2$ is a multiplicatively closed subset of $T$ satisfying
 $S_1 \subseteq S$ and $S_2 \subseteq S$.
 
-Assume for now that $Tp_2\cap S = \varnothing$ (we will prove this later).
+Assume for now that $T \mathfrak{p}_2\cap S = \varnothing$ (we will prove this later).
 $T \mathfrak{p}_2$ is an ideal of $T$, so we have $S^{-1}(T \mathfrak{p}_2) \subseteq S^{-1} T$
 is an ideal, and it is a proper ideal, since otherwise we would have
 $x \in T \mathfrak{p}_2$ and $s, y \in S$ such that $s(x-y) = 0$, but then
@@ -42,9 +42,22 @@ $T$ is an integral domain, we see that $x\neq 0$. Lemma 4.22 with $I = \mathfrak
 tells us that the integral closure of  $\mathfrak{p}_2$ in $T$ is $\sqrt{T \mathfrak{p}_2}$.
 In particular, $x$ is in the integral closure of $\mathfrak{p}_2$. Lemma
 4.23 then tells us that it is algebraic over $K$, the field of fractions of $R$,
-and the coefficient minimal polynomial $f$ of $x$ over $K$ are contained
+and the coefficients of the minimal polynomial $f$ of $x$ over $K$ are contained
 in $\sqrt{\mathfrak{p}_2} = \mathfrak{p}_2$.
 
 Since $x \in S$, it is of the form $x=rt$ with $t \in S_1$, $r \in S_2$. If
-$r_i$ are the coefficients of $f$, then the minimal polynomial of $t = x/r$ has
-coefficients $r_i/r \in R$.
+$r_i$ are the coefficients of $f$, then the minimal polynomial of $t = x/r$ over $K$ has
+coefficients $r_i' \coloneqq r_i/r^{n-i} \in K$. Since $t$ is integral over $R$ by assumption, we may apply
+4.23 with $I = R$ and find that $r_i'$ is in fact contained in $R$.
+
+Now $r_i = r_i'r^{n-i} \in \mathfrak{p}_2$ and $r \notin \mathfrak{p}_2$ since
+$r \in S_2$, so we must have $r_i' \in \mathfrak{p}_2$. Since these coefficients
+belong to  a monic polynomial killing $t$, this just means that $t$ is integral
+over $\mathfrak{p}_2$. Hence, 4.22 tells us that $t \in \sqrt{T \mathfrak{p}_2}$.
+We have
+$\mathfrak{p}_2 \subseteq \mathfrak{p}_1 \subseteq \mathfrak{q}_1$, which
+implies $T \mathfrak{p}_2 \subseteq T \mathfrak{q}_1 = \mathfrak{q}_1$. Since
+$\mathfrak{q}_1$ is prime, this implies $\sqrt{T \mathfrak{p}_2} \subseteq \mathfrak{q}_1$,
+so we conclude $t \in \mathfrak{q}_1$.
+On the other hand, $t \in S_1 = T\setminus \mathfrak{q}_1$, so we have
+arrived at the desired contradiction.
