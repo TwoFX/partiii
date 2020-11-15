@@ -1,2 +1,29 @@
-This appears on example sheet 3. Hint: When using (2), think about maximal
-submodules, as their quotients are simple.
+Suppose $I \subseteq J(R)$, $M$ is a finitely generated right $R$-module and
+$N \subseteq M$ is a submodule such that $N + MI = M$. If $N \neq M$, then
+$N \subseteq N'$ for a maximal right $R$-module $N'$ (this follows from Zorn's lemma,
+as upper bounds exist: if the union of a chain
+of proper submodules was not a proper submodules, then all of the finitely many generators
+of $M$ would be contained in some member of the chain). Let $m \in M$. By assumption
+we find $n \in N$, $m'_k \in M$ and $i_k \in I$ such that $m = n + \sum_k m'_ki_k$. Since
+$M/N'$ is simple, $\Ann(m'_k + N')$ is maximal, so $I \subseteq \Ann(m'_k + N')$. In
+particular, $(m'_k + N')i_k = 0$, so $m'_ki_k \in N'$. Hence $m \in N + N' \subseteq N'$,
+so $M = N'$, a contradiction. So $N = M$ as required.
+
+Next, assume (2) holds and let $x \in I$. Let $M \coloneqq R$, $N \coloneqq (1+x)R$.
+Let $r \in R$. Then $r = (1+x)r + 1\cdot (-xr) \in (1+x)R + RI$. Hence, by (2)
+we have $(1+x)R=R$, so we find $y' \in R$ such that $(1+x)y'=1$. Define
+$y\coloneqq y' - 1$, then $1+y = y'$, so  $(1+x)(1+y) = 1$. In particular,
+$x + y + xy = 0$, so $y = -x-xy \in I$.
+
+Repeating the argument for $y$, we find  $z \in R$ such that $(1+y)z = 1$. Then
+$(1+y)(1+x) = (1+y)(1+x)(1+y)z = (1+y)z = 1$, so $1+x$ is a unit with two-sided
+inverse $1+y$. Hence $G$ is a subset of $R^\times$ and closed under taking inverses.
+Since $G$ is obviously closed under multiplication since $I$ is an ideal, (3)
+follows.
+
+Finally, assume that $G$ is a subgroup of $R^\times$ and $J$ is a maximal right
+ideal. Suppose $I\nsubseteq J$. Then we find $i \in I$ such that $i\notin J$.
+Since $J$ is maximal, this implies $J + iR =R$, i.e., we find $j \in J$, $r \in R$
+such that $j + ir = 1$. But then $j = 1 + (-ir)$, but $-ir \in I$, so $j$ is a
+unit, which is a contradiction. Thus, $I \subseteq J$ for all maximal right ideals
+$J$, so $I \subseteq J(R)$.
