@@ -30,4 +30,12 @@ consist of matrices $B$ with columns of the form $\begin{pmatrix}d_1 & \cdots & 
 where  $\lambda \in D$ and the column vector is fixed.
 
 The simple right submodules of $M_{n_i}(D_i)$ are all of dimension $n_i$ as a
-$D_i$-vector space and so $\dim D_i(S_i) = n_i$, completing the proof.
+$D_i$-vector space and so $\dim_{D_i}(S_i) = n_i$.
+
+Finally, it remains to show that if $D$ is a division algebra over an algebraically
+closed field $k$, then $D= k$. Indeed, let $x \in D$. Consider $k(x) \subseteq D$.
+This is a finite extension of $k$ (since $D$ is finite-dimensional), so it is
+in particular algebraic. Hence, we find a monic polynomial $f \in k[X]$  such that
+$f(x) = 0$. Choose $f$ of minimal degree. Since $k$ is algebraically closed, it has
+a root $\lambda \in k$ and we may write $f = g(X-\lambda)$. By minimality, $g(x)\neq 0$,
+so $x = \lambda \in k$, so $D = k$.
