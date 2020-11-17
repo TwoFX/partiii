@@ -1,0 +1,7 @@
+type: theorem
+label: NoetherNormalisation
+numbered: true
+section: false
+title: Noether Normalisation
+proofs:
+    proof: Proof

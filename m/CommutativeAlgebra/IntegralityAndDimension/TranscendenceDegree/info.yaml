@@ -1,0 +1,11 @@
+type: section
+label: TranscendenceDegree
+numbered: true
+section: true
+title: Transcendence Degree
+children:
+- AffineAlgebra
+- DimensionIsTranscendenceDegree
+- TranscendenceDegree
+- TranscendenceExample
+- NoetherNormalisation

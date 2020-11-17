@@ -1,0 +1,6 @@
+type: theorem
+label: DimensionIsTranscendenceDegree
+numbered: true
+section: false
+proofs:
+    proof: Proof
