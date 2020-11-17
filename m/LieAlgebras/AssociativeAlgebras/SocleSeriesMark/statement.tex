@@ -1,5 +1,14 @@
 \begin{enumerate}
 	\item The series is strict until $\soc_i(M) = M$.
-	\item By the previous lemma, $\soc_i(M) = \set{m \in M\given mJ(R)^i = 0}$
-		(TODO: prove this).
+	\item By the previous lemma, $\soc_i(M) = \set{m \in M\given mJ(R)^i = 0}$.
+		Indeed, the case $i = 0$ is trivial, and if we know that the claim is
+		true for $i$ and if $\pi\colon M\to M/\soc_i(M)$ is the quotient map,
+		then by definition and the inductive claim we have
+		\begin{align*}
+			\soc_{i+1}(M) &= \pi^{-1}(\soc(M/\soc_i(M)))\\
+			&= \set{m \in M\given (m + \soc_i(M))J(R) = 0}\\
+			&= \set{m \in M\given mJ(R) \in \soc_i(M)}\\
+			&= \set{m \in M\given mJ(R)^{i+1}}
+		\end{align*}
+		as required.
 \end{enumerate}

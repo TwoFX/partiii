@@ -1,0 +1,6 @@
+type: theorem
+label: ClassGroupOfNoetherian
+numbered: true
+section: false
+proofs:
+    proof: Proof

@@ -1,0 +1,21 @@
+We can find an open affine subset $U = \Spec A$ of $X$ such that $f \in \Gamma(U, \mathcal{O}_X)$,
+e.g., first pass to an open affine $\Spec B$. On this, $f = \frac{a}{s}$ for some $a \in B$, $s\neq 0$,
+and the $f \in B_s$, wo we may take $U = D(s) \subseteq \Spec B$.
+
+Then $Z = X\setminus U$ is a proper closed subset of $X$. Since $X$ is Noetherian, so
+is $Z$ as a topological space and hence decomposes into a finite number of irreducible
+closed subsets. Thus $Z$ contains only a finite number of prime divisors.
+
+Thus, it suffcies to check that statement on $U$, since any other prime divisor
+intersects $U$ and its generic point $\eta$ is contained in $U$ (if $\eta \notin U$,
+then $\overline{\set{\eta}} \cap U = \varnothing$ as $U$ is open).
+
+Thus we may assume that $X = \Spec A$ is affine and $f \in A$. Thus $\nu_Y(f)\geq 0$ for
+all prime divisors $Y$ in $X$ and furthermore $\nu_Y(f) > 0$ if and only if
+$f \in \mathfrak{m_{\eta} \subseteq\mathcal{O}_{X, \eta}}$ where $\eta$ is the
+generic point of $Y$, which is the case if and only if $f/1 \in \mathfrak{p}$, where
+$\mathfrak{p} \subseteq A$ is the prime ideal corresponding to $\eta$ if and only
+if $\mathfrak{p} \in V(f)$. Note that $V(f)$ is a proper closed subset of $X$ since
+$f\neq 0$. Thus $V(f)$ decomposes into a finite number of irreducible components,
+none of which are equal to $X$, and hence there are at most a finite number of
+prime divisors contained in $V(f)$.

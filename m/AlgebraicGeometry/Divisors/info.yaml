@@ -8,3 +8,11 @@ children:
 - Dimension
 - NoetherianIsNoetherian
 - Assumption
+- Regularity
+- PrimeDivisor
+- AffineExample
+- ValuationZero
+- Divisor
+- ClassGroup
+- NumberThy
+- ClassGroupOfNoetherian

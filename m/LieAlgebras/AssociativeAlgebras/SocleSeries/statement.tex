@@ -1,4 +1,6 @@
 The socle series of a module $M$ is
-\[ 0 = \soc_0(M) \subsetneq M \soc_1(M) \subsetneq \cdots, \]
-where $\soc_i(M)/\soc_{i+1}(M) = \soc(M/\soc_{i-1}(M))$, as long as
+\[ 0 = \soc_0(M) \subsetneq \soc_1(M) \subsetneq \cdots, \]
+where $\soc_i(M)/\soc_{i-1}(M) = \soc(M/\soc_{i-1}(M))$ (i.e., to define $\soc_i(M)$,
+pull back $\soc(M/\soc_{i-1}(M))$, which is a submodule of $M/\soc_{i-1}(M)$, along the
+quotient map), as long as
 $\soc_{i-1}(M)\neq M$.

@@ -1,0 +1,19 @@
+Regularity measures nonsingularity, so we tend to say that a scheme $X$ all of
+whose local rings are regular is a regular or nonsingular scheme.
+
+For example, if $X$ is a nonsingular curve in the classical sense, then $X$ is
+regular in codimension $1$, but the variety defined by $Y^2 = X^2(X-1)$ (there is an
+image missing here) is not regular at the origin. Indeed, the Zariski tangent space at
+the origin is $2$-dimensional.
+
+By a standard commutative algebra fact (which can be found in Atiyah-Macdonals),
+a regular Noetherian local domain $A$ of dimension $1$ is a discrete valuation
+ring, i.e., if $K$ is the field of fractions of $A$, then there is a group
+homomorphism $\nu\colon K^\times \to \mathbb{Z}$ such that
+\begin{align*}
+	A &= \set{x \in K^\times\given \nu(x)\geq 0} \cup \set{0}\\
+	\mathfrak{m} &= \set{x \in K^\times \given \nu(x) > 0} \cup\set{0}
+\end{align*}
+
+Note that after rescaling $\nu$ so that $\nu(\mathfrak{m}\setminus \mathfrak{m}^2) = 1$,
+then $\nu(x) = k$ if and only if $x \in \mathfrak{m}^k\setminus \mathfrak{m}^{k+1}$.
