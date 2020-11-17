@@ -1,0 +1,7 @@
+type: theorem
+label: ArtinWedderburn
+numbered: true
+section: false
+title: Artin-Wedderburn theorem
+proofs:
+    proof: Proof

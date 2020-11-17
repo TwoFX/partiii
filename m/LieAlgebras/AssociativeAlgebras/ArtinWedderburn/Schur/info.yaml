@@ -1,0 +1,7 @@
+type: lemma
+label: Schur
+numbered: true
+section: false
+title: Schur's lemma
+proofs:
+    proof: Proof

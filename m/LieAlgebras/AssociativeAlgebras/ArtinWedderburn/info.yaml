@@ -1,0 +1,12 @@
+type: section
+label: ArtinWedderburn
+numbered: true
+section: true
+title: The Artin-Wedderburn theorem
+children:
+- Schur
+- EndSelf
+- ArtinWedderburn
+- ArtinWedderburnRemark
+- CentreOfComplexGroupAlgebra
+- Example

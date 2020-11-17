@@ -1,0 +1,26 @@
+Consider $G = S_3$ and let $k$ be an algebraically closed field. Denote
+$g \coloneqq \begin{pmatrix}1&2\end{pmatrix}$, $h \coloneqq \begin{pmatrix}1&2&3\end{pmatrix}$.
+In characteristic $0$ there are three simple $kG$-modules up to isomorphism, hence
+there are three conjugacy classes. We have the trivial one-dimensional module
+$U_1 = k$, on which $g, h$ act like $1$. We also have the one-dimensional module
+$U_2$ on which $g$ acts like $-1$ and $h$ acts like $1$. Finally, we have theS
+two-dimensional module $U_2$. We write elements of $U_2$ as row vectors
+$\begin{pmatrix}\lambda&\mu\end{pmatrix}$ and $G$ acts on the right.  The element
+$g$ acts as $\begin{pmatrix}-1&-1\\0&1\end{pmatrix}$ and $h$ acts as
+$\begin{pmatrix}-1&-1\\1&0\end{pmatrix}$ Geometrically, $g$ is a reflection and
+$h$ is a rotation.
+
+If $\chr k = 2$ or $\chr k = 3$, then we can work modulo $2$ or $3$. For example,
+in characteristic $2$, we have $\overline{U_1} = \overline{U_2}$, but $\overline{U_3}$
+remains simple. Hence, we have at least two simple modules. By Artin-Wedderburn,
+$kG/J(kG) \cong M_1(k)\oplus M_2(k)$, which has dimension $5$, and we can't have
+anything else because then $J(kG) = 0$, which is not the case.
+
+Hence $J(kG)$ is one-dimensional, and the group sum $1 + h + h^2 + g + gh + gh^2$ is
+contained in the centre and spans $J(kG)$.
+
+Furthermore, $\soc(kG) = \set{r \in kG\given rJ(kG) = 0}$ is the span of $\gamma  - 1$,
+where $\gamma \in G$. This is precisely the kernel of the map $kG\to k$ sending
+$\gamma\mapsto 1$.
+
+The characteristic $3$ case will apear on the example sheet.

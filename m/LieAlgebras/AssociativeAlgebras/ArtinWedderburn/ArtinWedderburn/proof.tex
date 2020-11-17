@@ -1,0 +1,33 @@
+Since $R$ is semisimple, by 6.5 $R_R$ is a finite direct sum of simple
+right $R$-modules.
+
+Group together those that are isomorphic.
+\[ R_R \cong (S_{11} \oplus \cdots \oplus S_{1n_1}) \oplus (S_{21}\oplus \cdots\oplus S_{2n_2}) \cdots \]
+so that $S_{ij} \cong S_{kl}$ if and only if $i = k$ and define $S_i\coloneqq S_{i1}$.
+
+Define $R_i\coloneqq S_{i1}\oplus\cdots\oplus S_{in_i}$. Then
+$R_R = \bigoplus_{i=1}^r R_i$.
+
+Let $S$ be a simple $R$-submodule of $R_R$. Consider the projections
+$\pi_{ik}\colon R\to S_{ik}$ restricted to $S$. By Schur's lemma,
+$\pi_{ik}|_S$ is either an isomorphism or the zero map. Note that at least
+one of these restrictions must be nonzero, since $S$ is non-zero. We deduce that
+$\pi_{ik}|_S$ is non-zero for exactly one $i$ (and possibly several $k$) and
+thus we deduce that $S \subseteq R_i$. Thus $R_i$ can be expressed as the
+sum of the simple submodules of $R_R$ isomorphic to $S_i$ and is hence uniquely
+determined.
+
+Consider $\End_R(R_i) = \End_R(S_{i1}\oplus\cdots\oplus S_{in_i}) \cong M_{n_i}(D_i)$,
+where $M_{n_i}(D_i)$, where $D_i = \End_{R}(S_i)$ by Schur, which is a
+division algebra (also by Schur). Indeed,  $\phi  \in \End_R(S_{i1}\oplus\cdots\oplus S_{in_i})$ is
+represented by a matrix $(\phi_{m\ell})$, where $\phi_{m\ell} \in \Hom(S_{im}, S_{i\ell})$.
+Hence $R\cong \End_R(R_R)$ (using 6.12) is a matrix algebra consisting of
+block diagonal matrices with blocks $M_{n_i}(D_i)$, where the other blocks
+of the form $\Hom_R(S_{ij}, S_{kl})$ with $i\neq k$ are zero by Schur.
+
+Now recall the example about right ideals of $M_n(D)$. The minimal right ideals
+consist of matrices $B$ with columns of the form $\begin{pmatrix}d_1 & \cdots & d_n\end{pmatrix}^\top \lambda$,
+where  $\lambda \in D$ and the column vector is fixed.
+
+The simple right submodules of $M_{n_i}(D_i)$ are all of dimension $n_i$ as a
+$D_i$-vector space and so $\dim D_i(S_i) = n_i$, completing the proof.
