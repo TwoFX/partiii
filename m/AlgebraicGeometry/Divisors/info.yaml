@@ -16,3 +16,14 @@ children:
 - ClassGroup
 - NumberThy
 - ClassGroupOfNoetherian
+- ClassGroupOfSubscheme
+- ClassGroupOfProjectiveSpace
+- ProjectiveNonsingular
+- RationalFunctions
+- Inclusion
+- CartierDivisor
+- RepresentationOfCartierDivisor
+- WeilVsCartier
+- IsomorphismCondition
+- NonsingularVariety
+- LocallyFactorialScheme

@@ -1,0 +1,12 @@
+Let $X$ be a scheme. We define the sheaf of rational functions on $X$, $\mathcal{K}_X$,
+to be the sheaf associated with the presheaf
+\[ U\mapsto S(U)^{-1}\Gamma(U, \mathcal{O}_X), \]
+where $S(U) \subseteq \Gamma(U, \mathcal{O}_X)$ is the subset of elements whose stalks in
+$\mathcal{O}_{X, x}$ for every $x \in U$ are non-zero divisors.
+
+For example, if $X$ is integral, then $S(U) \subseteq \Gamma(U, \mathcal{O}_X)$
+is just the set of non-zero elements of $\Gamma(U, \mathcal{O}_X)$.
+Then $\mathcal{K}_X$ is the constant sheaf $U\mapsto K(X)$.
+
+This is more subtle than it looks. Grothendieck got it wrong in EGA, and also the first
+few editions of Hartshorne copied the incorrect definition from Grothendieck.

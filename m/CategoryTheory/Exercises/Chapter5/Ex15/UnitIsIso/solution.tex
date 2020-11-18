@@ -1,0 +1,20 @@
+We will show that $(1_{\mathcal{C}}, \alpha^{-1}\eta, \mu)$ is a monad, where
+$\mu$ is the composite
+\[\begin{tikzcd}
+	1_{\mathcal{C}}\ar[r, "\alpha"] & GF\ar[r, "\alpha_{GF}"] & GFGF\ar[r, "G\epsilon_F"] & GF\ar[r, "\alpha^{-1}"] & 1_{\mathcal{C}}.
+\end{tikzcd}\]
+Indeed, observe that for $1_{\mathcal{C}}$ the first and second monad laws are
+identical and the associativity law is vacuous. Hence, it suffices to check
+the first monad law. Let $A$ be an object of $\mathcal{C}$. Then we need to show
+that \[\alpha_A^{-1} \circ G\epsilon_{FA} \circ \alpha_{GFA} \circ \alpha_A \circ \alpha^{-1}_A \circ \eta_A = \alpha^{-1}_A \circ G\epsilon_{FA} \circ \alpha_{GFA} \circ \eta_A\]
+is the identity on $A$. Indeed, this follows from the commutative diagram
+\[\begin{tikzcd}[row sep=1.2cm, column sep=1cm]
+	A\ar[r, "\alpha_A"]\ar[d, "\eta_A" left] & GFA\ar[d, "GF\eta_A" left]\ar[dr, "1_{GFA}"]\\
+	GFA\ar[r, "\alpha_{GFA}"] & GFGFA\ar[r, "G\epsilon_{FA}"]& GFA\ar[r, "\alpha^{-1}_A"] & A,
+\end{tikzcd}\]
+where the square commutes by naturality of $\alpha$ and the triangle is just $G$
+applied to the first triangle identity.
+
+By (ii), $\alpha^{-1}\eta$ is an isomorphism, so $\eta = \alpha\alpha^{-1}\eta$ is
+an isomorphism. The fact that $F$ is fully faithful follows from the dual
+of Lemma 3.9.

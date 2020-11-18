@@ -1,0 +1,14 @@
+For (1), observe that $Y$ being a prime divisor of $X$ implies $Y\cap U$ is either
+a prime divisor of $U$ or it is empty. If $f \in K(X)^\times$ and $(f) = \sum n_iY_i$,
+then the image of $(f)$ is $\sum n_i(Y_i\cap U)$ and this coincides with
+$(f|_U)$. The main point here is that $K(X) = K(U)$ (since both are the field of
+fractions of any affine subscheme of either). Thus $\Cl X\to \Cl U$ is well-defined.
+It is surjective since if $Y \subseteq U$ is a prime divisor, then $\overline{Y} \subseteq X$
+is a prime divisor of $X$ with $Y = \overline{Y}\cap U$.
+
+For (2), we note that $\Div X$ and $\Cl X$ only depend on subvarieties of codimension
+$1$, so the claim follows (TODO).
+
+For (3), we remark that the kernel of $\Cl X\to \Cl U$ consists only of divisors
+suppoerted on $Z$. If $Z$ is irreducible of codimension $1$, there is precisely
+one such prime divisor: $Z$ itself. Hence, the claim follows.

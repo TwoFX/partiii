@@ -1,0 +1,22 @@
+Let $X$ satisfy $(\star)$. Then there is a homomorphism
+$\Gamma(X, \mathcal{K}_X^\times/\mathcal{O}_X^\times)\to \Div X$
+descending to $\CaCl X\to \Cl X$.
+
+Indeed, given $\set{(U_i, f_i)}$ as in the previous remark, and $Y$ a prime divisor
+on $X$, associate a coefficient $n_Y$ to $Y$ by choosing some $U_i$ such that
+$Y\cap U_i\neq\varnothing$ and setting $n_Y = \nu_Y(f_i)$.
+
+We check that this is well-defined: if $Y\cap U_j\neq\varnothing$, then $Y\cap U_i\cap U_j\neq\varnothing$
+(as $U_i\cap Y$ is dense in $Y$ by irreducibility). Then $\nu_Y(f_j) = \nu_Y(f_i\cdot\frac{f_j}{f_i}) = \nu_Y(f_i) + \nu_Y(\frac{f_j}{f_i}) = \nu_Y(f_i)$
+since (as we noted in the previous remark), $f_j/f_i$ is invertible on $U_i\cap U_j$,
+hence has no zeros or poles. Now take the Cartier divisor $\set{(U_i, f_i)}$ to
+$\sum_Y n_YY$.
+
+There are several things that should be checked here: it has to be independent of
+the choice of representative $\set{(U_i, f_i)}$. We should also convince ourselves
+that the cover $\set{U_i}$ may be assumed to be finite (this follows since $X$
+is Noetherian, so in particular quasi-compact).
+
+Note also that a principal divisor coming form $f \in \Gamma(X, \mathcal{K}_X^\times)$
+is represented by $\set{(X, f)}$. Then this is mapped to $(f)$ by construction.
+Hence, we get an induced map on class groups as claimed.
