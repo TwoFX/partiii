@@ -1,0 +1,41 @@
+Let $M = \bigoplus_{i=1}^m M_i = \bigoplus_{i = 1}^n M_i'$. We will proceed by
+induction on $m$. If $m = 1$, then $M$ is indecomposable, so the claim follows.
+
+Next, assume that $m>1$. Let
+\[ \alpha_i\colon M_i'\to M\to M_1\qquad \beta_i\colon M_1\to M\to M_i' \]
+be the obvious maps. Then $\sum (\alpha_i \circ \beta_i)$ is the identity on $M_1$.
+Now since $\End_R(M_1)$ is local by assumption, some of the $\alpha_i \circ \beta_i$
+must be invertible. Otherwise, they would all be in the maximal ideal, so
+their sum would be in the ideal and thus not equal to the identity.
+
+This means that we find a two-sided inverse $f\colon M_1 \to M_1$ of $\alpha_i \circ \beta_i$.
+But then the short exact sequence
+\[\begin{tikzcd}
+	0\ar[r] & \im \beta_i\ar[r, hook, "\iota"] & M_i'\ar[r] & \coker\iota\ar[r] & 0
+\end{tikzcd}\]
+splits on the left via the map $\beta_i \circ f \circ \alpha_i\colon M_i'\to \im\beta_i$,
+hence $M_i'\cong \im\beta_i\oplus \coker \iota$, so we conclude $M_i' = \im\beta_i$
+by indecomposability. Hence $\beta_i$ is surjective, so $\beta_i$ is an isomorphism,
+so $\alpha_i = \alpha_i \circ \beta_i \circ \beta_i^{-1}$ is also an isomorphism.
+
+Renummber the $M_i'$ such that $\alpha_i \circ \beta_i$ is invertible and
+$M_1\cong M_1'$. Our next will be to find an $R$-linear automorphism of $M$ sending
+$M_1\to M_1'$.
+
+Consider the map $\mu = 1 - \theta$, where $\theta$ is the composite
+\[\begin{tikzcd}
+	M\ar[r, two heads] & M_1\ar[r, "\alpha_1^{-1}"] & M_1'\ar[r, hook] & M\ar[r, two heads] & \bigoplus_{i = 2}^m M_i\ar[r, hook] & M.
+\end{tikzcd}\]
+Observe that $\mu(M_1') = M_1$. Indeed, on $M_1'$, $\theta$ acts like
+$M_1' \to M \to \bigoplus_{i=2}^m M_i$, so on $M_1'$ $\mu$ acts like,
+$M_1'\to M\to M_1$, and we know that this is surjective.
+Moreover, $\mu(\bigoplus_{i=2}^m M_i) = \bigoplus_{i=2}^m M_i$, since $\theta$
+vanishes on this submodule (this is obvious: it is precisely the kernel of
+the first map).
+This shows that $\mu$ is surjective.
+
+Next, if $\mu(x) = 0$, then $x = \theta(x)$, so $x \in \bigoplus_{i=2}^m M_i$ (since
+that is the image of the final map). But then $x = \theta(x) = 0$ as seen above.
+Hence $\mu$ is an automorphism of $M$ satisfying $\mu(M_1') = M_1$. Hence
+\[\bigoplus_{i = 2}^n M_i' \cong M/M_1' \cong M/M_1 \cong \bigoplus_{i=2}^m M_i, \]
+using $\mu$ in the second step. Hence, we are done using the inductive step.

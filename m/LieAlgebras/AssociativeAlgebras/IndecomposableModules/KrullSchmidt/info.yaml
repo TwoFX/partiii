@@ -1,0 +1,7 @@
+type: theorem
+label: KrullSchmidt
+numbered: true
+section: false
+title: Krull-Schmidt
+proofs:
+    proof: Proof

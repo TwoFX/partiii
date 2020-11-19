@@ -1,0 +1,13 @@
+Let $E = \End_R(M)$. Choose a maximal right ideal $I$ of $E$ and take
+$x \notin I$. Our goal is to show that $x$ is invertible, which will imply
+that $I$ is the unique maximal right ideal. Then $E = xE + I$ by maximality
+of $I$. In particular, $1 = x\lambda + \mu$ for some $\lambda \in E$ and
+$\mu \in I$. By Fitting's lemma, $M = \ker \mu^n \oplus \im \mu^n$ for some
+$n$. These summands are $R$-modules, so by idecomposability of $M$ we have
+$\ker \mu^n = M$ or $\im \mu^n = M$. The latter implies that $\mu$ is
+invertible with inverse $\mu^{-1}$. But if $\mu \in \End_R(M)$, then we must
+have $\mu^{-1} \in \End_R(M)$ and so $\mu E = E$, which is a contradiction to
+$\mu \in I$.
+
+Hence, we must have $\ker \mu^n = M$. Thus, $x\lambda = 1-\mu$ has inverse
+$1 + \mu + \ldots + \mu^{n-1}$ and so $x$ is invertible as claimed.

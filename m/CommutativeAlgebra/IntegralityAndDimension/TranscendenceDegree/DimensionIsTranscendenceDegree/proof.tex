@@ -1,3 +1,6 @@
+We proceed by induction over $r\coloneqq \trdeg_k K$. For $r = 0$, there
+is nothing to do.
+
 By Noether Normalisation, we find algebraically independent elements
  $x_1, \ldots, x_r \in T$ such that $T$ is integral over $R = k[x_1, \ldots, x_r]$,
 This implies that $K$ is algebraic over $k(x_1, \ldots, x_r)$, which in turn
@@ -5,9 +8,18 @@ implies that $\trdeg_k(K) = \trdeg_kk(x_1, \ldots, x_r) = r$.
 By 4.19, $\dim T = \dim R = \dim k[X_1, \ldots, X_r]$.
 
 Thus, it remains to show that $\dim k[X_1, \ldots, X_r] = r$. We have already
-seen that $\dim k[X_1, \ldots, X_r] \geq r$. We will prove equality by induction
-on $r$. For $r = 0$ there is nothing to show. Assume $r\geq 1$ and take
+seen that $\dim k[X_1, \ldots, X_r] \geq r$.
+Take
 a chain $\mathfrak{p}_0 \subsetneq \cdots\subsetneq \mathfrak{p}_s$ of primes in $R$.
 
 Since $R$ is an integral domain, we may assume that $\mathfrak{p}_0 = 0$. Furthermore,
 we may assume using Lemma 4.5 that $\mathfrak{p}_1 = (f)$.
+
+As shown in an example below, we have $\trdeg_k(K_f) = r-1$, where $K_f$ is the
+field of fractions of $R/(f)$. By induction, we find $\dim R/(f) = r-1$.
+
+Next, consider the chain
+\[ \mathfrak{p}_1/\mathfrak{p}_1 \subsetneq \mathfrak{p}_2/\mathfrak{p}_1 \subsetneq\cdots\subseteq \mathfrak{p}_s/\mathfrak{p}_1. \]
+This is again a chain of prime ideals (since $\mathfrak{p}_1 \subseteq \mathfrak{p}_i$
+and the quotient map is surjective) in $R/(f)$ of length $s-1$. Hence
+$s - 1 \leq r-1$ and so $s\leq r$, so we conclude $\dim R = r$ as required.

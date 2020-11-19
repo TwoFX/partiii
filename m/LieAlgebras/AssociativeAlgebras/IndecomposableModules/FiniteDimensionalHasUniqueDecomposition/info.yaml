@@ -1,0 +1,6 @@
+type: corollary
+label: FiniteDimensionalHasUniqueDecomposition
+numbered: true
+section: false
+proofs:
+    proof: Proof

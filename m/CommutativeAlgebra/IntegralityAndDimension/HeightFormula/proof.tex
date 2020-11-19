@@ -1,0 +1,25 @@
+Define $m\coloneqq \hgt(\mathfrak{q})$ and pick a chain
+\[ \mathfrak{q}_0 \subsetneq \cdots\subseteq \mathfrak{q}_m = \mathfrak{q} \]
+of primes of maximal length. By Noether normalization, we find some polynomial
+subsalgebra $R$ of $T$ such that $T$ is integral over $R$. We have
+$\dim T = \dim R$ by 4.19 and $\dim T = \dim R = \trdeg K$, where $K$ is the
+field of fractions of $T$, by 4.24. Furthermore, $\dim R$ is the number
+if indeterminates of $R$.
+
+Write $\mathfrak{p}_i \coloneqq \mathfrak{q}_i\cap R$. By maximality of the chain,
+we must have $\hgt(\mathfrak{q}_1) = 1$. Since $R$ is a UFD, it is integrally
+closed (the proof for $R = \mathbb{Z}$ generalized to any UFD), hence 4.20 tells
+us that $\hgt(\mathfrak{p}_1) = 1$. But by 4.5 this implies $\mathfrak{p}_1 = (f)$
+for an irreducible polynomial $f$. By a previous calculation, we conclude
+that the transcendence degree of the field of fractions of  $R/\mathfrak{p}_1$ is
+$\dim R - 1$.
+
+Now $\hgt(\mathfrak{q}/\mathfrak{q}_1) = m - 1$ (TODO: why? Maybe you can make
+some argument comparing chains in $T$ and $T/\mathfrak{q}_1$ work, but doesn't
+that just prove the entire lemma?), and $R/\mathfrak{p}_1 \subseteq T/\mathfrak{q}_1$ is
+an integral extension, so $\dim(T/\mathfrak{q}_1) = \dim(R/\mathfrak{p}_1) = \dim T-1$
+(4.19 and 4.24). Finally, the rings $(T/\mathfrak{q}_1)/(\mathfrak{q}/\mathfrak{q}_1)$
+and $T/\mathfrak{q}$ are isomorphic, so putting things together and applying the
+inductive hypothesis, we find
+\[ (m-1) + \dim(T/\mathfrak{q}) = \dim T - 1, \]
+and adding $1$ on both sides yields the claim.

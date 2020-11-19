@@ -1,0 +1,16 @@
+type: section
+label: IndecomposableModules
+numbered: true
+section: true
+title: Indecomposable Modules
+children:
+- Reminder
+- UniqueDecompositionProperty
+- LocalRing
+- LocalDivisionRing
+- KrullSchmidt
+- Fitting
+- EndomorphismOfIndecomposable
+- FiniteDimensionalHasUniqueDecomposition
+- BimoduleRemark
+- Blocks

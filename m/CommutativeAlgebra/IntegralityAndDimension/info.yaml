@@ -13,3 +13,6 @@ children:
 - HeightOneInPolynomial
 - IntegralExtensions
 - TranscendenceDegree
+- HeightFormula
+- SeperableOverDedekind
+- NumberField

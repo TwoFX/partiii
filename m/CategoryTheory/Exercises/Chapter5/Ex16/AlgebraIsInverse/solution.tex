@@ -1,0 +1,10 @@
+The identity $\alpha\eta_A = 1_A$ is part of the definition of an algebra.
+For the other direction, consider the diagram
+\[\begin{tikzcd}[row sep=1cm, column sep=1cm]
+	TA\ar[d, "\alpha"]\ar[r, shift right, "\eta_{TA}" below]\ar[r, shift left, "T\eta_A" above] & TTA\ar[r, "\mu_A"]\ar[d, "T\alpha"] & TA\\
+	A\ar[r, "\eta_A"] & TA.
+\end{tikzcd}\]
+The square commutes by naturality of $\eta$, and the top composites are both the
+identity by definition of a monad. But $\mu_A$ is an isomorphism, so
+$\eta_{TA} = T\eta_A$. Hence, $\eta_A\alpha = T(\alpha\eta_A) = 1_{TA}$, since
+$(A, \alpha)$ is an algebra.
