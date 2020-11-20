@@ -1,0 +1,18 @@
+Part (a) is immediate from the generalised Hauptidealsatz, since every
+prime is minimal over itself.
+
+Clearly, $\dim R = \hgt(\mathfrak{m})$, so the first part of (b) follows.
+For the second part, it will suffice to show that $x_1, \ldots, x_n$ generate
+$\mathfrak{m}$ as an $R$-module if and only if $x_1 + \mathfrak{m}^2, \ldots, x_n + \mathfrak{m}^2$
+generate $\mathfrak{m}/\mathfrak{m}^2$ as a $R/\mathfrak{m}$-vector space.
+
+The \enquote{only if} claim is immediate. Conversely, if
+$x_1 + \mathfrak{m}^2, \ldots, x_n + \mathfrak{m}^2$ generate $\mathfrak{m}/\mathfrak{m}^2$,
+consider the submodule $I \coloneqq (x_1, \ldots, x_n) \subseteq \mathfrak{m}$.
+By assumption, we have $I + \mathfrak{m}^2 = \mathfrak{m}$.
+Let $x \in \mathfrak{m}$. Then this means that we find $m_i, n_i \in \mathfrak{m}$
+such that $x - \sum_i m_in_i \in I$. This means that as elements of the $R$-module
+$\mathfrak{m}/I$ we have $x + I = \sum_i m_i(n_i + I)$, hence we have
+ $\mathfrak{m}(\mathfrak{m}/I) = \mathfrak{m}/I$. Since $R$ is local,
+ $J(R) = \mathfrak{m}$, so by Nakayama's lemma, we must have
+ $\mathfrak{m}/I = 0$, and we are done.

@@ -1,0 +1,7 @@
+type: theorem
+label: Hauptidealsatz
+numbered: true
+section: false
+title: Krull's Hauptidealsatz
+proofs:
+    proof: Proof

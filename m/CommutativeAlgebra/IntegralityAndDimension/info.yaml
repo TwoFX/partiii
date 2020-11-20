@@ -16,3 +16,9 @@ children:
 - HeightFormula
 - SeperableOverDedekind
 - NumberField
+- Hauptidealsatz
+- GeneralisedHauptidealsatz
+- HauptidealsatzCorollary
+- NoetherianDCC
+- RegularLocal
+- LocalRadical
