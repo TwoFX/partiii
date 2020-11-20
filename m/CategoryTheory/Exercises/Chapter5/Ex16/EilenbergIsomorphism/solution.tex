@@ -1,0 +1,22 @@
+Indeed, we have a functor $\mathcal{C}^{\mathbb{T}}\to \Fix(T)$ that sends
+$(A, \alpha)$ to $A$ (this is valid by the previous part) and
+$f$ to $f$. Conversely, we have a functor $\Fix(T) \to \mathcal{C}^{\mathbb{T}}$
+that sends $A\mapsto (A, \eta_A^{-1})$ and $f\mapsto f$. Indeed, $(A, \eta_A^{-1})$
+is an algebra: the first axiom is trivially true, and the second is equivalent
+to $T\eta_A^{-1} = \mu_A$, which follows from the first monad law. Furthermore,
+$f$ is a morphism of algebras by naturality of $\eta$. It is clear that these
+functors are two-sided inverses of each other.
+
+For the second claim, note that by the second monad law and the fact that $\mu_A$
+is an isomorphism for every $A$ we must have $\eta_{TA} = \mu_A^{-1}$, so
+$\eta_{TA}$ is an isomorphism for every $A$. Thus, the adjunction from Proposition
+5.6 is restricts to an adjunction
+$F_{\mathbb{T}}\colon \Fix(T)\to \mathcal{C}_{\mathbb{T}}\dashv G_{\mathbb{T}}\colon C_{\mathbb{T}}\to \Fix(T)$.
+But the unit of this adjunction is just $\eta$ restricted to $\Fix(T)$, which is
+a natural isomorphism. If $A$ is an object of $\mathcal{C}$, then $\epsilon_A$
+is the morphism $TA\leadsto A$ represented by the identity $1_{TA}$ in $\mathcal{C}$.
+But it is readily checked (using the monad laws and the fact that $T\eta_A = \eta_{TA}$)
+that the morphism $A \leadsto TA$ given by the composite
+$\eta_{TA}\eta_A\colon A\to TA\to TTA$ is a two-sided inverse of this morphism.
+Hence, the counit is also a natural isomorphism, completing the proof that
+$\Fix(T)$ and $\mathcal{C}_{\mathbb{T}}$ are equivalent.

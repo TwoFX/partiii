@@ -2,6 +2,29 @@ We will make use of the trace function. There are many ways to define it
 (cf. Galois theory). We will use it as a black box with the following
 property (cf. Reid 8.13): if $K \subseteq L$ is separable, then the map
 $L\times L\to K$ given by $(x, y)\mapsto \Tr(xy)$ is a non-degenerate
-symmetric $K$-bilinear form.
+symmetric $K$-bilinear form. Furthermore, the trace of and element $x$ is an
+integer multiple of a coefficient of the minimal polynomial of $x$.
 
-Pick a $K$-basis $y_1, \ldots, y_n$ of $L$.
+Pick a $K$-basis $z_1, \ldots, z_n$ of $L$. Each $z_i$ is algebraic over $K$,
+so it satisfies a monic polynomial with coefficients in $K$, say
+\[ z_i^n + \frac{r_{n-1}}{s_{n-1}}z_i^{n-1} + \cdots + \frac{r_0}{s_0} = 0. \]
+By multiplying with the product of the denominators, we find $t_i \in R$
+such that we have an equation of the form
+\[ t_nz_i^n + t_{n-1}z_i^{n-1} + \cdots + t_0 = 0. \]
+Finally, define $y_i\coloneqq t_nz_i$. Then we have
+\begin{multline*}
+y_i^n + t_{n-1}y_i^{n-1} + t_nt_{n-2}y_i^{n-2} + t_n^2t_{n-3}y_i^{n-3} + \cdots + t_n^{n-1}t_0\\
+	= t_n^{n-1}(t_nz_n + t_{n-1}z_{n-1}+\cdots t_0) = 0.
+\end{multline*}
+Therefore, $y_i \in T_1$, and the $y_i$ still form a $K$-basis of $L$.
+By non-degeneracy, we find a $K$-basis $x_1, \ldots, x_n$ such that $\Tr(x_iy_j) = \delta_{ij}$.
+
+Let $x \in T_1$. Then may write $x = \sum \lambda_i x_i$ for some $\lambda_i \in K$.
+Then we may calculate
+\[ \Tr(xy_j) = \sum_i\lambda_i \Tr(x_iy_j) = \sum\lambda_i\delta_{ij} = \lambda_j. \]
+On the other hand, $xy_j \in T_1$, since the integral closure is a subalgebra.
+By (4.23) with $I = R$, the minimal polynomial of $xy_j$ has coefficients in $R$,
+so in particular $\lambda_j = \Tr(xy_j) \in R$. Therefore, $x \in \sum Rx_i$, so
+we have an inclusion of $R$-submodules $T_1 \subseteq \sum Rx_i$. But
+$\sum Rx_i$ is a finitely generated module over a Noetherian ring, so it is
+Noetherian itself. Hence, $T_1$ is finitely generated.
