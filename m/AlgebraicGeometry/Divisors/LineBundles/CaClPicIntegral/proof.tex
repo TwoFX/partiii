@@ -1,0 +1,20 @@
+We need to show that every line bundle on $X$ is isomorphic to a subsheaf
+of $\mathcal{K}_X$, which, since $X$ is integral, is the constant sheaf
+$U\mapsto K(X)$. Once this is shown, a trivialization on a cover $U_i$ leads
+to rational functions given by $1 \in \mathcal{O}_{U_i}\to \mathcal{L}|_{U_i} \subseteq \mathcal{K}_X|_{U_i}$,
+where $1\mapsto f_i$, and then $D = \set{(U_i, f_i^{-1})}$ satisfies $\mathcal{L}\cong \mathcal{O}_X(D)$.
+
+So let $\mathcal{L}$ be any line bundle on $X$ and consider $\mathcal{L}\tensor_{\mathcal{O}_X}\mathcal{K}_X$.
+On any open $U$ with $\mathcal{L}|_U\cong \mathcal{O}_U$, we have $\mathcal{L}\tensor_{\mathcal{O}_X}\mathcal{K}_X|_{U}\cong \mathcal{O}_U\tensor_{\mathcal{O}_U}\mathcal{K}_X|_U \cong \mathcal{O}_X|_U$.
+This is the constant sheaf $V\mapsto K(X)$ for $V \subseteq U$.
+
+We will shwo that $\mathcal{F}\coloneqq \mathcal{L}\tensor_{\mathcal{O}_X} \mathcal{K}_X$ is also the constant
+sheaf $V\mapsto \mathcal{K}(X)$. Indeed, if $V$ is any nonempty open subset
+and $\set{U_i}$ is a trivializing cover of $\mathcal{L}$, then $\mathcal{F}(V\cap U_i)$
+can be identified with $K(X)$ canonically, as we can identify $\mathcal{F}_\eta$ with
+$K(X)$ where $\eta$ is the generlic point of $X$.
+
+Then the sheaf gluing axioms tell us that $\mathcal{F}U\cong K(X)$. Thus,
+$\mathcal{L}\tensor_{\mathcal{O}_X}\mathcal{K}_X\cong \mathcal{K}_X$, and we have a natural
+map $\mathcal{L}\to \mathcal{L}\tensor_{\mathcal{O}_X} \mathcal{K}_X$, $s\mapsto s\tensor 1$,
+thus exhibiting $\mathcal{L}$ as a subsheaf of $\mathcal{K}_X$.

@@ -1,5 +1,5 @@
-type: proposition
-label: IsomorphismCondition
+type: lemma
+label: KernelOfComparison
 numbered: true
 section: false
 proofs:

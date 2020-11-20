@@ -27,3 +27,4 @@ children:
 - IsomorphismCondition
 - NonsingularVariety
 - LocallyFactorialScheme
+- LineBundles

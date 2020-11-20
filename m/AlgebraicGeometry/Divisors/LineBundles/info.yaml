@@ -1,0 +1,11 @@
+type: section
+label: LineBundles
+numbered: true
+section: true
+title: Cartier divisors and line bundles
+children:
+- CartierSheaf
+- KernelOfComparison
+- BundleScheafInjective
+- CaClPicIntegral
+- EffectiveDivisor

@@ -1,0 +1,40 @@
+Our goal is to define an inverse map $\Div(C) \to \Gamma(X, \mathcal{K}_X^\times/\mathcal{O}_X^\times)$.
+Let $x \in X$ be any point. Then we get a morphism $\Spec \mathcal{O}_{X, x}\to X$
+(e.g., if $x \in \Spec A \subseteq X$ open affine, then $\mathcal{O}_{X, x}\cong A_{\mathfrak{p}}$ where
+$\mathfrak{p}$ corresponds to $x$, so $A\to A_{\mathfrak{p}}$ induces a morphism
+$\Spec \mathcal{O}_{X, x}\to \Spec A\to X$ (should check that this is independent of
+the choice of $A$).
+
+A prime divisor on $X$ pulls back to a prime divisor on $\Spec \mathcal{O}_{X, x}$ by
+taking inverse image. More precisely, given a prime divisor $Y \subseteq X$, if $x\notin Y$,
+then the pullback is empty. Otherise, $(\Spec A)\cap Y$ is nonempty and is of the
+form $V(q)$ for a prime ideal $\mathfrak{q} \subseteq A$ with $\mathfrak{q} \subseteq \mathfrak{p}$.
+Hence, $\mathfrak{q}$ corresponds to a prime ideal $\mathfrak{q}A_{\mathfrak{p}}$, hence
+a prime divisor $V(\mathfrak{q}A_{\mathfrak{p}})$ of $\Spec A_{\mathfrak{p}}$.
+
+This gives a map $\Div X\to \Div\Spec \mathcal{O}_{X, x}$, $D\mapsto D_x$. Since $\mathcal{O}_{X, x}$ is
+a UFD, $D_x$ must be a principal divisor on $\Spec \mathcal{O}_{X, x}$, i.e., $D_x = (f_x)$
+(on $\Spec \mathcal{O}_{X, x}$ for some $f_x \in K(X)$. Thus, $D$ and $(f_x)$ in $X$
+differ only in divisors which don't contain $x$ (since otherwise we could pull back
+to $\mathcal{O}_{X, x}$ and the order of vanishing, which is the same on $X$ and $\Spec \mathcal{O}_{X, x}$,
+must be zero).
+
+Thus, if $U_x$ is the complement of the union of prime divisors of $X$ at which $D$
+and $(f_x)$ have different coefficient, then $D|_{U_x} = (f_x)|_{U_x}$.
+
+Do this for every point $x$, and then represent a Cartier divisor by $\set{(U_x, f_x)}$.
+Need to check that this is really a Cartier divisor: on $U_x\cap U_y$,
+$(f_x)$ and $(f_y)$ agree, as both agree with $D|_{U_x\cap U_y}$. Hence
+$(f_x/f_y)=0$, so $f_x/f_y$ is invertible in $\mathcal{O}_{X, p}$ for all points
+$p \in U_x\cap U_y$ of height $1$ (i.e., generic points of prime divisors).
+
+If we cover $U_x\cap U_y$ with open affines $\Spec A$, this says that
+$f_x/f_y \in A_{\mathfrak{p}}^\times$ for all prime ideals $\mathfrak{p} \subseteq A$ of
+height $1$. Now since all $A_{\mathfrak{q}}$ are UFDs, for all $\mathfrak{q} \subseteq A$ prime,
+$A_{\mathfrak{q}}$ must be integrally closed. Since being intrally closed is a local
+property (cf. Atiyah-Macdonald, Prop. 5.13), $A$ is integrally closed, so by a
+result we cited previously, $A = \bigcap_{\mathfrak{p} \subseteq A, \hgt(\mathfrak{p})=1}A_{\mathfrak{p}}$,
+so $f_x/f_y \in A^\times$, so $f_x/f_y \in \Gamma(U_i\cap U_j, \mathcal{O}_X^\times)$.
+
+Thus $\set{(U_x, f_x)}$ represents a section of $\mathcal{K}_X^\times/\mathcal{O}_X^\times$,
+i.e., a Cartier divisor. This gives the inverse map.
