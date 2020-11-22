@@ -13,3 +13,30 @@ ideal in $R/(a)$ pulls back to a prime between $(a)$ and $\mathfrak{p}$ in $R$,
 so we conclude that $\mathfrak{p}/(a)$ is actually the only non-zero prime of $R/(a)$.
 Thus $N(R/(a)) = \mathfrak{p}/(a)$ is nilpotent (1.21). Pulling this back, we conclude
 that $\mathfrak{p} \subseteq (a)$ for some $n$.
+Consider the chain
+\[ R \supseteq \mathfrak{p} \supseteq \mathfrak{p}^2 \supseteq \cdots\supseteq \mathfrak{p}^n. \]
+Since $R$ is noetherian, each factor is a finitely-generated $R/\mathfrak{p}$-vector
+space, so we can stitch together the descending chain conditions to find that
+$R/\mathfrak{p^n}$ is artinian (cf. example sheet 1). In particular, this implies
+that $R/(a)$ is artinian.
+
+Next, define $I_n\coloneqq \set{r \in R\given r/1 \in S^{-1}\mathfrak{q}^n}$, where
+$S = R\setminus \mathfrak{q}$. We get a chain
+\[ \mathfrak{q} = I_1 \supseteq I_2 \supseteq \cdots, \]
+on $R$, which we may project to a chain
+\[ (I_1 + (a))/(a) \supseteq (I_2 + (a))/(a) \supseteq\cdots \]
+in $R/(a)$. But the latter is artinian, hence this chain must terminate, so we find
+$m$ such that $I_m + (a) = I_{m+1} + (a)$.
+
+We will now show that in fact $I_m = I_{m+1}$. Indeed, let $r \in I_m$. Since
+$I_m + (a) = I_{m+1} + (a)$, this means that we  find $t \in I_{m+1}$, $x \in R$ such
+that $r = t+ax$. Rearranging, wehave $ax = r-t \in I_m$, but $a\notin \mathfrak{q}$
+($\mathfrak{p}$ is minimal over $(a)$!). By definition of $I_m$, this means
+$\frac{ax}{1} \in S^{-1}\mathfrak{q}^m$. By definition of localization, this
+means that we find $q \in \mathfrak{q}^m$, $s, t \in S$ such that
+$t(axs - q) = 0$. This means that $\frac{x}{1} = \frac{q}{as} \in S^{-1}\mathfrak{q}^m$,
+and thus $x \in I_m$. This means that $r + I_{m+1} = a(x + I_{m+1})$ as elements
+of the $R$-module $I_m/I_{m+1}$, but since $a \in \mathfrak{p}$, we conclude
+$I_m/I_{m+1} = \mathfrak{p}(I_m/I_{m+1})$. By Nakayama's lemma, we conclude
+$I_m = I_{m+1}$ as claimed.
+

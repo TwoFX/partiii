@@ -1,0 +1,16 @@
+type: chapter
+label: Quivers
+numbered: true
+section: true
+title: Quivers
+children:
+- Quiver
+- QuiverRepresentation
+- QuiverRepresentationExample
+- MorphismOfQuiverRepresentations
+- Path
+- PathAlgebra
+- PathAlgebraProperties
+- RepresentationIsModule
+- ModuleExample
+- LoopQuiver

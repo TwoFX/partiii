@@ -14,3 +14,6 @@ children:
 - FiniteDimensionalHasUniqueDecomposition
 - BimoduleRemark
 - Blocks
+- Idempotent
+- BlockExample
+- SemisimpleBlock

@@ -6,4 +6,5 @@ children:
 - CartanSubalgebras
 - RootSystems
 - AssociativeAlgebras
+- Quivers
 - Exercises

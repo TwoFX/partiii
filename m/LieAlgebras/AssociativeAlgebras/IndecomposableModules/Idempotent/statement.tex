@@ -1,0 +1,15 @@
+Let $R \cong \bigoplus B_j$ be a block decomposition. Write
+$1 = e_1 + \cdots + e_n$, where $e_j \in B_j$. Then $e_ie_j \in B_i\cap B_j = 0$
+if $i\neq j$. Hence $1 = 1^2 = e_1^2 + \cdots + e_n^2$ with $e_j^2 + B_j$. Since
+we have a direct sum, comparison of components yields $e_j^2 = e_j$, i.e.,
+$e_j$ is an idempotent. Now if $r = r_1 + \cdots + r_n \in R$ with $r_i  \in B_j$,
+then
+\[ 1r = (e_1 + \cdots + e_n)(r_1 + \cdots + r_n) = \sum_j e_jr_j, \]
+again since $e_ir_j = 0$ for $i\neq j$. Similarly, $r1 = \sum r_je_j$. By comparison
+of components, we conclude $re_j = e_jr$ for all $r$. In order words, the
+$e_j$ are central idempotents. Each $e_j$ is the multiplicative identity of the
+block $B_j = e_jR$ (the last equality is obvious: if $b \in B_j$, then $b = 1b = e_jb \in e_jR$).
+
+Conversely, if $1 = e_1 + \cdots + e_n$ with $e_ie_j = 0$ for $i\neq j$, $e_j^2 = e_j$
+and $e_j$ central, then $R = \bigoplus_j e_jR$, where the $e_jR$ are ideals since
+$e_j$ is central.

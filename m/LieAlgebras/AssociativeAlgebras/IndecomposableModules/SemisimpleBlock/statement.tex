@@ -1,0 +1,20 @@
+Recall that $R/J(R)$ is semisimple. If $R = \bigoplus B_j$, then
+$R/J(R) = \bigoplus B_j/B_jJ(R)$, where the $B_j/B_jJ(R)$ are semisimple $R$-modules
+(TODO: why? See Drozd, Kirichenko: Finite Dimensional Algebras).
+Recall that $B_j = e_jR$, so $B_j/B_jJ(R) = e_jR/e_jJ(R)$.
+
+Now by Artin-Wedderburn, each $B_j/B_jJ(R)$ is a direct sum of matrix
+algebras---it may be a sum of various of the matrix algebras associated with
+simple $R$-modules $S_i$ (TODO: why $R$-modules?).
+The point here is that while $B_i$ is indecomposable, $B_i/B_jJ(R)$ will in general
+not be indecomposable.
+
+The following question arises: when does the matrix algebra associated with
+$S_i$ appear in the same $B_j/B_jJ(R)$ as the matrix algebra associated with
+$S_\ell$?
+
+One way to tackle this question is using the Ext quiver. Its vertices are labelled by
+the isomorphism classes of simple modules $S_i$. The matrix algebras associated with
+$S_i$ and $S_j$ appear in the same $B_j/B_jJ(R)$ if and only if $S_i$ and $S_\ell$
+are in the same component of the Ext quiver.`
+In other words, blocks correspond to components.

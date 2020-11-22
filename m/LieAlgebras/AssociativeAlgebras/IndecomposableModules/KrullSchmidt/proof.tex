@@ -8,17 +8,17 @@ Now since $\End_R(M_1)$ is local by assumption, some of the $\alpha_i \circ \bet
 must be invertible. Otherwise, they would all be in the maximal ideal, so
 their sum would be in the ideal and thus not equal to the identity.
 
-This means that we find a two-sided inverse $f\colon M_1 \to M_1$ of $\alpha_i \circ \beta_i$.
+This means that we find a left inverse $f\colon M_1 \to M_1$ of $\alpha_i \circ \beta_i$.
 But then the short exact sequence
 \[\begin{tikzcd}
 	0\ar[r] & \im \beta_i\ar[r, hook, "\iota"] & M_i'\ar[r] & \coker\iota\ar[r] & 0
 \end{tikzcd}\]
 splits on the left via the map $\beta_i \circ f \circ \alpha_i\colon M_i'\to \im\beta_i$,
-hence $M_i'\cong \im\beta_i\oplus \coker \iota$, so we conclude $M_i' = \im\beta_i$
+hence $M_i'\cong \im\beta_i\oplus \coker \iota$ by the splitting lemma, so we conclude $M_i' = \im\beta_i$
 by indecomposability. Hence $\beta_i$ is surjective, so $\beta_i$ is an isomorphism,
 so $\alpha_i = \alpha_i \circ \beta_i \circ \beta_i^{-1}$ is also an isomorphism.
 
-Renummber the $M_i'$ such that $\alpha_i \circ \beta_i$ is invertible and
+Renumber the $M_i'$ such that $\alpha_i \circ \beta_i$ is invertible and
 $M_1\cong M_1'$. Our next will be to find an $R$-linear automorphism of $M$ sending
 $M_1\to M_1'$.
 
