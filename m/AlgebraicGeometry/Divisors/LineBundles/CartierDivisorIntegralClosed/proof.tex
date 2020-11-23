@@ -1,0 +1,20 @@
+For (1), we have $\mathcal{O}_X(D_0) \subseteq \mathcal{K}_X$, so $s \in \Gamma(X, \mathcal{L})$ corresponds
+to a rational function $f \in \Gamma(X, \mathcal{K}_X) = K(X)$. If $D_0$ is represented by
+$\set{(U_i, f_i)}$, then $\mathcal{O}_X(D_0)$ is locally generated as an $\mathcal{O}_{U_i}$-module by
+$f_i^{-1}$, giving trivializations
+\begin{align*}
+	\varphi_i\colon \mathcal{O}(D_0)|_{U_i}&\to \mathcal{O}_{U_i}\\
+	t&\mapsto t\cdot f_i.
+\end{align*}
+So $D = (s)_0 = \set{(U_i, f\cdot f_i)} = D_0 + (f)$, since we had defined $(f) = \set{(X, f)}$.
+Hence, $D\sim D_0$.
+
+For (2), if $D$ is effective and $D = D_0 + (f)$, then if we write $D = \set{(U_i, g_i)}$,
+$D_0 = \set{(U_i, f_i)}$, then $g_i = f_i \cdot f$ and $g_i \in \mathcal{O}_X(U_i)$.
+Then $\varphi^{-1}(g_i) = g_if_i^{-1} = f_i\cdot f\cdot f_i^{-1} = f$. So $f$ in
+fact is a section of $\mathcal{O}_X(D_0) \cong \mathcal{L}$, and the
+$(s)_0 = D$.
+
+If $(s)_0 = (s')_0$, then $(s)_0 = D_0 + (f)$ and $(s')_0 = D_0 + (f')$. But then
+$(f/f') = 0$, i.e., $f/f' \in \Gamma(X, \mathcal{O}_X^\times)$. Now we use the
+fact that $\Gamma(X, \mathcal{O}_X) = k$, so $f/f' \in k^\times$.

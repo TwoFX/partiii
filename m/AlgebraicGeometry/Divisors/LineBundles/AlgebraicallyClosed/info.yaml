@@ -1,0 +1,6 @@
+type: theorem
+label: AlgebraicallyClosed
+numbered: true
+section: false
+proofs:
+    noproof: Not proved in this course

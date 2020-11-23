@@ -1,0 +1,7 @@
+type: chapter
+label: Cohomology
+numbered: true
+section: true
+title: Cohomology of sheaves
+children:
+- Intro

@@ -9,3 +9,11 @@ children:
 - BundleScheafInjective
 - CaClPicIntegral
 - EffectiveDivisor
+- ClosedSubschemeFiniteDimensional
+- NotFiniteDimensional
+- AlgebraicallyClosed
+- NotAlgebraicallyClosed
+- CartierDivisorIntegralClosed
+- Projective
+- Dictionary
+- GeometricCriterion

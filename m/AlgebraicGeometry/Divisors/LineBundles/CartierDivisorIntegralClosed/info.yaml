@@ -1,0 +1,6 @@
+type: theorem
+label: CartierDivisorIntegralClosed
+numbered: true
+section: false
+proofs:
+    proof: Proof
