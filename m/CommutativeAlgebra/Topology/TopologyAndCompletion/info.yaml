@@ -1,0 +1,7 @@
+type: section
+label: TopologyAndCompletion
+numbered: true
+section: true
+title: Topology and completion
+children:
+- Topology

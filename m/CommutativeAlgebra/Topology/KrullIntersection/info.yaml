@@ -1,0 +1,7 @@
+type: proposition
+label: KrullIntersection
+numbered: true
+section: false
+title: Krull's intersection theorem
+proofs:
+    proof: Proof

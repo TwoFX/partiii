@@ -1,0 +1,7 @@
+type: corollary
+label: ArtinReesAgain
+numbered: true
+section: false
+title: Artin-Rees lemma
+proofs:
+    proof: Proof

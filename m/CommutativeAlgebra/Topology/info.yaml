@@ -1,0 +1,15 @@
+type: chapter
+label: Topology
+numbered: true
+section: true
+title: $I$-adic topology
+children:
+- Filtration
+- GradedRing
+- GradedNoetherian
+- ReesNoetherian
+- GradedFinitelyGenerated
+- ArtinRees
+- ArtinReesAgain
+- KrullIntersection
+- TopologyAndCompletion

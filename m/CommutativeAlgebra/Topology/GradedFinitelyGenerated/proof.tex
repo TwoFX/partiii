@@ -1,0 +1,16 @@
+For $n\geq 0$, define
+\[ M_n^* \coloneqq \bigoplus_{i=0}^n M_i\oplus \bigoplus_{j\geq 1} I^jM_n. \]
+This is an $R^*$-submodule of $M^*$, and since each of the $M_i$ is finitely
+generated as an $R$-module (since $M$ is a noetherian $R$-module), we have that
+$M_n^*$ is a finitely generated $R^*$-module. We have a chain
+$M_0^* \subseteq M_1^* \subseteq \cdots$, and $M^* = \bigcup M_n^*$.
+
+Now if $M^*$
+is finitely generated, then it is a noetherian  $R^*$-module (since $R^*$ is noetherian),
+so in particular this chain termines. Conversely, if this chain terminates, then
+$M^*$ is one of the $M_n^*$, so it is finitely generated.
+
+But the chain terminates
+if and only if $M_{N+j} = I^jM_N$ for some $N$ and all $j$ (by a componentwise
+comparison of $M^*$ and $M_N^*$), and this is just the definition of a stable
+filtration.

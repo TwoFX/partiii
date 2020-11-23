@@ -1,0 +1,6 @@
+type: proposition
+label: GradedNoetherian
+numbered: true
+section: false
+proofs:
+    proof: Proof

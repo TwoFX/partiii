@@ -1,0 +1,19 @@
+A graded ring $T$ is a ring that, as an abelian group, is of the form
+$\bigoplus_{n\geq 0} T_n$, where the $T_n$ are additive subgroups of $T$. Furthermore,
+we require $T_mT_n \subseteq T_{m+n}$ for all $m, n \geq 0$. In particular,
+$T_0$ is a subring of $T$ and $T_+\coloneqq \bigoplus_{n\geq 1} T_n$ is an ideal
+of $T$. Furthermore, each $T_n$ is a $T_0$-module. We call $T_n$ the nth
+homogeneous component of $T$.
+
+If $\set{M_n}$ is an $I$-filtration of an $R$-module $M$, then
+$M^*\coloneqq \bigoplus_{n\geq 0} M_n$ is a graded $R^*$-module (by a graded $T$-module
+$N$ we mean a module of the form $\bigoplus_{i\geq 0} N_i$ such that $T_mN_i \subseteq N_{m+i}$
+for all $m$ and $i$. Observe that $N_i$ is a $T_0$-module). We use that
+$I^mM_n \subseteq M_{m+n}$ by the fact that we have an $I$-filtration.
+
+A homogenous element is one lying in some compoent. A morphism of graded
+$T$-modules $\theta\colon N\to N' = \bigoplus N_i'$ is a $T$-linear map such
+that $\theta(N_i) \subseteq N_i'$ for all $i\geq 0$.
+
+It is also possible to define gradings with different indexing sets ($\mathbb{Z}$ is
+an example that sometimes comes up).
