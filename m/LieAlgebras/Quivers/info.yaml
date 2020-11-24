@@ -14,3 +14,17 @@ children:
 - RepresentationIsModule
 - ModuleExample
 - LoopQuiver
+- NoCycles
+- BasicAlgebra
+- BasicRemark
+- BasicExamples
+- MoritaEquivalent
+- ExtQuiver
+- JacobsonAnnihilates
+- ExtQuiverExamples
+- Gabriel
+- SameBlock
+- FiniteRepresentationType
+- FiniteRepresentationTypeExample
+- GabrielAgain
+- NonSimplyLaced

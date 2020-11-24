@@ -1,0 +1,23 @@
+Let $Q$ be a finite quiver with no directed cycles (hence $kQ$ is finite dimensional).
+
+Let $J$ be the $k$-span of paths of length $\ell\geq 1$. Then
+$J^r$ is the $k$-span of paths of length $\ell\geq r$. Since $Q$ is finite and has
+no directed cycles, we find $J^n = 0$ for some $n$. Thus $J \subseteq J(kQ)$
+(for example using Nakayama's lemma and the standard telescoping trick).
+
+Now $kQ/J\cong k\oplus\cdots\oplus k$, where we get one copy of $k$ for every
+vertex.
+
+Recall that $S_i$ was the simple $kQ$-module corresponding to the
+representation that has $k$ at vertex $i$, $0$ everywhere else and all maps
+are zero.
+
+Now if an element of $J(kQ)$ has a non-zero component for a path of length $0$,
+then by multiplying with the appropriate $e_i$ and scaling we find $e_i \in J(kQ)$
+for some $i$. But then $e_iS_i \neq 0$, which is a contradiction since
+$J(kQ)$ is the intersection of the annihilators of the simple modules, so in particular
+$e_i$ should annihilate $S_i$. Hence we conclude $J(kQ) \subseteq J$, i.e.,
+$J = J(kQ)$.
+
+Now using Artin-Wedderburn and the explicit description of $kQ/J$ from above,
+we conclude that the $S_i$ are actually all simple $kQ$-modules.

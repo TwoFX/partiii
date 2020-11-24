@@ -1,4 +1,11 @@
 Consider again the quiver from before. Then the module $e_1 kQ$ corresponds
-to the representation which has $M_1 = k$, $M_2 = k\oplus k$, $\theta_x$
+to the representation which has $M_1 = k$, $M_2 = k\oplus k$, $\theta_x$ is
 the first inclusion, and $\theta_y$ is the second inclusion.
-Exercise (TODO): Prove this.
+
+Indeed, $e_1kG = \set{e_1p\given p \in kG}$ is the $k$-span of the set of paths starting
+at $1$. In our case, we $e_1kG$ is generated as a $k$-vector space by
+$e_i$, $x$ and $y$. Now the corresponding representation has $M = e_1kG$ and
+$M_i = Me_i$, thus $M_1 = \vspan{e_1}$ and $M_2 = \vspan{x, y}$ (these are
+$k$-spans). For an arrow $z$, $\theta_z$ is given by $m\mapsto mz$. In our
+case, this means $\theta_x$ maps $e_1 \mapsto e_1x = x$ and $\theta_y$ maps
+$e_1\mapsto e_1y = y$, completing the proof.

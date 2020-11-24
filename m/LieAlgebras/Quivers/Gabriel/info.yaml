@@ -1,0 +1,7 @@
+type: theorem
+label: Gabriel
+numbered: true
+section: false
+title: Gabriel
+proofs:
+    noproof: Not proved in this course

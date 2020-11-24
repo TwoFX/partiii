@@ -1,0 +1,61 @@
+\begin{enumerate}
+	\item Let $R = k[X]/(X^p)$. Then there is only one isomorphism class of
+		simple modules, the trivial module $S = k$ with $X$ acting like $0$
+		(TODO: why?).
+
+		There is the indecomposable $X_1\coloneqq k[X]/(X^2)$ and a short exact sequence
+		\[\begin{tikzcd}
+			0\ar[r] & (X)/(X^2)\ar[r] & X_1\ar[r] & k[X]/(X)\ar[r] & 0,
+		\end{tikzcd}\]
+		where the left and right terms are both isomorphic to $S$. Hence, the
+		Ext quiver has at least one arrow $S\to S$.
+
+		By the structure theorem of modules over the PID $k[X]$, the
+		finite-dimensional $k[X]/(X^p)$-modules are of the form
+		$\bigoplus_i k[X]/(X^{r_i})$ for some $r_i\leq p$. Hence, for $X_i$ to
+		be indecomposable, it must be of the form $k[X]/(X^{r_i})$ and
+		so the $X_1$ we had before the only possibility (TODO: work this
+		out in detail).
+
+		Hence, the Ext-quiver consists of one vertex $S$ with one arrow $x$.
+
+		Thus, $k[Q]\cong k[X]$ as a $k$-algebra, and the $kQ$-modules are just
+		representations $M$ with a linear map $\theta_x\colon M\to M$.
+
+	\item Let $R = kS_3$, where $\chr k = 2$. There are two isomorphism classes of
+		simple $R$-modules: the trivial $S_1$ and the two-dimensional $S_3$.
+
+		We saw that $kS_3= kC_2\oplus M_2(k)$ was the block decomposition.
+		In characteristic $2$, we have $kC_2 = k[X]/(X-1)^2$. There is an
+		indecomposable in characteristic $2$ that fits in the exact
+		sequence
+		\[\begin{tikzcd}
+			0\ar[r] & (X-1)/(X-1)^2\ar[r] & k[X]/(X-1)^2\ar[r] & k[X]/(X-1)\ar[r]& 0
+		\end{tikzcd}\]
+		$kC_2\cong k[X]/(X-1)^2$ is itself indecomposable. Hence there is a loop
+		in the Ext quiver $x\colon S_1\to S_1$. In fact, the Ext quiver is
+		given by the loop $x$ and an isolated vertex for $S_3$ (TODO: work this out).
+		Observe that we had two blocks and have two components in the Ext quiver.
+
+		As an additional exercise, work out the case where $\chr k = 3$. In this
+		case there are two isomorphism classes of simple modules, both of dimension
+		$1$, the trivial module $S_1$ and the signature $S_2$. One should show that there
+		is an indecomposables $X_1$ that fits in a sequence
+		\[\begin{tikzcd}
+			0\ar[r] & k\ar[r] & X_1\ar[r] & k\ar[r] & 0,
+		\end{tikzcd}\]
+		where the left $k$ is the signature and the right $k$ is trivial. Furthermore,
+		one should show that ther is $X_2$ that fits into
+		\[\begin{tikzcd}
+			0\ar[r] & k\ar[r] & X_2\ar[r] & k\ar[r] & 0,
+		\end{tikzcd}\]
+		where this time the left $k$ is trivial and the right $k$ is the signature.
+		Hence, the Ext quiver contains two vertices and at least one arrow in either
+		direction.
+		As an exercise (TODO) show that this is already the full Ext quiver.
+
+		There is one block and one component.
+
+		In both characteristics, there is a directed cycle, so the path algebra
+		is not finite-dimensional in either case.
+\end{enumerate}
