@@ -1,0 +1,6 @@
+type: proposition
+label: CompletionIsExact
+numbered: true
+section: false
+proofs:
+    proof: Proof

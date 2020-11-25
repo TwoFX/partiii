@@ -1,0 +1,17 @@
+The $I$-adic completion $\hat{M}$ of $M$ is the set of equivalence classes of
+Cauchy sequences. If $(x_n)$, $(y_n)$ are Cauchy sequences, so is $(x_n + y_n)$ and
+its class only depends on the classes of $(x_n)$ and $(y_n)$. The $I$-adic completion
+$\hat{R}$ of $R$ is the set of equivalence classes of Cauchy sequences with the
+$I$-adic topology. We get a well-defined product via $[r_n][s_n] = [r_ns_n]$ and
+addition as aobve.
+
+Hence (after checking a whole bunch of stuff), we have made $\hat{R}$ into a ring
+and we make $\hat{M}$ into an $R$-module in the obvious way. We get a homomorphism
+of rings $R\to \hat{R}$ by sending $r$ to the constant sequence $[r]$. The
+kernel of this map is easily seen to be $\bigcap_{n \in \mathbb{N}} I^n$. Similarly,
+we have a homomorphism of abelian groups (and also of $R$-modules?)
+$M\to \hat{M}$ sending $x\mapsto [x]$. The kernel is $\bigcap I^nM$.
+
+Krull's intersection theorem can be interpreted as giving sufficient conditions for
+these maps to be injective. For example, $R\to \hat{R}$ is injective if $R$ is
+an integral domain, and $M\to \hat{M}$ is injective if $I \subseteq J(R)$.

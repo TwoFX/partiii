@@ -10,3 +10,73 @@ is exact. Can we extend this to a long exact sequence?
 
 This is indeed possible using the right derived functors of $\Gamma(X, \bullet)$, which
 are written as $H^i(X, \bullet)$.
+
+The idea of the construction is as follows. An abelian group $I$ is called injective
+if given any diagram of abelian groups
+\[\begin{tikzcd}
+	&I\\
+	0\ar[r] & A\ar[r]\ar[u] & B\ar[ul, densely dotted]
+\end{tikzcd}\]
+admits a lift making the diagram commute.
+
+Fact: Every abelian group $A$ has an injection into an injective group. This allows
+us to construct injective resolutions: construct the diagram
+\[\begin{tikzcd}
+	&&&& 0\ar[dr] && 0\\
+	&&&&& C_1\ar[dr]\ar[ur]\\
+	0\ar[r] & A\ar[r] & I_0\ar[rr]\ar[dr] & & I_1\ar[rr]\ar[ur] & & I_2\ar[r] & \ldots\\
+	&&& C_0\ar[ur]\ar[dr]\\
+	&& 0\ar[ur] && 0,
+\end{tikzcd}\]
+where the $C_i$ are cokernels.
+This gives a long exact sequence $0\to A\to I_\bullet$.
+
+We then get injective resolutions in the category of sheaves of abelian groups:
+if $\mathcal{F}$ is a sheaf on $X$, then for $x \in X$ we have an inclusion
+$0\to \mathcal{F}_x \to I_x$ with $\mathcal{I}_x$ injective. Then define
+\[ \mathcal{I} = \prod_{x \in X} i_{x*}\mathcal{I}_x, \]
+where $i_x\colon \set{x} \to X$, i.e., $\mathcal{I}(U) = \prod_{x \in U} \mathcal{I}_x$.
+
+Then we have an inclusion $0\to \mathcal{F} \to I$, where $s \in \mathcal{F}(U)\mapsto (f_x(U, s))_{x \in U}$
+and it is possible to check that $\mathcal{I}$ is an injective object in the category
+of sheaves of abelian groups.
+
+Hence we get injective resolutions
+\[\begin{tikzcd}
+	0\ar[r] & \mathcal{F}\ar[r] & \mathcal{I}^0\ar[r, "d_0"] & \mathcal{I}^1\ar[r, "d_1"] & \ldots
+\end{tikzcd}\]
+Then define \[H^i(X, \mathcal{F})\coloneqq \frac{\ker(d_i\coloneq \Gamma(X, \mathcal{I}^i)\to \Gamma(X, \mathcal{I}^{i+1}))}{\im(d_{i-1}\colon \Gamma(X, \mathcal{I}^{i-1})\to \Gamma(X, \mathcal{I}^i))}, \]
+i.e., take the cohomology of the chain complex of glocal sections of the $\mathcal{I}^i$.
+
+There are some immediate properties:
+\begin{enumerate}
+	\item $H^i(X, \bullet)$ is a well-defined coaraiant functor (i.e., it is independent
+		of the choice of resolution and $f\colon \mathcal{F}\to \mathcal{G}$ and we
+		get induced maps $H^i(X, \mathcal{F})\to H^(X, \mathcal{G})$.
+	\item Whenever
+		\[\begin{tikzcd}
+			0\ar[r] & \mathcal{F}'\ar[r] & \mathcal{F}\ar[r] & \mathcal{F}''\ar[r] & 0
+		\end{tikzcd}\]
+		is exact, then we obtain connecting homomorphisms
+		$\delta\colon H^i(X, \mathcal{F}'')\to H^{i+1}(X, \mathcal{F}')$ the
+		fit into a long exact sequence.
+	\item Given a commutative diagram
+		\[\begin{tikzcd}
+			0\ar[r] & \mathcal{F}'\ar[r]\ar[d] & \mathcal{F}\ar[r]\ar[d] & \mathcal{F}''\ar[r]\ar[d] & 0\\
+			0\ar[r] & \mathcal{G}'\ar[r] & \mathcal{G}\ar[r] & \mathcal{G}''\ar[r] & 0
+		\end{tikzcd}\]
+		with exact rows, we get a commutative square
+		\[\begin{tikzcd}
+			H^i(X, \mathcal{F}'') \ar[r, "\delta"]\ar[d] & H^{i+1}(X, \mathcal{F}')\ar[d]\\
+			H^i(X, \mathcal{G}'')\ar[r, "\delta"] & H^{i+1}(X, \mathcal{G}').
+		\end{tikzcd}\]
+	\item Whenever $\mathcal{F}$ is a flabby (flasque) sheaf, i.e., all restriction
+		maps are surjective, then $H^i(X, \mathcal{F}) = 0$ for all $i > 0$.
+	\item $H^0(X, \mathcal{F}) = \Gamma(X, F)$.
+\end{enumerate}
+
+As a remark, we may also work on a ringed space $(X, \mathcal{O}_X)$ and consider
+only sheaves of $\mathcal{O}_X$-modules. Injective resolutions of
+$\mathcal{O}_X$-modules by injective $\mathcal{O}_X$-modules exist, so we could have
+defined cohomology in terms of such resolutions (but as remarked previously,
+we get the same cohomology either way).

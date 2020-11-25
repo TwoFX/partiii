@@ -1,0 +1,26 @@
+If $f\colon M\to N$ is any morphism of $R$-modules, then we have a map
+$f_n\colon M/I^nM \to N/I$. These maps fit into a commutative diagram
+\[\begin{tikzcd}
+	M/M\ar[d] & M/IM\ar[l]\ar[d] & M/I^2N\ar[d]\ar[l] & M/I^3M\ar[l]\ar[d] & \ldots\ar[l]\\
+	N/N & N/IN\ar[l] & N/I^2N\ar[l] & N/I^3N\ar[l] & \ldots\ar[l].
+\end{tikzcd}\]
+By the universal property of the direct limit $\hat{N} $, we get a unique induced morphism
+$\hat{f}\colon \hat{M}\to \hat{N}$ such that $\pi_n(\hat{f}(x)) = f_n(\pi_n(x))$.
+This gives immediately that $\hat{\cdot}$ is functorial and if $f = 0$, then
+$\hat{f} = 0$.
+
+Furthermore, we claim that if $f$ is injective, then $\hat{f}$ is injective. Indeed,
+by Artin-Rees, we find $s$ such that for all $n\geq s$ we have
+\[ (I^nN)\cap f(M) = I^{n-s}((I^sN)\cap f(M)). \]
+Now let $x \in \hat{M}$ such that $\hat{f}(x) = 0$. First, let $n \in \mathbb{N}_0$.
+If $\pi_{n + s}(x) = m + I^{n + s}M$, then $0 = \pi_{n + s}(\hat{f}(x)) = f_{n + s}(\pi_{n + s}(x)) = f(m) + I^{n + s}M$.
+Hence,
+\[ f(m) \in (I^{n + s}N) \cap f(M) = I^n((I^sN)\cap f(M)), \]
+i.e., we find $i \in I^n$, $m' \in M$ such that $f(m) = if(m') = f(im')$. But
+$f$ is injective, hence we conclude $m = im'$. The fact that $\hat{M}$ is an inverse
+limit (so the projections form a cone over the inverse system) tells us that
+$\pi_n(x) = m + I^nM = im' + I^nM = 0$. Doing this for all $n$, we find that
+$x = 0$ as required.
+
+Hence, we get our induced morphisms $\hat{\iota}$ and $\hat{\varphi}$ and we have
+already shown that $\hat{\iota}$ is injective and that $\im\hat{\iota} \subseteq \ker\hat{\varphi}$.

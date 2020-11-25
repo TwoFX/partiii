@@ -5,3 +5,11 @@ section: true
 title: Topology and completion
 children:
 - Topology
+- TopologyExamples
+- CauchySequence
+- Completion
+- CompleteRing
+- InverseLimits
+- InverseLimitExamples
+- ContainedInJacobson
+- CompletionIsExact

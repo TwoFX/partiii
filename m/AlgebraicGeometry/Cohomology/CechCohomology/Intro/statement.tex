@@ -1,0 +1,19 @@
+How do we calculate cohomology in practice?
+
+Let $X$ be a topological space, $\mathcal{F}$ a sheaf of abelian groups
+on $X$ and $\mathcal{U} \coloneqq \set{U_i}_{i \in I}$ an open cover of $X$.
+
+Choose a well-ordering on $I$ and write $U_{i_0, \ldots, i_p} = U_{i_0}\cap\cdots\cap I_{i_p}$.
+
+Define the group of Cech $p$-cochains to be
+\[ C^p(U, \mathcal{F}) \coloneqq \prod_{i_0 < \cdots < i_p} \mathcal{F}(U_{i_0, \ldots, i_p}). \]
+Write $\alpha \in C^p(\mathcal{U}, \mathcal{F})$ as
+\[ \alpha = (\alpha_{i_0, \ldots, i_p})_{i_0<\cdots<i_p}. \]
+Define the Cech coboundary $d\colon C^p(\mathcal{U}, \mathcal{F}) \to C^{p+1}(\mathcal{U}, \mathcal{F})$
+by
+\[ (d\alpha){i_0, \ldots, i_{p+1}} = \sum_{k=0}^{p+1} (-1)^k\alpha_{i_0, \cdots, \hat{i_k}, \cdots, i_{p+1}}|_{U_{i_0, \ldots, i_{p+1}}}. \]
+As an exercise, show that $d^2 = 0$ (this is the same as for singular cohomology).
+
+Define $\check{H}^p(\mathcal{U}, \mathcal{F}) \coloneqq H^p(C^\bullet(\mathcal{U}, \mathcal{F}))$.
+
+This is nice, because if the cover $\mathcal{U}$ is small, this is actually computable.

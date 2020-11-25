@@ -1,0 +1,9 @@
+type: section
+label: CechCohomology
+numbered: true
+section: true
+title: Cech Cohomology
+children:
+- Intro
+- CechExample
+- ComparisonTheorem

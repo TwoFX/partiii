@@ -5,3 +5,5 @@ section: true
 title: Cohomology of sheaves
 children:
 - Intro
+- Grothendieck
+- CechCohomology

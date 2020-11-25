@@ -1,0 +1,31 @@
+Another way of defining these concepts is via the inverse limits
+$\varprojlim (M/M_n)$ and $\varprojlim (R/I^n)$, where $\set{M_n}$ is a stable
+$I$-filtration. Now $\varprojlim (M/M_n)$ is s subobject of $\prod (M/M_n)$,
+and this Cartesian product allows infinitely many entries that differ from
+$0$. The elements are precisely the tuples with entries $y_n + M_n$ such that
+for $r>s $ the canonical projection $M/M_r\to M/M_s$ maps
+$y_r + M_r\mapsto y_s + M_s$. Addition (and, in the case of $\varprojlim (R/I^n)$,
+multiplication) are componentwise. We have a canonical projection
+$\varprojlim M/M_n\to M/M_r$ (and similar for $R/I^r$ for each $r$.
+
+Furthermore, we may declare a map $\varphi\colon \hat{M} \to \varprojlim (M/M_n)$ in the following
+way: if $[x_n] \in \hat{M}$ is a Cauchy sequence, then for each $n$ there is
+ $a(M_n)$ such that $x_{a(M_n)} - x_m \in M_n$ for all $m\geq a(M_n)$. Define the
+ $n$-th component of $\varphi([x_n])$ to be $x_{a(M_n)} + M_n$. This is easily
+ seen to be a morphism of abelian groups. Furthermore, it is injective, since
+every component of $\varphi([x_n])$ is the same information as the sequence being
+equivalent to the zero sequence. Also, any element
+$(\ldots, y_n + M_n, \ldots) \mapsto \varprojlim (M/M_n)$ has preimage
+$[y_n]$, and the fact that we have an element of the inverse limit ensures that
+this is a Cauchy sequence (set $a(M_n)\coloneqq n$). Hence, we have an isomorphism
+$\hat{M}\cong \varprojlim (M/M_n)$ and we will freely transport along this isomorphism.
+
+We define a filtration on $\hat{M} = \varprojlim (M/M_n)$: $\hat{M}_n$ is the
+set of elements of $\varprojlim (M/M_n)$ whose first $n+1$ components are $0$
+(recall that $M_0 = M$, so the first component is always $0$).
+
+All of the above also applies to $\hat{R} = \varprojlim (R/I^n)$. In particular,
+the $\hat{R}_n$ are ideals if we define $\hat{I}\coloneqq \hat{R}_1$, then
+$R/I \cong \hat{R}/\hat{I}$, since in the right hand side we ignore everything
+except for the first two components, but the first component is trivial and
+the second component is $R/I$. More generally, we have $R/I^n \cong \hat{R}/\hat{I}^n$.

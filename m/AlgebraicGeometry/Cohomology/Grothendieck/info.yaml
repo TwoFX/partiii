@@ -1,0 +1,7 @@
+type: theorem
+label: Grothendieck
+numbered: true
+section: false
+title: Grothendieck
+proofs:
+    noproof: Not proved in this course

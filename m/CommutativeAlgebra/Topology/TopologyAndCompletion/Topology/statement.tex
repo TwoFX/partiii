@@ -1,3 +1,38 @@
 Let $\set{M_n}$ be a filtration of  an $R$-module $M$ with $M_0 = M$. We will
 define a topology on $M$, by declaring the open sets to be unions of sets of the
 form $m + M_n$ for some $m \in M$ and $n \in \mathbb{N}\setminus\set{0}$.
+
+Clearly, any union of these is open. The intersection of two open sets is
+of the form
+\[ \bigcup_i m_i + M_{n_i} \cap \bigcup_i m_i' + M_{n_i'} = \bigcup_{i, j} m_i + M_{n_i} \cap m_i' + M_{n_i'}. \]
+But if $n' > n$, then clearly $m + M_n = \bigcup_{\ell \in M_n} m + \ell + M_{n'}$,
+hence we may assume that $n_i = n_i'$ for all $i$. But if $x \in m + M_n \cap m' + M_n$,
+then actually $m + M_n = m' + M_n$, so the terms of the union over $i$ and $j$ are
+either $m_i + M_{n_i}$ or empty, so we have shown that the intersection of two
+closed sets is closed.
+
+If $\cap M_n = 0$, then we can put a metric on $M$ by declaring $d(m_1, m_2) = p^{-k}$,
+where $k$ is the maximal natural number such that  $m_1 - m_2 \in M_k$ and
+$p \in \mathbb{Z}$ is a prime number. This metric yields the same topology as
+above (in both cases, \enquote{balls} consist of things that all differ by the elements
+in some $M_k$).
+
+The choice of $p$ is important in the case $M = \mathbb{Z}$, $M_n = p^n\mathbb{Z}$.
+If we are only interested in the topology (which is the case most of the time),
+then the choice of $p$ does not matter.
+
+If $\set{M_n}$ and $\set{M'_n}$ are two filtrations such that
+there exists sequences $s$ and $t$ such that for each $n$ we have
+\[ M'_{s(n)} \subseteq M_n,\qquad M_{t(n)} \subseteq M_n', \]
+then the two filtrations determine the same topology.
+
+Now, if $I$ is an ideal, then the $I$-adic topology on $M$ is the topology induced
+by the filtration $\set{I^nM}$. In particular, we get a topology on $R$ from the
+filtration $\set{I^n}$.
+
+All stable $I$-filtrations yield the same topology. Indeed, if $\set{M_n}$ is a
+stable $I$-filtration, then We have $I^nM \subseteq M_n$, because $IM_n \subseteq M_{n+1}$.
+On the other hand, there is some $N$ such that for all $n\geq N$ we have
+$IM_n = M_{n+1}$, which means that $M_{n+N} = I^nM_N \subseteq I^nM$. Hence, by
+our previous consideration, the topology induced by $\set{M_n}$ is
+the sama as the topology induced by $\set{I^nM}$.

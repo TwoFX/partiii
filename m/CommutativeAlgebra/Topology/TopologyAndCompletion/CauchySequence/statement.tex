@@ -1,0 +1,12 @@
+A Cauchy sequence $(x_m)$ in $M$ is a sequence such that for any open
+set $U$ containing $0$ there is a natural number $a(U)$ such that
+for all $r, s\geq a(U)$ we have  $x_r - x_s \in U$.
+
+Since sets of the form $m + M_n$ form a basis of the topology and
+$0 \in m + M_n\iff m + M_n = M_n$, it is sufficient to consider open
+sets $U$ of the form $M_n $. Hence, a Cauchy sequence is one such
+that for all $r, s\geq a(M_n)$, $x_r\equiv x_s\pmod{M_n}$.
+
+Two Cauchy sequences $(x_n)$, $(y_n)$ are called equivalent if $x_m - y_m\to 0$,
+i.e., that for any open $U$ containing $0$ we find $b(U)$ such that for all
+$m\geq b(U)$ we have $x_m - y_m \in U$.
