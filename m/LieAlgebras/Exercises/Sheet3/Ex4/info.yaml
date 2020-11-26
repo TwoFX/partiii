@@ -1,0 +1,7 @@
+type: subsection
+label: Ex4
+numbered: false
+section: true
+title: Exercise 4
+children:
+- InnerProductNegative

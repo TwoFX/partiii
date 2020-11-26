@@ -27,4 +27,10 @@ children:
 - FiniteRepresentationType
 - FiniteRepresentationTypeExample
 - GabrielAgain
+- GabrielAgainRemarks
 - NonSimplyLaced
+- Warning
+- RealSpan
+- DimensionVector
+- ConverseGabriel
+- Constructive

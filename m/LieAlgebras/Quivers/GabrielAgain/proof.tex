@@ -1,0 +1,76 @@
+First observe that if $Q$ has finite representation type, then any subquiver
+obtained by removing a subset of the vertices is also of finite representation
+type (because any representation of the subquiver can be promoted to a representation
+on $Q$ by making everything else zero. Of course, this representation is still
+indecomposable).
+
+We have already seen that if we have a directed cycle, then $Q$ does not have
+finite representation type. We have also seen that if any two vertices are
+connected by more than one edge, then the result does not have finite
+representation type. We deduce that any subquiver obtained as above leaving
+two vertices has at most one edge.
+
+From this, we deduce that the underlying graph of $Q$ must be a tree.
+Recall that we
+defined a symmetric bilinear form on the real span of the vertices via
+\[ q(v_i, v_j) =
+\begin{cases}
+	2, & i = j,\\
+	-1, & \text{there is an edge between $i$ and $j$},\\
+	0, & \text{otherwise}.
+\end{cases}\]
+Suppose that this symmetric bilinear form is not positive definite. Then
+we find non-negative integers $k_i$ such that $q(v, v)\leq 0$ with
+$v = \sum k_iv_i \neq 0$\footnote{To see that we may assume the $k_i$ to be positive
+integers, approximate by a rational and multiply with a large number to get
+to integers. Then write $v = v_+ + v_-$, where  $v_+$ is the sum of those
+$k_iv_i$ where $k_i > 0$ and $v_-$ is defined analogously. Now
+$q(v, v) = q(v_+, v_+) + 2q(v_+, v_-) + q(v_-, v_-)$. But notice that the middle
+term is nonnegative, since $q(v_i, v_j)$ is zero or negative, and $k_ik_j$ is
+negative. Hence, either $q(v_+, v_+)$ or $q(v_-, v_-)$ is negative, so replace
+$v$ either by $v_+$ or by $-v_-$.}.
+
+Thus $2\sum k_i^2\leq 2\sum_{\text{$i, j$ connected}} k_ik_j$, and hence
+\begin{equation}\tag{$\star$}
+	\sum k_i^2 \leq \sum_{\text{$i, j$ connected}} k_ik_j.
+\end{equation}
+Let $M_i$ be a vector space of dimension $k_i$. We will show that there are
+infinitely many isomorphism classes of representations with this dimension
+vector $\sum k_iv_i$.
+
+We need to assigne linear maps $\theta_x\colon M_i\to M_j$ for each edge
+$x\colon i\to j$.
+
+Two such representations are isomorphic if and only if there are automorphisms
+$\prod_i \GL(M_i)$ such that the diagram
+\[\begin{tikzcd}
+	M_i\ar[r, "\theta_x"]\ar[d, "f_i"] & M_j\ar[d, "f_j"]\\
+	M_i'\ar[r, "\theta_x'"] = M_i & M_j' = M_j
+\end{tikzcd}\]
+commutes.
+
+We will consider oribts of $\prod_i \GL(M_i)$ on $\prod_{x\colon i\to j} \Hom(M_i, M_j)$.
+Two representations are isomorphic if and only if the homomorphisms
+representing the arrows yield elements of  $\prod_i \Hom(M_i, M_j)$ in the same
+orbit. But $\prod \GL(M_i')$ is an algebraic variety of dimension
+$\sum k_i^2$. The dimension of $\prod \Hom(M_i, M_j)$ is $\sum_{x\colon i\to j} k_ik_j$.
+
+Notice that the scalar multiplication in $\prod \GL(M_i)$ act trivially
+on $\prod \Hom(M_i, M_j)$ and so we have that
+\[ V\coloneqq \frac{\prod \GL(M_i)}{k^\times} \]
+operates on the homs. We have $\dim V = \left(\sum k_i^2\right) - 1$. By ($\star$),
+we find $\dim V < \sum k_ik_j = \dim \prod \Hom(k_ik_j)$, and so the orbits
+have dimension strictly less than $\dim \prod\Hom(M_i, M_j)$. This implies
+that we have infinitely many orbits, which means that there are infinitely
+many isomorphism classes of representations with dimension vector
+$\sum k_iv_i$.
+
+But if $Q$ has finite represenation type, then there are only finitely
+many indecomposable representations. By Krull-Schmidt, every representation
+decomposes as a direct sum of indecomposables in an essentially unique way.
+Hence, there are only finitely many representations of a given dimension
+up to isomorphism. In particular, there can only be finitely many isomorphism
+classes of representations of a given dimension vector, so we have arrived
+at a contradiction.
+
+Hence, the underlying graph is positive definite.
