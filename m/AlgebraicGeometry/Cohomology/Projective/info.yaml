@@ -1,0 +1,9 @@
+type: subsection
+label: Projective
+numbered: false
+section: true
+title: Cohomology of projective space
+children:
+- Intro
+- PerfectPairing
+- CohomologyOfProjectiveSpace

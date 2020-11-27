@@ -1,0 +1,6 @@
+type: theorem
+label: CohomologyOfProjectiveSpace
+numbered: true
+section: false
+proofs:
+    proof: Proof
