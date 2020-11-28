@@ -1,0 +1,6 @@
+If $Q$ and $Q'$ have the same underlying graph, and the graph is a tree, then
+we find $j_1, \ldots, j_s$ such that $s_{j_1}\cdots s_{j_s}Q  = Q'$.
+
+Indeed, root $Q$ at any vertex and work recursively. At a vertex $v$, if the
+parent edge is oriented in the wrong way, add $s_v$ to the list and proceed with
+the childen. This clearly produces the desired transformation.

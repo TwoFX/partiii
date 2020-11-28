@@ -1,0 +1,44 @@
+We define functors
+\begin{align*}
+	\mathcal{S}^+_j &\colon \Rep_Q \to \Rep_{s_jQ}\\
+	\mathcal{S}^-_j &\colon \Rep_{s_jQ}\to \Rep_Q.
+\end{align*}
+Given a represenation of $Q$, we define $\mathcal{S}_j^+(V)\coloneqq W$, where
+$W_i = V_i$ for $i\neq j$, and $W_j$ is the kernel of the map
+$\phi\coloneqq \bigoplus_{x\colon i\to j}\theta_x\colon \bigoplus_{x\colon i\to j} V_i \to V_j$.
+Hence, we have an exact sequence
+\begin{equation}\tag{$\dagger$}
+	\begin{tikzcd}
+		0\ar[r] & W_j\ar[r] & \displaystyle\bigoplus_{x\colon i\to j} V_i\ar[r, "\phi"] & V_j.
+	\end{tikzcd}
+\end{equation}
+Observe that for each $x\colon i\to j$ (which implies $i\neq j$ since $Q$ does
+not have directed cycles)
+there are obvious maps $W_j \to V_i = W_i$ given by the inclusion followed
+by the projection. This makes $W = \bigoplus W_i$ into a representation
+of $s_iQ$.
+
+As an exercise (TODO), check that we get functorial induced morphisms.
+
+The functor $\mathcal{S}_j^-$ is dual to this: given a representation of $s_jQ$,
+we let $V_i = W_i$ if $i\neq j$ and define $V_j$ to be the cokernel of the direct
+sum of maps from $j$, i.e., we have an exact sequence
+\begin{equation}\tag{$\ddagger$}
+	\begin{tikzcd}
+		W_j \ar[r, "\psi"] & \displaystyle\bigoplus_{\text{$x\colon j\to i$ in $s_jQ$}}\ar[r] & V_j\ar[r] & 0.
+	\end{tikzcd}
+\end{equation}
+
+If $V$ is a representation of $Q$ for which $\phi$ in  ($\dagger$) is surjective, then
+$\mathcal{S}_j^-\mathcal{S}_j^+(V) = V$ (TODO: check this). Hence,
+$\mathcal{S}_j^+$ and $\mathcal{S}_j^-$ form an equivalence of categories between
+the subcategory of $\Rep_Q$ where $\phi$ is surjective and the subcategory of
+$\Rep_{s_jQ}$ where $\psi$ is injective.
+
+Now vconsider indecomposable representations. If $\phi$ is not surjective in
+($\dagger$), then we can express $V$ as a direct sum of representations
+$V = V'\oplus V''$, where $V''$ is a representation with  $V''_j = \coker \phi$
+and $0$ elsewhere. Also, $V'$ is the same as $V$ but with $\im \varphi$
+at vertex $j$. If $V$ is indecomposable, then either $\varphi$ is surjective
+in ($\dagger$) or $V$ is the simple representation with $k$ at vertex $j$ and
+$0$ elsewhere.

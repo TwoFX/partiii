@@ -34,3 +34,17 @@ children:
 - DimensionVector
 - ConverseGabriel
 - Constructive
+- Sink
+- Reverse
+- Numbering
+- StandardisedQuiver
+- StandardisedProperties
+- AdmissibleNumbering
+- AdmissibleNumberingsExist
+- TwoQuivers
+- HaveSink
+- Functor
+- IsomorphismOfIndecomposables
+- FiniteIff
+- UsingExercise
+- DimensionVectors
