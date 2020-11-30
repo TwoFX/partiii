@@ -1,0 +1,15 @@
+Let $X$ be a scheme, $i\colon Z\to X$ a closed immersion. Then we have
+\[ \mathcal{I}_Z\coloneqq \mathcal{I}_{Z/X}\coloneqq \ker(i^*\colon \mathcal{O}_X\to i_*\mathcal{O}_Z). \]
+We saw on the example sheet that $\mathcal{I}_Z$ is a coherent sheaf of $\mathcal{O}_X$-modules
+if $X$ is Noetherian.
+
+We define the conormal sheaf of $Z$ in $X$ to be
+\[ N_{Z/X}^{\vee} = \mathcal{I}_Z/\mathcal{I}_Z^2 \subseteq \mathcal{O}_X/\mathcal{I}_Z^2. \]
+Here, $\mathcal{I}_Z^2$ is the sheaf associated to the presheaf $U\mapsto \mathcal{I}_Z(U)^2 \subseteq \mathcal{O}_X(U)$.
+
+We will not prove the following fact: suppose $X$ and $Z$ are nonsingular (i.e., all
+local rings of $X$ and $Z$ are regular). Then $N_{Z/X}^{\vee}$ is a locally free sheaf
+of rank $\codim(Z, X)$. In this case, we define the normal bundle of $Z$ in $X$ to
+be
+\[ N_{Z/X} = \SheafHom_{\mathcal{O}_Z}(N_{Z/X}^{\vee}, \mathcal{O}_Z). \]
+Here we are using that $N_{Z/X}^{\vee}$ is a sheaf of $\mathcal{O}_Z = \mathcal{O}_X/\mathcal{I}_Z$-modules.

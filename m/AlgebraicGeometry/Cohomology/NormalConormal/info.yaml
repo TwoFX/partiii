@@ -1,0 +1,8 @@
+type: section
+label: NormalConormal
+numbered: true
+section: true
+title: Normal and conormal bundles
+children:
+- Intro
+- SheafOfDifferentials
