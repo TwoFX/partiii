@@ -16,11 +16,52 @@ Now let $x \in \hat{M}$ such that $\hat{f}(x) = 0$. First, let $n \in \mathbb{N}
 If $\pi_{n + s}(x) = m + I^{n + s}M$, then $0 = \pi_{n + s}(\hat{f}(x)) = f_{n + s}(\pi_{n + s}(x)) = f(m) + I^{n + s}M$.
 Hence,
 \[ f(m) \in (I^{n + s}N) \cap f(M) = I^n((I^sN)\cap f(M)), \]
-i.e., we find $i \in I^n$, $m' \in M$ such that $f(m) = if(m') = f(im')$. But
-$f$ is injective, hence we conclude $m = im'$. The fact that $\hat{M}$ is an inverse
+i.e., we find $i_k \in I^n$, $m'_k \in M$ such that $f(m) = \sum_k i_kf(m'_k) = f(i_km'_k)$. But
+$f$ is injective, hence we conclude $m = \sum_k i_k m'_k$. The fact that $\hat{M}$ is an inverse
 limit (so the projections form a cone over the inverse system) tells us that
-$\pi_n(x) = m + I^nM = im' + I^nM = 0$. Doing this for all $n$, we find that
+$\pi_n(x) = m + I^nM = \sum_k i_k m'_k + I^nM = 0$. Doing this for all $n$, we find that
 $x = 0$ as required.
 
 Hence, we get our induced morphisms $\hat{\iota}$ and $\hat{\varphi}$ and we have
 already shown that $\hat{\iota}$ is injective and that $\im\hat{\iota} \subseteq \ker\hat{\varphi}$.
+
+In what follows, let $s$ be the maximum of the Artin-Rees constants of the
+submodules $\iota(M_1) \subseteq M$ and $\varphi(M) \subseteq M_2$.
+
+Next, we will show that $\ker\hat{\varphi} \subseteq \im\hat{\iota}$. Indeed,
+ket $x \in \hat{M'}$ such that $\hat{\varphi}(x) = 0$. Write
+$\pi_n(x) = x_n + I^nM$, then we have $\varphi(x_n) \in I^nM_2$.
+
+Let $n \in \mathbb{N}$. Then using Artin-Rees we have
+$\varphi(x_{n+s}) \in I^n(I^sM_2\cap \varphi(M))$, so we find
+$x_{n+s,k}' \in M_2$ and $i_{n+s,k} \in I^n$ such that
+$\varphi(x_{n+s}) = \sum_k i_{n+s,k}\varphi(x_{n+s,k}')$. Then
+$x_{n+s} - \sum_k i_{n+s,k}x_{n+s,k}' \in \ker\varphi$, so we find $y_{n+s} \in M_1$ such
+that $\iota(y_{n+s}) = x_{n+s} - \sum_k i_{n+s,k}x_{n+s,k}'$. But then
+\[ \iota_n(y_{n+s} + I^nM_1) = x_{n+s} - \sum_k i_{n+s,k}x_{n+s,k}' + I^nM = x_{n+s} + I^nM = x_n + I^nM. \]
+Hence, we are done as long as we can show that $(y_{n+s} + I^nM_1)_{n \in \mathbb{N}}$
+assemble into an element of $\hat{M_1}$, i.e., that for $n\leq m$ we have
+$y_{m+s} + I^nM_1 = y_{n+s} + I^nM_1$. Indeed, we have
+\[ \iota(y_{m+s} - y_{n+s}) = x_{m+s} - i_{m+s}x_{m+s}' - x_{n+s} + i_{n+s}x_{n+s}' \in I^{n+s}M, \]
+so Artin-Rees tells us that we find $i_{n, m, k} \in I^nM$ and $y_{n, m, k} \in M_1$ such
+that $\iota(y_{m+s} - y_{n+s}) = \iota(\sum_k i_{n, m,k}y_{n, m,k})$. But $\iota$ is injective,
+so $y_{m+s} - y_{n+s} \in I^nM$ as required, completing the proof that
+$\ker\hat{\varphi} \subseteq \im\hat{\iota}$.
+
+It remains to show that $\hat{\varphi}$ is surjective.
+Indeed, let $z = (z_n + I^nM_2) \in \hat{M_2}$. We will construct a preimage
+$y = (y_n + I^nM) \in \hat{M}$ by induction. In fact, we will do something slightly
+stronger: we will construct a sequence $(y_n)$ of elements of $M$ such that
+$y_{n+1} + I^nM = y_n + I^nM$ and $\varphi(y_n) = z_n$ for every $n$.
+
+We set $y_0$ to be a preimage of $z_0$ under $\varphi$. Now let $n > 0$
+and suppose that we have already defined $y_n \in M$ such that
+$\varphi(y_n) = z_n$. We need to find $y_{n+1} \in M$ such
+that $\varphi(y_{n+1}) = z_{n+1}$ and $y_n + I^nM = y_{n+1} + I^nM$.
+
+We have $z_n + I^nM = z_{n+1} + I^nM$, so $z_{n+1} - z_n \in I^nM$, i.e.,
+$z_{n + 1} - z_n = \sum r_iw_i$ for $r_i \in I^n$, $w_i \in M_2$. By surjectivity
+of $\varphi$, we find $t_i \in M$ such that $s\coloneqq \sum r_it_i \in I^nM$ satisfies
+$\varphi(s) = z_{n + 1} - z_n$. Define $y_{n+1}\coloneqq y_n + s$. Then $y_{n+1} + I^nM = y_n + I^nM$
+since $s \in I^nM$,
+and $\varphi(y_{n+1}) = \varphi(y_n) + \varphi(s) = z_n + z_{n+1} - z_n = z_{n+1}$.
