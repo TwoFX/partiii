@@ -1,0 +1,28 @@
+Since $M$ is finitely generated, it fits into a short exact sequence
+\[\begin{tikzcd}
+	0\ar[r] & N\ar[r] & F\ar[r] & M\ar[r] & 0,
+\end{tikzcd}\]
+where $F$. is free of finite rank. But we have a chain of isomorphisms
+\[ \hat{R} \tensor_R F = \hat{R}\tensor_R R^n\cong (\hat{R}\tensor_R)^n\cong \hat{R}^n = \widehat{R^n} = \hat{F}, \]
+and it is readily checked on generators that this agrees with the map
+$\hat{R}\tensor_R F\to \hat{F}$ described above. Hence, we have a commutative
+square
+\[\begin{tikzcd}
+	\hat{R}\tensor_R F\ar[r]\ar[d] & \hat{R}\tensor_R M\ar[d]\\
+	\hat{F}\ar[r] & \hat{M},
+\end{tikzcd}\]
+where the left map is an isomorphism as we just saw. Furthermore, in the proof
+of the exactness of completion, we did not use that $R$ is noetherian to show
+surjectivity. Hence, the bottom map is surjective, and by commutativity,
+the right map is surjective as claimed.
+
+Now if $R$ is noetherian, using right exactness of the tensor product and exactness
+of completion we get a commutative diagram
+\[\begin{tikzcd}
+	\hat{R}\tensor_R N\ar[r]\ar[d, "\alpha"] & \hat{R}\tensor_R F\ar[r]\ar[d, "\beta"] & \tensor{R}_RM\ar[r]\ar[d, "\gamma"] & 0\ar[d, "0"]\\
+	\hat{N}\ar[r] & \hat{F}\ar[r] & \hat{M}\ar[r] & 0
+\end{tikzcd}\]
+with exact rows. Wo already know that $\beta$ is an isomorphism and $\gamma$ is
+surjective, and since $N$ is also finitely generated (Sheet 2, Exercise 9),
+$\alpha$ is surjective. Of course, the zero map is injective, and thus the
+four lemma tells us that $\gamma$ is also injective, completing the proof.

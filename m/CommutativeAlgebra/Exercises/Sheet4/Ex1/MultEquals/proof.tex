@@ -1,0 +1,15 @@
+Since being trivial is a local property, it will suffice that
+$(M/IM)_P = 0$ for all maximal ideals $P$. Let $P$ be a maximal ideal.
+We distinguish two cases.
+
+First, if $I \subseteq P$, then $M_P = 0$. By exactness of localization, we
+have an exact sequence
+\[\begin{tikzcd}
+	0\ar[r] & (IM)_P\ar[r] & M_P\ar[r] & (M/IM)_P\ar[r] & 0,
+\end{tikzcd}\]
+so  the map  $M_P \to (M/IM)_P$ is surjective, so $(M/IM)_P = 0$ as required.
+
+Second, if $I\nsubseteq P$, then we find $i \in I\setminus P$. Now if
+$\frac{m + IM}{r}$ is any element of $(M/IM)_P$, then
+$i(m + IM) = 0$, so  $\frac{m + IM}{r} =\frac{0}{1}$ as elements of $(M/IM)_P$,
+so $(M/IM)_P = 0$ as required.

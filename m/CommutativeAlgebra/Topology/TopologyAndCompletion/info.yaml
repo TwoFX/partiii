@@ -13,3 +13,5 @@ children:
 - InverseLimitExamples
 - ContainedInJacobson
 - CompletionIsExact
+- CompletionIsNoetherian
+- Tensor

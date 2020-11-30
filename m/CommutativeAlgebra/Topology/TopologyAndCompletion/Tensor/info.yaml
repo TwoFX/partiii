@@ -1,0 +1,6 @@
+type: proposition
+label: Tensor
+numbered: true
+section: false
+proofs:
+    proof: Proof
