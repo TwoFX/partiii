@@ -1,0 +1,34 @@
+This proof is due to Bernstein-Gel'fand-Panomarev 1972.
+
+Choose an admissible numbering of $Q$, let $\mathcal{C}^+$ be the
+corresponding Coxeter functor, and let $c$ be the corresponding Coxeter
+element.
+
+Suppose $V$ is a finite-dimensional indecomposable representation with dimension
+vector $v \in \mathbb{R}^{\ell}$. From the discussion about Coxeter elements,
+there is some $m\geq 1$ such that $c^m(v)$ is not positive.
+
+By 7.26, $(\mathcal{C}^+)^m(V) = 0$ (TODO: why?). Choose $m$ as small as possible with
+$(\mathcal{C}^+)^m(V) = 0$. Thus for some $j$, we have that
+$\mathcal{S}^+_{j+1}\cdots \mathcal{S}_r^+(\mathcal{C}^+)^{m-1}(V)\neq 0$,
+but
+$\mathcal{S}^+_{j}\cdots \mathcal{S}_r^+(\mathcal{C}^+)^{m-1}(V) = 0$.
+
+Thus by 7.22 we know that $\mathcal{S}_{j+1}^+\mathcal{S}_{j+2}^+\cdots \mathcal{S}_r^+(\mathcal{C}^+)^{m-1}(V)$
+is the simple module concentrated at $j$ (since that is the only thing mapped to
+zero) and $V\cong (\mathcal{C}^-)^{m-1}\mathcal{S}_r\cdots \mathcal{S}_{j+1}^-(S_j)$.
+
+Thus the dimension vector $v$ of $V$ is given by
+\[ c^{-m+1}s_{\alpha_r}\cdots s_{\alpha_j+1}(v_j), \]
+where $v_j$ is the basis element belonging to the vertex $j$.
+
+Note that this argument shows that any indecomposable with the same dimension
+vector as $V$ is isomorphic to $V$.
+
+Conversely, if $v$ is a positive root, then for some $m\geq 1$ the element
+$c^m(v)$ is not positive. Choose the shortest expression of the form
+$s_{\alpha_j}\cdots s_{\alpha_r}c^{m-1}(v)$ which is not a positive root.
+
+Then $s_{\alpha_{j+1}}\cdots s_{\alpha_r}c^{m-1}(v) = v_j$ using 5.17(d). Thus,
+$(\mathcal{C}^-)^{m-1}\mathcal{S}_r^-\cdots S_{j+1}^-(S_j)$ has dimension
+vector $v$.
