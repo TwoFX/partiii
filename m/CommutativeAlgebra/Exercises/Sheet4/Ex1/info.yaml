@@ -5,3 +5,4 @@ section: true
 title: Exercise 1
 children:
 - MultEquals
+- InterEq

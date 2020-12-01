@@ -1,0 +1,13 @@
+Let $x \in \bigcap_{n=1}^\infty I^nM$ and let $P$ be maximal such that $I \subseteq P$.
+By Krull's theorem, we find $i \in I$ such that $(1+i)x = 0$. Now if
+$1 + i \in P$, then $1 \in P$, a contradiction. Hence, $1 + i\notin P$,
+
+so we have $\frac{x}{1} = \frac{0}{1} \in M_P$. Hence, $x \in \ker (M\to M_P)$.
+
+Before we work on the converse direction, let $P$ be a maximal such that
+$I \subseteq P$. Let $x/r \in N_P$. Since $x \in (\ker M\to M_P)$, we find
+$s \in R\setminus P$ such that $sx = 0$. But then $x/r = 0/1 \in N_P$, and so
+$N_P = 0$. Using (i), this means that $N = I^nN$ for all $n\geq 0$.
+
+Let $x \in N$ and $n \geq 1$. Then $x \in N = I^nN \subseteq I^nM$, and so
+$x \in \bigcap_{n=1}^\infty I^nM$ as claimed.
