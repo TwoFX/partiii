@@ -1,0 +1,26 @@
+If $X$ is a as above, we define the canonical bundle of $X$ to be
+\[ \omega_X \coloneqq \bigwedge^{\dim X}\Omega_X. \]
+This is the sheaf associated with the presheaf
+\[ U\mapsto \bigwedge^{\dim X}_{\mathcal{O}_X(U)}\Omega_X(U). \]
+Alternatively, if one takes a trivializing cover $\set{U_i}$ for $\Omega_X$ with
+transition matrices $g_{ij} \in \GL_n(\Gamma(U_i\cap U_j, \mathcal{O}_X))$,
+then the transition functors for $\omega_X$ are $\det g_{ij}$.
+
+$\omega_X$ is a line bundle, and we write its corresponding Cartier divisor
+class as $K_X$. This is called the canonical divisor of $X$. Understanding
+this canonical divisor is one of the central aims of algebraic geometry.
+
+There is an important result called Serre duality: let $X$ be a non-singular
+projective variety over $\Spec k$ of dimension $n$. Then for any locally
+free sheaf $\mathcal{F}$ on $X$ of finite rank, there is a natural isomorphism
+$H^i(X, \mathcal{F}^{\vee}\tensor \omega_X)\to H^{n-i}(X, \mathcal{F})^*$,
+where star in the right hand side is the dual vector space.
+
+The proof of Serre duality is mostly homological algebra, but ultimately it
+reduces to the calculation of $H^i(\mathbb{P}^r, \mathcal{O}_{\mathbb{P}^r}(n))$
+
+In fact, for $\mathbb{P}^r$ we have $\omega_{\mathbb{P}^r}\cong \mathcal{O}_{\mathbb{P}^r}(-r-1)$,
+so the perfect pairing we constructed during the calculation of the cohomology
+of projective space,
+\[ H^r(X, \mathcal{O}_X(n))\times H^0(X, \mathcal{O}_X(-n-r-1))\to k, \]
+exhibits the isomorphism from Serre duality in this special case.

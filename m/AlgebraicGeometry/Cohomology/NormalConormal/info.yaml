@@ -6,3 +6,9 @@ title: Normal and conormal bundles
 children:
 - Intro
 - SheafOfDifferentials
+- Motivation
+- CanonicalBundle
+- EulerCharacteristic
+- RiemannRoch
+- Genus
+- RiemannRochForCurves

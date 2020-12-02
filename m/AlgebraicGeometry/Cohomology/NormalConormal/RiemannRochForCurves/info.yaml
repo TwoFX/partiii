@@ -1,0 +1,7 @@
+type: theorem
+label: RiemannRochForCurves
+numbered: true
+section: false
+title: Riemann-Roch for curves
+proofs:
+    proof: Proof

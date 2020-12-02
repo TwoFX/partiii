@@ -1,0 +1,26 @@
+The Riemann-Roch theorem roughly says that $\chi(\mathcal{F})$ is a topological
+invariant.
+
+To make this more precise, we need to talk about curves. For now, let $X$ be a
+projective nonsingular curve over an algebraically closed field $k$ (algebraic
+closure is not needed, but will make things easier). If $P \in X$ is a closed point,
+we may think of it as a prime divisor defining a closed subscheme, and wehave
+an exact sequence
+\[\begin{tikzcd}
+	 0\ar[r] & \mathcal{I}_P\ar[r] & \mathcal{O}_X\ar[r] & \mathcal{O}_P\ar[r] & 0,
+ \end{tikzcd}\]
+where the last term is the structure sheaf of the point $P$. We also know that
+$\mathcal{I}_P \cong O_X(-P)$. Now tensor with a line bundle $\mathcal{L}$. Then
+we get
+\[\begin{tikzcd}
+	0\ar[r] & \mathcal{L}(-P)\ar[r] & \mathcal{L}\ar[r] & \mathcal{L}\tensor \mathcal{O}_P\ar[r] & 0,
+\end{tikzcd}\]
+since tensoring with line bundles is exact as remarked previously. Notice that
+$\mathcal{L}\tensor \mathcal{O}_P\cong \mathcal{O}_P$.
+
+So $\chi(\mathcal{L}) = \chi(\mathcal{L}(-P)) + \chi(\mathcal{O}_P)$.
+Since $k$ is algebraically closed, $\mathcal{O}_P$ has no higher cohomology
+and has cohomology $k$ in degree zero, so $\chi(L) = \chi(\mathcal{L}(-P)) + 1$.
+
+So if $D \in \Div X$, then $\chi(\mathcal{O}_X(D)) = \chi(\mathcal{O}_X) + \deg D$,
+where $D = \sum a_iP_i$, and $\deg D = \sum a_i$.

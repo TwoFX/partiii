@@ -1,0 +1,12 @@
+In general, if $X$ is a projective scheme over $k$, then $H^i(X, \mathcal{F})$ is
+a finite-dimensional $k$-vector space (for $\mathcal{F}$ a coherent sheaf on $X$).
+Then we may define the Euler characteristic of $\mathcal{F}$ to be
+\[ \chi(\mathcal{F})\coloneqq \sum_{i=0}^{\dim X} (-1)^i\dim H^i(X, \mathcal{F}). \]
+This is additive in exact sequences, i.e., if
+\[\begin{tikzcd}
+	\cdots\ar[r] & \mathcal{F}_{i-1}\ar[r] & \mathcal{F}_i\ar[r] & F_{i+1} \ar[r] & \ldots
+\end{tikzcd}\]
+is exact, then $\sum (-1)^i \chi(\mathcal{F}_i) = 0 $. In particular, if
+$\mathcal{F}', \mathcal{F}, \mathcal{F}''$ fit in a short exact sequence, then
+$\chi(\mathcal{F}) = \chi(\mathcal{F}') + \chi(\mathcal{F}'')$. These statements
+essentially follow from the corresponding statements about dimension of vector spaces.

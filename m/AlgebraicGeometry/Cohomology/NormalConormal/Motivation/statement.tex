@@ -1,0 +1,49 @@
+We will give some motivation for this construction.
+
+Let $B$ be an algebra (think $X = \Spec B$, $Y = \Spec A$) and $M$ a $B$-module.
+An $A$-derivation $d\colon B\to M$ is a map such that for all $a \in A$, $b, b' \in B$ we have
+\begin{enumerate}
+	\item $d(b + b') = d(b) + d(b')$,
+	\item $d(bb') = bd(b') + b'd(b)$, and
+	\item $d(a) = 0$.
+\end{enumerate}
+
+The module of relative differentials $\Omega_{B/A}$ is a $B$-module satisfying
+a universal property: there is an $A$-derivation $d\colon B\to \Omega_{B/A}$ such
+that for any other $A$-derivation $d'\colon B\to M$ we find a homomorphism
+of $B$-modules $g\colon \Omega_{B/A}\to M$ making the diagram
+\[\begin{tikzcd}
+	B\ar[r, "d"]\ar[dr, "d'"] & \Omega_{B/A}\ar[d, "g"]\\
+	& M
+\end{tikzcd}\]
+commute.
+
+As an example, take $B = k[X_1, \ldots, X_n]$ and $A = k$. We may describe
+$\Omega_{B/A}$ as a direct sum
+\[ \Omega_{B/A} = \bigoplus_{i=1}^n BdX_i, \]
+where $dX_i$ is a generator of the summand. We set $d(X_i) = dX_i$, $d(f) = \sum_{i=1}^n \frac{\partial f}{\partial X_i} dX_i$.
+Given $d'\colon B\to M$ define $g\colon \Omega_{B/A} \to B$ by $g(dX_i) = d'(X_i)$.
+
+More generally, we can construct $\Omega_{B/A}$ as follows. We have a homomorphism
+$\varphi\colon B\tensor_A B\to B$ sending $b\tensor b'\mapsto bb'$. Let $I\coloneqq \ker\varphi$.
+Then $I/I^2$ is a $B$-module and we may define $d\colon B\to I/I^2$ via
+$d(b) = 1\tensor b-b\tensor 1$ and we can check that $\Omega_{B/A} = I/I^2$ has
+the universal property (cf. Example Sheet 4).
+
+Notive that if $X = \Spec B$, $Y = \Spec A$, then $\varphi$ induces the diagonal
+morphism $\Delta\colon X\to X\times_Y X$ and $\tilde{I} = \mathcal{I}_{X/X\times_Y X}$.
+
+Then $\Delta^*\mathcal{I}_{X/X\times_Y X}/\mathcal{I}_{X/X\times_Y X}^2$
+coincides with the sheafification of $I/I^2$ viewing $I/I^2$ as a $B$-module.
+
+In this way, the sheaf of differentials is the geometric version of the module
+of relative differentials.
+
+For example if $Y = \Spec k$ and $X$ is a nonsingular connected variety, then
+so is $X\times_k X$ and $\codim(\Delta(X), X\times_k X) = \dim X$.
+So $\Omega_{X/\Spec k} = \Omega_X$ is a locally free sheaf of rank $\dim X$.
+
+As an example within the example, if $X = \mathbb{A}^n_k$, then $\Omega_X = \bigoplus_{i=1}^n \mathcal{O}_X dX_i$.
+One can think of $\Omega_X$ of as the cotangent bundle. Then
+$\mathcal{T}_X = \SheafHom_{\mathcal{O}_X}(\Omega_X, \mathcal{O}_X)$ is the tangent
+bundle.
