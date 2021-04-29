@@ -33,17 +33,18 @@ then $x(m(u_i)) \equiv \lambda_m x(u_i) = \lambda_m u_{i+1} \pmod{U_i}$ (just wr
 relation and apply $x$ to both sides).
 
 Therefore,
-\[ m(u_{i+1}) = m(x(u_i)) = ([m, x] + x \circ m)(u_i) \equiv \lambda_mu_{i+1}\pmod{U_1}, \]
+\[ m(u_{i+1}) = m(x(u_i)) = ([m, x] + x \circ m)(u_i) \equiv \lambda_mu_{i+1}\pmod{U_i}, \]
 using the previous calculation and the fact that $[m, x] \in M$ (since $M$ is
 an ideal) and $M(U_i) \subseteq U_i$. This completes the proof of the claim.
 
 Using the claim, we see that $M(U_{n - 1}) \subseteq U_{n-1}$.  On the other hand,
-$x(U_{n-1}) \subseteq U_{n-1}$. This means that $\mathfrak{L}(U_{n-1} \subseteq U_{n-1}$,
-but we halso have $x(U_{n-1} \subseteq U_{n-1}$
-(by linear dependence of $u_0, \ldots, u_n$). Moreover, with respect to the basis
+$x(U_{n-1}) \subseteq U_{n-1}$. This means that $\mathfrak{L}(U_{n-1}) \subseteq U_{n-1}$.
+%but we halso have $x(U_{n-1}) \subseteq U_{n-1}$
+%(by linear dependence of $u_0, \ldots, u_n$).
+Moreover, with respect to the basis
 $u_0, \ldots, u_{n-1}$, the action of $M$ is represented by upper triangular
 matrices (since $M(U_i) \subseteq U_i$ with diagonal entries $\lambda_m$ (by the
-formula modulo $U_{i-1}$. In particular, this is true for
+formula modulo $U_{i-1}$). In particular, this is true for
 $m \in \mathfrak{L}^{(1)} \subseteq M$.
 
 But matrices representing elements of $\mathfrak{L}^{(1)}$ must have trace $0$
