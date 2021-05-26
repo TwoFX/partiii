@@ -1,14 +1,17 @@
-We start with an observation. Let $\theta, \phi \in \End V$ iand $c \in k = \mathbb{C}$.
+We start with an observation. Let $\theta, \phi \in \End V$ and $c \in k = \mathbb{C}$.
 Suppose $\theta + c\phi$ has characteristic polynomial
 \[ f(t, c) = t^n + f_1(c)t^{n-1} + \cdots + f_n(c). \]
- Then $f_i$ is a polynomial in $c$ of degree  at most $i$. (TODO: why?)
+ Then $f_i$ is a polynomial in $c$ of degree  at most $i$\footnote{Indeed, the
+ characteristic polynomial can be expressed via the Leibniz formula, and
+ if we interpret the characteristic polynomial as a polynomial in the variables
+ $t$ and $c$, we see that the total degree of each summand cannot exceed $n$.}.
 
 For $y \in K$ consider the set $S \coloneqq \set{\ad(z + cy)\given c \in \mathbb{C}}$.
 Write $H\coloneqq L_{0, z}$. Each $z + cy \in K \subseteq H$ by hypothesis.
-Elements of $S$ induce endomrphisms of $H$ and $L/H$ since
-$\ad(z, cy)(H) \subseteq H$. Write $f(t, c)$ for the characteristic
+Elements of $S$ induce endomorphisms of $H$ and $L/H$ since
+$\ad(z + cy)(H) \subseteq H$. Write $f(t, c)$ for the characteristic
 polynomial of $\ad(z + cy)$ on $H$ and $g(t, c)$ for the characteristic
-polynomial of $\ad(z, cy)$ on $L/H$. If $\dim L = n$, $\dim L = m$, then
+polynomial of $\ad(z + cy)$ on $L/H$. If $\dim L = n$, $\dim H = m$, then
 \begin{align*}
 	f(t, c) &= t^m + f_1(c)t^{m-1} + \cdots + f_m(c),\\
 	g(t, c) &= t^{n-m} + g_1(c)t^{n-m-1} + \cdots + g_{n - m}(c),
@@ -18,13 +21,21 @@ where $f_i$ and $g_i$ are polynomials of degree at most $i$ by the initial obser
 But $\ad(z)$ has no zero eigenvalue on $L/H$ since $H$ is the generalized eigenspace.
 Hence $g_{n-m}(0) \neq 0$, so $g_{n-m}$ is not the zero polynomial. Hence we can find
 $c_1, \ldots, c_{m+1} \in k$ with $g_{n-m}(c_j)\neq 0$ for each $j$. Hence
-$\ad(z + c_jy)$ has no zero eigenvalue on $L/H$ and so $L_{0, z + c_jy} \subseteq H$.
+$\ad(z + c_jy)$ has no zero eigenvalue on $L/H$ and so
+$L_{0, z + c_jy} \subseteq H$\footnote{Indeed,
+suppose that $L_{0, z + c_jy}\nsubseteq H$. This means that we find
+some $0\neq x \in L/H$ such that there is some $r>0$ such that
+$\ad(z + c_jy)^r(x) = 0$. But this implies that $\ad(z + c_jy)$ has eigenvalue
+zero on $L/H$.}.
 But $H$ was chosen to be minimal among $L_{0, y}$ and so $L_{0, z+c_jy} = H$.
 Therefore, $0$ is the only eigenvalue of the map
 \[ \ad(z + c_jy)|_H\colon H\to H. \]
 This means that $f(t, c_j) = t^m$ for $1\leq j\leq m+1$. Therefore
 $f_i(c_j) = 0$ for $1\leq j\leq m+1$, but since $\deg f_i\leq i < m+1$, this means
 that $f_i$ is the zero polynomial. Hence $f(t, c) = t^m$ for all $c \in k$, which
-implies that $H \subseteq L_{0, z+cy}$ for all $c \in \mathbb{C}$.
+implies that $H \subseteq L_{0, z+cy}$ for all $c \in \mathbb{C}$: indeed,
+$\ad(z + cy)|_H$ only has the eigenvalue $0$, so $x\in H$ can be written as the
+sum of elements of the generalised $0$-eigenspaces of $\ad(z + cy)$, and so
+$x \in L_{0, z + cy}$.
 
 But $y \in K$ was arbitrary, hence $H \subseteq L_{0, y}$ for any $y \in K$.
